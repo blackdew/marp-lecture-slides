@@ -1,0 +1,25 @@
+<svg width="600" height="400" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    .box { fill: #f9f9f9; stroke: #333; stroke-width: 2; }
+    .text { font-family: sans-serif; font-size: 16px; text-anchor: middle; }
+    .title { font-family: sans-serif; font-size: 24px; text-anchor: middle; font-weight: bold; }
+  </style>
+
+  <text x="300" y="50" class="title">규칙 기반 vs 학습 기반</text>
+
+  <!-- Box 1: Rule-Based -->
+  <rect x="50" y="100" width="250" height="200" rx="10" class="box"/>
+  <text x="175" y="140" class="text" font-weight="bold">전통 코딩 (규칙 기반)</text>
+  <text x="175" y="180" class="text">사람이 모든 규칙을</text>
+  <text x="175" y="205" class="text">직접 코드로 작성</text>
+  <text x="175" y="245" class="text" font-size="14">예: if "광고" in 제목:</text>
+  <text x="175" y="265" class="text" font-size="14">     return "스팸"</text>
+
+  <!-- Box 2: Machine Learning -->
+  <rect x="350" y="100" width="250" height="200" rx="10" class="box" fill="#e3f2fd"/>
+  <text x="475" y="140" class="text" font-weight="bold">머신러닝 (학습 기반)</text>
+  <text x="475" y="180" class="text">컴퓨터가 데이터를 보고</text>
+  <text x="475" y="205" class="text">스스로 패턴(규칙)을 학습</text>
+  <text x="475" y="255" class="text" font-size="14">[수많은 이메일 데이터] -> [학습]</text>
+
+</svg>

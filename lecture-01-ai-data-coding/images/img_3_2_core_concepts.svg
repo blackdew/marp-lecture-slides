@@ -1,0 +1,25 @@
+<svg width="800" height="300" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    .box { fill: #f9f9f9; stroke: #333; stroke-width: 2; }
+    .text { font-family: sans-serif; font-size: 16px; text-anchor: middle; }
+    .title { font-family: sans-serif; font-size: 24px; text-anchor: middle; font-weight: bold; }
+  </style>
+
+  <text x="400" y="40" class="title">코딩의 핵심 개념 3가지</text>
+
+  <!-- Box 1 -->
+  <rect x="50" y="100" width="200" height="100" rx="10" class="box"/>
+  <text x="150" y="145" class="text" font-weight="bold">변수 (Variable)</text>
+  <text x="150" y="170" class="text">데이터를 담는 상자</text>
+
+  <!-- Box 2 -->
+  <rect x="300" y="100" width="200" height="100" rx="10" class="box"/>
+  <text x="400" y="145" class="text" font-weight="bold">조건문 (Condition)</text>
+  <text x="400" y="170" class="text">만약 ~라면, ~한다</text>
+
+  <!-- Box 3 -->
+  <rect x="550" y="100" width="200" height="100" rx="10" class="box"/>
+  <text x="650" y="145" class="text" font-weight="bold">반복문 (Loop)</text>
+  <text x="650" y="170" class="text">~를 반복한다</text>
+
+</svg>

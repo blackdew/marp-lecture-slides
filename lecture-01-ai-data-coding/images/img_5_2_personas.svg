@@ -1,0 +1,35 @@
+<svg width="800" height="400" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    .box { fill: #f9f9f9; stroke: #333; stroke-width: 2; }
+    .text { font-family: sans-serif; font-size: 14px; text-anchor: middle; }
+    .title { font-family: sans-serif; font-size: 24px; text-anchor: middle; font-weight: bold; }
+    .subtitle { font-family: sans-serif; font-size: 18px; text-anchor: middle; font-weight: bold; }
+  </style>
+
+  <text x="400" y="40" class="title">나는 무엇을 더 해볼 수 있을까?</text>
+
+  <!-- Box 1 -->
+  <rect x="50" y="100" width="200" height="200" rx="10" class="box"/>
+  <text x="150" y="130" class="subtitle">기획자/마케터</text>
+  <text x="150" y="170" class="text">데이터 기반</text>
+  <text x="150" y="190" class="text">의사결정 능력 향상</text>
+  <text x="150" y="230" class="text" fill="#007bff">- 데이터 시각화</text>
+  <text x="150" y="250" class="text" fill="#007bff">- SQL 기초</text>
+
+  <!-- Box 2 -->
+  <rect x="300" y="100" width="200" height="200" rx="10" class="box"/>
+  <text x="400" y="130" class="subtitle">디자이너/창작자</text>
+  <text x="400" y="170" class="text">AI를 창작의</text>
+  <text x="400" y="190" class="text">파트너로 활용</text>
+  <text x="400" y="230" class="text" fill="#007bff">- 이미지 생성 AI</text>
+  <text x="400" y="250" class="text" fill="#007bff">- ChatGPT 활용</text>
+
+  <!-- Box 3 -->
+  <rect x="550" y="100" width="200" height="200" rx="10" class="box"/>
+  <text x="650" y="130" class="subtitle">개발자 지망생</text>
+  <text x="650" y="170" class="text">본격적인</text>
+  <text x="650" y="190" class="text">코딩 학습 시작</text>
+  <text x="650" y="230" class="text" fill="#007bff">- 파이썬 기초 강의</text>
+  <text x="650" y="250" class="text" fill="#007bff">- 입문 프로젝트</text>
+
+</svg>

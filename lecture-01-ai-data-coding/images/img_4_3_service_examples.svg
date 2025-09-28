@@ -1,0 +1,35 @@
+<svg width="800" height="400" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    .box { fill: #f9f9f9; stroke: #333; stroke-width: 2; }
+    .text { font-family: sans-serif; font-size: 14px; text-anchor: middle; }
+    .title { font-family: sans-serif; font-size: 24px; text-anchor: middle; font-weight: bold; }
+    .subtitle { font-family: sans-serif; font-size: 18px; text-anchor: middle; font-weight: bold; }
+  </style>
+
+  <text x="400" y="40" class="title">우리 삶의 AI 서비스 원리</text>
+
+  <!-- Box 1 -->
+  <rect x="50" y="100" width="200" height="200" rx="10" class="box"/>
+  <text x="150" y="130" class="subtitle">콘텐츠 추천</text>
+  <text x="150" y="170" class="text">데이터: 시청 기록</text>
+  <text x="150" y="200" class="text">학습: 취향 패턴</text>
+  <text x="150" y="230" class="text">예측: 좋아할 만한</text>
+  <text x="150" y="250" class="text">다음 영상 추천</text>
+
+  <!-- Box 2 -->
+  <rect x="300" y="100" width="200" height="200" rx="10" class="box"/>
+  <text x="400" y="130" class="subtitle">얼굴 인식</text>
+  <text x="400" y="170" class="text">데이터: 내 얼굴 사진</text>
+  <text x="400" y="200" class="text">학습: 얼굴 고유 패턴</text>
+  <text x="400" y="230" class="text">예측: 내 얼굴인지</text>
+  <text x="400" y="250" class="text">판단하여 잠금해제</text>
+
+  <!-- Box 3 -->
+  <rect x="550" y="100" width="200" height="200" rx="10" class="box"/>
+  <text x="650" y="130" class="subtitle">번역 서비스</text>
+  <text x="650" y="170" class="text">데이터: 번역된 문장들</text>
+  <text x="650" y="200" class="text">학습: 언어의 패턴</text>
+  <text x="650" y="230" class="text">예측: 가장 자연스러운</text>
+  <text x="650" y="250" class="text">번역 결과 제공</text>
+
+</svg>

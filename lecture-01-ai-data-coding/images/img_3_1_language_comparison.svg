@@ -1,0 +1,19 @@
+<svg width="600" height="300" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    .box { fill: #f9f9f9; stroke: #333; stroke-width: 2; }
+    .text { font-family: sans-serif; font-size: 16px; text-anchor: middle; }
+    .code { font-family: monospace; font-size: 18px; text-anchor: middle; fill: #c7254e; }
+    .title { font-family: sans-serif; font-size: 24px; text-anchor: middle; font-weight: bold; }
+  </style>
+
+  <!-- Box 1: Human Language -->
+  <rect x="50" y="100" width="250" height="100" rx="10" class="box"/>
+  <text x="175" y="140" class="text" font-weight="bold">사람의 언어</text>
+  <text x="175" y="175" class="text">"화면에 '안녕'이라고 보여줘"</text>
+
+  <!-- Box 2: Code -->
+  <rect x="350" y="100" width="250" height="100" rx="10" class="box"/>
+  <text x="475" y="140" class="text" font-weight="bold">컴퓨터의 언어</text>
+  <text x="475" y="175" class="code">print("안녕")</text>
+
+</svg>

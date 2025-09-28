@@ -1,0 +1,28 @@
+<svg width="600" height="400" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    .box { fill: #f9f9f9; stroke: #333; stroke-width: 2; }
+    .text { font-family: sans-serif; font-size: 16px; text-anchor: middle; }
+    .title { font-family: sans-serif; font-size: 24px; text-anchor: middle; font-weight: bold; }
+    .subtitle { font-family: sans-serif; font-size: 18px; text-anchor: middle; font-weight: bold; }
+  </style>
+
+  <text x="300" y="50" class="title">학습을 위한 추천 자료</text>
+
+  <!-- Box 1 -->
+  <rect x="50" y="100" width="250" height="100" rx="10" class="box"/>
+  <text x="175" y="130" class="subtitle">무료 온라인 학습</text>
+  <text x="175" y="165" class="text">- 생활코딩</text>
+  <text x="175" y="185" class="text">- Kaggle</text>
+
+  <!-- Box 2 -->
+  <rect x="350" y="100" width="250" height="100" rx="10" class="box"/>
+  <text x="475" y="130" class="subtitle">유료 온라인 강의</text>
+  <text x="475" y="165" class="text">- 인프런</text>
+  <text x="475" y="185" class="text">- Class101</text>
+
+  <!-- Box 3 -->
+  <rect x="50" y="220" width="550" height="100" rx="10" class="box"/>
+  <text x="325" y="250" class="subtitle">추천 도서</text>
+  <text x="325" y="285" class="text">'혼자 공부하는 파이썬', 'Do it! 데이터 분석을 위한 판다스 입문' 등</text>
+
+</svg>

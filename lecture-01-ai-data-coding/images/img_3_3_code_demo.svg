@@ -1,0 +1,26 @@
+<svg width="600" height="400" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    .box { fill: #2b3e50; stroke: #ccc; stroke-width: 1; }
+    .code { font-family: monospace; font-size: 16px; fill: #f8f8f2; }
+    .comment { fill: #8c9ea9; }
+  </style>
+
+  <rect x="1" y="1" width="598" height="398" rx="10" class="box"/>
+
+  <text x="30" y="50" class="code">
+    <tspan x="30" dy="1.2em"><tspan class="comment"># 1. 데이터 준비</tspan></tspan>
+    <tspan x="30" dy="1.2em">coffee_sales = [15, 20, 18, 25, 30, 28, 22]</tspan>
+    <tspan x="30" dy="1.2em"></tspan>
+    <tspan x="30" dy="1.2em"><tspan class="comment"># 2. 총합 계산을 위한 변수 생성</tspan></tspan>
+    <tspan x="30" dy="1.2em">total = 0</tspan>
+    <tspan x="30" dy="1.2em"></tspan>
+    <tspan x="30" dy="1.2em"><tspan class="comment"># 3. 반복문으로 하나씩 더하기</tspan></tspan>
+    <tspan x="30" dy="1.2em">for sales in coffee_sales:</tspan>
+    <tspan x="60" dy="1.2em">total = total + sales</tspan>
+    <tspan x="30" dy="1.2em"></tspan>
+    <tspan x="30" dy="1.2em"><tspan class="comment"># 4. 평균 계산하고 출력하기</tspan></tspan>
+    <tspan x="30" dy="1.2em">average = total / 7</tspan>
+    <tspan x="30" dy="1.2em">print("일주일 평균 판매량:", average)</tspan>
+  </text>
+
+</svg>
