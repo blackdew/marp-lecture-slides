@@ -1,0 +1,28 @@
+<svg width="800" height="300" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    .box { fill: #f9f9f9; stroke: #333; stroke-width: 2; }
+    .arrow { stroke: #333; stroke-width: 2; marker-end: url(#arrowhead); }
+    .text { font-family: sans-serif; font-size: 18px; text-anchor: middle; }
+    .prompt-text { font-family: monospace; font-size: 16px; text-anchor: middle; fill: #c7254e; }
+  </style>
+  <defs>
+    <marker id="arrowhead" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#333" />
+    </marker>
+  </defs>
+
+  <!-- Box 1: Problem -->
+  <rect x="50" y="100" width="300" height="100" rx="10" class="box" stroke-dasharray="5,5" stroke-width="3" stroke="#c00"/>
+  <text x="200" y="145" class="text">문제 발견 (사용자)</text>
+  <text x="200" y="175" class="prompt-text">"할일이 안보이네?"</text>
+
+  <!-- Arrow -->
+  <line x1="360" y1="150" x2="440" y2="150" class="arrow" />
+
+  <!-- Box 2: AI Fix -->
+  <rect x="450" y="100" width="300" height="100" rx="10" class="box" fill="#e3f2fd"/>
+  <text x="600" y="135" class="text">즉시 분석 및 수정 (AI)</text>
+  <text x="600" y="160" class="text" font-size="14">- 원인 분석 (DB 쿼리 오류)</text>
+  <text x="600" y="185" class="text" font-size="14">- 해결 코드 자동 작성</text>
+
+</svg>

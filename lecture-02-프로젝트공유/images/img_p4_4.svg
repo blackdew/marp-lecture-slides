@@ -1,0 +1,30 @@
+<svg width="800" height="300" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    .box { fill: #f9f9f9; stroke: #333; stroke-width: 2; }
+    .arrow { stroke: #333; stroke-width: 2; marker-end: url(#arrowhead); }
+    .text { font-family: sans-serif; font-size: 16px; text-anchor: middle; }
+  </style>
+  <defs>
+    <marker id="arrowhead" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#333" />
+    </marker>
+  </defs>
+
+  <!-- Input -->
+  <rect x="50" y="100" width="200" height="120" rx="10" class="box"/>
+  <text x="150" y="145" class="text" font-weight="bold">인간</text>
+  <text x="150" y="175" class="text">(최종 목표 설정)</text>
+  <line x1="250" y1="160" x2="290" y2="160" class="arrow" />
+
+  <!-- AI Agent -->
+  <rect x="300" y="100" width="200" height="120" rx="10" class="box" fill="#e3f2fd"/>
+  <text x="400" y="145" class="text" font-weight="bold">AI Agent</text>
+  <text x="400" y="175" class="text">(자율적 중간 과정 수행)</text>
+  <line x1="500" y1="160" x2="540" y2="160" class="arrow" />
+
+  <!-- Output -->
+  <rect x="550" y="100" width="200" height="120" rx="10" class="box"/>
+  <text x="650" y="145" class="text" font-weight="bold">인간</text>
+  <text x="650" y="175" class="text">(최종 판단 및 의사결정)</text>
+
+</svg>

@@ -1,0 +1,25 @@
+<svg width="800" height="300" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    .box { fill: #f9f9f9; stroke: #333; stroke-width: 2; }
+    .text { font-family: sans-serif; font-size: 16px; text-anchor: middle; }
+    .title { font-family: sans-serif; font-size: 24px; text-anchor: middle; font-weight: bold; }
+  </style>
+
+  <text x="400" y="40" class="title">Codex 프로젝트 교훈</text>
+
+  <!-- Box 1 -->
+  <rect x="50" y="100" width="200" height="120" rx="10" class="box"/>
+  <text x="150" y="145" class="text" font-weight="bold">창의성 + 규칙</text>
+  <text x="150" y="175" class="text">(인간과 AI의 역할 분담)</text>
+
+  <!-- Box 2 -->
+  <rect x="300" y="100" width="200" height="120" rx="10" class="box"/>
+  <text x="400" y="145" class="text" font-weight="bold">'하지 않을 일'의 명시</text>
+  <text x="400" y="175" class="text">(Exclude 규칙의 힘)</text>
+
+  <!-- Box 3 -->
+  <rect x="550" y="100" width="200" height="120" rx="10" class="box"/>
+  <text x="650" y="145" class="text" font-weight="bold">파이프라인 = 자산</text>
+  <text x="650" y="175" class="text">(재현 가능한 워크플로우)</text>
+
+</svg>

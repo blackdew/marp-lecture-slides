@@ -1,0 +1,25 @@
+<svg width="800" height="300" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    .box { fill: #f9f9f9; stroke: #333; stroke-width: 2; }
+    .text { font-family: sans-serif; font-size: 16px; text-anchor: middle; }
+    .title { font-family: sans-serif; font-size: 24px; text-anchor: middle; font-weight: bold; }
+  </style>
+
+  <text x="400" y="40" class="title">Claude 프로젝트 교훈</text>
+
+  <!-- Box 1 -->
+  <rect x="50" y="100" width="200" height="120" rx="10" class="box"/>
+  <text x="150" y="145" class="text" font-weight="bold">문서 기반 소통</text>
+  <text x="150" y="175" class="text">(Docs as SSOT)</text>
+
+  <!-- Box 2 -->
+  <rect x="300" y="100" width="200" height="120" rx="10" class="box"/>
+  <text x="400" y="145" class="text" font-weight="bold">자연어의 힘</text>
+  <text x="400" y="175" class="text">(목표 중심 서술)</text>
+
+  <!-- Box 3 -->
+  <rect x="550" y="100" width="200" height="120" rx="10" class="box"/>
+  <text x="650" y="145" class="text" font-weight="bold">신뢰와 위임</text>
+  <text x="650" y="175" class="text">(구현은 AI에게)</text>
+
+</svg>

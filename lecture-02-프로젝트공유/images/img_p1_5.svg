@@ -1,0 +1,22 @@
+<svg width="800" height="300" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    .box { fill: #f9f9f9; stroke: #333; stroke-width: 2; }
+    .text { font-family: sans-serif; font-size: 18px; text-anchor: middle; }
+    .title { font-family: sans-serif; font-size: 24px; text-anchor: middle; font-weight: bold; }
+  </style>
+
+  <text x="400" y="40" class="title">인간-AI 협업 모델</text>
+
+  <!-- Box 1: Human -->
+  <rect x="50" y="100" width="300" height="120" rx="10" class="box"/>
+  <text x="200" y="140" class="text" font-weight="bold">인간의 역할</text>
+  <text x="200" y="180" class="text">- 명확한 비전 제시</text>
+  <text x="200" y="200" class="text">- 날카로운 피드백</text>
+
+  <!-- Box 2: AI -->
+  <rect x="450" y="100" width="300" height="120" rx="10" class="box" fill="#e3f2fd"/>
+  <text x="600" y="140" class="text" font-weight="bold">AI의 역할</text>
+  <text x="600" y="180" class="text">- 빠른 실행 및 구체화</text>
+  <text x="600" y="200" class="text">- 반복적인 수정 및 관리</text>
+
+</svg>

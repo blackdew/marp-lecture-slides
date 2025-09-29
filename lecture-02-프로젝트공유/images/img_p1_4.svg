@@ -1,0 +1,28 @@
+<svg width="800" height="300" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    .box { fill: #f9f9f9; stroke: #333; stroke-width: 2; }
+    .arrow { stroke: #c00; stroke-width: 2.5; marker-end: url(#arrowhead); }
+    .text { font-family: sans-serif; font-size: 18px; text-anchor: middle; }
+    .feedback-text { font-family: sans-serif; font-size: 16px; text-anchor: middle; fill: #c00; font-weight: bold; }
+  </style>
+  <defs>
+    <marker id="arrowhead" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#c00" />
+    </marker>
+  </defs>
+
+  <!-- Box 1: Initial Idea -->
+  <rect x="50" y="100" width="300" height="100" rx="10" class="box"/>
+  <text x="200" y="145" class="text">초기 결과물</text>
+  <text x="200" y="170" class="text">(텍스트 플레이스홀더)</text>
+
+  <!-- Arrow -->
+  <line x1="360" y1="150" x2="440" y2="150" class="arrow" />
+  <text x="400" y="130" class="feedback-text">사용자 피드백</text>
+
+  <!-- Box 2: Improved Idea -->
+  <rect x="450" y="100" width="300" height="100" rx="10" class="box" fill="#fffbe6"/>
+  <text x="600" y="145" class="text">최종 결과물</text>
+  <text x="600" y="170" class="text">('박스+텍스트' SVG 다이어그램)</text>
+
+</svg>

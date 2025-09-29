@@ -1,0 +1,28 @@
+<svg width="800" height="300" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    .box { fill: #f9f9f9; stroke: #333; stroke-width: 2; }
+    .arrow { stroke: #333; stroke-width: 2; marker-end: url(#arrowhead); }
+    .text { font-family: sans-serif; font-size: 18px; text-anchor: middle; }
+    .code { font-family: monospace; font-size: 16px; text-anchor: middle; fill: #c7254e; }
+  </style>
+  <defs>
+    <marker id="arrowhead" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#333" />
+    </marker>
+  </defs>
+
+  <!-- Box 1: Input -->
+  <rect x="50" y="100" width="300" height="100" rx="10" class="box"/>
+  <text x="200" y="145" class="text">스타일 프롬프트 (초안)</text>
+  <text x="200" y="175" class="code">epic, dramatic, choir...</text>
+
+  <!-- Arrow -->
+  <line x1="360" y1="150" x2="440" y2="150" class="arrow" />
+  <text x="400" y="130" class="text">AI 필터링</text>
+
+  <!-- Box 2: Filter -->
+  <rect x="450" y="100" width="300" height="100" rx="10" class="box" fill="#fff0f0" stroke="#c00"/>
+  <text x="600" y="145" class="text" font-weight="bold">Exclude 규칙</text>
+  <text x="600" y="175" class="code">"choir", "epic" 제외</text>
+
+</svg>

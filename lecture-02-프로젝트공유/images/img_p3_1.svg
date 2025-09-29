@@ -1,0 +1,33 @@
+<svg width="800" height="300" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    .box { fill: #f9f9f9; stroke: #333; stroke-width: 2; }
+    .text { font-family: sans-serif; font-size: 18px; text-anchor: middle; }
+    .op { font-family: sans-serif; font-size: 40px; text-anchor: middle; }
+    .arrow { stroke: #333; stroke-width: 2; marker-end: url(#arrowhead); }
+  </style>
+  <defs>
+    <marker id="arrowhead" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#333" />
+    </marker>
+  </defs>
+
+  <!-- Box 1: Creativity -->
+  <rect x="50" y="100" width="200" height="100" rx="10" class="box"/>
+  <text x="150" y="155" class="text">인간의 창의성</text>
+
+  <!-- Plus -->
+  <text x="290" y="165" class="op">+</text>
+
+  <!-- Box 2: Automation -->
+  <rect x="330" y="100" width="200" height="100" rx="10" class="box" fill="#e3f2fd"/>
+  <text x="430" y="155" class="text">AI의 자동화</text>
+
+  <!-- Arrow -->
+  <line x1="540" y1="150" x2="580" y2="150" class="arrow" />
+
+  <!-- Box 3: Result -->
+  <rect x="590" y="100" width="200" height="100" rx="10" class="box" fill="#fffbe6"/>
+  <text x="690" y="145" class="text">일관된 품질</text>
+  <text x="690" y="170" class="text">+ 빠른 제작</text>
+
+</svg>
