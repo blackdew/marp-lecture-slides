@@ -2,8 +2,8 @@
   <style>
     .box { fill: #f9f9f9; stroke: #333; stroke-width: 2; }
     .arrow { stroke: #333; stroke-width: 2; marker-end: url(#arrowhead); }
-    .text { font-family: sans-serif; font-size: 18px; text-anchor: middle; }
-    .prompt-text { font-family: monospace; font-size: 16px; text-anchor: middle; fill: #c7254e; }
+    .text { font-family: sans-serif; font-size: 16px; text-anchor: middle; }
+    .prompt-text { font-family: monospace; font-size: 14px; text-anchor: middle; fill: #c7254e; }
   </style>
   <defs>
     <marker id="arrowhead" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
@@ -22,7 +22,7 @@
   <!-- Box 2: AI Fix -->
   <rect x="450" y="100" width="300" height="100" rx="10" class="box" fill="#e3f2fd"/>
   <text x="600" y="135" class="text">즉시 분석 및 수정 (AI)</text>
-  <text x="600" y="160" class="text" font-size="14">- 원인 분석 (DB 쿼리 오류)</text>
-  <text x="600" y="185" class="text" font-size="14">- 해결 코드 자동 작성</text>
+  <text x="600" y="160" class="text" font-size="12">- 원인 분석 (DB 쿼리 오류)</text>
+  <text x="600" y="185" class="text" font-size="12">- 해결 코드 자동 작성</text>
 
 </svg>
