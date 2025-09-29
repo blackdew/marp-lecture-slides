@@ -1,0 +1,32 @@
+<svg width="800" height="400" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    .box { fill: #f0fff0; stroke: #090; stroke-width: 2; }
+    .text { font-family: sans-serif; font-size: 14px; text-anchor: middle; }
+    .title { font-family: sans-serif; font-size: 24px; text-anchor: middle; font-weight: bold; }
+    .subtitle { font-family: sans-serif; font-size: 18px; text-anchor: middle; font-weight: bold; }
+  </style>
+
+  <text x="400" y="40" class="title">데이터/코딩을 아는 사람들의 비밀 무기</text>
+
+  <!-- Box 1: Decision Making -->
+  <rect x="50" y="100" width="200" height="200" rx="10" class="box"/>
+  <text x="150" y="130" class="subtitle">데이터 기반 의사결정</text>
+  <text x="150" y="180" class="text">'감'이 아닌 '숫자'로</text>
+  <text x="150" y="200" class="text">성과를 증명하고</text>
+  <text x="150" y="240" font-size="20px" fill="#090" font-weight="bold">이득</text>
+
+  <!-- Box 2: Automation -->
+  <rect x="300" y="100" width="200" height="200" rx="10" class="box"/>
+  <text x="400" y="130" class="subtitle">반복 업무 자동화</text>
+  <text x="400" y="180" class="text">10줄 코드로</text>
+  <text x="400" y="200" class="text">100시간을 아끼는</text>
+  <text x="400" y="240" font-size="20px" fill="#090" font-weight="bold">이득</text>
+
+  <!-- Box 3: Communication -->
+  <rect x="550" y="100" width="200" height="200" rx="10" class="box"/>
+  <text x="650" y="130" class="subtitle">논리적인 의견 제시</text>
+  <text x="650" y="180" class="text">데이터로 무장하여</text>
+  <text x="650" y="200" class="text">자신의 가치를 높이는</text>
+  <text x="650" y="240" font-size="20px" fill="#090" font-weight="bold">이득</text>
+
+</svg>
