@@ -1,4 +1,4 @@
-<svg width="600" height="400" xmlns="http://www.w3.org/2000/svg">
+<svg width="700" height="450" xmlns="http://www.w3.org/2000/svg">
   <style>
     .text { font-family: sans-serif; font-size: 16px; }
     .title { font-family: sans-serif; font-size: 24px; text-anchor: middle; font-weight: bold; }
@@ -6,7 +6,7 @@
     .highlight-col { fill: #fffbe6; }
   </style>
 
-  <text x="300" y="40" class="title">흔적을 담는 그릇, 표(Table)</text>
+  <text x="350" y="40" class="title">흔적을 담는 그릇, 표(Table)</text>
 
   <!-- Table structure -->
   <rect x="50" y="80" width="500" height="280" fill="none" stroke="#333" stroke-width="2"/>
@@ -20,8 +20,8 @@
 
   <!-- Highlight Row -->
   <rect x="51" y="181" width="498" height="49" class="highlight-row"/>
-  <text x="560" y="210" class="text" font-weight="bold">행 (Row)</text>
-  <text x="560" y="230" class="text">하나의 데이터</text>
+  <text x="625" y="210" class="text" text-anchor="middle" font-weight="bold">행 (Row)</text>
+  <text x="625" y="230" class="text" text-anchor="middle">하나의 데이터</text>
 
   <!-- Highlight Column -->
   <rect x="51" y="81" width="99" height="278" class="highlight-col"/>
