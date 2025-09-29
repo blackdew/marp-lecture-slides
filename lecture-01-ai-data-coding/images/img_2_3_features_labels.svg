@@ -1,0 +1,48 @@
+<svg width="600" height="400" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    .text { font-family: sans-serif; font-size: 16px; }
+    .title { font-family: sans-serif; font-size: 24px; text-anchor: middle; font-weight: bold; }
+    .feature-box { fill: #e3f2fd; }
+    .label-box { fill: #fffbe6; }
+  </style>
+
+  <text x="300" y="40" class="title">흔적을 읽는 언어: 특징과 라벨</text>
+
+  <!-- Table structure -->
+  <rect x="50" y="80" width="500" height="280" fill="none" stroke="#333" stroke-width="2"/>
+  <line x1="50" y1="130" x2="550" y2="130" stroke="#333" stroke-width="1"/>
+  <line x1="50" y1="180" x2="550" y2="180" stroke="#ccc" stroke-width="1"/>
+  <line x1="50" y1="230" x2="550" y2="230" stroke="#ccc" stroke-width="1"/>
+  <line x1="50" y1="280" x2="550" y2="280" stroke="#ccc" stroke-width="1"/>
+  <line x1="150" y1="80" x2="150" y2="360" stroke="#ccc" stroke-width="1"/>
+  <line x1="300" y1="80" x2="300" y2="360" stroke="#ccc" stroke-width="1"/>
+  <line x1="425" y1="80" x2="425" y2="360" stroke="#333" stroke-width="1"/>
+
+  <!-- Highlight Features -->
+  <rect x="51" y="81" width="373" height="278" class="feature-box"/>
+  <text x="237" y="385" class="text" text-anchor="middle" font-weight="bold">특징 (Features)</text>
+  <text x="237" y="405" class="text" text-anchor="middle">예측에 사용하는 '문제'</text>
+
+  <!-- Highlight Label -->
+  <rect x="426" y="81" width="123" height="278" class="label-box"/>
+  <text x="487" y="385" class="text" text-anchor="middle" font-weight="bold">라벨 (Label)</text>
+  <text x="487" y="405" class="text" text-anchor="middle">예측하려는 '정답'</text>
+
+  <!-- Headers -->
+  <text x="100" y="110" class="text" text-anchor="middle" font-weight="bold">평수</text>
+  <text x="225" y="110" class="text" text-anchor="middle" font-weight="bold">방 개수</text>
+  <text x="362" y="110" class="text" text-anchor="middle" font-weight="bold">지하철역</text>
+  <text x="487" y="110" class="text" text-anchor="middle" font-weight="bold">가격</text>
+
+  <!-- Data -->
+  <text x="100" y="160" class="text" text-anchor="middle">32평</text>
+  <text x="225" y="160" class="text" text-anchor="middle">3개</text>
+  <text x="362" y="160" class="text" text-anchor="middle">있음</text>
+  <text x="487" y="160" class="text" text-anchor="middle">10억</text>
+
+  <text x="100" y="210" class="text" text-anchor="middle">24평</text>
+  <text x="225" y="210" class="text" text-anchor="middle">2개</text>
+  <text x="362" y="210" class="text" text-anchor="middle">없음</text>
+  <text x="487" y="210" class="text" text-anchor="middle">7억</text>
+
+</svg>

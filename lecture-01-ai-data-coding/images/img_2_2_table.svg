@@ -1,0 +1,48 @@
+<svg width="600" height="400" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    .text { font-family: sans-serif; font-size: 16px; }
+    .title { font-family: sans-serif; font-size: 24px; text-anchor: middle; font-weight: bold; }
+    .highlight-row { fill: #e3f2fd; }
+    .highlight-col { fill: #fffbe6; }
+  </style>
+
+  <text x="300" y="40" class="title">흔적을 담는 그릇, 표(Table)</text>
+
+  <!-- Table structure -->
+  <rect x="50" y="80" width="500" height="280" fill="none" stroke="#333" stroke-width="2"/>
+  <line x1="50" y1="130" x2="550" y2="130" stroke="#333" stroke-width="1"/>
+  <line x1="50" y1="180" x2="550" y2="180" stroke="#ccc" stroke-width="1"/>
+  <line x1="50" y1="230" x2="550" y2="230" stroke="#ccc" stroke-width="1"/>
+  <line x1="50" y1="280" x2="550" y2="280" stroke="#ccc" stroke-width="1"/>
+  <line x1="150" y1="80" x2="150" y2="360" stroke="#333" stroke-width="1"/>
+  <line x1="300" y1="80" x2="300" y2="360" stroke="#ccc" stroke-width="1"/>
+  <line x1="425" y1="80" x2="425" y2="360" stroke="#ccc" stroke-width="1"/>
+
+  <!-- Highlight Row -->
+  <rect x="51" y="181" width="498" height="49" class="highlight-row"/>
+  <text x="560" y="210" class="text" font-weight="bold">행 (Row)</text>
+  <text x="560" y="230" class="text">하나의 데이터</text>
+
+  <!-- Highlight Column -->
+  <rect x="51" y="81" width="99" height="278" class="highlight-col"/>
+  <text x="100" y="385" class="text" text-anchor="middle" font-weight="bold">열 (Column)</text>
+  <text x="100" y="405" class="text" text-anchor="middle">하나의 속성</text>
+
+  <!-- Headers -->
+  <text x="100" y="110" class="text" text-anchor="middle" font-weight="bold">이름</text>
+  <text x="225" y="110" class="text" text-anchor="middle" font-weight="bold">나이</text>
+  <text x="362" y="110" class="text" text-anchor="middle" font-weight="bold">도시</text>
+  <text x="487" y="110" class="text" text-anchor="middle" font-weight="bold">가입일</text>
+
+  <!-- Data -->
+  <text x="100" y="160" class="text" text-anchor="middle">김민준</text>
+  <text x="225" y="160" class="text" text-anchor="middle">28</text>
+  <text x="362" y="160" class="text" text-anchor="middle">서울</text>
+  <text x="487" y="160" class="text" text-anchor="middle">2023-01-15</text>
+
+  <text x="100" y="210" class="text" text-anchor="middle">이서연</text>
+  <text x="225" y="210" class="text" text-anchor="middle">34</text>
+  <text x="362" y="210" class="text" text-anchor="middle">부산</text>
+  <text x="487" y="210" class="text" text-anchor="middle">2023-02-11</text>
+
+</svg>

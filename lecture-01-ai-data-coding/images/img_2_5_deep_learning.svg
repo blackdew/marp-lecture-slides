@@ -1,0 +1,41 @@
+<svg width="800" height="400" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    .box { fill: #f9f9f9; stroke: #333; stroke-width: 2; }
+    .dl-box { fill: #2b3e50; stroke: #ccc; stroke-width: 2; }
+    .arrow { stroke: #333; stroke-width: 2; marker-end: url(#arrowhead); }
+    .text { font-family: sans-serif; font-size: 16px; text-anchor: middle; }
+    .title { font-family: sans-serif; font-size: 24px; text-anchor: middle; font-weight: bold; }
+  </style>
+  <defs>
+    <marker id="arrowhead" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#333" />
+    </marker>
+  </defs>
+
+  <text x="400" y="40" class="title">비정형 데이터와 딥러닝의 등장</text>
+
+  <!-- Unstructured Data -->
+  <rect x="50" y="100" width="200" height="200" rx="10" class="box"/>
+  <text x="150" y="150" font-size="60">😺</text>
+  <text x="150" y="240" class="text" font-weight="bold">비정형 데이터</text>
+  <text x="150" y="260" class="text">(고양이 사진)</text>
+
+  <!-- Arrow 1 -->
+  <line x1="260" y1="200" x2="310" y2="200" class="arrow" />
+
+  <!-- Deep Learning Box -->
+  <rect x="320" y="150" width="160" height="100" rx="10" class="dl-box"/>
+  <text x="400" y="205" class="text" fill="#f8f8f2" font-weight="bold">딥러닝</text>
+
+  <!-- Arrow 2 -->
+  <line x1="490" y1="200" x2="540" y2="200" class="arrow" />
+
+  <!-- Structured Data -->
+  <rect x="550" y="100" width="200" height="200" rx="10" class="box"/>
+  <text x="650" y="130" class="text" font-weight="bold">정형 데이터 (특징)</text>
+  <text x="650" y="170" class="text" text-anchor="start">- 귀는 뾰족한가? Yes</text>
+  <text x="650" y="200" class="text" text-anchor="start">- 수염이 있는가? Yes</text>
+  <text x="650" y="230" class="text" text-anchor="start">- 털 색은? Brown</text>
+  <text x="650" y="260" class="text" text-anchor="start">- ...</text>
+
+</svg>

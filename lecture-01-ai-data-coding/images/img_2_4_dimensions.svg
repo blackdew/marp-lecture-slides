@@ -1,0 +1,23 @@
+<svg width="600" height="400" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    .box { fill: #f9f9f9; stroke: #333; stroke-width: 2; }
+    .text { font-family: sans-serif; font-size: 16px; text-anchor: middle; }
+    .title { font-family: sans-serif; font-size: 24px; text-anchor: middle; font-weight: bold; }
+  </style>
+
+  <text x="300" y="40" class="title">흔적의 복잡성: 차원</text>
+
+  <!-- Box 1: Low Dimension -->
+  <rect x="50" y="100" width="250" height="200" rx="10" class="box"/>
+  <text x="175" y="140" class="text" font-weight="bold">저차원 데이터</text>
+  <text x="175" y="170" class="text">(특징 2개)</text>
+  <text x="175" y="220" class="text">키, 몸무게</text>
+
+  <!-- Box 2: High Dimension -->
+  <rect x="350" y="100" width="250" height="200" rx="10" class="box"/>
+  <text x="475" y="140" class="text" font-weight="bold">고차원 데이터</text>
+  <text x="475" y="170" class="text">(특징 1000+개)</text>
+  <text x="475" y="220" class="text">얼굴 사진 픽셀,</text>
+  <text x="475" y="250" class="text">자동차 센서 값 등</text>
+
+</svg>

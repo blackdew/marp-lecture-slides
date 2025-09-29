@@ -39,32 +39,47 @@ size: 16:9
 
 ---
 
-# **2부: 데이터와 친해지기**
+# **2부: 데이터의 언어 배우기**
 
 ---
 
-## 데이터의 두 얼굴: 정형 vs 비정형
+## 데이터란 무엇인가? - "데이터는 흔적이다"
 
-- **정형 데이터:** 표처럼 깔끔하게 정리된 데이터
-- **비정형 데이터:** 글, 사진, 동영상처럼 형태가 없는 데이터
+- 우리가 디지털 세상에서 하는 모든 행동은 '흔적'을 남깁니다. 이 흔적이 바로 데이터입니다.
 
-![Data Types](./images/img_2_1_data_types.svg)
-
----
-
-## 우리 주변에 숨어있는 데이터들
-
-- 우리는 매 순간 데이터를 만들고 소비하는 '데이터 생활자'입니다.
-
-![Data in a Morning Routine](./images/img_2_2_morning_routine.svg)
+![Footprints to Data](./images/img_2_1_footprints.svg)
 
 ---
 
-## 데이터, 왜 중요할까?
+## 흔적을 담는 그릇 - 표(Table)로 세상 보기
 
-- 데이터 속에 숨겨진 '패턴'을 발견하여, 더 나은 '의사결정'을 할 수 있습니다.
+- 이 수많은 흔적(데이터)을 가장 기본적으로 담는 그릇이 바로 '표'입니다.
 
-![Data -> Insight -> Decision](./images/img_2_3_process.svg)
+![Table Structure](./images/img_2_2_table.svg)
+
+---
+
+## 흔적을 읽는 언어 - 특징과 라벨
+
+- 우리는 '특징'이라는 흔적들을 보고 '라벨'이라는 결과를 예측하고 싶어 합니다.
+
+![Features and Labels](./images/img_2_3_features_labels.svg)
+
+---
+
+## 흔적의 복잡성 - 차원과 정형 데이터
+
+- 데이터는 '차원'으로 복잡성을 표현하며, '표' 형태의 데이터가 바로 '정형 데이터'입니다.
+
+![Dimensions of Data](./images/img_2_4_dimensions.svg)
+
+---
+
+## 비정형 데이터와 딥러닝의 등장
+
+- 딥러닝은, 인간이 하기 어려웠던 '비정형 데이터의 정형화'를 자동화하여 AI의 새로운 시대를 열었습니다.
+
+![Deep Learning Process](./images/img_2_5_deep_learning.svg)
 
 ---
 
