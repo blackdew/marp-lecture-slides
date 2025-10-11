@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="600" viewBox="0 0 800 600">
+  <rect width="100%" height="100%" fill="#f0f4f8"/>
+  <g transform="translate(400, 300)">
+    <rect x="-150" y="-100" width="120" height="120" fill="#dbeeff"/>
+    <rect x="30" y="-100" width="120" height="120" fill="#dbeeff"/>
+    <rect x="-150" y="40" width="120" height="120" fill="#dbeeff"/>
+    <rect x="30" y="40" width="120" height="120" fill="#dbeeff"/>
+    <text x="-90" y="-30" font-family="sans-serif" font-size="24" text-anchor="middle" fill="#333">건강</text>
+    <text x="90" y="-30" font-family="sans-serif" font-size="24" text-anchor="middle" fill="#333">일상</text>
+    <text x="-90" y="110" font-family="sans-serif" font-size="24" text-anchor="middle" fill="#333">여가</text>
+    <text x="90" y="110" font-family="sans-serif" font-size="24" text-anchor="middle" fill="#333">소통</text>
+  </g>
+  <text x="400" y="500" font-family="sans-serif" font-size="30" text-anchor="middle" fill="#333">똑똑한 비서 활용법</text>
+</svg>

@@ -4,7 +4,7 @@ size: 16:9
 paginate: true
 ---
 
-![bg left:40%](images/img_p1_1.jpg)
+![bg left:40%](images/img_p1_1.svg)
 
 # **1강. 똑똑한 비서가 생겼어요!**
 ## AI Agent 처음 만나기
@@ -29,7 +29,7 @@ paginate: true
 
 ---
 
-![bg left:40%](images/img_p1_2.jpg)
+![bg left:40%](images/img_p1_2.svg)
 
 ## **1. 인공지능(AI)은 어려운 게 아니에요**
 
@@ -40,7 +40,7 @@ paginate: true
 
 ---
 
-![bg left:40%](images/img_p1_3.jpg)
+![bg left:40%](images/img_p1_3.svg)
 
 ## **2. AI Agent = '나의 디지털 비서'**
 
@@ -65,7 +65,7 @@ paginate: true
 
 ### **내 스마트폰 속 비서**
 
-![bg right:40%](images/img_p1_4.jpg)
+![bg right:40%](images/img_p1_4.svg)
 
 *   아이폰을 쓰신다면 **"시리야"**
 *   삼성 갤럭시폰은 **"하이 빅스비"**
@@ -77,7 +77,7 @@ paginate: true
 
 ### **우리 집 거실의 비서**
 
-![bg right:40%](images/img_p1_5.jpg)
+![bg right:40%](images/img_p1_5.svg)
 
 *   "지니야, 오늘 날씨 어때?" (**KT 기가지니**)
 *   "아리야, 신나는 노래 틀어줘" (**SKT 누구**)
@@ -89,7 +89,7 @@ paginate: true
 
 ### **컴퓨터 화면 속 비서**
 
-![bg right:40%](images/img_p1_6.jpg)
+![bg right:40%](images/img_p1_6.svg)
 
 *   은행이나 관공서 홈페이지에 들어가면,
 *   오른쪽 아래에 작은 창이 뜨면서 **"무엇을 도와드릴까요?"** 라고 물어보죠?
@@ -123,7 +123,7 @@ paginate: true
 
 ---
 
-![bg left:40%](images/img_p2_2.jpg)
+![bg left:40%](images/img_p2_2.svg)
 
 ## **1. 사람에게 부탁하듯이!**
 
@@ -159,7 +159,7 @@ AI 비서는 아직 어린 아이와 같아서, 쉽고 구체적으로 말해줘
 
 ---
 
-![bg left:40%](images/img_p2_3.jpg)
+![bg left:40%](images/img_p2_3.svg)
 
 ## **핵심 비법: 콕 집어 말하기**
 
@@ -172,9 +172,9 @@ AI 비서는 아직 어린 아이와 같아서, 쉽고 구체적으로 말해줘
 
 ---
 
-## **3. 다 함께 직접 비서를 불러봐요!**
+![bg right:40%](images/img_p2_4.svg)
 
-![bg right:40%](images/img_p2_4.jpg)
+## **3. 다 함께 직접 비서를 불러봐요!**
 
 지금 바로 스마트폰을 꺼내서 AI 비서를 불러볼까요?
 
@@ -219,7 +219,7 @@ AI 비서는 아직 어린 아이와 같아서, 쉽고 구체적으로 말해줘
 
 ---
 
-![bg left:40%](images/img_p3_1.jpg)
+![bg left:40%](images/img_p3_1.svg)
 
 # **3강. 똑똑한 비서 활용법**
 ## 이렇게 쓰면 삶이 편해져요!
@@ -239,7 +239,7 @@ AI 비서는 아직 어린 아이와 같아서, 쉽고 구체적으로 말해줘
 
 ## **1. 건강 관리 비서**
 
-![bg right:40%](images/img_p3_2.jpg)
+![bg right:40%](images/img_p3_2.svg)
 
 깜빡하기 쉬운 약 시간, 이제 걱정 마세요.
 
@@ -253,7 +253,7 @@ AI 비서는 아직 어린 아이와 같아서, 쉽고 구체적으로 말해줘
 
 ## **2. 일상 생활 비서**
 
-![bg right:40%](images/img_p3_3.jpg)
+![bg right:40%](images/img_p3_3.svg)
 
 매일 하는 일들, 이제 말로 편하게 해결하세요.
 
@@ -281,7 +281,7 @@ AI 비서는 아직 어린 아이와 같아서, 쉽고 구체적으로 말해줘
 
 ## **4. 소통과 연결 비서**
 
-![bg right:40%](images/img_p3_5.jpg)
+![bg right:40%](images/img_p3_5.svg)
 
 이제 손가락 아프게 화면을 누르지 않아도 괜찮아요.
 
@@ -314,7 +314,7 @@ AI 비서는 아직 어린 아이와 같아서, 쉽고 구체적으로 말해줘
 
 ---
 
-![bg left:40%](images/img_p4_1.jpg)
+![bg left:40%](images/img_p4_1.svg)
 
 # **4강. 안전하게 사용해요**
 ## 마무리 및 질의응답
@@ -331,7 +331,7 @@ AI 비서는 아직 어린 아이와 같아서, 쉽고 구체적으로 말해줘
 
 ## **1. 이것만은 꼭! 안전하게 사용하기**
 
-![bg right:40%](images/img_p4_2.jpg)
+![bg right:40%](images/img_p4_2.svg)
 
 비서가 똑똑해도, 중요한 비밀은 내가 지켜야 해요.
 
@@ -357,7 +357,7 @@ AI 비서는 아직 어린 아이와 같아서, 쉽고 구체적으로 말해줘
 
 ## **3. AI 비서와 더 친해지는 법**
 
-![bg right:50%](images/img_p4_3.jpg)
+![bg right:50%](images/img_p4_3.svg)
 
 *   **자주 사용해보세요:** 매일 한 번씩 말을 걸어보면 금방 익숙해져요. "오늘의 운세 알려줘" 같은 간단한 것도 좋아요.
 *   **실수해도 괜찮아요:** 말을 잘 못 알아들으면, 다시 한 번 말하면 돼요. 사람도 가끔 대화를 잘못 알아들을 때가 있잖아요?
@@ -384,7 +384,7 @@ AI 비서는 아직 어린 아이와 같아서, 쉽고 구체적으로 말해줘
 
 ---
 
-![bg](images/img_p4_4.jpg)
+![bg](images/img_p4_4.svg)
 
 # **궁금한 점이 있다면 편하게 물어보세요!**
 
