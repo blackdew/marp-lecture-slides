@@ -1,0 +1,66 @@
+<svg viewBox="0 0 800 500" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="800" height="500" fill="#f8f9fa"/>
+
+  <!-- Title -->
+  <text x="400" y="40" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="#2c3e50" text-anchor="middle">
+    docs 폴더 구조
+  </text>
+
+  <!-- Main folder -->
+  <rect x="250" y="80" width="300" height="370" fill="white" stroke="#34495e" stroke-width="2" rx="10"/>
+
+  <!-- Folder icon and label -->
+  <text x="400" y="120" font-family="Arial, sans-serif" font-size="40" text-anchor="middle">📁</text>
+  <text x="400" y="155" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="#2c3e50" text-anchor="middle">
+    docs/
+  </text>
+
+  <!-- Divider -->
+  <line x1="270" y1="170" x2="530" y2="170" stroke="#bdc3c7" stroke-width="1"/>
+
+  <!-- File 1: project-plan.md -->
+  <rect x="280" y="190" width="240" height="50" fill="#3498db" opacity="0.1" rx="5"/>
+  <text x="300" y="210" font-family="Arial, sans-serif" font-size="16" text-anchor="start">📄</text>
+  <text x="330" y="210" font-family="Arial, sans-serif" font-size="14" fill="#2c3e50" text-anchor="start" font-weight="bold">
+    project-plan.md
+  </text>
+  <text x="330" y="228" font-family="Arial, sans-serif" font-size="12" fill="#7f8c8d" text-anchor="start">
+    프로젝트 계획
+  </text>
+
+  <!-- File 2: todo.md -->
+  <rect x="280" y="255" width="240" height="50" fill="#e74c3c" opacity="0.1" rx="5"/>
+  <text x="300" y="275" font-family="Arial, sans-serif" font-size="16" text-anchor="start">☑️</text>
+  <text x="330" y="275" font-family="Arial, sans-serif" font-size="14" fill="#2c3e50" text-anchor="start" font-weight="bold">
+    todo.md
+  </text>
+  <text x="330" y="293" font-family="Arial, sans-serif" font-size="12" fill="#7f8c8d" text-anchor="start">
+    작업 목록
+  </text>
+
+  <!-- File 3: progress.md -->
+  <rect x="280" y="320" width="240" height="50" fill="#27ae60" opacity="0.1" rx="5"/>
+  <text x="300" y="340" font-family="Arial, sans-serif" font-size="16" text-anchor="start">📈</text>
+  <text x="330" y="340" font-family="Arial, sans-serif" font-size="14" fill="#2c3e50" text-anchor="start" font-weight="bold">
+    progress.md
+  </text>
+  <text x="330" y="358" font-family="Arial, sans-serif" font-size="12" fill="#7f8c8d" text-anchor="start">
+    진행 상황
+  </text>
+
+  <!-- File 4: milestones.md -->
+  <rect x="280" y="385" width="240" height="50" fill="#f39c12" opacity="0.1" rx="5"/>
+  <text x="300" y="405" font-family="Arial, sans-serif" font-size="16" text-anchor="start">🎯</text>
+  <text x="330" y="405" font-family="Arial, sans-serif" font-size="14" fill="#2c3e50" text-anchor="start" font-weight="bold">
+    milestones.md
+  </text>
+  <text x="330" y="423" font-family="Arial, sans-serif" font-size="12" fill="#7f8c8d" text-anchor="start">
+    마일스톤
+  </text>
+
+  <!-- Bottom description -->
+  <text x="400" y="475" font-family="Arial, sans-serif" font-size="14" fill="#7f8c8d" text-anchor="middle">
+    최소 3가지 문서로 프로젝트 관리
+  </text>
+</svg>
