@@ -1,70 +1,73 @@
-<svg viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg">
+<svg viewBox="0 0 600 1000" xmlns="http://www.w3.org/2000/svg">
   <!-- Background -->
-  <rect width="800" height="600" fill="#f8f9fa"/>
+  <rect width="600" height="1000" fill="#f8f9fa"/>
 
   <!-- Title -->
-  <text x="400" y="40" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="#2c3e50" text-anchor="middle">
+  <text x="300" y="60" font-family="Arial, sans-serif" font-size="28" font-weight="bold" fill="#2c3e50" text-anchor="middle">
     6단계 워크플로우
   </text>
 
   <!-- Center circle -->
-  <circle cx="400" cy="320" r="240" fill="none" stroke="#bdc3c7" stroke-width="2" stroke-dasharray="5,5"/>
+  <circle cx="300" cy="500" r="280" fill="none" stroke="#bdc3c7" stroke-width="2" stroke-dasharray="8,8"/>
 
   <!-- Step 1: Document Preparation (Top) -->
-  <circle cx="400" cy="100" r="45" fill="#3498db"/>
-  <text x="400" y="105" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="white" text-anchor="middle">1</text>
-  <text x="400" y="165" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#2c3e50" text-anchor="middle">
+  <circle cx="300" cy="150" r="55" fill="#3498db"/>
+  <text x="300" y="160" font-family="Arial, sans-serif" font-size="30" font-weight="bold" fill="white" text-anchor="middle">1</text>
+  <text x="300" y="230" font-family="Arial, sans-serif" font-size="17" font-weight="bold" fill="#2c3e50" text-anchor="middle">
     문서 준비
   </text>
-  <text x="400" y="182" font-family="Arial, sans-serif" font-size="12" fill="#7f8c8d" text-anchor="middle">
-    계획, todo 작성
+  <text x="300" y="252" font-family="Arial, sans-serif" font-size="14" fill="#7f8c8d" text-anchor="middle">
+    계획, todo
   </text>
 
   <!-- Step 2: Plan Mode (Right Top) -->
-  <circle cx="600" cy="210" r="45" fill="#9b59b6"/>
-  <text x="600" y="215" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="white" text-anchor="middle">2</text>
-  <text x="600" y="270" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#2c3e50" text-anchor="middle">
+  <circle cx="490" cy="310" r="55" fill="#9b59b6"/>
+  <text x="490" y="320" font-family="Arial, sans-serif" font-size="30" font-weight="bold" fill="white" text-anchor="middle">2</text>
+  <text x="490" y="390" font-family="Arial, sans-serif" font-size="17" font-weight="bold" fill="#2c3e50" text-anchor="middle">
     Plan 대화
   </text>
-  <text x="600" y="287" font-family="Arial, sans-serif" font-size="12" fill="#7f8c8d" text-anchor="middle">
+  <text x="490" y="412" font-family="Arial, sans-serif" font-size="14" fill="#7f8c8d" text-anchor="middle">
     충분한 논의
   </text>
 
   <!-- Step 3: Confirm Plan (Right Bottom) -->
-  <circle cx="600" cy="430" r="45" fill="#e74c3c"/>
-  <text x="600" y="435" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="white" text-anchor="middle">3</text>
-  <text x="600" y="495" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#2c3e50" text-anchor="middle">
+  <circle cx="490" cy="690" r="55" fill="#e74c3c"/>
+  <text x="490" y="700" font-family="Arial, sans-serif" font-size="30" font-weight="bold" fill="white" text-anchor="middle">3</text>
+  <text x="490" y="770" font-family="Arial, sans-serif" font-size="17" font-weight="bold" fill="#2c3e50" text-anchor="middle">
     계획 확정
   </text>
-  <text x="600" y="512" font-family="Arial, sans-serif" font-size="12" fill="#7f8c8d" text-anchor="middle">
-    accept edits on
+  <text x="490" y="792" font-family="Arial, sans-serif" font-size="14" fill="#7f8c8d" text-anchor="middle">
+    accept edits
   </text>
 
   <!-- Step 4: Execute (Bottom) -->
-  <circle cx="400" cy="540" r="45" fill="#27ae60"/>
-  <text x="400" y="545" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="white" text-anchor="middle">4</text>
-  <text x="400" y="595" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#2c3e50" text-anchor="middle">
+  <circle cx="300" cy="850" r="55" fill="#27ae60"/>
+  <text x="300" y="860" font-family="Arial, sans-serif" font-size="30" font-weight="bold" fill="white" text-anchor="middle">4</text>
+  <text x="300" y="930" font-family="Arial, sans-serif" font-size="17" font-weight="bold" fill="#2c3e50" text-anchor="middle">
     실행
+  </text>
+  <text x="300" y="952" font-family="Arial, sans-serif" font-size="14" fill="#7f8c8d" text-anchor="middle">
+    코드 작성
   </text>
 
   <!-- Step 5: Verify (Left Bottom) -->
-  <circle cx="200" cy="430" r="45" fill="#f39c12"/>
-  <text x="200" y="435" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="white" text-anchor="middle">5</text>
-  <text x="200" y="495" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#2c3e50" text-anchor="middle">
+  <circle cx="110" cy="690" r="55" fill="#f39c12"/>
+  <text x="110" y="700" font-family="Arial, sans-serif" font-size="30" font-weight="bold" fill="white" text-anchor="middle">5</text>
+  <text x="110" y="770" font-family="Arial, sans-serif" font-size="17" font-weight="bold" fill="#2c3e50" text-anchor="middle">
     확인
   </text>
-  <text x="200" y="512" font-family="Arial, sans-serif" font-size="12" fill="#7f8c8d" text-anchor="middle">
-    테스트, 검증
+  <text x="110" y="792" font-family="Arial, sans-serif" font-size="14" fill="#7f8c8d" text-anchor="middle">
+    테스트
   </text>
 
   <!-- Step 6: Update Docs (Left Top) -->
-  <circle cx="200" cy="210" r="45" fill="#1abc9c"/>
-  <text x="200" y="215" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="white" text-anchor="middle">6</text>
-  <text x="200" y="270" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#2c3e50" text-anchor="middle">
+  <circle cx="110" cy="310" r="55" fill="#1abc9c"/>
+  <text x="110" y="320" font-family="Arial, sans-serif" font-size="30" font-weight="bold" fill="white" text-anchor="middle">6</text>
+  <text x="110" y="390" font-family="Arial, sans-serif" font-size="17" font-weight="bold" fill="#2c3e50" text-anchor="middle">
     문서 업데이트
   </text>
-  <text x="200" y="287" font-family="Arial, sans-serif" font-size="12" fill="#7f8c8d" text-anchor="middle">
-    todo, progress
+  <text x="110" y="412" font-family="Arial, sans-serif" font-size="14" fill="#7f8c8d" text-anchor="middle">
+    todo 체크
   </text>
 
   <!-- Arrows -->
@@ -75,21 +78,18 @@
   </defs>
 
   <!-- Arrow paths (circular flow) -->
-  <path d="M 435 125 Q 500 145 565 185" stroke="#34495e" stroke-width="2" fill="none" marker-end="url(#arrowhead3)"/>
-  <path d="M 625 250 Q 630 340 615 390" stroke="#34495e" stroke-width="2" fill="none" marker-end="url(#arrowhead3)"/>
-  <path d="M 565 455 Q 480 515 435 520" stroke="#34495e" stroke-width="2" fill="none" marker-end="url(#arrowhead3)"/>
-  <path d="M 365 520 Q 280 515 235 455" stroke="#34495e" stroke-width="2" fill="none" marker-end="url(#arrowhead3)"/>
-  <path d="M 185 390 Q 170 340 175 250" stroke="#34495e" stroke-width="2" fill="none" marker-end="url(#arrowhead3)"/>
-  <path d="M 235 185 Q 300 145 365 125" stroke="#34495e" stroke-width="2" fill="none" marker-end="url(#arrowhead3)"/>
+  <path d="M 345 180 Q 420 220 450 275" stroke="#34495e" stroke-width="3" fill="none" marker-end="url(#arrowhead3)"/>
+  <path d="M 510 360 Q 520 520 505 640" stroke="#34495e" stroke-width="3" fill="none" marker-end="url(#arrowhead3)"/>
+  <path d="M 455 725 Q 380 780 345 820" stroke="#34495e" stroke-width="3" fill="none" marker-end="url(#arrowhead3)"/>
+  <path d="M 255 820 Q 180 780 145 725" stroke="#34495e" stroke-width="3" fill="none" marker-end="url(#arrowhead3)"/>
+  <path d="M 90 640 Q 80 520 95 360" stroke="#34495e" stroke-width="3" fill="none" marker-end="url(#arrowhead3)"/>
+  <path d="M 145 275 Q 180 220 255 180" stroke="#34495e" stroke-width="3" fill="none" marker-end="url(#arrowhead3)"/>
 
   <!-- Center text -->
-  <text x="400" y="315" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#2c3e50" text-anchor="middle">
-    순환 프로세스
+  <text x="300" y="490" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="#2c3e50" text-anchor="middle">
+    순환
   </text>
-  <text x="400" y="335" font-family="Arial, sans-serif" font-size="14" fill="#7f8c8d" text-anchor="middle">
-    계속 반복하며
-  </text>
-  <text x="400" y="352" font-family="Arial, sans-serif" font-size="14" fill="#7f8c8d" text-anchor="middle">
-    프로젝트 완성
+  <text x="300" y="515" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="#2c3e50" text-anchor="middle">
+    프로세스
   </text>
 </svg>

@@ -1,55 +1,61 @@
-<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
+<svg viewBox="0 0 600 800" xmlns="http://www.w3.org/2000/svg">
   <!-- Background -->
-  <rect width="800" height="400" fill="#f8f9fa"/>
+  <rect width="600" height="800" fill="#f8f9fa"/>
 
   <!-- Title -->
-  <text x="400" y="40" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="#2c3e50" text-anchor="middle">
-    Claude CLI 개념
+  <text x="300" y="80" font-family="Arial, sans-serif" font-size="28" font-weight="bold" fill="#2c3e50" text-anchor="middle">
+    Claude CLI
+  </text>
+  <text x="300" y="115" font-family="Arial, sans-serif" font-size="20" fill="#7f8c8d" text-anchor="middle">
+    개념
   </text>
 
   <!-- Flow boxes -->
   <!-- Box 1: User -->
-  <rect x="50" y="120" width="150" height="100" fill="#3498db" rx="10"/>
-  <text x="125" y="160" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="white" text-anchor="middle">
+  <rect x="175" y="180" width="250" height="120" fill="#3498db" rx="15"/>
+  <text x="300" y="230" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="white" text-anchor="middle">
     사용자
   </text>
-  <text x="125" y="185" font-family="Arial, sans-serif" font-size="14" fill="white" text-anchor="middle">
+  <text x="300" y="265" font-family="Arial, sans-serif" font-size="18" fill="white" text-anchor="middle">
     문서 작성
   </text>
 
   <!-- Arrow 1 -->
-  <path d="M 200 170 L 280 170" stroke="#34495e" stroke-width="3" fill="none" marker-end="url(#arrowhead)"/>
-  <text x="240" y="160" font-family="Arial, sans-serif" font-size="12" fill="#34495e" text-anchor="middle">
+  <path d="M 300 300 L 300 360" stroke="#34495e" stroke-width="4" fill="none" marker-end="url(#arrowhead)"/>
+  <text x="330" y="335" font-family="Arial, sans-serif" font-size="16" fill="#34495e">
     대화
   </text>
 
   <!-- Box 2: Claude CLI -->
-  <rect x="280" y="120" width="150" height="100" fill="#e74c3c" rx="10"/>
-  <text x="355" y="160" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="white" text-anchor="middle">
+  <rect x="175" y="360" width="250" height="120" fill="#e74c3c" rx="15"/>
+  <text x="300" y="410" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="white" text-anchor="middle">
     Claude CLI
   </text>
-  <text x="355" y="185" font-family="Arial, sans-serif" font-size="14" fill="white" text-anchor="middle">
+  <text x="300" y="445" font-family="Arial, sans-serif" font-size="18" fill="white" text-anchor="middle">
     이해 &amp; 계획
   </text>
 
   <!-- Arrow 2 -->
-  <path d="M 430 170 L 510 170" stroke="#34495e" stroke-width="3" fill="none" marker-end="url(#arrowhead)"/>
-  <text x="470" y="160" font-family="Arial, sans-serif" font-size="12" fill="#34495e" text-anchor="middle">
+  <path d="M 300 480 L 300 540" stroke="#34495e" stroke-width="4" fill="none" marker-end="url(#arrowhead)"/>
+  <text x="330" y="515" font-family="Arial, sans-serif" font-size="16" fill="#34495e">
     생성
   </text>
 
   <!-- Box 3: Project -->
-  <rect x="510" y="120" width="150" height="100" fill="#27ae60" rx="10"/>
-  <text x="585" y="160" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="white" text-anchor="middle">
+  <rect x="175" y="540" width="250" height="120" fill="#27ae60" rx="15"/>
+  <text x="300" y="590" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="white" text-anchor="middle">
     프로젝트
   </text>
-  <text x="585" y="185" font-family="Arial, sans-serif" font-size="14" fill="white" text-anchor="middle">
+  <text x="300" y="625" font-family="Arial, sans-serif" font-size="18" fill="white" text-anchor="middle">
     코드 생성
   </text>
 
   <!-- Bottom description -->
-  <text x="400" y="280" font-family="Arial, sans-serif" font-size="16" fill="#7f8c8d" text-anchor="middle">
-    문서로 소통하며 프로젝트를 만드는 AI 비서
+  <text x="300" y="720" font-family="Arial, sans-serif" font-size="16" fill="#7f8c8d" text-anchor="middle">
+    문서로 소통하며
+  </text>
+  <text x="300" y="745" font-family="Arial, sans-serif" font-size="16" fill="#7f8c8d" text-anchor="middle">
+    프로젝트를 만드는 AI 비서
   </text>
 
   <!-- Arrow marker definition -->
