@@ -5,7 +5,24 @@ size: 16:9
 paginate: true
 ---
 
-![bg left:40%](images/img_p1_1_claude_cli_concept.svg)
+<style>
+section {
+  padding: 60px 80px;
+}
+
+section.lead {
+  padding: 60px 80px;
+}
+
+/* 배경 이미지 크기와 위치 조정 */
+section > div[data-marpit-advanced-background-container] > div[data-marpit-advanced-background-direction] {
+  background-size: 35% auto !important;
+  background-position: center center !important;
+  padding: 40px !important;
+}
+</style>
+
+![bg left:35%](images/img_p1_1_claude_cli_concept.svg)
 
 # Claude CLI로 프로젝트 관리하기
 
@@ -21,7 +38,7 @@ paginate: true
 
 ---
 
-![bg left:40%](images/img_p1_1_claude_cli_concept.svg)
+![bg left:35%](images/img_p1_1_claude_cli_concept.svg)
 
 # 1강: Claude CLI 시작하기
 
@@ -79,7 +96,7 @@ my-project/
 
 ---
 
-![bg left:40%](images/img_p1_5_two_modes.svg)
+![bg left:35%](images/img_p1_5_two_modes.svg)
 
 ## Plan 모드 vs 실행 모드
 
@@ -143,7 +160,7 @@ You: 완벽해! accept edits on
 
 ---
 
-![bg left:40%](images/img_p2_3_docs_structure.svg)
+![bg left:35%](images/img_p2_3_docs_structure.svg)
 
 # 2강: 문서로 말하기
 
@@ -179,7 +196,7 @@ You: 완벽해! accept edits on
 
 ---
 
-![bg right:40%](images/img_p2_3_docs_structure.svg)
+![bg right:35%](images/img_p2_3_docs_structure.svg)
 
 ## docs 폴더: 3가지 핵심 문서
 
@@ -303,7 +320,7 @@ Claude: todo.md를 확인했습니다.
 
 ---
 
-![bg left:40%](images/img_p3_1_workflow.svg)
+![bg left:35%](images/img_p3_1_workflow.svg)
 
 # 3강: 실전 워크플로우
 

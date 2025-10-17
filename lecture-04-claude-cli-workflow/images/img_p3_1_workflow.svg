@@ -1,6 +1,6 @@
-<svg viewBox="0 0 600 1000" xmlns="http://www.w3.org/2000/svg">
+<svg viewBox="0 -80 600 1160" xmlns="http://www.w3.org/2000/svg">
   <!-- Background -->
-  <rect width="600" height="1000" fill="#f8f9fa"/>
+  <rect x="0" y="-80" width="600" height="1160" fill="#f8f9fa"/>
 
   <!-- Title -->
   <text x="300" y="60" font-family="Arial, sans-serif" font-size="28" font-weight="bold" fill="#2c3e50" text-anchor="middle">
