@@ -1,0 +1,37 @@
+<svg viewBox="0 -80 600 1160" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="novelGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#667eea"/>
+      <stop offset="100%" style="stop-color:#764ba2"/>
+    </linearGradient>
+  </defs>
+
+  <!-- 책 -->
+  <g transform="translate(300, 400)">
+    <!-- 책 페이지들 -->
+    <rect x="-80" y="-100" width="160" height="200" fill="white" stroke="#667eea" stroke-width="3" rx="5"/>
+    <line x1="-80" y1="-100" x2="-80" y2="100" stroke="#667eea" stroke-width="3"/>
+    <line x1="0" y1="-100" x2="0" y2="100" stroke="#667eea" stroke-width="1" stroke-dasharray="5,5"/>
+
+    <!-- 페이지 라인들 -->
+    <line x1="-60" y1="-70" x2="60" y2="-70" stroke="#764ba2" stroke-width="1" opacity="0.5"/>
+    <line x1="-60" y1="-50" x2="60" y2="-50" stroke="#764ba2" stroke-width="1" opacity="0.5"/>
+    <line x1="-60" y1="-30" x2="60" y2="-30" stroke="#764ba2" stroke-width="1" opacity="0.5"/>
+    <line x1="-60" y1="-10" x2="60" y2="-10" stroke="#764ba2" stroke-width="1" opacity="0.5"/>
+    <line x1="-60" y1="10" x2="60" y2="10" stroke="#764ba2" stroke-width="1" opacity="0.5"/>
+    <line x1="-60" y1="30" x2="60" y2="30" stroke="#764ba2" stroke-width="1" opacity="0.5"/>
+    <line x1="-60" y1="50" x2="40" y2="50" stroke="#764ba2" stroke-width="1" opacity="0.5"/>
+  </g>
+
+  <!-- 펜 -->
+  <g transform="translate(300, 650)">
+    <line x1="40" y1="-50" x2="80" y2="10" stroke="#764ba2" stroke-width="6" stroke-linecap="round"/>
+    <polygon points="80,10 85,15 75,15" fill="#2d3748"/>
+    <circle cx="60" cy="-20" r="3" fill="white" opacity="0.6"/>
+  </g>
+
+  <!-- 텍스트 -->
+  <text x="300" y="780" font-family="Arial, sans-serif" font-size="28" fill="#667eea" text-anchor="middle" font-weight="bold">
+    소설 집필
+  </text>
+</svg>

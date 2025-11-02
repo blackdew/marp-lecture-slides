@@ -1,0 +1,46 @@
+<svg viewBox="0 -80 600 1160" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="personalGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#a8edea"/>
+      <stop offset="100%" style="stop-color:#fed6e3"/>
+    </linearGradient>
+  </defs>
+
+  <!-- 폴더들 -->
+  <g transform="translate(300, 350)">
+    <!-- 폴더 1 -->
+    <path d="M -80,-60 L -60,-80 L -20,-80 L 0,-60 L 0,-20 L -80,-20 Z" fill="#a8edea" stroke="#5dc9bd" stroke-width="2"/>
+    <rect x="-80" y="-60" width="80" height="40" fill="#a8edea" opacity="0.8" stroke="#5dc9bd" stroke-width="2" rx="3"/>
+
+    <!-- 폴더 2 -->
+    <path d="M 0,-40 L 20,-60 L 60,-60 L 80,-40 L 80,0 L 0,0 Z" fill="#fed6e3" stroke="#f78da7" stroke-width="2"/>
+    <rect x="0" y="-40" width="80" height="40" fill="#fed6e3" opacity="0.8" stroke="#f78da7" stroke-width="2" rx="3"/>
+
+    <!-- 폴더 3 -->
+    <path d="M -80,10 L -60,-10 L -20,-10 L 0,10 L 0,50 L -80,50 Z" fill="#a8edea" stroke="#5dc9bd" stroke-width="2"/>
+    <rect x="-80" y="10" width="80" height="40" fill="#a8edea" opacity="0.8" stroke="#5dc9bd" stroke-width="2" rx="3"/>
+
+    <!-- 문서 아이콘들 (폴더 안) -->
+    <rect x="-65" y="-50" width="30" height="20" fill="white" stroke="#5dc9bd" stroke-width="1" rx="2"/>
+    <line x1="-60" y1="-43" x2="-40" y2="-43" stroke="#5dc9bd" stroke-width="1" opacity="0.5"/>
+    <line x1="-60" y1="-37" x2="-40" y2="-37" stroke="#5dc9bd" stroke-width="1" opacity="0.5"/>
+  </g>
+
+  <!-- 연결 네트워크 (지식 연결) -->
+  <g transform="translate(300, 580)" opacity="0.6">
+    <circle cx="-30" cy="-20" r="8" fill="#5dc9bd"/>
+    <circle cx="30" cy="-20" r="8" fill="#f78da7"/>
+    <circle cx="0" cy="20" r="8" fill="#5dc9bd"/>
+    <circle cx="-30" cy="50" r="8" fill="#f78da7"/>
+
+    <line x1="-30" y1="-20" x2="30" y2="-20" stroke="#5dc9bd" stroke-width="2"/>
+    <line x1="-30" y1="-20" x2="0" y2="20" stroke="#5dc9bd" stroke-width="2"/>
+    <line x1="30" y1="-20" x2="0" y2="20" stroke="#f78da7" stroke-width="2"/>
+    <line x1="0" y1="20" x2="-30" y2="50" stroke="#5dc9bd" stroke-width="2"/>
+  </g>
+
+  <!-- 텍스트 -->
+  <text x="300" y="750" font-family="Arial, sans-serif" font-size="28" fill="#5dc9bd" text-anchor="middle" font-weight="bold">
+    개인 문서
+  </text>
+</svg>

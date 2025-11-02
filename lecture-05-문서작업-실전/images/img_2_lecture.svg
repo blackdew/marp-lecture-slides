@@ -1,0 +1,43 @@
+<svg viewBox="0 -80 600 1160" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="lectureGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#f093fb"/>
+      <stop offset="100%" style="stop-color:#f5576c"/>
+    </linearGradient>
+  </defs>
+
+  <!-- 프레젠테이션 화면 -->
+  <g transform="translate(300, 350)">
+    <!-- 화면 -->
+    <rect x="-100" y="-80" width="200" height="140" fill="white" stroke="#f5576c" stroke-width="3" rx="5"/>
+
+    <!-- 슬라이드 내용 (제목) -->
+    <rect x="-80" y="-60" width="160" height="12" fill="#f093fb" opacity="0.7" rx="2"/>
+
+    <!-- 슬라이드 내용 (불릿) -->
+    <circle cx="-70" cy="-30" r="3" fill="#f5576c"/>
+    <rect x="-60" y="-33" width="100" height="6" fill="#f5576c" opacity="0.5" rx="1"/>
+
+    <circle cx="-70" cy="-10" r="3" fill="#f5576c"/>
+    <rect x="-60" y="-13" width="120" height="6" fill="#f5576c" opacity="0.5" rx="1"/>
+
+    <circle cx="-70" cy="10" r="3" fill="#f5576c"/>
+    <rect x="-60" y="7" width="90" height="6" fill="#f5576c" opacity="0.5" rx="1"/>
+
+    <!-- 화면 스탠드 -->
+    <rect x="-5" y="60" width="10" height="40" fill="#f5576c"/>
+    <ellipse cx="0" cy="100" rx="40" ry="8" fill="#f5576c" opacity="0.6"/>
+  </g>
+
+  <!-- 코드 아이콘 -->
+  <g transform="translate(300, 600)">
+    <rect x="-60" y="-30" width="120" height="60" fill="white" stroke="#f5576c" stroke-width="2" rx="3"/>
+    <text x="-40" y="-5" font-family="monospace" font-size="16" fill="#f093fb">&lt;/&gt;</text>
+    <text x="-40" y="15" font-family="monospace" font-size="12" fill="#f5576c" opacity="0.7">md</text>
+  </g>
+
+  <!-- 텍스트 -->
+  <text x="300" y="750" font-family="Arial, sans-serif" font-size="28" fill="#f5576c" text-anchor="middle" font-weight="bold">
+    강의 자료
+  </text>
+</svg>
