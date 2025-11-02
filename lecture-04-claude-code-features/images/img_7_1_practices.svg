@@ -1,0 +1,46 @@
+<svg viewBox="0 -80 600 960" xmlns="http://www.w3.org/2000/svg">
+  <!-- Best Practices - Checklist Concept -->
+  <g transform="translate(140, 160)">
+    <!-- Clipboard -->
+    <rect x="30" y="0" width="260" height="420" rx="15" fill="#e8f4f8" stroke="#4a90e2" stroke-width="3"/>
+    <rect x="110" y="-10" width="100" height="30" rx="8" fill="#4a90e2"/>
+
+    <!-- Checklist Items -->
+    <g transform="translate(60, 60)">
+      <!-- Item 1 - Checked -->
+      <rect x="0" y="0" width="30" height="30" rx="5" fill="#51cf66" stroke="#2b8a3e" stroke-width="2"/>
+      <path d="M 8 15 L 13 20 L 22 8" stroke="white" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+      <text x="45" y="22" font-family="sans-serif" font-size="18" fill="#333">명확한 프롬프트</text>
+    </g>
+
+    <g transform="translate(60, 120)">
+      <!-- Item 2 - Checked -->
+      <rect x="0" y="0" width="30" height="30" rx="5" fill="#51cf66" stroke="#2b8a3e" stroke-width="2"/>
+      <path d="M 8 15 L 13 20 L 22 8" stroke="white" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+      <text x="45" y="22" font-family="sans-serif" font-size="18" fill="#333">Plan Mode 활용</text>
+    </g>
+
+    <g transform="translate(60, 180)">
+      <!-- Item 3 - Checked -->
+      <rect x="0" y="0" width="30" height="30" rx="5" fill="#51cf66" stroke="#2b8a3e" stroke-width="2"/>
+      <path d="M 8 15 L 13 20 L 22 8" stroke="white" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+      <text x="45" y="22" font-family="sans-serif" font-size="18" fill="#333">Todo 관리</text>
+    </g>
+
+    <g transform="translate(60, 240)">
+      <!-- Item 4 - In Progress -->
+      <rect x="0" y="0" width="30" height="30" rx="5" fill="white" stroke="#4a90e2" stroke-width="2"/>
+      <circle cx="15" cy="15" r="8" fill="#4a90e2"/>
+      <text x="45" y="22" font-family="sans-serif" font-size="18" fill="#333">병렬 실행</text>
+    </g>
+
+    <g transform="translate(60, 300)">
+      <!-- Item 5 - Empty -->
+      <rect x="0" y="0" width="30" height="30" rx="5" fill="white" stroke="#aaa" stroke-width="2"/>
+      <text x="45" y="22" font-family="sans-serif" font-size="18" fill="#999">테스트 확인</text>
+    </g>
+
+    <!-- Label -->
+    <text x="160" y="490" font-family="sans-serif" font-size="28" fill="#4a90e2" text-anchor="middle" font-weight="bold">Best Practices</text>
+  </g>
+</svg>

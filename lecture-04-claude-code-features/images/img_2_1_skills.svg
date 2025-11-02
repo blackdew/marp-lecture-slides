@@ -1,0 +1,31 @@
+<svg viewBox="0 -80 600 960" xmlns="http://www.w3.org/2000/svg">
+  <!-- Skills - Toolbox Concept -->
+  <g transform="translate(150, 180)">
+    <!-- Toolbox -->
+    <rect x="0" y="80" width="300" height="200" rx="10" fill="#e8f4f8" stroke="#4a90e2" stroke-width="3"/>
+    <rect x="0" y="80" width="300" height="50" fill="#4a90e2"/>
+    <rect x="120" y="60" width="60" height="40" fill="#4a90e2" rx="5"/>
+
+    <!-- Tools Inside -->
+    <!-- PDF Icon -->
+    <g transform="translate(40, 160)">
+      <rect x="0" y="0" width="50" height="65" rx="5" fill="#ff6b6b" stroke="#c92a2a" stroke-width="2"/>
+      <text x="25" y="40" font-family="sans-serif" font-size="18" fill="white" text-anchor="middle" font-weight="bold">PDF</text>
+    </g>
+
+    <!-- Excel Icon -->
+    <g transform="translate(125, 160)">
+      <rect x="0" y="0" width="50" height="65" rx="5" fill="#51cf66" stroke="#2b8a3e" stroke-width="2"/>
+      <text x="25" y="40" font-family="sans-serif" font-size="18" fill="white" text-anchor="middle" font-weight="bold">XLS</text>
+    </g>
+
+    <!-- Code Icon -->
+    <g transform="translate(210, 160)">
+      <rect x="0" y="0" width="50" height="65" rx="5" fill="#748ffc" stroke="#4c6ef5" stroke-width="2"/>
+      <text x="25" y="40" font-family="sans-serif" font-size="24" fill="white" text-anchor="middle" font-weight="bold">&lt;/&gt;</text>
+    </g>
+
+    <!-- Label -->
+    <text x="150" y="350" font-family="sans-serif" font-size="28" fill="#4a90e2" text-anchor="middle" font-weight="bold">Skills</text>
+  </g>
+</svg>

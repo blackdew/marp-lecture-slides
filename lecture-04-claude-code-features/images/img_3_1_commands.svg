@@ -1,0 +1,23 @@
+<svg viewBox="0 -80 600 960" xmlns="http://www.w3.org/2000/svg">
+  <!-- Commands - Slash Command Concept -->
+  <g transform="translate(150, 180)">
+    <!-- Terminal-like Box -->
+    <rect x="0" y="0" width="300" height="400" rx="15" fill="#1e1e1e" stroke="#4a90e2" stroke-width="3"/>
+
+    <!-- Slash Symbol -->
+    <text x="60" y="140" font-family="monospace" font-size="120" fill="#50e3c2" font-weight="bold">/</text>
+
+    <!-- Command Examples -->
+    <text x="30" y="220" font-family="monospace" font-size="20" fill="#4a90e2">/help</text>
+    <text x="30" y="260" font-family="monospace" font-size="20" fill="#4a90e2">/review</text>
+    <text x="30" y="300" font-family="monospace" font-size="20" fill="#4a90e2">/test</text>
+
+    <!-- Cursor -->
+    <rect x="140" y="200" width="15" height="24" fill="#50e3c2" opacity="0.8">
+      <animate attributeName="opacity" values="0.8;0;0.8" dur="1s" repeatCount="indefinite"/>
+    </rect>
+
+    <!-- Label -->
+    <text x="150" y="470" font-family="sans-serif" font-size="28" fill="#4a90e2" text-anchor="middle" font-weight="bold">Commands</text>
+  </g>
+</svg>

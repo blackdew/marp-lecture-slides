@@ -1,0 +1,40 @@
+<svg viewBox="0 -80 600 960" xmlns="http://www.w3.org/2000/svg">
+  <!-- Hooks - Event/Trigger Concept -->
+  <g transform="translate(150, 180)">
+    <!-- Event Flow -->
+    <rect x="0" y="50" width="100" height="60" rx="10" fill="#e8f4f8" stroke="#4a90e2" stroke-width="3"/>
+    <text x="50" y="85" font-family="sans-serif" font-size="14" fill="#4a90e2" text-anchor="middle" font-weight="bold">Event</text>
+
+    <!-- Hook Symbol (Fish Hook) -->
+    <g transform="translate(150, 0)">
+      <path d="M 50 80 Q 50 20 80 20 Q 100 20 100 40 Q 100 60 85 65"
+            stroke="#50e3c2" stroke-width="5" fill="none" stroke-linecap="round"/>
+      <circle cx="80" cy="70" r="8" fill="#50e3c2"/>
+      <text x="50" y="130" font-family="sans-serif" font-size="16" fill="#50e3c2" text-anchor="middle" font-weight="bold">Hook</text>
+    </g>
+
+    <!-- Action -->
+    <rect x="200" y="50" width="100" height="60" rx="10" fill="#e8f4f8" stroke="#4a90e2" stroke-width="3"/>
+    <text x="250" y="85" font-family="sans-serif" font-size="14" fill="#4a90e2" text-anchor="middle" font-weight="bold">Action</text>
+
+    <!-- Arrows -->
+    <path d="M 100 80 L 150 50" stroke="#4a90e2" stroke-width="2" marker-end="url(#arrowhead2)"/>
+    <path d="M 150 80 L 200 80" stroke="#4a90e2" stroke-width="2" marker-end="url(#arrowhead2)"/>
+
+    <defs>
+      <marker id="arrowhead2" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+        <polygon points="0 0, 10 3, 0 6" fill="#4a90e2"/>
+      </marker>
+    </defs>
+
+    <!-- Examples Below -->
+    <g transform="translate(0, 180)">
+      <text x="150" y="0" font-family="sans-serif" font-size="14" fill="#666" text-anchor="middle">pre-tool-call</text>
+      <text x="150" y="30" font-family="sans-serif" font-size="14" fill="#666" text-anchor="middle">post-tool-call</text>
+      <text x="150" y="60" font-family="sans-serif" font-size="14" fill="#666" text-anchor="middle">user-prompt-submit</text>
+    </g>
+
+    <!-- Label -->
+    <text x="150" y="330" font-family="sans-serif" font-size="28" fill="#4a90e2" text-anchor="middle" font-weight="bold">Hooks</text>
+  </g>
+</svg>
