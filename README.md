@@ -27,13 +27,13 @@ npm install -g @marp-team/marp-cli
 ### 1. 프레젠테이션 빌드
 
 ```bash
-./generate-presentation.sh <강의폴더명> <마크다운파일명>
+./generate-presentation.sh lectures/<강의폴더명> <마크다운파일명>
 ```
 
 예시:
 
 ```bash
-./generate-presentation.sh lecture-01-ai-data-coding lecture.md
+./generate-presentation.sh lectures/lecture-01-ai-data-coding lecture.md
 ```
 
 ### 2. 라이브 프리뷰
@@ -41,15 +41,15 @@ npm install -g @marp-team/marp-cli
 편집 중 자동 새로고침을 원할 경우:
 
 ```bash
-marp <폴더>/<파일.md> --watch
+marp lectures/<폴더>/<파일.md> --watch
 ```
 
 ### 3. 수동 변환
 
 ```bash
-marp <폴더>/<파일.md> -o <폴더>/<파일.html> --html --allow-local-files
-marp <폴더>/<파일.md> --pdf
-marp <폴더>/<파일.md> --pptx
+marp lectures/<폴더>/<파일.md> -o lectures/<폴더>/<파일.html> --html --allow-local-files
+marp lectures/<폴더>/<파일.md> --pdf
+marp lectures/<폴더>/<파일.md> --pptx
 ```
 
 ## 프로젝트 구조
@@ -60,11 +60,13 @@ marp <폴더>/<파일.md> --pptx
 ├── docs/
 │   ├── AGENTS_CONTEXT.md       # AI 에이전트용 작업 컨텍스트
 │   └── retrospectives/         # 작업 회고
-├── lecture-XX-주제명/
-│   ├── lecture.md              # 메인 프레젠테이션 파일
-│   ├── part-01.md ~ part-XX.md # 모듈화된 콘텐츠
-│   ├── images/                 # 시각 자료
-│   └── lecture.html            # 생성된 결과물
+└── lectures/                   # 강의 자료 루트 디렉토리
+    └── lecture-XX-<주제명>/    # 개별 강의 폴더 (패턴)
+        ├── lecture.md          # 메인 프레젠테이션 파일
+        ├── part-XX.md          # 모듈화된 콘텐츠
+        ├── images/             # 시각 자료
+        │   └── img_*.svg       # SVG 이미지 파일
+        └── lecture.html        # 생성된 결과물
 ```
 
 ## 작업 흐름
@@ -113,12 +115,16 @@ Marp CLI의 `--pdf` 옵션 대신 다음 방법 권장:
 3. "배경 그래픽" 옵션 활성화
 4. "PDF로 저장"
 
-## 샘플 강의 목록
+## 현재 강의 목록
+
+현재 `lectures/` 디렉토리에는 다음 강의가 포함되어 있습니다:
 
 - lecture-01-ai-data-coding
 - lecture-02-프로젝트공유
 - lecture-03-ai-agent-intro
 - lecture-04-claude-cli-workflow
+- lecture-04-claude-code-features
+- lecture-05-문서작업-실전
 
 ## 라이선스
 
