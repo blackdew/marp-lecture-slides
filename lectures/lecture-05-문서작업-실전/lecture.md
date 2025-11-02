@@ -19,7 +19,7 @@ section.lead {
 
 ![bg left:35%](images/img_0_main.svg)
 
-# Claude Code로 문서 작업 마스터하기
+# Claude Code 문서 작업 마스터하기
 
 소설, 논문, 강의 자료 제작까지
 
