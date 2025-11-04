@@ -1,0 +1,42 @@
+<svg viewBox="0 -80 600 960" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="600" height="960" y="-80" fill="#f8f9fa"/>
+
+  <!-- Token gauge -->
+  <g transform="translate(300, 350)">
+    <!-- Gauge background -->
+    <circle cx="0" cy="0" r="140" fill="none" stroke="#e0e0e0" stroke-width="20"/>
+
+    <!-- Used tokens (45%) -->
+    <circle cx="0" cy="0" r="140" fill="none" stroke="#4caf50" stroke-width="20"
+            stroke-dasharray="395 484" stroke-dashoffset="121"
+            transform="rotate(-90)"/>
+
+    <!-- Center display -->
+    <circle cx="0" cy="0" r="100" fill="#fff" stroke="#666" stroke-width="2"/>
+    <text x="0" y="-20" text-anchor="middle" font-size="24" fill="#333" font-weight="bold">45K</text>
+    <text x="0" y="5" text-anchor="middle" font-size="16" fill="#666">/ 200K</text>
+    <text x="0" y="30" text-anchor="middle" font-size="14" fill="#4caf50">23% 사용</text>
+  </g>
+
+  <!-- Labels -->
+  <g transform="translate(300, 550)">
+    <!-- Green zone -->
+    <rect x="-100" y="0" width="30" height="20" fill="#4caf50"/>
+    <text x="-60" y="15" font-size="14" fill="#333">안전 (0-150K)</text>
+
+    <!-- Yellow zone -->
+    <rect x="-100" y="30" width="30" height="20" fill="#ff9800"/>
+    <text x="-60" y="45" font-size="14" fill="#333">주의 (150-180K)</text>
+
+    <!-- Red zone -->
+    <rect x="-100" y="60" width="30" height="20" fill="#f44336"/>
+    <text x="-60" y="75" font-size="14" fill="#333">위험 (180K+)</text>
+  </g>
+
+  <!-- Command hint -->
+  <g transform="translate(300, 680)">
+    <rect x="-80" y="0" width="160" height="40" rx="5" fill="#1976d2"/>
+    <text x="0" y="25" text-anchor="middle" font-size="14" fill="#fff" font-weight="bold">/context</text>
+  </g>
+</svg>

@@ -1,0 +1,78 @@
+<svg viewBox="0 -80 600 960" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="600" height="960" y="-80" fill="#f8f9fa"/>
+
+  <!-- Title -->
+  <text x="300" y="80" text-anchor="middle" font-size="18" fill="#333" font-weight="bold">성과 측정 대시보드</text>
+
+  <!-- Chart 1: Commit Frequency -->
+  <g transform="translate(150, 180)">
+    <text x="0" y="0" text-anchor="middle" font-size="14" fill="#333" font-weight="bold">커밋 빈도</text>
+
+    <!-- Bars -->
+    <rect x="-60" y="20" width="30" height="80" fill="#90caf9"/>
+    <text x="-45" y="110" text-anchor="middle" font-size="11" fill="#666">이전</text>
+
+    <rect x="-20" y="20" width="30" height="140" fill="#1976d2"/>
+    <text x="-5" y="110" text-anchor="middle" font-size="11" fill="#666">현재</text>
+
+    <!-- Arrow up -->
+    <text x="25" y="70" font-size="24" fill="#4caf50">↑</text>
+    <text x="50" y="75" font-size="12" fill="#4caf50">+75%</text>
+  </g>
+
+  <!-- Chart 2: Bug Rate -->
+  <g transform="translate(450, 180)">
+    <text x="0" y="0" text-anchor="middle" font-size="14" fill="#333" font-weight="bold">버그 발생률</text>
+
+    <!-- Bars -->
+    <rect x="-60" y="20" width="30" height="120" fill="#ef9a9a"/>
+    <text x="-45" y="150" text-anchor="middle" font-size="11" fill="#666">이전</text>
+
+    <rect x="-20" y="20" width="30" height="60" fill="#f44336"/>
+    <text x="-5" y="150" text-anchor="middle" font-size="11" fill="#666">현재</text>
+
+    <!-- Arrow down -->
+    <text x="25" y="90" font-size="24" fill="#4caf50">↓</text>
+    <text x="50" y="95" font-size="12" fill="#4caf50">-50%</text>
+  </g>
+
+  <!-- Chart 3: Review Time -->
+  <g transform="translate(150, 400)">
+    <text x="0" y="0" text-anchor="middle" font-size="14" fill="#333" font-weight="bold">리뷰 시간</text>
+
+    <!-- Bars -->
+    <rect x="-60" y="20" width="30" height="100" fill="#ffcc80"/>
+    <text x="-45" y="130" text-anchor="middle" font-size="11" fill="#666">이전</text>
+
+    <rect x="-20" y="20" width="30" height="50" fill="#ff9800"/>
+    <text x="-5" y="130" text-anchor="middle" font-size="11" fill="#666">현재</text>
+
+    <!-- Arrow down -->
+    <text x="25" y="70" font-size="24" fill="#4caf50">↓</text>
+    <text x="50" y="75" font-size="12" fill="#4caf50">-50%</text>
+  </g>
+
+  <!-- Chart 4: Satisfaction -->
+  <g transform="translate(450, 400)">
+    <text x="0" y="0" text-anchor="middle" font-size="14" fill="#333" font-weight="bold">만족도</text>
+
+    <!-- Bars -->
+    <rect x="-60" y="20" width="30" height="60" fill="#c5e1a5"/>
+    <text x="-45" y="90" text-anchor="middle" font-size="11" fill="#666">이전</text>
+
+    <rect x="-20" y="20" width="30" height="120" fill="#4caf50"/>
+    <text x="-5" y="90" text-anchor="middle" font-size="11" fill="#666">현재</text>
+
+    <!-- Arrow up -->
+    <text x="25" y="80" font-size="24" fill="#4caf50">↑</text>
+    <text x="50" y="85" font-size="12" fill="#4caf50">+100%</text>
+  </g>
+
+  <!-- Summary -->
+  <g transform="translate(300, 610)">
+    <rect x="-150" y="0" width="300" height="80" rx="10" fill="#e8f5e9" stroke="#4caf50" stroke-width="2"/>
+    <text x="0" y="30" text-anchor="middle" font-size="16" fill="#333" font-weight="bold">전반적 생산성 향상</text>
+    <text x="0" y="55" text-anchor="middle" font-size="14" fill="#4caf50" font-weight="bold">+85%</text>
+  </g>
+</svg>

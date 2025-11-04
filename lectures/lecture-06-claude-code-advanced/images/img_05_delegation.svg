@@ -1,0 +1,65 @@
+<svg viewBox="0 -80 600 960" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="600" height="960" y="-80" fill="#f5f5f5"/>
+
+  <!-- Human -->
+  <g transform="translate(150, 250)">
+    <circle cx="0" cy="-50" r="40" fill="#1976d2"/>
+    <text x="0" y="-42" text-anchor="middle" font-size="24" fill="#fff">👤</text>
+    <text x="0" y="20" text-anchor="middle" font-size="16" fill="#333" font-weight="bold">개발자</text>
+    <text x="0" y="40" text-anchor="middle" font-size="12" fill="#666">전략 수립</text>
+  </g>
+
+  <!-- Arrow -->
+  <g transform="translate(300, 200)">
+    <path d="M -80,0 L 80,0" stroke="#4caf50" stroke-width="4" marker-end="url(#arrowhead)"/>
+    <text x="0" y="-10" text-anchor="middle" font-size="14" fill="#4caf50" font-weight="bold">위임</text>
+  </g>
+
+  <!-- Arrow marker definition -->
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <polygon points="0 0, 10 3, 0 6" fill="#4caf50"/>
+    </marker>
+  </defs>
+
+  <!-- Agent -->
+  <g transform="translate(450, 250)">
+    <circle cx="0" cy="-50" r="40" fill="#ff9800"/>
+    <text x="0" y="-42" text-anchor="middle" font-size="24" fill="#fff">🤖</text>
+    <text x="0" y="20" text-anchor="middle" font-size="16" fill="#333" font-weight="bold">에이전트</text>
+    <text x="0" y="40" text-anchor="middle" font-size="12" fill="#666">실행 담당</text>
+  </g>
+
+  <!-- Process boxes -->
+  <g transform="translate(300, 380)">
+    <!-- Box 1 -->
+    <rect x="-80" y="0" width="160" height="50" rx="5" fill="#e3f2fd" stroke="#1976d2" stroke-width="2"/>
+    <text x="0" y="30" text-anchor="middle" font-size="14" fill="#333">코드 작성</text>
+
+    <!-- Box 2 -->
+    <rect x="-80" y="70" width="160" height="50" rx="5" fill="#e3f2fd" stroke="#1976d2" stroke-width="2"/>
+    <text x="0" y="100" text-anchor="middle" font-size="14" fill="#333">테스트</text>
+
+    <!-- Box 3 -->
+    <rect x="-80" y="140" width="160" height="50" rx="5" fill="#e3f2fd" stroke="#1976d2" stroke-width="2"/>
+    <text x="0" y="170" text-anchor="middle" font-size="14" fill="#333">커밋</text>
+
+    <!-- Arrows -->
+    <path d="M 0,50 L 0,70" stroke="#666" stroke-width="2" marker-end="url(#smallarrow)"/>
+    <path d="M 0,120 L 0,140" stroke="#666" stroke-width="2" marker-end="url(#smallarrow)"/>
+  </g>
+
+  <defs>
+    <marker id="smallarrow" markerWidth="8" markerHeight="8" refX="7" refY="3" orient="auto">
+      <polygon points="0 0, 8 3, 0 6" fill="#666"/>
+    </marker>
+  </defs>
+
+  <!-- Result -->
+  <g transform="translate(300, 640)">
+    <rect x="-100" y="0" width="200" height="60" rx="10" fill="#4caf50"/>
+    <text x="0" y="25" text-anchor="middle" font-size="16" fill="#fff" font-weight="bold">완성된 PR</text>
+    <text x="0" y="45" text-anchor="middle" font-size="12" fill="#fff">과정보다 결과</text>
+  </g>
+</svg>

@@ -1,0 +1,60 @@
+<svg viewBox="0 -80 600 960" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="600" height="960" y="-80" fill="#fafafa"/>
+
+  <!-- Trophy -->
+  <g transform="translate(300, 200)">
+    <!-- Trophy cup -->
+    <path d="M -60,-40 L -50,-60 L 50,-60 L 60,-40 L 60,20 Q 60,50 30,60 L 30,80 L 40,80 L 40,100 L -40,100 L -40,80 L -30,80 L -30,60 Q -60,50 -60,20 Z" fill="#ffd700" stroke="#333" stroke-width="2"/>
+
+    <!-- Handles -->
+    <path d="M -60,-20 Q -90,-20 -90,0 Q -90,20 -60,20" fill="none" stroke="#333" stroke-width="2"/>
+    <path d="M 60,-20 Q 90,-20 90,0 Q 90,20 60,20" fill="none" stroke="#333" stroke-width="2"/>
+
+    <!-- Star -->
+    <text x="0" y="10" text-anchor="middle" font-size="30" fill="#333">⭐</text>
+  </g>
+
+  <text x="300" y="340" text-anchor="middle" font-size="18" fill="#333" font-weight="bold">모범 사례</text>
+
+  <!-- Best practices -->
+  <g transform="translate(150, 400)">
+    <!-- Item 1 -->
+    <g transform="translate(0, 0)">
+      <circle cx="0" cy="0" r="20" fill="#4caf50"/>
+      <text x="0" y="7" text-anchor="middle" font-size="20" fill="#fff">✓</text>
+      <text x="35" y="5" font-size="14" fill="#333">간결한 CLAUDE.md</text>
+    </g>
+
+    <!-- Item 2 -->
+    <g transform="translate(0, 60)">
+      <circle cx="0" cy="0" r="20" fill="#4caf50"/>
+      <text x="0" y="7" text-anchor="middle" font-size="20" fill="#fff">✓</text>
+      <text x="35" y="5" font-size="14" fill="#333">컨텍스트 모니터링</text>
+    </g>
+
+    <!-- Item 3 -->
+    <g transform="translate(0, 120)">
+      <circle cx="0" cy="0" r="20" fill="#4caf50"/>
+      <text x="0" y="7" text-anchor="middle" font-size="20" fill="#fff">✓</text>
+      <text x="35" y="5" font-size="14" fill="#333">자동 검증 Hooks</text>
+    </g>
+
+    <!-- Item 4 -->
+    <g transform="translate(0, 180)">
+      <circle cx="0" cy="0" r="20" fill="#4caf50"/>
+      <text x="0" y="7" text-anchor="middle" font-size="20" fill="#fff">✓</text>
+      <text x="35" y="5" font-size="14" fill="#333">Skills 재사용</text>
+    </g>
+
+    <!-- Item 5 -->
+    <g transform="translate(0, 240)">
+      <circle cx="0" cy="0" r="20" fill="#4caf50"/>
+      <text x="0" y="7" text-anchor="middle" font-size="20" fill="#fff">✓</text>
+      <text x="35" y="5" font-size="14" fill="#333">최소 책임 MCP</text>
+    </g>
+  </g>
+
+  <!-- Label -->
+  <text x="300" y="720" text-anchor="middle" font-size="14" fill="#666">성공적인 AI 협업</text>
+</svg>
