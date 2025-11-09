@@ -1,0 +1,38 @@
+<svg viewBox="0 -80 600 960" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="grad5" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#667eea;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#764ba2;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+
+  <!-- Agent 구조 레이어 -->
+  <!-- LLM 코어 -->
+  <circle cx="300" cy="380" r="60" fill="url(#grad5)"/>
+  <text x="300" y="390" font-family="Arial, sans-serif" font-size="20" fill="white" text-anchor="middle" font-weight="bold">LLM</text>
+
+  <!-- Tool -->
+  <rect x="180" y="200" width="100" height="60" rx="8" fill="none" stroke="url(#grad5)" stroke-width="3"/>
+  <text x="230" y="238" font-family="Arial, sans-serif" font-size="18" fill="#667eea" text-anchor="middle" font-weight="bold">Tool</text>
+
+  <!-- Memory -->
+  <rect x="320" y="200" width="100" height="60" rx="8" fill="none" stroke="url(#grad5)" stroke-width="3"/>
+  <text x="370" y="238" font-family="Arial, sans-serif" font-size="18" fill="#667eea" text-anchor="middle" font-weight="bold">Memory</text>
+
+  <!-- Planning -->
+  <rect x="180" y="520" width="100" height="60" rx="8" fill="none" stroke="url(#grad5)" stroke-width="3"/>
+  <text x="230" y="558" font-family="Arial, sans-serif" font-size="18" fill="#667eea" text-anchor="middle" font-weight="bold">Planning</text>
+
+  <!-- Result -->
+  <rect x="320" y="520" width="100" height="60" rx="8" fill="none" stroke="url(#grad5)" stroke-width="3"/>
+  <text x="370" y="558" font-family="Arial, sans-serif" font-size="18" fill="#667eea" text-anchor="middle" font-weight="bold">Result</text>
+
+  <!-- 연결선 -->
+  <line x1="230" y1="260" x2="265" y2="330" stroke="#667eea" stroke-width="2"/>
+  <line x1="370" y1="260" x2="335" y2="330" stroke="#667eea" stroke-width="2"/>
+  <line x1="265" y1="430" x2="230" y2="520" stroke="#667eea" stroke-width="2"/>
+  <line x1="335" y1="430" x2="370" y2="520" stroke="#667eea" stroke-width="2"/>
+
+  <!-- 텍스트 -->
+  <text x="300" y="680" font-family="Arial, sans-serif" font-size="28" fill="#4a5568" text-anchor="middle" font-weight="bold">Agent 구조</text>
+</svg>

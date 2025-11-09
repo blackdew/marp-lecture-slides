@@ -1,0 +1,35 @@
+<svg viewBox="0 -80 600 960" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="grad7" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#f093fb;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#f5576c;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+
+  <!-- 비어있는 퍼즐 -->
+  <g transform="translate(150, 250)">
+    <rect x="0" y="0" width="60" height="60" fill="#e2e8f0" stroke="#cbd5e0" stroke-width="2"/>
+    <rect x="70" y="0" width="60" height="60" fill="#e2e8f0" stroke="#cbd5e0" stroke-width="2"/>
+    <rect x="0" y="70" width="60" height="60" fill="#e2e8f0" stroke="#cbd5e0" stroke-width="2"/>
+    <rect x="70" y="70" width="60" height="60" fill="#e2e8f0" stroke="#cbd5e0" stroke-width="2"/>
+    <text x="65" y="85" font-family="Arial, sans-serif" font-size="24" fill="#a0aec0" text-anchor="middle">?</text>
+  </g>
+
+  <!-- 화살표 -->
+  <path d="M 300 360 L 320 360" fill="none" stroke="url(#grad7)" stroke-width="4"/>
+  <polygon points="315,355 325,360 315,365" fill="url(#grad7)"/>
+
+  <!-- 채워진 퍼즐 -->
+  <g transform="translate(350, 250)">
+    <rect x="0" y="0" width="60" height="60" fill="url(#grad7)" opacity="0.8" stroke="#f5576c" stroke-width="2"/>
+    <rect x="70" y="0" width="60" height="60" fill="url(#grad7)" opacity="0.8" stroke="#f5576c" stroke-width="2"/>
+    <rect x="0" y="70" width="60" height="60" fill="url(#grad7)" opacity="0.8" stroke="#f5576c" stroke-width="2"/>
+    <rect x="70" y="70" width="60" height="60" fill="url(#grad7)" opacity="0.8" stroke="#f5576c" stroke-width="2"/>
+    <text x="65" y="85" font-family="Arial, sans-serif" font-size="28" fill="white" text-anchor="middle">✓</text>
+  </g>
+
+  <!-- 텍스트 -->
+  <text x="210" y="470" font-family="Arial, sans-serif" font-size="18" fill="#718096" text-anchor="middle">비어있음</text>
+  <text x="410" y="470" font-family="Arial, sans-serif" font-size="18" fill="#718096" text-anchor="middle">채워짐</text>
+  <text x="300" y="570" font-family="Arial, sans-serif" font-size="32" fill="#4a5568" text-anchor="middle" font-weight="bold">컨텍스트</text>
+</svg>

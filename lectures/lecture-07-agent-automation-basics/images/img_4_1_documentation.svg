@@ -1,0 +1,26 @@
+<svg viewBox="0 -80 600 960" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="grad8" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#a8edea;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#fed6e3;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+
+  <!-- 문서 아이콘 -->
+  <path d="M 220 250 L 220 550 L 380 550 L 380 310 L 320 250 Z" fill="url(#grad8)" stroke="#4a5568" stroke-width="3"/>
+  <path d="M 320 250 L 320 310 L 380 310" fill="white" stroke="#4a5568" stroke-width="3"/>
+
+  <!-- 문서 내용 라인들 -->
+  <line x1="245" y1="350" x2="355" y2="350" stroke="#4a5568" stroke-width="3" stroke-linecap="round"/>
+  <line x1="245" y1="390" x2="355" y2="390" stroke="#4a5568" stroke-width="3" stroke-linecap="round"/>
+  <line x1="245" y1="430" x2="320" y2="430" stroke="#4a5568" stroke-width="3" stroke-linecap="round"/>
+  <line x1="245" y1="470" x2="340" y2="470" stroke="#4a5568" stroke-width="3" stroke-linecap="round"/>
+
+  <!-- 프로젝트 아이콘 (작은 폴더) -->
+  <rect x="200" y="180" width="80" height="50" rx="5" fill="#667eea" opacity="0.3"/>
+  <text x="240" y="212" font-family="Arial, sans-serif" font-size="20" fill="#667eea" text-anchor="middle" font-weight="bold">P</text>
+
+  <!-- 텍스트 -->
+  <text x="300" y="640" font-family="Arial, sans-serif" font-size="32" fill="#4a5568" text-anchor="middle" font-weight="bold">문서화</text>
+  <text x="300" y="680" font-family="Arial, sans-serif" font-size="20" fill="#718096" text-anchor="middle">프로젝트의 자산</text>
+</svg>

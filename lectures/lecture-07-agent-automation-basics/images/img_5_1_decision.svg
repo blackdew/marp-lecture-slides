@@ -1,0 +1,41 @@
+<svg viewBox="0 -80 600 960" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="grad10" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#667eea;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#764ba2;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+
+  <!-- 의사결정 트리 -->
+  <!-- 루트 노드 -->
+  <rect x="250" y="220" width="100" height="50" rx="8" fill="url(#grad10)"/>
+  <text x="300" y="252" font-family="Arial, sans-serif" font-size="18" fill="white" text-anchor="middle" font-weight="bold">문제</text>
+
+  <!-- 분기 -->
+  <line x1="300" y1="270" x2="200" y2="340" stroke="url(#grad10)" stroke-width="3"/>
+  <line x1="300" y1="270" x2="400" y2="340" stroke="url(#grad10)" stroke-width="3"/>
+
+  <!-- 옵션 A -->
+  <rect x="150" y="340" width="100" height="50" rx="8" fill="none" stroke="url(#grad10)" stroke-width="3"/>
+  <text x="200" y="372" font-family="Arial, sans-serif" font-size="16" fill="#667eea" text-anchor="middle" font-weight="bold">옵션 A</text>
+
+  <!-- 옵션 B -->
+  <rect x="350" y="340" width="100" height="50" rx="8" fill="none" stroke="url(#grad10)" stroke-width="3"/>
+  <text x="400" y="372" font-family="Arial, sans-serif" font-size="16" fill="#667eea" text-anchor="middle" font-weight="bold">옵션 B</text>
+
+  <!-- 결과 분기 -->
+  <line x1="200" y1="390" x2="200" y2="450" stroke="url(#grad10)" stroke-width="2" stroke-dasharray="4,2"/>
+  <line x1="400" y1="390" x2="400" y2="450" stroke="url(#grad10)" stroke-width="2" stroke-dasharray="4,2"/>
+
+  <!-- 결과 노드들 -->
+  <circle cx="200" cy="470" r="20" fill="#a8edea"/>
+  <circle cx="400" cy="470" r="20" fill="#a8edea"/>
+
+  <!-- 선택 화살표 (옵션 B를 선택) -->
+  <path d="M 300 520 L 400 490" fill="none" stroke="#f5576c" stroke-width="4"/>
+  <polygon points="395,488 405,490 398,497" fill="#f5576c"/>
+  <text x="350" y="515" font-family="Arial, sans-serif" font-size="16" fill="#f5576c" text-anchor="middle" font-weight="bold">선택!</text>
+
+  <!-- 텍스트 -->
+  <text x="300" y="600" font-family="Arial, sans-serif" font-size="32" fill="#4a5568" text-anchor="middle" font-weight="bold">의사결정</text>
+</svg>

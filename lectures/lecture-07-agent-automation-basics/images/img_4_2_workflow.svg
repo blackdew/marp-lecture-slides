@@ -1,0 +1,36 @@
+<svg viewBox="0 -80 600 960" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="grad9" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#ffecd2;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#fcb69f;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+
+  <!-- 순환 워크플로우 -->
+  <!-- 문서 -->
+  <rect x="230" y="200" width="140" height="60" rx="8" fill="url(#grad9)"/>
+  <text x="300" y="238" font-family="Arial, sans-serif" font-size="20" fill="#4a5568" text-anchor="middle" font-weight="bold">문서</text>
+
+  <!-- 화살표 아래 -->
+  <path d="M 300 260 L 300 310" fill="none" stroke="#4a5568" stroke-width="3"/>
+  <polygon points="295,305 300,315 305,305" fill="#4a5568"/>
+
+  <!-- 코드 -->
+  <rect x="230" y="315" width="140" height="60" rx="8" fill="url(#grad9)"/>
+  <text x="300" y="353" font-family="Arial, sans-serif" font-size="20" fill="#4a5568" text-anchor="middle" font-weight="bold">코드</text>
+
+  <!-- 화살표 아래 -->
+  <path d="M 300 375 L 300 425" fill="none" stroke="#4a5568" stroke-width="3"/>
+  <polygon points="295,420 300,430 305,420" fill="#4a5568"/>
+
+  <!-- 테스트 -->
+  <rect x="230" y="430" width="140" height="60" rx="8" fill="url(#grad9)"/>
+  <text x="300" y="468" font-family="Arial, sans-serif" font-size="20" fill="#4a5568" text-anchor="middle" font-weight="bold">테스트</text>
+
+  <!-- 화살표 위로 (순환) -->
+  <path d="M 230 460 Q 150 350 230 230" fill="none" stroke="#4a5568" stroke-width="3" stroke-dasharray="8,4"/>
+  <polygon points="225,235 230,225 235,235" fill="#4a5568"/>
+
+  <!-- 텍스트 -->
+  <text x="300" y="580" font-family="Arial, sans-serif" font-size="28" fill="#4a5568" text-anchor="middle" font-weight="bold">순환 워크플로우</text>
+</svg>
