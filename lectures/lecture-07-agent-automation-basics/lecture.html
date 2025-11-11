@@ -260,59 +260,38 @@
 </section>
 </foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="18" data-paginate="true" data-theme="default" lang="ko-KR" data-marpit-pagination="18" style="--paginate:true;--theme:default;" data-marpit-pagination-total="68" data-size="16:9">
 <h1 id="claude-code-cli%EC%9D%98-%ED%8A%B9%EB%B3%84%ED%95%A8">Claude Code CLI의 특별함</h1>
-<p><strong>완전한 Agent 구현:</strong></p>
-<table>
-<thead>
-<tr>
-<th>요소</th>
-<th>일반 Chatbot</th>
-<th>Claude Code CLI</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>LLM</td>
-<td>✓</td>
-<td>✓ Sonnet 4.5</td>
-</tr>
-<tr>
-<td>Memory</td>
-<td>✗ 단발성</td>
-<td>✓ 지속적 컨텍스트</td>
-</tr>
-<tr>
-<td>Planning</td>
-<td>✗ 없음</td>
-<td>✓ <strong>Plan 모드</strong></td>
-</tr>
-<tr>
-<td>Tools</td>
-<td>✗ 대화만</td>
-<td>✓ CLI, 파일, 검색</td>
-</tr>
-</tbody>
-</table>
-<p><strong>Plan 모드:</strong> Reasoning + Planning으로 컨텍스트 채우기<br />
-→ 예측 가능하고 안전한 자동화</p>
+<p><strong>완전한 Agent 4요소 구현:</strong></p>
+<ul>
+<li><strong>LLM</strong>: Sonnet 4.5 (최신 모델)</li>
+<li><strong>Memory</strong>: 대화 전체 컨텍스트 유지</li>
+<li><strong>Planning</strong>: <strong>Plan 모드</strong>로 사전 검토</li>
+<li><strong>Tools</strong>: CLI, 파일, 검색 직접 실행</li>
+</ul>
+<p><strong>Plan 모드의 힘:</strong></p>
+<ol>
+<li>컨텍스트 부족 → Reasoning으로 추론</li>
+<li>단계별 계획 수립 → 사용자에게 보여줌</li>
+<li>승인 후 실행 → <strong>안전한 자동화</strong></li>
+</ol>
+<p><strong>핵심:</strong> 투명성 + 통제권</p>
 </section>
 </foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="19" data-paginate="true" data-theme="default" lang="ko-KR" data-marpit-pagination="19" style="--paginate:true;--theme:default;" data-marpit-pagination-total="68" data-size="16:9">
-<h1 id="llm%EA%B3%BC-agent%EC%9D%98-%ED%95%9C%EA%B3%84">LLM과 Agent의 한계</h1>
-<p><strong>Memory의 한계:</strong></p>
+<h1 id="agent%EB%8A%94-%EC%B1%85%EC%9E%84%EC%A7%80%EC%A7%80-%EC%95%8A%EB%8A%94%EB%8B%A4">Agent는 책임지지 않는다</h1>
+<p><strong>Agent가 할 수 있는 일:</strong></p>
 <ul>
-<li>200K 토큰 넘으면 &quot;잊어버림&quot;</li>
-<li>대용량 프로젝트는 여전히 어려움</li>
+<li>데이터베이스 전체 삭제</li>
+<li>중요한 문서 수정/삭제</li>
+<li>잘못된 명령 실행</li>
+<li>복구 불가능한 변경</li>
 </ul>
-<p><strong>Planning의 한계:</strong></p>
+<p><strong>Agent의 실수 사례:</strong></p>
 <ul>
-<li>부족한 컨텍스트를 추론으로 채움</li>
-<li>추론이 틀릴 수 있음 (Hallucination)</li>
+<li>&quot;정리해줘&quot; → 필요한 파일까지 삭제</li>
+<li>&quot;최적화해줘&quot; → 설정 파일 손상</li>
+<li>&quot;업데이트해줘&quot; → 호환성 문제 발생</li>
 </ul>
-<p><strong>Tools의 한계:</strong></p>
-<ul>
-<li>CLI 없는 서비스는 MCP 필요</li>
-<li>최신 정보는 검색 도구 필요</li>
-</ul>
-<p><strong>→ 인간이 검증하고, 확인하고, 책임지기</strong></p>
+<p><strong>Agent는 책임지지 않는다. 인간이 책임진다.</strong></p>
+<p><strong>→ 항상 검증하고, 확인하고, 되돌릴 수 있게 준비하기</strong></p>
 </section>
 </foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="20" data-paginate="true" data-theme="default" lang="ko-KR" data-marpit-pagination="20" style="--paginate:true;--theme:default;" data-marpit-pagination-total="68" data-size="16:9">
 <h1 id="part-2-%EC%A0%95%EB%A6%AC">Part 2 정리</h1>
