@@ -1,0 +1,96 @@
+<svg viewBox="0 -80 600 960" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect x="100" y="100" width="400" height="500" fill="#fef2f2" rx="10"/>
+
+  <!-- Messy files (before) -->
+  <g transform="translate(130, 150)">
+    <text x="70" y="0" font-size="16" font-weight="bold" fill="#64748b" text-anchor="middle">Before</text>
+
+    <!-- Random scattered files -->
+    <g transform="translate(0, 20) rotate(-15 30 25)">
+      <rect x="0" y="0" width="60" height="50" fill="#fca5a5" rx="3"/>
+      <text x="30" y="30" font-size="10" fill="white" text-anchor="middle">IMG_</text>
+      <text x="30" y="42" font-size="10" fill="white" text-anchor="middle">2024</text>
+    </g>
+
+    <g transform="translate(45, 35) rotate(10 30 25)">
+      <rect x="0" y="0" width="60" height="50" fill="#fb923c" rx="3"/>
+      <text x="30" y="30" font-size="10" fill="white" text-anchor="middle">final_</text>
+      <text x="30" y="42" font-size="10" fill="white" text-anchor="middle">v2.doc</text>
+    </g>
+
+    <g transform="translate(15, 75) rotate(-8 30 25)">
+      <rect x="0" y="0" width="60" height="50" fill="#a78bfa" rx="3"/>
+      <text x="30" y="30" font-size="10" fill="white" text-anchor="middle">temp</text>
+      <text x="30" y="42" font-size="10" fill="white" text-anchor="middle">file</text>
+    </g>
+
+    <g transform="translate(60, 90) rotate(12 30 25)">
+      <rect x="0" y="0" width="60" height="50" fill="#4ade80" rx="3"/>
+      <text x="30" y="30" font-size="10" fill="white" text-anchor="middle">Screen</text>
+      <text x="30" y="42" font-size="10" fill="white" text-anchor="middle">shot</text>
+    </g>
+
+    <g transform="translate(30, 125) rotate(-5 30 25)">
+      <rect x="0" y="0" width="60" height="50" fill="#60a5fa" rx="3"/>
+      <text x="30" y="30" font-size="10" fill="white" text-anchor="middle">계약서</text>
+      <text x="30" y="42" font-size="10" fill="white" text-anchor="middle">ABC</text>
+    </g>
+
+    <text x="70" y="200" font-size="14" fill="#ef4444" text-anchor="middle">엉망...</text>
+  </g>
+
+  <!-- Arrow -->
+  <g transform="translate(250, 300)">
+    <line x1="0" y1="0" x2="80" y2="0" stroke="#6366f1" stroke-width="4"/>
+    <polygon points="80,0 70,-7 70,7" fill="#6366f1"/>
+    <text x="40" y="-10" font-size="14" fill="#6366f1" text-anchor="middle">정리</text>
+  </g>
+
+  <!-- Organized folders (after) -->
+  <g transform="translate(350, 150)">
+    <text x="70" y="0" font-size="16" font-weight="bold" fill="#64748b" text-anchor="middle">After</text>
+
+    <!-- Folder structure -->
+    <g transform="translate(0, 20)">
+      <!-- Main folder -->
+      <rect x="0" y="0" width="140" height="180" fill="white" stroke="#10b981" stroke-width="3" rx="5"/>
+
+      <!-- Folder icon 1 -->
+      <g transform="translate(10, 15)">
+        <path d="M 0,8 L 0,30 L 60,30 L 60,8 L 25,8 L 20,3 L 0,3 Z" fill="#3b82f6"/>
+        <text x="30" y="22" font-size="10" fill="white" text-anchor="middle">문서</text>
+      </g>
+
+      <!-- Folder icon 2 -->
+      <g transform="translate(10, 55)">
+        <path d="M 0,8 L 0,30 L 60,30 L 60,8 L 25,8 L 20,3 L 0,3 Z" fill="#8b5cf6"/>
+        <text x="30" y="22" font-size="10" fill="white" text-anchor="middle">이미지</text>
+      </g>
+
+      <!-- Folder icon 3 -->
+      <g transform="translate(10, 95)">
+        <path d="M 0,8 L 0,30 L 60,30 L 60,8 L 25,8 L 20,3 L 0,3 Z" fill="#f59e0b"/>
+        <text x="30" y="22" font-size="10" fill="white" text-anchor="middle">데이터</text>
+      </g>
+
+      <!-- Folder icon 4 -->
+      <g transform="translate(10, 135)">
+        <path d="M 0,8 L 0,30 L 60,30 L 60,8 L 25,8 L 20,3 L 0,3 Z" fill="#10b981"/>
+        <text x="30" y="22" font-size="10" fill="white" text-anchor="middle">기타</text>
+      </g>
+
+      <!-- File counts -->
+      <text x="85" y="33" font-size="11" fill="#64748b">5개</text>
+      <text x="85" y="73" font-size="11" fill="#64748b">12개</text>
+      <text x="85" y="113" font-size="11" fill="#64748b">8개</text>
+      <text x="85" y="153" font-size="11" fill="#64748b">3개</text>
+    </g>
+
+    <text x="70" y="210" font-size="14" fill="#10b981" text-anchor="middle" font-weight="bold">깔끔!</text>
+  </g>
+
+  <!-- Title -->
+  <text x="300" y="570" font-size="24" font-weight="bold" fill="#1e293b" text-anchor="middle">파일 정리</text>
+  <text x="300" y="600" font-size="20" fill="#64748b" text-anchor="middle">자동화</text>
+</svg>
