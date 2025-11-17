@@ -53,6 +53,24 @@ table {
   margin: 15px 0;
   font-size: 1.2em;
 }
+
+.success {
+  background: #d4edda;
+  padding: 15px;
+  border-left: 4px solid #28a745;
+  margin: 15px 0;
+  font-size: 1.2em;
+}
+
+.question {
+  background: #e3f2fd;
+  padding: 20px;
+  border-left: 4px solid #2196f3;
+  margin: 20px 0;
+  font-size: 1.3em;
+  font-weight: bold;
+  color: #1565c0;
+}
 </style>
 
 <!-- _class: lead -->
@@ -66,13 +84,13 @@ table {
 
 ---
 
-## 오늘 배울 내용 (Part 1)
+## 이번 시간에 배울 내용 (Part 1)
 
-### Part 1: 시작하기 (50분)
+### Part 1: 시작하기 (30분)
 
-- 환경 확인: Claude Code 실행 테스트
-- AI Agent란 무엇인가?
-- Agent의 구조: Tools의 힘
+- 내 컴퓨터에서 Agent 실행해보기
+- "AI Agent가 뭐죠?" - 챗봇과 다른 점
+- Agent가 일하는 방법
 
 **핵심 메시지**: "Agent = 도구를 쓸 줄 아는 똑똑한 동료"
 
