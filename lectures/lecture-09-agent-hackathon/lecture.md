@@ -374,64 +374,6 @@ claude    # 또는 gemini, codex
 다음은 **Part 2: 첫 실습**
 
 실제로 Agent와 함께 작업해봅시다!
-
-h1 {
-  color: #2c3e50;
-  font-size: 2.5em;
-}
-
-h2 {
-  color: #3498db;
-  font-size: 1.8em;
-}
-
-h3 {
-  font-size: 1.4em;
-}
-
-p, li {
-  font-size: 1.1em;
-  line-height: 1.5;
-}
-
-code {
-  background: #f4f4f4;
-  padding: 2px 6px;
-  border-radius: 3px;
-  font-size: 1.1em;
-}
-
-table {
-  font-size: 1.1em;
-}
-
-.highlight {
-  background: #fff3cd;
-  padding: 15px;
-  border-left: 4px solid #ffc107;
-  margin: 15px 0;
-  font-size: 1.2em;
-}
-
-.success {
-  background: #d4edda;
-  padding: 15px;
-  border-left: 4px solid #28a745;
-  margin: 15px 0;
-  font-size: 1.2em;
-}
-
-.question {
-  background: #e3f2fd;
-  padding: 20px;
-  border-left: 4px solid #2196f3;
-  margin: 20px 0;
-  font-size: 1.3em;
-  font-weight: bold;
-  color: #1565c0;
-}
-</style>
-
 <!-- _class: lead -->
 
 # 비개발자를 위한
@@ -723,56 +665,6 @@ claude
 **선택 · 계획 · 문서화**
 
 지금까지 체험한 내용이 왜 중요한지 이해하게 됩니다!
-
-h1 {
-  color: #2c3e50;
-  font-size: 2.5em;
-}
-
-h2 {
-  color: #3498db;
-  font-size: 1.8em;
-}
-
-h3 {
-  font-size: 1.4em;
-}
-
-p, li {
-  font-size: 1.1em;
-  line-height: 1.5;
-}
-
-code {
-  background: #f4f4f4;
-  padding: 2px 6px;
-  border-radius: 3px;
-  font-size: 1.1em;
-}
-
-table {
-  font-size: 1.1em;
-}
-
-.highlight {
-  background: #fff3cd;
-  padding: 15px;
-  border-left: 4px solid #ffc107;
-  margin: 15px 0;
-  font-size: 1.2em;
-}
-
-.question {
-  background: #e3f2fd;
-  padding: 20px;
-  border-left: 4px solid #2196f3;
-  margin: 20px 0;
-  font-size: 1.3em;
-  font-weight: bold;
-  color: #1565c0;
-}
-</style>
-
 <!-- _class: lead -->
 
 # 비개발자를 위한
@@ -1527,54 +1419,6 @@ AI가 모든 걸 만들어줘도, 나의 역할은 더 중요해집니다
 선택 · 계획 · 문서화를 실전에 적용해봅시다
 
 ---
-
-h1 {
-  color: #2c3e50;
-  font-size: 2.5em;
-}
-
-h2 {
-  color: #3498db;
-  font-size: 1.8em;
-}
-
-h3 {
-  font-size: 1.4em;
-}
-
-p, li {
-  font-size: 1.1em;
-  line-height: 1.5;
-}
-
-code {
-  background: #f4f4f4;
-  padding: 2px 6px;
-  border-radius: 3px;
-  font-size: 1.1em;
-}
-
-table {
-  font-size: 1.1em;
-}
-
-.highlight {
-  background: #fff3cd;
-  padding: 15px;
-  border-left: 4px solid #ffc107;
-  margin: 15px 0;
-  font-size: 1.2em;
-}
-
-.success {
-  background: #d4edda;
-  padding: 15px;
-  border-left: 4px solid #28a745;
-  margin: 15px 0;
-  font-size: 1.2em;
-}
-</style>
-
 <!-- _class: lead -->
 
 # 비개발자를 위한
@@ -1955,6 +1799,10 @@ CEO에게 보고할 메일을 작성해줘.
 
 ## 실습 4-3: 학습 포인트
 
+<div style="display: grid; grid-template-columns: 1fr 1fr; gap: 40px;">
+
+<div>
+
 ### 톤 조절의 핵심
 
 | 요소 | 팀원용 | 경영진용 |
@@ -1965,6 +1813,10 @@ CEO에게 보고할 메일을 작성해줘.
 | **어조** | 친근하고 격려적 | 간결하고 객관적 |
 | **길이** | 다소 길어도 OK | 짧고 명확하게 |
 
+</div>
+
+<div>
+
 ### 프롬프트 팁
 
 **톤을 명시하세요**:
@@ -1974,6 +1826,10 @@ CEO에게 보고할 메일을 작성해줘.
 
 <div class="highlight">
 받는 사람을 명시하면 Agent가 자동으로 톤을 조절합니다!
+</div>
+
+</div>
+
 </div>
 
 ---
@@ -2113,6 +1969,10 @@ CEO에게 보고할 메일을 작성해줘.
 
 ## 실습 4-4: 학습 포인트
 
+<div style="display: grid; grid-template-columns: 1fr 1fr; gap: 40px;">
+
+<div>
+
 ### 즉석 도구 만들기의 원칙
 
 **1. 완벽함보다 작동하는 것**
@@ -2122,6 +1982,10 @@ CEO에게 보고할 메일을 작성해줘.
 **2. 디자인보다 기능 우선**
 - 예쁜 것은 나중에
 - 기능이 먼저
+
+</div>
+
+<div>
 
 **3. 반복 개선**
 - 기본 → 테스트 → 개선
@@ -2133,6 +1997,10 @@ CEO에게 보고할 메일을 작성해줘.
 
 <div class="success">
 완벽하지 않아도 괜찮습니다. 프로토타입을 빠르게 만드는 게 핵심!
+</div>
+
+</div>
+
 </div>
 
 ---
