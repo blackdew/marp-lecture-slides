@@ -1978,11 +1978,11 @@ CEO에게 보고할 메일을 작성해줘.
 
 ## 실습 4-4: 학습 포인트
 
+### 즉석 도구 만들기의 원칙
+
 <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 40px;">
 
 <div>
-
-### 즉석 도구 만들기의 원칙
 
 **1. 완벽함보다 작동하는 것**
 - 첫 버전은 10분 안에
