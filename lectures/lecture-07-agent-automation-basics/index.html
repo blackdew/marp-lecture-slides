@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lecture 07: AI 에이전트로 자동화 시작하기</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #f5f5f5;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .header {
+            background: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            margin-bottom: 20px;
+        }
+
+        .header h1 {
+            color: #2c3e50;
+            font-size: 2em;
+            margin-bottom: 10px;
+        }
+
+        .header .subtitle {
+            font-size: 1.2em;
+            color: #555;
+            margin-bottom: 20px;
+        }
+
+        .meta-info {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin: 20px 0;
+        }
+
+        .meta-item {
+            padding: 15px;
+            background: #f8f9fa;
+            border-radius: 6px;
+            border-left: 4px solid #3498db;
+        }
+
+        .meta-item strong {
+            display: block;
+            color: #2c3e50;
+            margin-bottom: 5px;
+            font-size: 0.9em;
+        }
+
+        .meta-item span {
+            color: #555;
+            font-size: 1em;
+        }
+
+        .rating {
+            display: inline-block;
+            padding: 5px 12px;
+            background: #28a745;
+            color: white;
+            border-radius: 20px;
+            font-weight: bold;
+            font-size: 0.9em;
+        }
+
+        .description {
+            margin: 20px 0;
+            padding: 20px;
+            background: #e3f2fd;
+            border-radius: 6px;
+            border-left: 4px solid #2196f3;
+        }
+
+        .description p {
+            color: #1565c0;
+            font-size: 1.1em;
+            line-height: 1.8;
+        }
+
+        .actions {
+            display: flex;
+            gap: 10px;
+            margin: 20px 0;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 24px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s;
+        }
+
+        .btn-primary {
+            background: #3498db;
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background: #2980b9;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(52, 152, 219, 0.3);
+        }
+
+        .btn-secondary {
+            background: white;
+            color: #3498db;
+            border: 2px solid #3498db;
+        }
+
+        .btn-secondary:hover {
+            background: #3498db;
+            color: white;
+        }
+
+        .slide-container {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            margin-bottom: 30px;
+        }
+
+        .slide-container h2 {
+            margin-bottom: 15px;
+            color: #2c3e50;
+        }
+
+        iframe {
+            width: 100%;
+            height: 600px;
+            border: none;
+            border-radius: 6px;
+        }
+
+        .comments-section {
+            background: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .comments-section h2 {
+            color: #2c3e50;
+            margin-bottom: 20px;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 10px;
+            }
+
+            .header h1 {
+                font-size: 1.5em;
+            }
+
+            .meta-info {
+                grid-template-columns: 1fr;
+            }
+
+            iframe {
+                height: 400px;
+            }
+
+            .actions {
+                flex-direction: column;
+            }
+
+            .btn {
+                width: 100%;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- 헤더 섹션 -->
+        <div class="header">
+            <h1>🎯 Lecture 07: AI 에이전트로</h1>
+            <p class="subtitle">자동화 시작하기</p>
+
+            <!-- 메타 정보 -->
+            <div class="meta-info">
+                <div class="meta-item">
+                    <strong>📊 대상</strong>
+                    <span>모든 레벨</span>
+                </div>
+                <div class="meta-item">
+                    <strong>⏱️ 시간</strong>
+                    <span>120분</span>
+                </div>
+                <div class="meta-item">
+                    <strong>📁 구성</strong>
+                    <span>철학+실습</span>
+                </div>
+                <div class="meta-item">
+                    <strong>⭐ 평가</strong>
+                    <span class="rating">A (92/100)</span>
+                </div>
+            </div>
+
+            <!-- 강의 설명 -->
+            <div class="description">
+                <p>선택, 계획, 문서화 - AI 시대의 핵심 개념과 8개 실습으로 배우는 자동화 기초.</p>
+            </div>
+
+            <!-- 액션 버튼 -->
+            <div class="actions">
+                <a href="lecture.html" target="_blank" class="btn btn-primary">
+                    🖥️ 슬라이드 전체화면으로 보기
+                </a>
+                <a href="../../docs/review-lecture-07-agent-automation-basics.md" class="btn btn-secondary">
+                    📝 강의 리뷰 보기
+                </a>
+                <a href="../../" class="btn btn-secondary">
+                    🏠 전체 강의 목록
+                </a>
+            </div>
+        </div>
+
+        <!-- 슬라이드 미리보기 -->
+        <div class="slide-container">
+            <h2>📊 슬라이드 미리보기</h2>
+            <p style="color: #666; margin-bottom: 15px;">
+                아래에서 슬라이드를 미리 볼 수 있습니다. 전체화면으로 보려면 위의 버튼을 클릭하세요.
+            </p>
+            <iframe src="lecture.html" title="Lecture 07: AI 에이전트로 슬라이드"></iframe>
+        </div>
+
+        <!-- 댓글 섹션 -->
+        <div class="comments-section">
+            <h2>💬 강의에 대한 의견을 남겨주세요</h2>
+            <p style="color: #666; margin-bottom: 20px;">
+                GitHub 계정으로 로그인하여 댓글을 남길 수 있습니다.
+            </p>
+
+            <!-- Giscus 댓글 시스템 -->
+            <script src="https://giscus.app/client.js"
+                    data-repo="blackdew/marp-lecture-slides"
+                    data-repo-id="R_kgDONgVZDg"
+                    data-category="General"
+                    data-category-id="DIC_kwDONgVZDs4Clel5"
+                    data-mapping="pathname"
+                    data-strict="0"
+                    data-reactions-enabled="1"
+                    data-emit-metadata="0"
+                    data-input-position="bottom"
+                    data-theme="preferred_color_scheme"
+                    data-lang="ko"
+                    crossorigin="anonymous"
+                    async>
+            </script>
+        </div>
+    </div>
+</body>
+</html>
