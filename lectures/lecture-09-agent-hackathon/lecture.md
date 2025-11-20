@@ -1623,13 +1623,6 @@ sales_merged.csv에서 중복된 행을 제거해줘.
 - 개선 사항
 ```
 
-### Agent의 PDF Skill
-
-<div class="success">
-Agent가 자동으로 PDF Skill을 실행합니다!
-파일을 읽고 텍스트를 추출하는 과정을 직접 볼 수 있습니다.
-</div>
-
 ---
 
 ## 실습 4-2: 도전 과제 (15분)
@@ -1662,8 +1655,8 @@ quarterly_summary.md에 추가:
 
 ### PDF 처리의 핵심
 
-**1. Agent의 자동 Skill 실행**
-- PDF 파일을 만나면 자동으로 PDF Skill 활성화
+**1. PDF 파일 읽기**
+- Agent가 Read tool로 PDF 파일을 직접 읽고 처리
 - 여러분은 그냥 "PDF 읽어줘"만 하면 됨
 
 **2. 결과물 형식 지정**
@@ -2683,7 +2676,7 @@ Agent에게 Git도 맡기세요
 
 **3단계: 고급 기능**
 - Commands 활용법 (반복 작업 자동화)
-- Skills 활용법 (반복 작업 자동화)
+- Skills 활용법 (전문 도구 활용)
 
 
 ---
