@@ -82,6 +82,14 @@ table {
 
 환경 확인 및 AI Agent 첫 만남
 
+<div style="margin-top: 40px;">
+  <img src="images/qr_slide_link.svg" width="150" style="display: inline-block; vertical-align: middle;" />
+  <div style="display: inline-block; vertical-align: middle; margin-left: 30px; text-align: left;">
+    <strong style="font-size: 1.1em;">슬라이드 링크:</strong><br>
+    <a href="https://bit.ly/3JXLGZ0" style="color: #3498db; font-size: 1.1em;">https://bit.ly/3JXLGZ0</a>
+  </div>
+</div>
+
 ---
 
 ## 이번 시간에 배울 내용 (Part 1)
