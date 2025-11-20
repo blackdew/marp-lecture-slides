@@ -1462,17 +1462,19 @@ CSV · PDF · 메일 · 즉석 도구
 
 ### 실습 파일 다운로드
 
-강사가 제공한 `hackathon-samples.zip` 파일을 다운로드하고 압축을 풀어주세요.
+**다운로드 링크**: [part4-samples.zip](https://github.com/blackdew/marp-lecture-slides/raw/refs/heads/main/lectures/lecture-09-agent-hackathon/samples/part4/part4-samples.zip)
+
+다운로드 후 압축을 풀어주세요.
 
 ```bash
 # 압축 해제
-unzip hackathon-samples.zip
+unzip part4-samples.zip
 
 # 디렉토리 이동
-cd hackathon-samples
+cd part4
 
 # 파일 확인
-ls -la part4/
+ls -la
 ```
 
 ### 파일 구조
