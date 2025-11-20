@@ -2550,10 +2550,12 @@ Agent의 결과를 직접 눈으로 확인하세요
 |------|------|
 | **VS Code** | 무료, 파일 탐색 |
 | **Cursor** | AI 통합 에디터 |
+| **AntiGravity** | 최신 IDE |
 
 **설치 링크**:
 - VS Code: https://code.visualstudio.com/
 - Cursor: https://cursor.com/
+- AntiGravity: https://antigravity.google/download
 
 </div>
 
@@ -2627,6 +2629,34 @@ Agent에게 Git도 맡기세요
 </div>
 
 </div>
+
+---
+
+## 활용 팁 5-1: 처음 Git 사용 시 초기화
+
+<div class="highlight">
+첫 커밋 전에 Git 사용자 정보 설정이 필요합니다
+</div>
+
+### 프롬프트 예시
+
+**초기화 요청**:
+```
+Git을 처음 사용합니다.
+내 이름과 이메일로 Git 초기화해줘.
+
+이름: 홍길동
+이메일: hong@example.com
+```
+
+**Agent가 실행하는 명령**:
+```bash
+git config --global user.name "홍길동"
+git config --global user.email "hong@example.com"
+git init
+```
+
+**참고**: 이 설정은 컴퓨터당 한 번만 하면 됩니다!
 
 ---
 
