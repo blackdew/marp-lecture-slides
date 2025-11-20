@@ -5,14 +5,34 @@
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-    --giscus-spacing: 0.5rem;
 }
 
-/* Giscus 컴포넌트 컴팩트 모드 */
+/* Giscus 컨테이너 레이아웃 조정 */
 .giscus {
-    --spacing-2: 0.25rem !important;
-    --spacing-4: 0.5rem !important;
-    --spacing-6: 0.75rem !important;
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+/* Giscus iframe 스타일 조정 */
+.giscus-frame {
+    width: 100%;
+    max-width: 100%;
+    min-height: 150px;
+    border: none;
+    display: block;
+    color-scheme: light dark;
+    margin: 0;
+    padding: 0;
+}
+
+/* 모바일 대응 */
+@media (max-width: 768px) {
+    .giscus,
+    .giscus-frame {
+        width: 100%;
+    }
 }
 
 .comments-section h2 {

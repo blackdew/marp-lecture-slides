@@ -1,0 +1,49 @@
+/* Giscus 커스텀 테마 - 컴팩트 레이아웃 */
+
+/* 기본 테마 import */
+@import url('https://giscus.app/themes/preferred_color_scheme.css');
+
+/* 반응 버튼 레이아웃 개선 */
+.gsc-reactions {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-top: 0.5rem;
+}
+
+.gsc-reactions-count {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.25rem;
+}
+
+/* 반응 버튼 간격 축소 */
+.gsc-reaction-button {
+    padding: 0.25rem 0.5rem;
+    margin-right: 0.25rem;
+}
+
+/* 투표 버튼과 반응 버튼 정렬 */
+.gsc-upvote-button,
+.gsc-reactions {
+    display: inline-flex;
+    align-items: center;
+}
+
+/* 댓글 푸터 레이아웃 */
+.gsc-comment-footer {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+
+/* 여백 축소 */
+.gsc-comment {
+    padding: 0.75rem 0;
+}
+
+.gsc-comment-content {
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+}
