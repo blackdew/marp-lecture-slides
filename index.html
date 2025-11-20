@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI & 코딩 강의 자료</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #f8f9fa;
+            min-height: 100vh;
+            padding: 40px 20px;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        header {
+            text-align: center;
+            color: #2c3e50;
+            margin-bottom: 30px;
+        }
+
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+
+        .subtitle {
+            font-size: 1.1em;
+            color: #6c757d;
+            margin-bottom: 10px;
+        }
+
+        .intro-section {
+            background: white;
+            border-radius: 8px;
+            padding: 30px;
+            margin-bottom: 40px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            border-left: 4px solid #4a90e2;
+        }
+
+        .intro-section h2 {
+            font-size: 1.4em;
+            color: #2c3e50;
+            margin-bottom: 15px;
+        }
+
+        .intro-section p {
+            color: #555;
+            line-height: 1.8;
+            margin-bottom: 10px;
+        }
+
+        .lectures-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 18px;
+            margin-bottom: 40px;
+        }
+
+        .lecture-card {
+            background: white;
+            border-radius: 8px;
+            padding: 18px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+            text-decoration: none;
+            color: #333;
+            display: block;
+            border: 1px solid #e9ecef;
+        }
+
+        .lecture-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+            border-color: #4a90e2;
+        }
+
+        .lecture-number {
+            display: inline-block;
+            background: #4a90e2;
+            color: white;
+            padding: 4px 10px;
+            border-radius: 4px;
+            font-size: 0.75em;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+
+        .lecture-title {
+            font-size: 1.1em;
+            font-weight: 600;
+            margin-bottom: 6px;
+            color: #2c3e50;
+            line-height: 1.4;
+        }
+
+        .lecture-subtitle {
+            font-size: 0.85em;
+            color: #6c757d;
+            margin-bottom: 12px;
+        }
+
+        .lecture-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px;
+        }
+
+        .tag {
+            background: #e9ecef;
+            color: #495057;
+            padding: 3px 8px;
+            border-radius: 3px;
+            font-size: 0.7em;
+        }
+
+        footer {
+            text-align: center;
+            color: #6c757d;
+            margin-top: 50px;
+            padding-top: 30px;
+            border-top: 1px solid #dee2e6;
+        }
+
+        .footer-links {
+            margin-top: 15px;
+        }
+
+        .footer-links a {
+            color: #4a90e2;
+            text-decoration: none;
+            margin: 0 10px;
+            transition: color 0.3s;
+        }
+
+        .footer-links a:hover {
+            color: #2c5282;
+            text-decoration: underline;
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2em;
+            }
+
+            .lectures-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>AI & 코딩 강의 자료</h1>
+            <p class="subtitle">AI 에이전트와 함께하는 개발 여정</p>
+        </header>
+
+        <section class="intro-section">
+            <h2>강의 소개</h2>
+            <p>
+                이 강의 시리즈는 AI 에이전트를 활용한 실전 개발과 문서 작업 능력을 키우기 위해 만들어졌습니다.
+                초보자부터 실무자까지, 누구나 AI 도구를 효과적으로 활용하여 생산성을 높일 수 있도록 구성되어 있습니다.
+            </p>
+            <p>
+                특히 Claude Code를 중심으로, 코딩뿐만 아니라 문서 작성, 자동화, 프로젝트 관리까지
+                AI 에이전트를 실무에 적용하는 방법을 단계별로 배울 수 있습니다.
+            </p>
+        </section>
+
+        <div class="lectures-grid">
+            <!-- Lecture 01 -->
+            <a href="lectures/lecture-01-ai-data-coding/lecture.html" class="lecture-card">
+                <span class="lecture-number">Lecture 01</span>
+                <div class="lecture-title">AI 시대를 준비하는 데이터와 코딩 이해</div>
+                <div class="lecture-subtitle">입문 강의</div>
+                <div class="lecture-tags">
+                    <span class="tag">AI 입문</span>
+                    <span class="tag">데이터</span>
+                    <span class="tag">코딩 기초</span>
+                </div>
+            </a>
+
+            <!-- Lecture 02 -->
+            <a href="lectures/lecture-02-프로젝트공유/project_sharing_presentation.html" class="lecture-card">
+                <span class="lecture-number">Lecture 02</span>
+                <div class="lecture-title">AI Agent와의 협업 프로젝트</div>
+                <div class="lecture-subtitle">3가지 AI, 3가지 프로젝트</div>
+                <div class="lecture-tags">
+                    <span class="tag">Gemini</span>
+                    <span class="tag">Claude</span>
+                    <span class="tag">Codex</span>
+                </div>
+            </a>
+
+            <!-- Lecture 03 -->
+            <a href="lectures/lecture-03-ai-agent-intro/lecture.html" class="lecture-card">
+                <span class="lecture-number">Lecture 03</span>
+                <div class="lecture-title">똑똑한 비서가 생겼어요!</div>
+                <div class="lecture-subtitle">AI Agent 처음 만나기</div>
+                <div class="lecture-tags">
+                    <span class="tag">AI Agent</span>
+                    <span class="tag">디지털 비서</span>
+                    <span class="tag">초보자</span>
+                </div>
+            </a>
+
+            <!-- Lecture 04-1 -->
+            <a href="lectures/lecture-04-claude-cli-workflow/lecture.html" class="lecture-card">
+                <span class="lecture-number">Lecture 04-1</span>
+                <div class="lecture-title">Claude CLI로 프로젝트 관리하기</div>
+                <div class="lecture-subtitle">문서 중심 개발 워크플로우</div>
+                <div class="lecture-tags">
+                    <span class="tag">Claude CLI</span>
+                    <span class="tag">워크플로우</span>
+                    <span class="tag">문서 중심</span>
+                </div>
+            </a>
+
+            <!-- Lecture 04-2 -->
+            <a href="lectures/lecture-04-claude-code-features/lecture.html" class="lecture-card">
+                <span class="lecture-number">Lecture 04-2</span>
+                <div class="lecture-title">Claude Code 기능 완전 정복</div>
+                <div class="lecture-subtitle">초보자를 위한 핵심 기능 가이드</div>
+                <div class="lecture-tags">
+                    <span class="tag">Claude Code</span>
+                    <span class="tag">기능 가이드</span>
+                    <span class="tag">실습</span>
+                </div>
+            </a>
+
+            <!-- Lecture 05 -->
+            <a href="lectures/lecture-05-문서작업-실전/lecture.html" class="lecture-card">
+                <span class="lecture-number">Lecture 05</span>
+                <div class="lecture-title">Claude Code 문서 작업 마스터하기</div>
+                <div class="lecture-subtitle">소설, 논문, 강의 자료 제작까지</div>
+                <div class="lecture-tags">
+                    <span class="tag">문서 작업</span>
+                    <span class="tag">실전</span>
+                    <span class="tag">콘텐츠 제작</span>
+                </div>
+            </a>
+
+            <!-- Lecture 06 -->
+            <a href="lectures/lecture-06-claude-code-advanced/lecture.html" class="lecture-card">
+                <span class="lecture-number">Lecture 06</span>
+                <div class="lecture-title">Claude Code 고급 활용법</div>
+                <div class="lecture-subtitle">실전 프로젝트를 위한 고급 기능과 자동화 전략</div>
+                <div class="lecture-tags">
+                    <span class="tag">고급</span>
+                    <span class="tag">자동화</span>
+                    <span class="tag">CLAUDE.md</span>
+                </div>
+            </a>
+
+            <!-- Lecture 07 -->
+            <a href="lectures/lecture-07-agent-automation-basics/lecture.html" class="lecture-card">
+                <span class="lecture-number">Lecture 07</span>
+                <div class="lecture-title">AI 에이전트로 자동화 시작하기</div>
+                <div class="lecture-subtitle">업무 자동화 기초</div>
+                <div class="lecture-tags">
+                    <span class="tag">자동화</span>
+                    <span class="tag">에이전트</span>
+                    <span class="tag">업무 효율</span>
+                </div>
+            </a>
+
+            <!-- Lecture 08 -->
+            <a href="lectures/lecture-08-hackathon-practice/lecture.html" class="lecture-card">
+                <span class="lecture-number">Lecture 08</span>
+                <div class="lecture-title">AI 에이전트 해커톤</div>
+                <div class="lecture-subtitle">실무 자동화 실습</div>
+                <div class="lecture-tags">
+                    <span class="tag">해커톤</span>
+                    <span class="tag">실습</span>
+                    <span class="tag">자동화</span>
+                </div>
+            </a>
+
+            <!-- Lecture 09 -->
+            <a href="lectures/lecture-09-agent-hackathon/lecture.html" class="lecture-card">
+                <span class="lecture-number">Lecture 09</span>
+                <div class="lecture-title">AI 에이전트 개인 해커톤</div>
+                <div class="lecture-subtitle">나만의 자동화 프로젝트 만들기</div>
+                <div class="lecture-tags">
+                    <span class="tag">개인 프로젝트</span>
+                    <span class="tag">해커톤</span>
+                    <span class="tag">실전</span>
+                </div>
+            </a>
+        </div>
+
+        <footer>
+            <p>&copy; 2025 AI & 코딩 강의. All rights reserved.</p>
+            <div class="footer-links">
+                <a href="https://github.com/blackdew" target="_blank">GitHub</a>
+                <a href="https://claude.ai" target="_blank">Claude AI</a>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>
