@@ -8,14 +8,70 @@ paginate: true
 <style>
 section {
   padding: 60px 80px;
+  font-size: 1.1em;
 }
 
 section.lead {
   padding: 60px 80px;
+  text-align: center;
+}
+
+h1 {
+  color: #2c3e50;
+  font-size: 2.5em;
+}
+
+h2 {
+  color: #3498db;
+  font-size: 1.8em;
+}
+
+h3 {
+  font-size: 1.4em;
+}
+
+p, li {
+  font-size: 1.1em;
+  line-height: 1.5;
+}
+
+code {
+  background: #f4f4f4;
+  padding: 2px 6px;
+  border-radius: 3px;
+  font-size: 1.1em;
+}
+
+table {
+  font-size: 1.1em;
+}
+
+.highlight {
+  background: #fff3cd;
+  padding: 15px;
+  border-left: 4px solid #ffc107;
+  margin: 15px 0;
+  font-size: 1.2em;
+}
+
+.success {
+  background: #d4edda;
+  padding: 15px;
+  border-left: 4px solid #28a745;
+  margin: 15px 0;
+  font-size: 1.2em;
+}
+
+.question {
+  background: #e3f2fd;
+  padding: 20px;
+  border-left: 4px solid #2196f3;
+  margin: 20px 0;
+  font-size: 1.3em;
+  font-weight: bold;
+  color: #1565c0;
 }
 </style>
-
-<!-- _class: lead -->
 
 # Part 6
 
@@ -120,35 +176,309 @@ section.lead {
 
 ---
 
+## 활용 팁 1: 문서 기반 작업 관리
+
+<div class="highlight">
+핵심: 프로젝트 상태를 문서로 관리하세요
+</div>
+
+<div style="display: grid; grid-template-columns: 1fr 1fr; gap: 40px;">
+
+<div>
+
+### 왜 문서 관리가 중요한가?
+
+**문제**: 세션이 길어지면
+- 대화 기록이 너무 길어짐
+- 맥락을 잃어버림
+- Agent 성능이 떨어짐
+
+**해결책**: 문서로 상태 관리
+- 세션을 자유롭게 시작/종료
+- 언제든 작업 재개 가능
+- Agent에게 정확한 맥락 전달
+
+</div>
+
+<div>
+
+### 문서 예시
+
+```markdown
+# project-status.md
+
+## 현재 진행 상황
+- [완료] 데이터 수집
+- [진행중] 데이터 정리
+- [대기] 보고서 작성
+
+## TODO 리스트
+1. CSV 중복 제거
+2. 날짜 포맷 통일
+3. 결측치 처리
+
+## 결정사항
+- 결측치: 0으로 처리
+```
+
+</div>
+
+</div>
+
+---
+
+## 활용 팁 2: 세션 관리
+
+<div class="highlight">
+세션은 짧게, 자주 종료하세요
+</div>
+
+<div style="display: grid; grid-template-columns: 1fr 1fr; gap: 40px;">
+
+<div>
+
+### 세션이 길어지면 문제
+
+- Agent 응답 품질 저하
+- 불필요한 맥락으로 혼란
+- 비용 증가 (토큰 사용량)
+
+### 권장: 30-60분 작업 사이클
+
+1. 문서 읽고 시작
+2. 한 가지 작업에 집중
+3. 문서 업데이트
+4. 세션 종료
+
+</div>
+
+<div>
+
+### 프롬프트 예시
+
+**세션 시작 시**:
+```
+project-status.md 읽어줘.
+다음 TODO 진행:
+CSV 중복 제거
+```
+
+**세션 종료 전**:
+```
+project-status.md 업데이트해줘.
+완료: CSV 중복 제거
+다음: 날짜 포맷 통일
+```
+
+</div>
+
+</div>
+
+---
+
+## 활용 팁 3: 좋은 대화 원칙
+
+<div class="highlight">
+Agent와의 대화도 사람과의 대화처럼
+</div>
+
+| 원칙 | 설명 | 예시 |
+|------|------|------|
+| **서두르지 않기** | Agent가 계획을 세우도록 시간 주기 | "먼저 계획을 세워줘" |
+| **꼼꼼하게 읽기** | Agent의 응답과 질문을 주의깊게 읽기 | 에러 메시지, 제안사항 놓치지 않기 |
+| **구체적으로 답하기** | Agent 질문에 명확하게 답변 | ❌ "대충" → ✅ "YYYY-MM-DD 형식" |
+| **추가 아이디어 요청** | Agent에게 제안 요청 | "다른 방법도 있을까?" |
+| **이해 확인** | Agent가 제대로 이해했는지 확인 | "내 요청을 요약해줘" |
+
+**나쁜 예**:
+```
+파일 정리해줘
+```
+
+**좋은 예**:
+```
+downloads 폴더의 PDF 파일들을 정리하고 싶어.
+먼저 어떤 방식으로 정리할지 3가지 옵션을 제안해줘.
+```
+
+---
+
+## 활용 팁 4: IDE로 작업 확인
+
+<div class="highlight">
+Agent의 결과를 직접 눈으로 확인하세요
+</div>
+
+<div style="display: grid; grid-template-columns: 1fr 1fr; gap: 40px;">
+
+<div>
+
+### 추천 도구
+
+| 도구 | 특징 |
+|------|------|
+| **VS Code** | 무료, 파일 탐색 |
+| **Cursor** | AI 통합 에디터 |
+| **AntiGravity** | 최신 IDE |
+
+**설치 링크**:
+- VS Code: https://code.visualstudio.com/
+- Cursor: https://cursor.com/
+- AntiGravity: https://antigravity.google/download
+
+</div>
+
+<div>
+
+### 왜 IDE를 사용?
+
+**1. 파일 구조 확인**
+- Agent가 만든 파일들
+- 폴더 구조 한눈에
+
+**2. 직접 수정 가능**
+- 놓친 부분 바로 수정
+- 간단한 변경은 직접
+
+**3. 동시 작업**
+- Agent: 큰 작업
+- 나: 작은 수정/확인
+
+</div>
+
+</div>
+
+---
+
+## 활용 팁 5: Git으로 작업 저장
+
+<div class="highlight">
+Agent에게 Git도 맡기세요
+</div>
+
+<div style="display: grid; grid-template-columns: 1fr 1fr; gap: 40px;">
+
+<div>
+
+### 프롬프트 예시
+
+**간단하게**:
+```
+깃 커밋해줘
+```
+
+**구체적으로**:
+```
+지금까지 작업을 git에 저장.
+커밋 메시지:
+"데이터 정리 완료"
+```
+
+**작업 흐름**:
+작업 완료 -> "깃 커밋해줘" -> Agent가 커밋 -> 다음 작업 진행
+
+</div>
+
+<div>
+
+### 왜 Git을 사용?
+
+| 상황 | 도움 |
+|------|------|
+| **실수** | 이전 버전 복구 |
+| **실험** | 안전하게 시도 |
+| **공유** | 팀원과 협업 |
+| **기록** | 자동 히스토리 |
+
+**Git = 되돌리기 버튼**
+
+실패해도 괜찮다는
+안전감을 줍니다
+
+</div>
+
+</div>
+
+---
+
+## 활용 팁 5-1: 처음 Git 사용 시 초기화
+
+<div class="highlight">
+첫 커밋 전에 Git 사용자 정보 설정이 필요합니다
+</div>
+
+### 프롬프트 예시
+
+**초기화 요청**:
+```
+Git을 처음 사용합니다.
+내 이름과 이메일로 Git 초기화해줘.
+
+이름: 홍길동
+이메일: hong@example.com
+```
+
+**Agent가 실행하는 명령**:
+```bash
+git config --global user.name "홍길동"
+git config --global user.email "hong@example.com"
+git init
+```
+
+**참고**: 이 설정은 컴퓨터당 한 번만 하면 됩니다!
+
+---
+
+## Agent 활용 실제 프로젝트 사례
+
+**실전에서 Agent를 어떻게 활용하고 있을까요?**
+
+<div style="display: grid; grid-template-columns: 1fr 1fr; gap: 40px; margin-top: 30px;">
+
+<div>
+
+**창작 & 콘텐츠**
+- 음악 앨범 프로젝트
+- 강의 생성 프로젝트
+
+**생산성 & 도구**
+- DailyFlow 프로젝트
+- OTU 프로젝트
+
+</div>
+
+<div>
+
+**데이터 & 분석**
+- 캐글 컨테스트 참여
+- 주식 신호 분석기
+
+**연구 & 학습**
+- 정책 및 논문 연구
+
+</div>
+
+</div>
+
+**프로젝트 상세 내용**: [Agent 활용 프로젝트 7가지](https://docs.google.com/presentation/d/1_525QEweDZZS5LJC0roWzQaAkrp54Yn6XBI1-d9IWNQ/edit?usp=sharing)
+
+---
+
 ## 다음 단계: 심화 학습
 
-**1단계: 기본 활용 (1-2주)**
+**1단계: 기본 활용**
 - 실무에서 주 1회 이상 사용
 - 프롬프트 패턴 익히기
 - Plan 모드 습관화
 
-**2단계: 프로젝트 컨텍스트 (3-4주)**
+**2단계: 프로젝트 컨텍스트**
 - CLAUDE.md 파일 작성법 학습
 - 프로젝트별 가이드라인 설정
 
-**3단계: 고급 기능 (1-2개월)**
-- Commands 만들기 (반복 작업 자동화)
-- MCP 활용 (외부 도구 연결)
+**3단계: 고급 기능**
+- Commands 활용법 (반복 작업 자동화)
+- Skills 활용법 (전문 도구 활용)
 
----
-
-## 심화 학습 자료
-
-**공식 문서**:
-- Claude Code 공식 문서: https://code.claude.com/docs
-- Claude.ai: https://claude.ai
-
-**커뮤니티**:
-- GitHub 샘플 프로젝트
-- Discord/Slack 커뮤니티 (회사별)
-
-**실습 과제**:
-- "이번 주에 업무에서 Agent 한 번 써보고 후기 공유"
 
 ---
 
@@ -174,7 +504,7 @@ reports/ - 생성된 보고서
 
 ---
 
-## Commands 만들기 (미리보기)
+## Commands 활용법 (미리보기)
 
 **Commands란?**
 - 자주 쓰는 작업을 단축 명령어로 저장
@@ -192,38 +522,24 @@ reports/ 폴더에 저장해줘.
 
 ---
 
-## MCP (Model Context Protocol) (미리보기)
+## Skills 활용하기 (미리보기)
 
-**MCP란?**
-- Agent가 외부 도구를 사용할 수 있게 하는 프로토콜
-- Google Calendar, Notion, Slack 등 연결 가능
+**Skills란?**
+- 특정 작업에 특화된 전문 도구 모음
+- PDF, Excel, 이미지 처리 등 복잡한 작업을 쉽게 수행
 
 **활용 예시**:
-- Slack에 자동 메시지 전송
-- Google Calendar에서 일정 읽기
-- Notion 데이터베이스 업데이트
+- PDF Skill: PDF 텍스트 추출, 병합, 분할
+- Excel Skill: 데이터 분석, 차트 생성, 피벗 테이블
+- 이미지 Skill: 이미지 편집, 포맷 변환, 썸네일 생성
 
-**주의**: 고급 기능이므로 기본 활용 후 도전!
-
----
-
-## 1주일 후 팔로우업 세션 (선택)
-
-**일정**: 1주일 후, 1시간
-
-**내용**:
-- 실무 활용 사례 공유
-- 막힌 부분 Q&A
-- 추가 팁 및 트릭
-
-**참여 방법**:
-- 희망자 사전 신청 (10명 이상 시 개설)
+**사용법**: Agent가 필요시 자동으로 적절한 Skill 선택!
 
 ---
 
 ## 과제
 
-**이번 주 미션**:
+**강의 후 미션**:
 
 1. **실무에서 Agent 1회 이상 사용**
    - 어떤 작업이든 OK
@@ -271,16 +587,18 @@ reports/ 폴더에 저장해줘.
 
 ## 연락처 및 피드백
 
+**공식 문서**:
+- Claude Code 공식 문서: https://code.claude.com/docs
+- Claude.ai: https://claude.ai
+
 **강의 관련 문의**:
-- 이메일: [강사 이메일]
-- 슬랙: [채널명]
+- GitHub: https://github.com/blackdew
+- 이메일: blackdew7@gmail.com
 
 **피드백 환영**:
 - 오늘 강의에 대한 의견
 - 개선 제안
 - 추가로 듣고 싶은 내용
-
-**설문조사**: [QR 코드 또는 링크]
 
 ---
 

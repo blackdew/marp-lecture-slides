@@ -73,17 +73,6 @@ table {
 }
 </style>
 
-<!-- _class: lead -->
-
-# 비개발자를 위한
-# AI 에이전트 해커톤
-
-**Part 1: 시작하기**
-
-환경 확인 및 AI Agent 첫 만남
-
----
-
 ## 이번 시간에 배울 내용 (Part 1)
 
 ### Part 1: 시작하기 (30분)
@@ -374,3 +363,15 @@ claude    # 또는 gemini, codex
 다음은 **Part 2: 첫 실습**
 
 실제로 Agent와 함께 작업해봅시다!
+
+---
+<!-- _class: lead -->
+
+# Just Plan It!
+
+**Part 2: 첫 실습**
+
+간단한 체험으로 시작하기
+
+---
+

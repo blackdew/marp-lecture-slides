@@ -1,8 +1,8 @@
-# Lecture 09: AI 에이전트 해커톤 (비개발자용)
+# Lecture 09: Just Plan It!
 
 **프로젝트 시작일**: 2025-11-16
-**현재 상태**: 개요 확정 단계
-**다음 단계**: Part별 상세 스크립트 작성
+**현재 상태**: ✅ 완료 (5시간 강의)
+**최종 업데이트**: 2025-11-20
 
 ---
 
@@ -10,11 +10,11 @@
 
 ### 강의 목적
 
-**비개발자를 위한 AI 에이전트 해커톤 강의 제작**
+**Just Plan It! - AI Agent와 함께하는 업무 자동화 실습**
 
 - **대상**: 일반 업무 사용자 (엑셀, 워드는 가능하지만 터미널은 낯선 사람)
-- **시간**: 6시간 (하루 완성)
-- **형식**: 이론 30% + 실습 60% + 자유활동 10%
+- **시간**: 5시간 (300분, 하루 완성)
+- **형식**: 이론 30% + 실습 60% + 개인 해커톤 10%
 
 ### 3가지 핵심 목표
 
@@ -116,350 +116,172 @@
 
 ---
 
-## 📋 현재 진행 상황
+## 📋 완료된 작업
 
-### 완료된 작업
-
+### 기획 및 설계
 - [x] 기존 강의 분석 (Lecture 03-08)
 - [x] 4명 전문가 패널 리뷰 (교육, 실무, UX, 기술)
 - [x] 5대 개선 과제 도출
 - [x] 최종 강의 개요 확정 (outline.md)
 - [x] 회의록 작성 (회의록.md)
 
-### 주요 변경 사항 (전문가 패널 피드백 반영)
+### 강의 자료 제작
+- [x] 완전한 Marp 슬라이드 제작 (lecture.md)
+- [x] Part 1-6 모든 섹션 완성
+- [x] 5시간(300분) 타임라인 확정
+- [x] QR 코드 및 슬라이드 링크 추가 (https://bit.ly/3JXLGZ0)
+- [x] Agent 프로젝트 실제 사례 7가지 추가
+- [x] Part 4 샘플 파일 다운로드 링크 제공
+- [x] Git 초기화 가이드 추가
+- [x] IDE 도구 목록 업데이트 (AntiGravity 포함)
+- [x] HTML 프레젠테이션 생성 완료
 
-1. **Part 순서 변경**: 이론 → 실습 ❌ / 실습 → 이론 ✅
-   - Part 2: 첫 실습 (간단한 체험) → **신규 제작**
-   - Part 3: AI 시대 3가지 키워드 (이론)
-2. **실습 구조 통일**: 모든 실습 = 기본(25분) + 도전(15분)
-3. **심리적 안전감 강화**: "실패해도 괜찮아" 메시지 반복
-4. **Agent의 한계 명시**: Part 6에 섹션 추가
-5. **지원 자료 구체화**: 용어집, 프롬프트 가이드북, 치트 시트
+### 강의 구조 (총 5시간, 300분)
 
-### 현재 파일 구조
+| Part | 제목 | 시간 | 내용 |
+|------|------|------|------|
+| Part 1 | 시작하기 | 30분 | 환경 확인 및 AI Agent 첫 만남 |
+| Part 2 | 첫 실습 | 45분 | "안녕, Agent!" - 간단한 대화와 첫 작업 |
+| 휴식 1 | | 15분 | |
+| Part 3 | AI 시대 3가지 키워드 | 40분 | LLM 작동 원리, 선택/계획/문서화 |
+| Part 4 | 업무 자동화 실습 | 95분 | CSV 정리, PDF 요약, 메일 작성, 즉석 도구 (4개 실습, 각 10+10분) |
+| 휴식 2 | | 15분 | |
+| Part 5 | 개인 해커톤 | 40분 | 하고 싶은 것 자유롭게 만들기 |
+| Part 6 | 회고 및 다음 단계 | 20분 | Agent의 한계, 심화 학습 방향 |
+
+### 주요 특징
+
+1. **실습 우선 구조**: Part 2에서 바로 실습 시작 (이론은 Part 3에서)
+2. **10+10 구조**: 모든 Part 4 실습 = 기본 과제(10분) + 도전 과제(10분)
+3. **실전 프로젝트 사례**: 7가지 실제 Agent 활용 프로젝트 소개
+4. **심리적 안전감**: "실패해도 괜찮아" 메시지 반복
+5. **Agent 한계 명시**: Part 6에서 현실적인 기대치 설정
+
+### 파일 구조
 
 ```
 lectures/lecture-09-agent-hackathon/
-├── README.md           # 이 파일 (프로젝트 컨텍스트)
-├── 회의록.md            # 전문가 패널 토론 내용
-└── outline.md          # 최종 강의 개요
+├── README.md                   # 프로젝트 개요 및 컨텍스트
+├── lecture.md                  # 완성된 Marp 프레젠테이션
+├── lecture.html                # 생성된 HTML 프레젠테이션
+├── outline.md                  # 최초 강의 개요
+├── 회의록.md                    # 전문가 패널 토론 내용
+├── part-01.md ~ part-06.md    # Part별 상세 스크립트
+├── images/
+│   ├── qr_slide_link.svg       # QR 코드 이미지
+│   └── [기타 시각 자료]
+└── samples/
+    └── part4/
+        └── part4-samples.zip   # Part 4 실습 파일
 ```
 
 ---
 
-## 🚀 다음 단계 작업
+## 🎓 강의 사용 가이드
 
-### 즉시 작업 (이번 주)
+### 프레젠테이션 실행
 
-#### 1. 지원 자료 제작
-
-**용어집** (`glossary.md`):
-
-| 우선순위 | 기술 용어 | 쉬운 설명 | 비유 |
-|---------|-----------|-----------|------|
-| 1 | LLM | 대규모 언어 모델 | 엄청나게 많은 책을 읽은 AI |
-| 1 | Agent | AI 비서 + 도구 사용 능력 | 도구를 쓸 줄 아는 비서 |
-| 1 | 컨텍스트 | 대화의 맥락 정보 | Agent의 '단기 기억' |
-| 1 | 프롬프트 | Agent에게 주는 지시 | 직원에게 주는 업무 지시서 |
-| 2 | Plan 모드 | 실행 전 계획 검토 | 일 시키기 전에 보고받기 |
-| 2 | Tools | Agent가 쓸 수 있는 기능들 | Agent의 앱 서랍 |
-
-**프롬프트 가이드북** (`prompt-guide.md`):
-
-- 섹션 1: 기본 구조 (좋은 예 vs 나쁜 예)
-- 섹션 2: 단계별 지시
-- 섹션 3: 결과물 명시
-- 섹션 4: 톤 조절
-- 패턴별 예시 10개
-
-**치트 시트** (`cheatsheet.md`):
-
-- 자주 쓰는 명령어
-- 좋은 프롬프트 체크리스트
-- 긴급 상황 대처법
-- HTML 파일 여는 법
-- 용어 간단 정리
-
-#### 2. Part별 상세 스크립트 준비
-
-**우선 제작 순서**:
-
-1. Part 1: 시작하기 (`part-01.md`)
-2. Part 2: 첫 실습 (`part-02.md`) ← **신규 제작**
-3. Part 3: AI 시대 3가지 키워드 (`part-03.md`) ← Lecture 07 재구성
-
-### 단기 작업 (2주 내)
-
-#### 1. 시각 자료 제작 (`images/` 디렉토리)
-
-**필수 시각 자료**:
-
-- [ ] `img_llm_prediction.svg`: LLM 다음 단어 예측 과정 3-4컷 만화
-- [ ] `img_agent_structure.svg`: Agent 구조 다이어그램 (LLM + Memory + Planning + Tools)
-- [ ] `img_prompt_comparison.svg`: 좋은/나쁜 프롬프트 비교
-- [ ] `img_context_memory.svg`: 컨텍스트를 '대화 메모리'로 비유한 그림
-
-**참고**: 모든 SVG는 중앙 배치 원칙 준수 (CLAUDE.md 이미지 가이드 참조)
-
-#### 2. 실습 파일 샘플 제작 (`samples/` 디렉토리)
-
-**Part 4 실습용**:
-
-```
-samples/
-├── part4/
-│   ├── sales_jan.csv      # 1월 매출 데이터
-│   ├── sales_feb.csv      # 2월 매출 데이터
-│   ├── sales_mar.csv      # 3월 매출 데이터
-│   ├── report_q1.pdf      # 1분기 보고서
-│   ├── report_q2.pdf      # 2분기 보고서
-│   ├── report_q3.pdf      # 3분기 보고서
-│   └── meeting_notes.md   # 회의록 샘플
-└── README.md
+**브라우저에서 보기**:
+```bash
+# HTML 파일 직접 열기
+open lectures/lecture-09-agent-hackathon/lecture.html
 ```
 
-**CSV 파일 요구사항** (중간 수준의 현실성):
+**온라인 링크**: https://bit.ly/3JXLGZ0
 
-- 날짜 포맷 제각각: `2024-01-01`, `01/15/2024`, `2024.1.20`
-- 금액에 특수문자: `₩1,000`, `1000원`, `1,000`
-- 중복 데이터 3-5개 포함
-- 총 행 수: 각 파일당 30-50행
+**PDF 생성**:
+1. 브라우저에서 lecture.html 열기
+2. Cmd+P (Mac) / Ctrl+P (Windows)
+3. "배경 그래픽" 옵션 활성화
+4. "PDF로 저장" 선택
 
-#### 3. Part별 상세 스크립트
+### 프레젠테이션 재생성
 
-**제작 순서**:
-
-1. Part 1: 시작하기
-2. Part 2: 첫 실습 (신규)
-3. Part 3: AI 시대 3가지 키워드
-4. Part 4: 업무 자동화 실습
-5. Part 5: 팀 해커톤
-6. Part 6: 회고 및 다음 단계
-
-### 중기 작업 (1개월 내)
-
-#### 1. 사전 설치 가이드 제작
-
-**동영상 가이드** (Loom 또는 유사 도구):
-
-- [ ] Windows용 설치 가이드 (5분)
-- [ ] Mac용 설치 가이드 (5분)
-- [ ] 트러블슈팅 시연 (3-5분)
-
-**문서 가이드** (`install-guide.md`):
-
-- Node.js 설치 단계별 스크린샷
-- Claude Code CLI 설치 명령어
-- API Key 발급 및 설정
-- 설치 확인 방법
-
-**트러블슈팅 FAQ** (`troubleshooting.md`):
-
-- 'npm: command not found' → Node.js 미설치
-- '관리자 권한 필요' → sudo/관리자 모드 사용법
-- 'API key invalid' → 재발급 및 재설정
-- 방화벽/보안 소프트웨어 충돌
-
-#### 2. Marp 슬라이드 제작
-
-**파일 이름**: `lecture.md`
-
-**구조**:
-
-```markdown
----
-marp: true
-theme: default
-size: 16:9
-paginate: true
----
-
-<style>
-section {
-  padding: 60px 80px;
-}
-</style>
-
-<!-- Part 1 -->
----
-
-# Part 1: 시작하기
-
-...
-```
-
-**주의사항**:
-
-- 배경 이미지는 35% 크기 사용
-- 슬라이드 오버플로우 방지 (테이블 활용)
-- 한국어 텍스트 줄바꿈 주의
-
-#### 3. 시범 강의 (내부 테스트)
-
-**테스트 대상**:
-
-- 비개발자 2-3명
-- 개발자 1명 (관찰자)
-
-**테스트 목표**:
-
-- 실습 시간 적정성 검증
-- 용어 이해도 확인
-- 어려운 부분 파악
-- 프롬프트 가이드북 효과성 검증
-
----
-
-## 📖 세션 재개 시 참조 정보
-
-### 핵심 컨텍스트
-
-**이 강의를 만드는 이유**:
-
-- 비개발자가 AI Agent를 활용해 업무 자동화를 체험하고, AI 시대 관점을 장착하도록 돕기 위함
-- 기존 강의 (Lecture 03-08)는 샘플이었고, 이제 실제 강의를 만드는 단계
-
-**대상 특성**:
-
-- 일반 업무 사용자 (엑셀, 워드는 가능)
-- 터미널은 낯설지만 따라할 수 있음
-- 개발 경험 불필요
-- 6시간 교육 (하루)
-
-**설계 원칙**:
-
-1. **쉽지만 가벼지 않게**: 기술 용어는 정의 후 사용, 비유 활용
-2. **체험 우선**: 실습 먼저 → 이론 (순서 변경 적용됨)
-3. **심리적 안전감**: "실패해도 괜찮아" 메시지 반복
-4. **실무 직결**: 다음 날부터 써먹을 수 있는 내용
-
-**주요 변경 사항 (전문가 패널 피드백)**:
-
-- Part 순서: 실습 먼저 → 이론 (체험 → 이론 → 심화)
-- 실습 구조: 모든 실습 = 기본(25분) + 도전(15분)
-- Agent의 한계 명시
-- 지원 자료 구체화 (용어집, 프롬프트 가이드북, 치트 시트)
-
-### 파일 위치
-
-**프로젝트 루트**: `/Users/sookbunlee/work/lectures/lectures/lecture-09-agent-hackathon/`
-
-**핵심 문서**:
-
-- `README.md`: 이 파일 (프로젝트 전체 컨텍스트)
-- `outline.md`: 최종 강의 개요 (6시간 타임라인, Part별 상세)
-- `회의록.md`: 전문가 패널 토론 내용
-
-**다음 작업 디렉토리**:
-
-- `part-01.md` ~ `part-06.md`: Part별 상세 스크립트
-- `images/`: SVG 시각 자료
-- `samples/`: 실습용 샘플 파일
-- `glossary.md`: 용어집
-- `prompt-guide.md`: 프롬프트 가이드북
-- `cheatsheet.md`: 치트 시트
-
-### 참고할 기존 강의 위치
-
-- `/Users/sookbunlee/work/lectures/lectures/lecture-03-ai-agent-basics/`
-- `/Users/sookbunlee/work/lectures/lectures/lecture-07-ai-agent-automation/`
-- `/Users/sookbunlee/work/lectures/lectures/lecture-08-hackathon-practice/`
-
-### 다음 세션 시작 시 확인 사항
-
-1. `outline.md` 읽기 (전체 구조 파악)
-2. `회의록.md` 읽기 (전문가 피드백 확인)
-3. 현재 작업 중인 Part 확인
-4. `CLAUDE.md` 참조 (마크다운 규칙, 이미지 가이드)
-
----
-
-## 🎨 강의 제작 가이드
-
-### 마크다운 작성 규칙
-
-**CLAUDE.md 준수**:
-
-- 헤딩은 `#`, `##`, `###` 사용 (MD036)
-- 중첩 목록은 2칸 들여쓰기 (MD007)
-- 헤딩 위아래 한 줄 비움 (MD022)
-- 목록 위아래 한 줄 비움 (MD032)
-
-### 이미지 생성 규칙
-
-**SVG 중앙 배치 필수**:
-
-- Marp의 `![bg left:35%]`는 이미지를 자르는 게 아니라 정렬
-- 콘텐츠가 한쪽으로 치우치면 잘려 보임
-- 모든 SVG 콘텐츠는 viewBox 중앙에 배치
-
-**권장 viewBox**:
-
-- 세로로 긴 비율: `viewBox="0 -80 600 1160"`
-- 내부 여백: 상하 80px, 좌우 100px
-
-### Marp 디자인 패턴
-
-**필수 CSS**:
-
-```markdown
----
-marp: true
-theme: default
-size: 16:9
-paginate: true
----
-
-<style>
-section {
-  padding: 60px 80px;
-}
-</style>
-```
-
-**배경 이미지**:
-
-- 35% 크기 사용: `![bg left:35%](images/img_example.svg)`
-- 40% 이상은 가장자리에 붙어 잘림
-
-**공간 절약**:
-
-- 불릿 리스트 → 테이블 (세로 공간 40-50% 절약)
-
-### 빌드 방법
-
-**HTML 생성**:
+강의 내용을 수정한 경우:
 
 ```bash
-./generate-presentation.sh lectures/lecture-09-agent-hackathon lecture.md
+./generate-presentation.sh lecture-09-agent-hackathon lecture.md
 ```
 
-**브라우저에서 확인**:
+### 실습 파일 준비
 
-- 줄바꿈, 이미지 경로, 여백, 오버플로우 확인
+**Part 4 샘플 파일 다운로드**:
+- 링크: https://github.com/blackdew/marp-lecture-slides/raw/refs/heads/main/lectures/lecture-09-agent-hackathon/samples/part4/part4-samples.zip
+- 강의 전에 미리 다운로드하여 수강생에게 공유
 
-**PDF 생성** (수동):
+### 강의 진행 팁
 
-1. 브라우저에서 HTML 열기
-2. Cmd+P (Mac) / Ctrl+P (Win)
-3. "배경 그래픽" 활성화
-4. "PDF로 저장"
+**사전 준비**:
+1. 모든 수강생이 Claude Code CLI 또는 대체 도구(Gemini CLI, Codex) 설치 완료 확인
+2. Part 4 샘플 파일 배포
+3. 슬라이드 QR 코드 또는 bit.ly 링크 공유
+
+**진행 중**:
+1. Part 2에서 첫 실습으로 분위기 조성
+2. Part 4 실습은 10+10 구조 엄수 (기본→도전)
+3. 각 Part 마무리 시 핵심 메시지 강조
+4. Part 5 개인 해커톤에서 적극적인 질문 유도
+
+**주의사항**:
+- "실패해도 괜찮아" 메시지 반복 전달
+- Agent의 한계를 솔직하게 설명 (Part 6)
+- 시간 배분 엄수 (총 300분)
+
+### 관련 리소스
+
+**Agent 프로젝트 사례**:
+- 슬라이드: https://docs.google.com/presentation/d/1_525QEweDZZS5LJC0roWzQaAkrp54Yn6XBI1-d9IWNQ/edit?usp=sharing
+- 7가지 실전 프로젝트 (음악, 강의, 생산성, 데이터, 연구 등)
+
+**설치 가이드**:
+- Claude Code: https://getclaudecode.com/
+- Gemini CLI: https://github.com/google/generative-ai-python
+- Codex: https://platform.openai.com/docs/guides/code
+- AntiGravity IDE: https://antigravity.google/download
 
 ---
 
-## 📞 관련 문서
+## 📝 향후 개선 아이디어
 
-**프로젝트 루트 문서**:
+**1. 추가 지원 자료**:
+- 용어집 (glossary.md): LLM, Agent, Context, Prompt 등 주요 용어 정리
+- 프롬프트 가이드북 (prompt-guide.md): 좋은 프롬프트 작성 패턴 10가지
+- 치트 시트 (cheatsheet.md): 자주 쓰는 명령어 및 팁
 
-- `/Users/sookbunlee/work/lectures/CLAUDE.md`: AI 코딩 어시스턴트 작업 컨텍스트
-- `/Users/sookbunlee/work/lectures/generate-presentation.sh`: 빌드 스크립트
+**2. 시각 자료 추가**:
+- LLM 작동 원리 설명 다이어그램
+- Agent 구조 시각화
+- 좋은/나쁜 프롬프트 비교 예시
 
-**기존 강의 분석 참조**:
+**3. 실전 사례 확장**:
+- 수강생 성공 사례 수집 및 공유
+- 산업별 Agent 활용 사례 추가 (마케팅, 재무, HR 등)
 
-- 전문가 패널이 분석한 Lecture 03-08 요약은 `회의록.md`에 포함
+**4. 설치 가이드**:
+- Windows/Mac 단계별 설치 동영상
+- 트러블슈팅 FAQ 문서
+- 오프라인 설치 가이드
+
+**5. 후속 강의**:
+- 심화 과정: MCP 서버 구축, Custom Skills 개발
+- 실무 적용 워크숍: 팀별 프로젝트 진행
 
 ---
 
-**마지막 업데이트**: 2025-11-16
-**프로젝트 상태**: 개요 확정 완료, Part별 스크립트 제작 준비 중
-**다음 작업**: 용어집 + 프롬프트 가이드북 + Part 1-2 스크립트
+## 📞 연락처 및 피드백
+
+**강의 관련 문의**:
+- GitHub: https://github.com/blackdew
+- 이메일: blackdew7@gmail.com
+
+**참고 문서**:
+- 프로젝트 컨텍스트: `lectures/CLAUDE.md`
+- 강의 개요: `outline.md`
+- 전문가 패널 회의록: `회의록.md`
+
+---
+
+**최종 업데이트**: 2025-11-20
+**프로젝트 상태**: ✅ 완료
+**강의 제목**: Just Plan It!
+**강의 시간**: 5시간 (300분)

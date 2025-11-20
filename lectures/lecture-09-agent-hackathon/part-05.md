@@ -8,20 +8,76 @@ paginate: true
 <style>
 section {
   padding: 60px 80px;
+  font-size: 1.1em;
 }
 
 section.lead {
   padding: 60px 80px;
+  text-align: center;
+}
+
+h1 {
+  color: #2c3e50;
+  font-size: 2.5em;
+}
+
+h2 {
+  color: #3498db;
+  font-size: 1.8em;
+}
+
+h3 {
+  font-size: 1.4em;
+}
+
+p, li {
+  font-size: 1.1em;
+  line-height: 1.5;
+}
+
+code {
+  background: #f4f4f4;
+  padding: 2px 6px;
+  border-radius: 3px;
+  font-size: 1.1em;
+}
+
+table {
+  font-size: 1.1em;
+}
+
+.highlight {
+  background: #fff3cd;
+  padding: 15px;
+  border-left: 4px solid #ffc107;
+  margin: 15px 0;
+  font-size: 1.2em;
+}
+
+.success {
+  background: #d4edda;
+  padding: 15px;
+  border-left: 4px solid #28a745;
+  margin: 15px 0;
+  font-size: 1.2em;
+}
+
+.question {
+  background: #e3f2fd;
+  padding: 20px;
+  border-left: 4px solid #2196f3;
+  margin: 20px 0;
+  font-size: 1.3em;
+  font-weight: bold;
+  color: #1565c0;
 }
 </style>
-
-<!-- _class: lead -->
 
 # Part 5
 
 # 개인 해커톤
 
-**시간**: 50분 (안내 5분 + 작업 40분 + 공유 5분)
+**시간**: 40분 (안내 5분 + 작업 30분 + 공유 5분)
 
 ---
 
@@ -32,7 +88,7 @@ section.lead {
 | 단계 | 내용 | 시간 |
 |------|------|------|
 | **안내** | 진행 방법 및 주제 선택 | 5분 |
-| **개인 작업** | 하고 싶은 것을 만들기 | 40분 |
+| **개인 작업** | 하고 싶은 것을 만들기 | 30분 |
 | **선택적 공유** | 원하는 사람만 간단히 공유 | 5분 |
 
 **핵심**: 평가 없음, 완성도 무관, Agent 경험이 목표
@@ -95,7 +151,7 @@ section.lead {
 
 **준비**:
 - [ ] 주제를 종이에 한 줄로 적었나요?
-- [ ] 40분 안에 가능한 범위인가요?
+- [ ] 30분 안에 가능한 범위인가요?
 - [ ] Plan 모드를 켤 준비가 되었나요?
 
 **마음가짐**:
@@ -105,7 +161,7 @@ section.lead {
 
 ---
 
-## 작업 시간 (40분)
+## 작업 시간 (30분)
 
 **타임라인**:
 
@@ -113,8 +169,8 @@ section.lead {
 |------|------|-----|
 | **0-5분** | 주제 정하기 | 너무 어렵게 생각하지 말기 |
 | **5-10분** | 첫 프롬프트 작성 | Plan 모드로 시작 |
-| **10-35분** | Agent와 작업 | 막히면 손들기 |
-| **35-40분** | 정리 | 안 끝나도 OK |
+| **10-25분** | Agent와 작업 | 막히면 손들기 |
+| **25-30분** | 정리 | 안 끝나도 OK |
 
 **강사의 역할**:
 - 순회하며 도움
@@ -183,7 +239,7 @@ section.lead {
 
 ---
 
-## 40분 작업 시작!
+## 30분 작업 시작!
 
 **타이머 시작**
 
@@ -197,12 +253,12 @@ section.lead {
 
 ---
 
-## (40분 후) 작업 종료
+## (30분 후) 작업 종료
 
 **수고하셨습니다!**
 
 완성 여부와 상관없이,
-Agent와 함께 40분을 보내셨습니다.
+Agent와 함께 30분을 보내셨습니다.
 
 **잠깐 쉬면서**:
 - 만든 것 저장 확인
@@ -244,3 +300,5 @@ Agent와 함께 40분을 보내셨습니다.
 **다음**: Part 6 - 회고 및 다음 단계
 
 ---
+<!-- _class: lead -->
+
