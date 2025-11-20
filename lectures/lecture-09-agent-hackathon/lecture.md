@@ -75,8 +75,7 @@ table {
 
 <!-- _class: lead -->
 
-# 비개발자를 위한
-# AI 에이전트 해커톤
+# Just Plan It!
 
 **Part 1: 시작하기**
 
@@ -386,8 +385,7 @@ claude    # 또는 gemini, codex
 ---
 <!-- _class: lead -->
 
-# 비개발자를 위한
-# AI 에이전트 해커톤
+# Just Plan It!
 
 **Part 2: 첫 실습**
 
@@ -679,8 +677,7 @@ claude
 ---
 <!-- _class: lead -->
 
-# 비개발자를 위한
-# AI 에이전트 해커톤
+# Just Plan It!
 
 **Part 3: AI 시대 3가지 키워드**
 
@@ -1435,8 +1432,7 @@ AI가 모든 걸 만들어줘도, 나의 역할은 더 중요해집니다
 ---
 <!-- _class: lead -->
 
-# 비개발자를 위한
-# AI 에이전트 해커톤
+# Just Plan It!
 
 **Part 4: 업무 자동화 실습**
 
