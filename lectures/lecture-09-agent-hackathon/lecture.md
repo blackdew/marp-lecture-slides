@@ -2635,35 +2635,56 @@ Agent에게 Git도 맡기세요
 
 ---
 
+## Agent 활용 실제 프로젝트 사례
+
+**실전에서 Agent를 어떻게 활용하고 있을까요?**
+
+<div style="display: grid; grid-template-columns: 1fr 1fr; gap: 40px; margin-top: 30px;">
+
+<div>
+
+**창작 & 콘텐츠**
+- 음악 앨범 프로젝트
+- 강의 생성 프로젝트
+
+**생산성 & 도구**
+- DailyFlow 프로젝트
+- OTU 프로젝트
+
+</div>
+
+<div>
+
+**데이터 & 분석**
+- 캐글 컨테스트 참여
+- 주식 신호 분석기
+
+**연구 & 학습**
+- 정책 및 논문 연구
+
+</div>
+
+</div>
+
+**프로젝트 상세 내용**: [Agent 활용 프로젝트 7가지](https://docs.google.com/presentation/d/1_525QEweDZZS5LJC0roWzQaAkrp54Yn6XBI1-d9IWNQ/edit?usp=sharing)
+
+---
+
 ## 다음 단계: 심화 학습
 
-**1단계: 기본 활용 (1-2주)**
+**1단계: 기본 활용**
 - 실무에서 주 1회 이상 사용
 - 프롬프트 패턴 익히기
 - Plan 모드 습관화
 
-**2단계: 프로젝트 컨텍스트 (3-4주)**
+**2단계: 프로젝트 컨텍스트**
 - CLAUDE.md 파일 작성법 학습
 - 프로젝트별 가이드라인 설정
 
-**3단계: 고급 기능 (1-2개월)**
-- Commands 만들기 (반복 작업 자동화)
-- MCP 활용 (외부 도구 연결)
+**3단계: 고급 기능**
+- Commands 활용법 (반복 작업 자동화)
+- Skills 활용법 (반복 작업 자동화)
 
----
-
-## 심화 학습 자료
-
-**공식 문서**:
-- Claude Code 공식 문서: https://code.claude.com/docs
-- Claude.ai: https://claude.ai
-
-**커뮤니티**:
-- GitHub 샘플 프로젝트
-- Discord/Slack 커뮤니티 (회사별)
-
-**실습 과제**:
-- "이번 주에 업무에서 Agent 한 번 써보고 후기 공유"
 
 ---
 
@@ -2689,7 +2710,7 @@ reports/ - 생성된 보고서
 
 ---
 
-## Commands 만들기 (미리보기)
+## Commands 활용법 (미리보기)
 
 **Commands란?**
 - 자주 쓰는 작업을 단축 명령어로 저장
@@ -2707,38 +2728,24 @@ reports/ 폴더에 저장해줘.
 
 ---
 
-## MCP (Model Context Protocol) (미리보기)
+## Skills 활용하기 (미리보기)
 
-**MCP란?**
-- Agent가 외부 도구를 사용할 수 있게 하는 프로토콜
-- Google Calendar, Notion, Slack 등 연결 가능
+**Skills란?**
+- 특정 작업에 특화된 전문 도구 모음
+- PDF, Excel, 이미지 처리 등 복잡한 작업을 쉽게 수행
 
 **활용 예시**:
-- Slack에 자동 메시지 전송
-- Google Calendar에서 일정 읽기
-- Notion 데이터베이스 업데이트
+- PDF Skill: PDF 텍스트 추출, 병합, 분할
+- Excel Skill: 데이터 분석, 차트 생성, 피벗 테이블
+- 이미지 Skill: 이미지 편집, 포맷 변환, 썸네일 생성
 
-**주의**: 고급 기능이므로 기본 활용 후 도전!
-
----
-
-## 1주일 후 팔로우업 세션 (선택)
-
-**일정**: 1주일 후, 1시간
-
-**내용**:
-- 실무 활용 사례 공유
-- 막힌 부분 Q&A
-- 추가 팁 및 트릭
-
-**참여 방법**:
-- 희망자 사전 신청 (10명 이상 시 개설)
+**사용법**: Agent가 필요시 자동으로 적절한 Skill 선택!
 
 ---
 
 ## 과제
 
-**이번 주 미션**:
+**강의 후 미션**:
 
 1. **실무에서 Agent 1회 이상 사용**
    - 어떤 작업이든 OK
@@ -2786,16 +2793,18 @@ reports/ 폴더에 저장해줘.
 
 ## 연락처 및 피드백
 
+**공식 문서**:
+- Claude Code 공식 문서: https://code.claude.com/docs
+- Claude.ai: https://claude.ai
+
 **강의 관련 문의**:
-- 이메일: [강사 이메일]
-- 슬랙: [채널명]
+- GitHub: https://github.com/blackdew
+- 이메일: blackdew7@gmail.com
 
 **피드백 환영**:
 - 오늘 강의에 대한 의견
 - 개선 제안
 - 추가로 듣고 싶은 내용
-
-**설문조사**: [QR 코드 또는 링크]
 
 ---
 
