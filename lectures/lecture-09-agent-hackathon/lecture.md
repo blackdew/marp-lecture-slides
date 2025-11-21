@@ -73,19 +73,15 @@ table {
 }
 </style>
 
-<!-- _class: lead -->
-
-# Just Plan It!
-
-**Part 1: 시작하기**
-
-환경 확인 및 AI Agent 첫 만남
-
-<div style="margin-top: 40px;">
-  <img src="images/qr_slide_link.svg" width="150" style="display: inline-block; vertical-align: middle;" />
-  <div style="display: inline-block; vertical-align: middle; margin-left: 30px; text-align: left;">
-    <strong style="font-size: 1.1em;">슬라이드 링크:</strong><br>
-    <a href="https://bit.ly/3JXLGZ0" style="color: #3498db; font-size: 1.1em;">https://bit.ly/3JXLGZ0</a>
+<div style="display: flex; align-items: center; justify-content: center; height: 100%; padding: 0 120px; gap: 80px;">
+  <div style="flex: 1; max-width: 600px;">
+    <h1 style="margin-bottom: 30px;">Just Plan It!</h1>
+    <p style="font-size: 1.3em; margin-bottom: 20px;"><strong>Part 1: 시작하기</strong></p>
+    <p style="font-size: 1.1em; margin-bottom: 30px;">환경 확인 및 AI Agent 첫 만남</p>
+  </div>
+  <div style="flex: 0 0 550px; text-align: center;">
+    <img src="images/qr_slide_link.svg" width="550" style="display: block; margin-bottom: 20px;" />
+    <p style="font-size: 1em;"><strong>슬라이드 링크:</strong> <a href="https://bit.ly/3JXLGZ0">https://bit.ly/3JXLGZ0</a></p>
   </div>
 </div>
 
