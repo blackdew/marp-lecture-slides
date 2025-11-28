@@ -228,6 +228,37 @@ _class: lead
 
 ---
 
+## 대안: Gemini CLI 설치 (개발자용)
+
+### 터미널에서 직접 Gemini 사용하기
+
+CLI(Command Line Interface)를 선호하는 분들을 위한 대안
+
+### 설치 방법
+
+```bash
+# Node.js가 설치되어 있어야 합니다
+npm install -g @google/gemini-cli
+```
+
+### 실행 및 인증
+
+```bash
+gemini          # Gemini CLI 실행
+gemini --version  # 버전 확인
+```
+
+- 처음 실행 시 브라우저에서 Google 계정 인증
+- **비용**: 완전 무료 (Google AI Studio API 기반)
+
+<div class="highlight">
+
+**참고**: CLI는 개발자/고급 사용자용입니다. 일반 사용자는 AntiGravity를 권장합니다.
+
+</div>
+
+---
+
 ## 첫 번째 대화: Hello Gemini!
 
 ### AntiGravity 채팅창에 입력해보세요
