@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="600" height="960" viewBox="0 -80 600 960" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect x="50" y="50" width="500" height="700" fill="#f8f9fa" rx="20"/>
+
+  <!-- Central AI Brain Icon -->
+  <g transform="translate(300, 350)">
+    <!-- Brain outline -->
+    <ellipse cx="0" cy="0" rx="120" ry="100" fill="none" stroke="#3498db" stroke-width="4"/>
+
+    <!-- Neural connections -->
+    <circle cx="-60" cy="-30" r="15" fill="#2196f3"/>
+    <circle cx="60" cy="-30" r="15" fill="#2196f3"/>
+    <circle cx="-40" cy="40" r="15" fill="#2196f3"/>
+    <circle cx="40" cy="40" r="15" fill="#2196f3"/>
+    <circle cx="0" cy="-60" r="15" fill="#2196f3"/>
+    <circle cx="0" cy="10" r="20" fill="#1565c0"/>
+
+    <!-- Connection lines -->
+    <line x1="-60" y1="-30" x2="0" y2="10" stroke="#64b5f6" stroke-width="2"/>
+    <line x1="60" y1="-30" x2="0" y2="10" stroke="#64b5f6" stroke-width="2"/>
+    <line x1="-40" y1="40" x2="0" y2="10" stroke="#64b5f6" stroke-width="2"/>
+    <line x1="40" y1="40" x2="0" y2="10" stroke="#64b5f6" stroke-width="2"/>
+    <line x1="0" y1="-60" x2="0" y2="10" stroke="#64b5f6" stroke-width="2"/>
+  </g>
+
+  <!-- Tools around the brain -->
+  <!-- Document icon (left) -->
+  <g transform="translate(100, 250)">
+    <rect x="0" y="0" width="50" height="60" fill="#fff" stroke="#27ae60" stroke-width="3" rx="5"/>
+    <line x1="10" y1="15" x2="40" y2="15" stroke="#27ae60" stroke-width="2"/>
+    <line x1="10" y1="25" x2="40" y2="25" stroke="#27ae60" stroke-width="2"/>
+    <line x1="10" y1="35" x2="30" y2="35" stroke="#27ae60" stroke-width="2"/>
+  </g>
+
+  <!-- Image icon (right) -->
+  <g transform="translate(450, 250)">
+    <rect x="0" y="0" width="50" height="50" fill="#fff" stroke="#9b59b6" stroke-width="3" rx="5"/>
+    <circle cx="15" cy="15" r="8" fill="#9b59b6"/>
+    <polygon points="5,45 25,25 45,45" fill="#9b59b6"/>
+  </g>
+
+  <!-- Data/Chart icon (bottom left) -->
+  <g transform="translate(120, 500)">
+    <rect x="0" y="30" width="15" height="30" fill="#e74c3c"/>
+    <rect x="20" y="15" width="15" height="45" fill="#e74c3c"/>
+    <rect x="40" y="0" width="15" height="60" fill="#e74c3c"/>
+  </g>
+
+  <!-- Gear icon (bottom right) -->
+  <g transform="translate(430, 500)">
+    <circle cx="30" cy="30" r="20" fill="none" stroke="#f39c12" stroke-width="4"/>
+    <circle cx="30" cy="30" r="10" fill="#f39c12"/>
+    <rect x="27" y="0" width="6" height="15" fill="#f39c12"/>
+    <rect x="27" y="45" width="6" height="15" fill="#f39c12"/>
+    <rect x="0" y="27" width="15" height="6" fill="#f39c12"/>
+    <rect x="45" y="27" width="15" height="6" fill="#f39c12"/>
+  </g>
+
+  <!-- Title text -->
+  <text x="300" y="680" text-anchor="middle" font-family="Arial, sans-serif" font-size="28" font-weight="bold" fill="#2c3e50">AI Agent</text>
+  <text x="300" y="720" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" fill="#7f8c8d">AntiGravity + Gemini</text>
+</svg>
