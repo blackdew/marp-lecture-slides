@@ -12,6 +12,20 @@
  
  > "단순 반복은 AI에게 맡기고, 우리는 **결정**과 **기획**에 집중합시다."
  
+ - **Agent의 구조 (4가지 요소)**:
+     - **LLM (Brain)**: 추론 및 결정 (두뇌)
+     - **Memory (Context)**: 기억 및 맥락 (수첩)
+     - **Planning (Strategy)**: 계획 수립 (매뉴얼)
+     - **Tools (Action)**: 실제 행동 (손발)
+ 
+  - **Agent 워크플로우**:
+     1. **요구사항 (User)**: 사용자가 목표 제시
+     2. **계획 (Planning)**: Memory를 참조하여 단계별 계획 수립
+     3. **확인 (Confirm)**: 사용자에게 계획 승인 요청 (피드백 루프)
+     4. **실행 (Execution)**: 도구(Tools)를 사용하여 작업 수행
+     5. **검증 (Verification)**: 결과 확인 (실패 시 재계획)
+     6. **완료 (Completion)**: 최종 결과 전달
+ 
  ---
 
 # Google Gemini 소개

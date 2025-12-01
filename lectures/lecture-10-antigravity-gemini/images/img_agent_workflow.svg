@@ -20,12 +20,13 @@
   <circle cx="80" cy="300" r="45" fill="#fff" stroke="#333" stroke-width="2" />
   <text x="80" y="305" text-anchor="middle" font-family="sans-serif" font-size="16" font-weight="bold">User</text>
 
-  <!-- Memory (Database shape) -->
-  <!-- Center: 520, 120. (Aligned with Confirm) -->
-  <path d="M460 120 v60 a60,15 0 0 0 120,0 v-60" fill="#ffe6f2" stroke="#333" stroke-width="2" />
-  <ellipse cx="520" cy="120" rx="60" ry="15" fill="#ffe6f2" stroke="#333" stroke-width="2" />
-  <text x="520" y="155" text-anchor="middle" font-family="sans-serif" font-size="16" font-weight="bold">Memory</text>
-  <text x="520" y="175" text-anchor="middle" font-family="sans-serif" font-size="12" fill="#555">(기억/맥락)</text>
+  <!-- Memory (Database shape) - CENTERED -->
+  <!-- Center: 620, 120. (Centered in Agent System Box) -->
+  <!-- Left: 560. Right: 680. -->
+  <path d="M560 120 v60 a60,15 0 0 0 120,0 v-60" fill="#ffe6f2" stroke="#333" stroke-width="2" />
+  <ellipse cx="620" cy="120" rx="60" ry="15" fill="#ffe6f2" stroke="#333" stroke-width="2" />
+  <text x="620" y="155" text-anchor="middle" font-family="sans-serif" font-size="16" font-weight="bold">Memory</text>
+  <text x="620" y="175" text-anchor="middle" font-family="sans-serif" font-size="12" fill="#555">(기억/맥락)</text>
 
   <!-- Plan (Rect) -->
   <!-- Center: 310. x=240. w=140. Right=380. -->
@@ -70,11 +71,11 @@
   <rect x="145" y="285" width="80" height="20" fill="#fff" fill-opacity="0.8" />
   <text x="185" y="298" text-anchor="middle" font-family="sans-serif" font-size="12">1. 요구사항</text>
 
-  <!-- Plan Top (310,270) <-> Memory Left (460,150 approx) -->
-  <path d="M310 260 Q 310 150 450 150" fill="none" stroke="#999" stroke-width="2" stroke-dasharray="5,5" marker-end="url(#arrowhead)" marker-start="url(#arrowhead-rev)" />
+  <!-- Plan Top (310,270) <-> Memory Left (560,150 approx) -->
+  <!-- Memory Left Edge is 560. Target point ~550,150. -->
+  <path d="M310 260 Q 310 150 550 150" fill="none" stroke="#999" stroke-width="2" stroke-dasharray="5,5" marker-end="url(#arrowhead)" marker-start="url(#arrowhead-rev)" />
 
   <!-- Plan Right (380,300) -> Confirm Left (460,300) -->
-  <!-- Gap is 80px. Arrow length ~70px. -->
   <line x1="383" y1="300" x2="450" y2="300" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)" />
   <text x="420" y="290" text-anchor="middle" font-family="sans-serif" font-size="12">2. 제안</text>
 
@@ -84,12 +85,12 @@
   <text x="415" y="419" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#d44">피드백/수정</text>
 
   <!-- Confirm Right (580,300) -> Exec Left (660,300) -->
-  <!-- Gap is 80px. Arrow length ~70px. -->
   <line x1="583" y1="300" x2="650" y2="300" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)" />
   <text x="620" y="290" text-anchor="middle" font-family="sans-serif" font-size="12">3. 승인</text>
 
-  <!-- Exec Top (730,270) <-> Memory Right (580,150 approx) -->
-  <path d="M730 260 Q 730 150 590 150" fill="none" stroke="#999" stroke-width="2" stroke-dasharray="5,5" marker-end="url(#arrowhead)" marker-start="url(#arrowhead-rev)" />
+  <!-- Exec Top (730,270) <-> Memory Right (680,150 approx) -->
+  <!-- Memory Right Edge is 680. Target point ~690,150. -->
+  <path d="M730 260 Q 730 150 690 150" fill="none" stroke="#999" stroke-width="2" stroke-dasharray="5,5" marker-end="url(#arrowhead)" marker-start="url(#arrowhead-rev)" />
 
   <!-- Exec Bottom (730,330) <-> Tools Top (730,440) -->
   <line x1="730" y1="333" x2="730" y2="430" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)" marker-start="url(#arrowhead-rev)" />
@@ -97,7 +98,6 @@
   <text x="770" y="385" text-anchor="middle" font-family="sans-serif" font-size="12">4. 도구 사용</text>
 
   <!-- Exec Right (800,300) -> Verify Left (880,300) -->
-  <!-- Gap is 80px. Arrow length ~70px. -->
   <line x1="803" y1="300" x2="870" y2="300" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)" />
   <text x="840" y="290" text-anchor="middle" font-family="sans-serif" font-size="12">5. 검증</text>
 
