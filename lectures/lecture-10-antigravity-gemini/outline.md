@@ -17,7 +17,7 @@
 ## ⏰ 전체 타임라인 (6시간)
 
 ```
-1교시 (60분) | Part 1: 생성형 AI 이해 및 Gemini/AntiGravity 시작하기
+1교시 (60분) | Part 1: AI Agent의 이해 및 시작하기
 2교시 (60분) | Part 2: Gemini를 활용한 문서 자동화 실습
 3교시 (60분) | Part 3: 이미지·영상 콘텐츠 제작 (Nano Banana)
 4교시 (60분) | Part 4: Gemini 기반 데이터 분석 및 시각화
@@ -29,12 +29,12 @@
 
 ## 📚 Part별 상세 구성
 
-### Part 1: 생성형 AI 이해 및 Gemini 시작하기
+### Part 1: AI Agent의 이해 및 시작하기
 
-**목표**: 생성형 AI 트렌드 이해 및 실습 환경(AntiGravity) 구축
+**목표**: AI Agent 개념 이해 및 실습 환경(AntiGravity) 구축
 
 **내용**:
-- **생성형 AI 기초**: 개념 및 최신 트렌드
+- **AI Agent 기초**: 챗봇과 에이전트의 차이 (뇌 vs 뇌+손발)
 - **Google Gemini 소개**: 특징(멀티모달 등) 및 활용 분야
 - **실습 환경 구축**:
     - **AntiGravity 설치**: 에이전트 도구 설치 및 설정
