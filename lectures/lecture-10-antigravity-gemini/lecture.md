@@ -181,12 +181,81 @@ _class: lead
 </div>
 
 <div class="highlight">
-
-**정의**: LLM(두뇌)을 기반으로 도구(Tools)를 사용하여 작업을 수행하는 AI 시스템
-
-</div>
-
----
+ 
+ **정의**: LLM(두뇌)을 기반으로 도구(Tools)를 사용하여 작업을 수행하는 AI 시스템
+ 
+ </div>
+ 
+ ---
+ 
+ ## Agent의 구조: Tools의 힘
+ 
+ <div class="highlight">
+ 
+ **Agent = LLM + Memory + Planning + Tools**
+ 
+ </div>
+ 
+ <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 40px;">
+ 
+ <div>
+ 
+ ### 1. LLM (Brain)
+ - **역할**: 추론, 결정, 지시
+ - **비유**: 똑똑한 두뇌
+ 
+ ### 2. Memory (Context)
+ - **역할**: 대화 기억, 정보 저장
+ - **비유**: 업무 수첩
+ 
+ </div>
+ 
+ <div>
+ 
+ ### 3. Planning (Strategy)
+ - **역할**: 단계별 계획 수립
+ - **비유**: 업무 매뉴얼
+ 
+ ### 4. Tools (Action)
+ - **역할**: 검색, 계산, API 호출
+ - **비유**: 손과 발 (실행)
+ 
+ </div>
+ 
+ </div>
+ 
+ ---
+ 
+ ## Agent의 워크플로우 (동작 원리)
+ 
+ ```mermaid
+ graph TD
+     User((User)) -->|1. 요구사항| Plan
+     
+     subgraph Agent ["Agent System"]
+         direction TB
+         Memory[(Memory<br/>기억/맥락)]
+         
+         Plan[Planning<br/>계획 수립] <--> Memory
+         Plan -->|2. 계획 제안| Confirm{Confirm<br/>사용자 확인}
+         Confirm -->|피드백/수정| Plan
+         
+         Confirm -->|3. 승인| Exec[Execution<br/>도구 실행]
+         Exec <--> Memory
+         Exec <-->|4. 도구 사용| Tools[Tools]
+         
+         Exec -->|5. 결과 검증| Verify{Verification<br/>검증}
+         Verify -->|실패| Plan
+     end
+     
+     Verify -->|6. 성공| Done((Completion<br/>완료))
+     
+     style Memory fill:#f9f,stroke:#333,stroke-width:2px
+     style Plan fill:#bbf,stroke:#333,stroke-width:2px
+     style Exec fill:#bfb,stroke:#333,stroke-width:2px
+ ```
+ 
+ ---
 
 ## Google Gemini 소개
 
