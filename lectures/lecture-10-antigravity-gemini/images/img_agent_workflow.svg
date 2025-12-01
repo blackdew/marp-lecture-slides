@@ -11,93 +11,113 @@
 
   <!-- Nodes -->
   
-  <!-- User -->
+  <!-- User (Circle) -->
   <circle cx="80" cy="300" r="45" fill="#fff" stroke="#333" stroke-width="2" />
   <text x="80" y="305" text-anchor="middle" font-family="sans-serif" font-size="16" font-weight="bold">User</text>
 
-  <!-- Memory (Database shape) -->
-  <!-- Moved slightly up and centered relative to Plan/Exec -->
-  <path d="M560 120 c0 -12 40 -12 40 0 v50 c0 12 -40 12 -40 0 v-50 z" fill="#ffe6f2" stroke="#333" stroke-width="2" />
-  <ellipse cx="580" cy="120" rx="20" ry="6" fill="none" stroke="#333" stroke-width="2" />
-  <text x="580" y="150" text-anchor="middle" font-family="sans-serif" font-size="14" font-weight="bold">Memory</text>
-  <text x="580" y="165" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#555">(기억/맥락)</text>
+  <!-- Memory (Database shape) - ENLARGED -->
+  <!-- Center: 580, 120. Width: 120 (was 80). Left: 520, Right: 640, Bottom: 170 -->
+  <path d="M520 120 c0 -15 60 -15 60 0 v50 c0 15 -60 15 -60 0 v-50 z" fill="#ffe6f2" stroke="#333" stroke-width="2" transform="translate(0,0)" />
+  <!-- Right half of cylinder top -->
+  <path d="M580 120 c0 -15 60 -15 60 0 v50 c0 15 -60 15 -60 0 v-50 z" fill="#ffe6f2" stroke="#333" stroke-width="2" />
+  <!-- Re-drawing cylinder properly as one path is hard, using simple rect+ellipses approach for cleaner code -->
+  
+  <!-- Memory Redraw: Cylinder -->
+  <!-- Top Ellipse: cx=580, cy=120, rx=60, ry=15 -->
+  <!-- Body: x=520, y=120, w=120, h=60 -->
+  <!-- Bottom Ellipse: cx=580, cy=180, rx=60, ry=15 -->
+  <path d="M520 120 v60 a60,15 0 0 0 120,0 v-60" fill="#ffe6f2" stroke="#333" stroke-width="2" />
+  <ellipse cx="580" cy="120" rx="60" ry="15" fill="#ffe6f2" stroke="#333" stroke-width="2" />
+  
+  <text x="580" y="155" text-anchor="middle" font-family="sans-serif" font-size="16" font-weight="bold">Memory</text>
+  <text x="580" y="175" text-anchor="middle" font-family="sans-serif" font-size="12" fill="#555">(기억/맥락)</text>
 
-  <!-- Plan -->
+  <!-- Plan (Rect) -->
+  <!-- Box: x=240, y=270, w=140, h=60. -->
   <rect x="240" y="270" width="140" height="60" rx="8" ry="8" fill="#e6f2ff" stroke="#333" stroke-width="2" />
   <text x="310" y="300" text-anchor="middle" font-family="sans-serif" font-size="16" font-weight="bold">Planning</text>
   <text x="310" y="320" text-anchor="middle" font-family="sans-serif" font-size="12" fill="#555">(계획 수립)</text>
 
   <!-- Confirm (Rhombus) -->
-  <!-- Adjusted size for better text fit -->
-  <polygon points="480,300 540,350 480,400 420,350" fill="#fff" stroke="#333" stroke-width="2" transform="translate(0, -50)" />
+  <polygon points="480,250 540,300 480,350 420,300" fill="#fff" stroke="#333" stroke-width="2" />
   <text x="480" y="295" text-anchor="middle" font-family="sans-serif" font-size="14" font-weight="bold">Confirm</text>
   <text x="480" y="315" text-anchor="middle" font-family="sans-serif" font-size="12" fill="#555">(사용자 확인)</text>
 
-  <!-- Exec -->
+  <!-- Exec (Rect) -->
+  <!-- Box: x=640, y=270, w=140, h=60. -->
   <rect x="640" y="270" width="140" height="60" rx="8" ry="8" fill="#e6ffe6" stroke="#333" stroke-width="2" />
   <text x="710" y="300" text-anchor="middle" font-family="sans-serif" font-size="16" font-weight="bold">Execution</text>
   <text x="710" y="320" text-anchor="middle" font-family="sans-serif" font-size="12" fill="#555">(도구 실행)</text>
 
-  <!-- Tools -->
+  <!-- Tools (Rect) -->
   <rect x="660" y="440" width="100" height="50" rx="4" ry="4" fill="#f0f0f0" stroke="#333" stroke-width="2" />
   <text x="710" y="470" text-anchor="middle" font-family="sans-serif" font-size="16" font-weight="bold">Tools</text>
 
   <!-- Verify (Rhombus) -->
-  <polygon points="880,300 940,350 880,400 820,350" fill="#fff" stroke="#333" stroke-width="2" transform="translate(0, -50)"/>
+  <polygon points="880,250 940,300 880,350 820,300" fill="#fff" stroke="#333" stroke-width="2" />
   <text x="880" y="295" text-anchor="middle" font-family="sans-serif" font-size="14" font-weight="bold">Verify</text>
   <text x="880" y="315" text-anchor="middle" font-family="sans-serif" font-size="12" fill="#555">(검증)</text>
 
-  <!-- Done -->
+  <!-- Done (Circle) -->
   <circle cx="1100" cy="300" r="35" fill="#fff" stroke="#333" stroke-width="2" />
   <circle cx="1100" cy="300" r="28" fill="none" stroke="#333" stroke-width="1" />
   <text x="1100" y="305" text-anchor="middle" font-family="sans-serif" font-size="14" font-weight="bold">Done</text>
 
 
-  <!-- Edges -->
-  
-  <!-- User -> Plan -->
-  <line x1="125" y1="300" x2="240" y2="300" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)" />
+  <!-- Edges with Precise Coordinates & Gap for Arrowheads -->
+  <!-- Arrowhead length is ~10px. We stop lines slightly short to avoid overlap. -->
+
+  <!-- User (125,300) -> Plan (240,300) -->
+  <!-- Stop at 230 to give space -->
+  <line x1="125" y1="300" x2="230" y2="300" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)" />
   <rect x="145" y="285" width="80" height="20" fill="#fff" fill-opacity="0.8" />
   <text x="185" y="298" text-anchor="middle" font-family="sans-serif" font-size="12">1. 요구사항</text>
 
-  <!-- Plan <-> Memory -->
-  <!-- Smoother curve avoiding overlap -->
-  <path d="M310 270 Q 310 145 560 145" fill="none" stroke="#999" stroke-width="2" stroke-dasharray="5,5" marker-end="url(#arrowhead)" marker-start="url(#arrowhead)" />
+  <!-- Plan Top (310,270) <-> Memory Left (520,150 approx) -->
+  <!-- Start at 310,260 (10px gap) -->
+  <!-- End at 510,150 (10px gap from Memory Left Edge 520) -->
+  <path d="M310 260 Q 310 150 510 150" fill="none" stroke="#999" stroke-width="2" stroke-dasharray="5,5" marker-end="url(#arrowhead)" marker-start="url(#arrowhead)" />
 
-  <!-- Plan -> Confirm -->
-  <line x1="380" y1="300" x2="420" y2="300" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)" />
+  <!-- Plan Right (380,300) -> Confirm Left (420,300) -->
+  <!-- Start 380. End 410 (10px gap) -->
+  <line x1="380" y1="300" x2="410" y2="300" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)" />
   <text x="400" y="290" text-anchor="middle" font-family="sans-serif" font-size="12">2. 제안</text>
 
-  <!-- Confirm -> Plan (Feedback Loop) -->
-  <!-- Lower loop to avoid text interference -->
-  <path d="M480 350 Q 480 420 395 420 Q 310 420 310 330" fill="none" stroke="#d66" stroke-width="2" marker-end="url(#arrowhead)" />
+  <!-- Confirm Bottom (480,350) -> Plan Bottom (310,330) -->
+  <!-- Start 480,350. End 310,340 (10px gap from 330) -->
+  <path d="M480 350 C 480 420, 310 420, 310 340" fill="none" stroke="#d66" stroke-width="2" marker-end="url(#arrowhead)" />
   <rect x="360" y="405" width="70" height="20" fill="#f9f9f9" fill-opacity="0.9" />
   <text x="395" y="419" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#d44">피드백/수정</text>
 
-  <!-- Confirm -> Exec -->
-  <line x1="540" y1="300" x2="640" y2="300" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)" />
+  <!-- Confirm Right (540,300) -> Exec Left (640,300) -->
+  <!-- Start 540. End 630 (10px gap) -->
+  <line x1="540" y1="300" x2="630" y2="300" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)" />
   <text x="590" y="290" text-anchor="middle" font-family="sans-serif" font-size="12">3. 승인</text>
 
-  <!-- Exec <-> Memory -->
-  <path d="M710 270 Q 710 145 600 145" fill="none" stroke="#999" stroke-width="2" stroke-dasharray="5,5" marker-end="url(#arrowhead)" marker-start="url(#arrowhead)" />
+  <!-- Exec Top (710,270) <-> Memory Right (640,150 approx) -->
+  <!-- Start 710,260 (10px gap). End 650,150 (10px gap from Memory Right Edge 640) -->
+  <path d="M710 260 Q 710 150 650 150" fill="none" stroke="#999" stroke-width="2" stroke-dasharray="5,5" marker-end="url(#arrowhead)" marker-start="url(#arrowhead)" />
 
-  <!-- Exec <-> Tools -->
-  <line x1="710" y1="330" x2="710" y2="440" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)" marker-start="url(#arrowhead)" />
+  <!-- Exec Bottom (710,330) <-> Tools Top (710,440) -->
+  <!-- Start 710,340 (10px gap). End 710,430 (10px gap) -->
+  <line x1="710" y1="340" x2="710" y2="430" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)" marker-start="url(#arrowhead)" />
   <rect x="715" y="370" width="70" height="20" fill="#fff" fill-opacity="0.8" />
   <text x="750" y="385" text-anchor="middle" font-family="sans-serif" font-size="12">4. 도구 사용</text>
 
-  <!-- Exec -> Verify -->
-  <line x1="780" y1="300" x2="820" y2="300" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)" />
+  <!-- Exec Right (780,300) -> Verify Left (820,300) -->
+  <!-- Start 780. End 810 (10px gap) -->
+  <line x1="780" y1="300" x2="810" y2="300" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)" />
   <text x="800" y="290" text-anchor="middle" font-family="sans-serif" font-size="12">5. 검증</text>
 
-  <!-- Verify -> Plan (Fail Loop) -->
-  <!-- Upper loop to distinguish from feedback loop -->
-  <path d="M880 350 Q 880 540 595 540 Q 310 540 310 330" fill="none" stroke="#d66" stroke-width="2" marker-end="url(#arrowhead)" />
-  <rect x="560" y="525" width="70" height="20" fill="#f9f9f9" fill-opacity="0.9" />
-  <text x="595" y="539" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#d44">실패 (재수립)</text>
+  <!-- Verify Top (880,250) -> Plan Top (310,270) -->
+  <!-- Start 880,250. End 310,260 (10px gap from 270) -->
+  <path d="M880 250 C 880 60, 310 60, 310 260" fill="none" stroke="#d66" stroke-width="2" marker-end="url(#arrowhead)" />
+  <rect x="560" y="65" width="80" height="20" fill="#f9f9f9" fill-opacity="0.9" />
+  <text x="600" y="79" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#d44">실패 (재수립)</text>
 
-  <!-- Verify -> Done -->
-  <line x1="940" y1="300" x2="1065" y2="300" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)" />
+  <!-- Verify Right (940,300) -> Done Left (1065,300) -->
+  <!-- Start 940. End 1055 (10px gap) -->
+  <line x1="940" y1="300" x2="1055" y2="300" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)" />
   <text x="1000" y="290" text-anchor="middle" font-family="sans-serif" font-size="12">6. 성공</text>
 
 </svg>
