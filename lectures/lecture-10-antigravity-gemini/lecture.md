@@ -5,6 +5,11 @@ size: 16:9
 paginate: true
 ---
 
+<script type="module">
+  import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
+  mermaid.initialize({ startOnLoad: true });
+</script>
+
 <style>
 section {
   padding: 60px 80px;
@@ -228,32 +233,32 @@ _class: lead
  
  ## Agent의 워크플로우 (동작 원리)
  
- ```mermaid
- graph TD
-     User((User)) -->|1. 요구사항| Plan
-     
-     subgraph Agent ["Agent System"]
-         direction TB
-         Memory[(Memory<br/>기억/맥락)]
-         
-         Plan[Planning<br/>계획 수립] <--> Memory
-         Plan -->|2. 계획 제안| Confirm{Confirm<br/>사용자 확인}
-         Confirm -->|피드백/수정| Plan
-         
-         Confirm -->|3. 승인| Exec[Execution<br/>도구 실행]
-         Exec <--> Memory
-         Exec <-->|4. 도구 사용| Tools[Tools]
-         
-         Exec -->|5. 결과 검증| Verify{Verification<br/>검증}
-         Verify -->|실패| Plan
-     end
-     
-     Verify -->|6. 성공| Done((Completion<br/>완료))
-     
-     style Memory fill:#f9f,stroke:#333,stroke-width:2px
-     style Plan fill:#bbf,stroke:#333,stroke-width:2px
-     style Exec fill:#bfb,stroke:#333,stroke-width:2px
- ```
+ <div class="mermaid">
+graph TD
+    User((User)) -->|1. 요구사항| Plan
+    
+    subgraph Agent ["Agent System"]
+        direction TB
+        Memory[(Memory<br/>기억/맥락)]
+        
+        Plan[Planning<br/>계획 수립] <--> Memory
+        Plan -->|2. 계획 제안| Confirm{Confirm<br/>사용자 확인}
+        Confirm -->|피드백/수정| Plan
+        
+        Confirm -->|3. 승인| Exec[Execution<br/>도구 실행]
+        Exec <--> Memory
+        Exec <-->|4. 도구 사용| Tools[Tools]
+        
+        Exec -->|5. 결과 검증| Verify{Verification<br/>검증}
+        Verify -->|실패| Plan
+    end
+    
+    Verify -->|6. 성공| Done((Completion<br/>완료))
+    
+    style Memory fill:#f9f,stroke:#333,stroke-width:2px
+    style Plan fill:#bbf,stroke:#333,stroke-width:2px
+    style Exec fill:#bfb,stroke:#333,stroke-width:2px
+</div>
  
  ---
 
