@@ -237,7 +237,7 @@ _class: lead
 graph TD
     User((User)) -->|1. 요구사항| Plan
     
-    subgraph Agent ["Agent System"]
+    subgraph "Agent System"
         direction TB
         Memory[(Memory<br/>기억/맥락)]
         
