@@ -4,14 +4,24 @@ Gemini CLI 중심의 AI 에이전트 활용 강의를 위한 실습 파일입니
 
 ## 시작하기
 
-### 1. 패키지 설치
+### Agent가 알아서 설치해줍니다!
+
+**권장 방식**: 프롬프트만 주면 Agent가 필요한 패키지를 자동으로 설치합니다.
+
+```
+예시: "CSV 파일을 합쳐줘" → Agent가 csv-parser, csv-writer 자동 설치!
+```
+
+### (대안) 수동 설치
+
+Agent가 설치하지 못하는 경우에만 직접 설치하세요:
 
 ```bash
 cd samples
 npm install
 ```
 
-이 명령어로 다음 패키지들이 설치됩니다:
+설치되는 패키지:
 - `csv-parser` - CSV 파일 읽기
 - `csv-writer` - CSV 파일 쓰기
 - `axios` - HTTP 요청
