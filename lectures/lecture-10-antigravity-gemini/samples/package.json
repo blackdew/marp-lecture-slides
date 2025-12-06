@@ -1,0 +1,25 @@
+{
+  "name": "ai-agent-workshop",
+  "version": "1.0.0",
+  "description": "Gemini CLI AI Agent 활용 워크샵 실습 파일",
+  "main": "index.js",
+  "scripts": {
+    "start": "echo '실습 파일 준비 완료!'",
+    "test": "echo '테스트 스크립트 없음'"
+  },
+  "keywords": [
+    "ai",
+    "agent",
+    "gemini",
+    "workshop"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^1.6.0",
+    "cheerio": "^1.0.0-rc.12",
+    "csv-parser": "^3.0.0",
+    "csv-writer": "^1.6.0",
+    "express": "^4.18.2"
+  }
+}
