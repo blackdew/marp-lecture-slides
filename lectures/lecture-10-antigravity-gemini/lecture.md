@@ -230,6 +230,25 @@ _class: lead
 
 ---
 
+## 터미널 기초
+
+### 필수 명령어
+
+| 작업 | Mac/Linux | Windows |
+|------|-----------|---------|
+| 폴더 이동 | `cd Documents` | `cd Documents` |
+| 파일 목록 | `ls` | `dir` |
+| 현재 위치 | `pwd` | `cd` (인자 없이) |
+| 폴더 생성 | `mkdir project` | `md project` |
+
+### 팁
+
+- **Tab 키**: 자동 완성
+- **위/아래 화살표**: 이전 명령어
+- **Ctrl + C**: 실행 중단
+
+---
+
 ## 설치 전 준비: Node.js 확인
 
 ### Node.js란?
@@ -348,25 +367,6 @@ codex
 
 - **메인**: Claude Code (모든 예시는 Claude Code 기준)
 - 다른 도구도 명령어만 다르고 사용법은 거의 동일!
-
----
-
-## 터미널 기초
-
-### 필수 명령어
-
-| 작업 | Mac/Linux | Windows |
-|------|-----------|---------|
-| 폴더 이동 | `cd Documents` | `cd Documents` |
-| 파일 목록 | `ls` | `dir` |
-| 현재 위치 | `pwd` | `cd` (인자 없이) |
-| 폴더 생성 | `mkdir project` | `md project` |
-
-### 팁
-
-- **Tab 키**: 자동 완성
-- **위/아래 화살표**: 이전 명령어
-- **Ctrl + C**: 실행 중단
 
 ---
 
