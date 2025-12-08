@@ -1,4 +1,4 @@
-# Lecture 10: Gemini CLI 중심의 AI 에이전트 활용 - 강의 개요
+# Lecture 10: Claude Code 중심의 AI 에이전트 활용 - 강의 개요
 
 **버전**: 4.0
 **대상**: 비개발자 및 일반 업무 사용자 (30~35명)
@@ -35,7 +35,7 @@
 ## 🎯 강의 핵심 목표
 
 1. **AI Agent 체험**: 챗봇과 에이전트의 차이를 직접 경험
-2. **실습 중심 학습**: Gemini와 함께 코드 생성하고 실행하기
+2. **실습 중심 학습**: Claude와 함께 코드 생성하고 실행하기
 3. **질문하는 습관**: 결과물을 보고 AI에게 질문으로 학습하기
 
 ---
@@ -44,7 +44,7 @@
 
 ```
 1교시 (50분) | Part 1: AI Agent 소개 + 환경 설정
-2교시 (45분) | Part 2: JavaScript 기초 with Gemini
+2교시 (45분) | Part 2: JavaScript 기초 with Claude
 -- 휴식 (10분) --
 3교시 (90분) | Part 3: 파일 자동화 실습 + AI 시대 우리의 역할
 -- 점심 (60분) --
@@ -60,7 +60,7 @@
 
 ### Part 1: AI Agent 소개 + 환경 설정 (50분)
 
-**목표**: AI Agent 개념 이해 및 Gemini CLI 환경 구축
+**목표**: AI Agent 개념 이해 및 Claude Code 환경 구축
 
 **내용**:
 
@@ -70,22 +70,22 @@
   - "생각만 하던 AI에게, 실행하는 손발이 생겼습니다"
 
 - **환경 설정** (25분):
-  - **Node.js 확인**: `node --version` (Gemini CLI 설치 시 이미 설치됨)
-  - **Gemini CLI 설치**: `npm install -g @google/gemini-cli`
-  - Google 계정 인증 및 첫 실행
+  - **Node.js 확인**: `node --version` (Claude Code 설치 시 필요)
+  - **Claude Code 설치**: `npm install -g @anthropic-ai/claude-code`
+  - Anthropic 계정 인증 및 첫 실행
   - 터미널 기본 사용법 (cd, dir/ls 등)
 
 - **첫 대화** (10분):
-  - "안녕, 너는 누구니?" → Gemini 응답 확인
+  - "안녕, 너는 누구니?" → Claude 응답 확인
   - 간단한 파일 생성 요청 체험
 
 **대안 안내**: AntiGravity (GUI 기반) - CLI가 어려운 참가자용
 
 ---
 
-### Part 2: JavaScript 기초 with Gemini (45분)
+### Part 2: JavaScript 기초 with Claude (45분)
 
-**목표**: Gemini가 생성한 JavaScript 코드를 실행하고, 질문으로 이해하기
+**목표**: Claude가 생성한 JavaScript 코드를 실행하고, 질문으로 이해하기
 
 **학습 방식**: Do → See → Ask → Learn
 
@@ -188,7 +188,7 @@
   - "robots.txt가 뭐야? 왜 확인해야 해?"
 
 - **Do: 실습 4-2 콘텐츠 생성** (15분):
-  - Gemini로 홍보 문구/해시태그 생성
+  - Claude로 홍보 문구/해시태그 생성
   - Nano Banana로 이미지 생성
   - Canva로 카드뉴스 완성
 
@@ -276,13 +276,13 @@
 
 - 개인 노트북 (Chrome 브라우저 설치)
 - Google 계정
-- Node.js (Gemini CLI 설치 시 필수 - 사전 설치)
+- Node.js (Claude Code 설치 시 필수 - 사전 설치)
 
 ### 사전 설치 (강의 3일 전 안내)
 
 ```bash
 # Node.js 설치 후
-npm install -g @google/gemini-cli
+npm install -g @anthropic-ai/claude-code
 
 # 강의 당일 프로젝트 폴더에서
 npm install csv-parser csv-writer axios cheerio express
@@ -324,7 +324,7 @@ npm install csv-parser csv-writer axios cheerio express
 | 용도 | 도구/라이브러리 |
 |------|----------------|
 | 런타임 | Node.js |
-| AI Agent | Gemini CLI |
+| AI Agent | Claude Code |
 | 파일 처리 | fs (내장), csv-parser, csv-writer |
 | 웹 크롤링 | axios, cheerio |
 | 웹 서버 | Express |

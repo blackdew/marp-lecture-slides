@@ -74,7 +74,7 @@ table {
 
 ![bg left:35%](images/img_title_ai_agent.svg)
 
-# Gemini CLI
+# Claude Code
 ## AI 에이전트 활용 마스터 클래스
 
 **비개발자를 위한 실무 자동화 + 코딩**
@@ -88,7 +88,7 @@ table {
 | Part | 주제 | 시간 |
 |------|------|------|
 | **1** | AI Agent 소개 + 환경 설정 | 50분 |
-| **2** | JavaScript 기초 with Gemini | 45분 |
+| **2** | JavaScript 기초 with Claude | 45분 |
 | **3** | 파일 자동화 + AI 시대 우리의 역할 | 90분 |
 | **4** | 웹 정보 수집 + 콘텐츠 생성 | 60분 |
 | **5** | 나만의 프로토타입 만들기 | 70분 |
@@ -218,27 +218,27 @@ _class: lead
 
 | 도구 | 가격 | 특징 |
 |------|------|------|
-| **Gemini CLI** | 무료 | 완전 무료. 빠른 응답. Google AI Studio 기반 |
 | **Claude Code** | 유료 | Plan 모드로 계획 검토. 코드 품질 우수 |
+| **Gemini CLI** | 무료 | 완전 무료. 빠른 응답. Google AI Studio 기반 |
 | **Codex** | 유료/무료 | ChatGPT Plus 구독자 무료. OpenAI 기반 |
 
-**오늘 강의**: Gemini CLI를 중심으로 진행 (무료!)
-**대안 옵션**: Claude Code (유료), Codex (ChatGPT Plus 구독자)
+**오늘 강의**: Claude Code를 중심으로 진행 (코드 품질 우수!)
+**대안 옵션**: Gemini CLI (무료), Codex (ChatGPT Plus 구독자)
 
 ---
 
-## 왜 Gemini CLI를 선택했나요?
+## 왜 Claude Code를 선택했나요?
 
 ### 비개발자를 위한 4가지 이유
 
 | 이유 | 설명 |
 |------|------|
-| **완전 무료** | 별도 결제 없이 바로 사용 가능 |
-| **빠른 응답** | Google 인프라 기반 빠른 처리 속도 |
+| **Plan 모드** | 실행 전 계획 검토 가능 (안전장치) |
+| **코드 품질** | 정확하고 신뢰할 수 있는 코드 생성 |
 | **파일 처리** | 다양한 파일 형식 읽기/쓰기 지원 |
 | **쉬운 설치** | Node.js만 있으면 바로 설치 |
 
-**다른 옵션**: 더 강력한 기능 → Claude Code / ChatGPT Plus 구독자 → Codex
+**다른 옵션**: 무료로 시작 → Gemini CLI / ChatGPT Plus 구독자 → Codex
 
 ---
 
@@ -264,7 +264,7 @@ _class: lead
 ### Node.js란?
 
 - JavaScript를 컴퓨터에서 실행하게 해주는 런타임
-- Gemini CLI를 포함한 대부분의 AI CLI 도구가 Node.js 기반
+- Claude Code를 포함한 대부분의 AI CLI 도구가 Node.js 기반
 
 ### 설치 확인
 
@@ -295,7 +295,33 @@ npm --version    # npm도 함께 설치됨
 
 ---
 
-## 설치 옵션 1: Gemini CLI (권장, 무료)
+## 설치 옵션 1: Claude Code (권장)
+
+### Claude Code CLI 설치
+
+**설치 가이드**: https://docs.anthropic.com/en/docs/claude-code
+
+```bash
+npm install -g @anthropic-ai/claude-code
+```
+
+### 첫 실행
+
+```bash
+claude
+```
+
+- 처음 실행 시 브라우저에서 Anthropic 계정 인증
+- 인증 완료 후 터미널에서 바로 사용 가능
+
+### 비용
+
+- Anthropic API 사용량 기반 과금
+- **Plan 모드**: 실행 전 계획 검토 가능 (안전장치)
+
+---
+
+## 설치 옵션 2: Gemini CLI (무료)
 
 ### Gemini CLI 설치
 
@@ -303,42 +329,15 @@ npm --version    # npm도 함께 설치됨
 npm install -g @google/gemini-cli
 ```
 
-### 첫 실행
+### 실행
 
 ```bash
 gemini
 ```
 
-- 처음 실행 시 브라우저에서 Google 계정 인증
-- 인증 완료 후 터미널에서 바로 사용 가능
-
 ### 비용
 
 - **완전 무료** (Google AI Studio API 기반)
-
----
-
-## 설치 옵션 2: Claude Code (유료)
-
-### Claude Code CLI 설치
-
-**설치 가이드**: https://getclaudecode.com/
-
-```bash
-npm install -g @anthropic-ai/claude-code
-```
-
-### 실행
-
-```bash
-claude --version
-claude
-```
-
-### 비용
-
-- Anthropic API 키 필요 (사용량 기반 과금)
-- **Plan 모드**: 실행 전 계획 검토 가능 (안전장치)
 
 ---
 
@@ -370,13 +369,13 @@ codex
 
 | 상황 | 권장 도구 |
 |------|-----------|
-| 처음이고 무료로 시작하고 싶다 | **Gemini CLI** |
-| 코드 품질과 안정성이 중요하다 | Claude Code |
+| 코드 품질과 안정성이 중요하다 | **Claude Code** |
+| 무료로 시작하고 싶다 | Gemini CLI |
 | ChatGPT Plus를 이미 구독 중이다 | Codex |
 
 ### 오늘 강의 기준
 
-- **메인**: Gemini CLI (모든 예시는 Gemini 기준)
+- **메인**: Claude Code (모든 예시는 Claude Code 기준)
 - 다른 도구도 명령어만 다르고 사용법은 거의 동일!
 
 ---
@@ -431,10 +430,10 @@ cd ai-workshop
 
 ## 실습: 첫 번째 대화
 
-### Gemini CLI 실행
+### Claude Code 실행
 
 ```bash
-gemini
+claude
 ```
 
 ### 입력해보세요
@@ -448,14 +447,14 @@ gemini
 | 항목 | 기대 결과 |
 |------|-----------|
 | 한국어 응답 | 자연스러운 한국어 답변 |
-| 모델 정보 | Gemini 모델 이름 확인 |
+| 모델 정보 | Claude 모델 이름 확인 |
 | 응답 속도 | 빠른 응답 |
 
 ---
 
 ## 실습: 파일 생성 체험
 
-### Gemini에게 요청
+### Claude에게 요청
 
 ```
 "안녕하세요"라고 적힌 hello.txt 파일을 만들어줘
@@ -487,10 +486,10 @@ type hello.txt  # Windows
 
 | 상황 | 권장 도구 |
 |------|-----------|
-| 터미널이 익숙함 | Gemini CLI |
+| 터미널이 익숙함 | Claude Code |
 | GUI 선호 | AntiGravity |
 | 빠른 시각적 확인 | AntiGravity |
-| 자동화/스크립트 연동 | Gemini CLI |
+| 자동화/스크립트 연동 | Claude Code |
 
 ---
 
@@ -501,8 +500,8 @@ type hello.txt  # Windows
 | 단계 | 확인 사항 | 완료 |
 |------|-----------|------|
 | 1 | Node.js 버전 확인 (`node --version`) | ☐ |
-| 2 | Gemini CLI 설치 (`gemini --version`) | ☐ |
-| 3 | Google 계정 인증 완료 | ☐ |
+| 2 | Claude Code 설치 (`claude --version`) | ☐ |
+| 3 | Anthropic 계정 인증 완료 | ☐ |
 | 4 | 첫 대화 성공 | ☐ |
 | 5 | 파일 생성 체험 완료 | ☐ |
 
@@ -516,7 +515,7 @@ _class: lead
 
 # Part 2
 
-## JavaScript 기초 with Gemini
+## JavaScript 기초 with Claude
 
 ---
 
@@ -547,7 +546,7 @@ _class: lead
 
 ## [Do] 실습 2-1: Hello World
 
-### Step 1: Gemini에게 요청
+### Step 1: Claude에게 요청
 
 ```
 Hello World를 출력하는 JavaScript 코드를 만들어서 hello.js로 저장해줘
@@ -565,7 +564,7 @@ node hello.js
 Hello World
 ```
 
-> **성공!** Gemini가 코드를 만들고, 우리가 실행했습니다!
+> **성공!** Claude가 코드를 만들고, 우리가 실행했습니다!
 
 ---
 
@@ -592,7 +591,7 @@ Hello World
 
 ## [Do] 실습 2-2: 간단한 계산기
 
-### Gemini에게 요청
+### Claude에게 요청
 
 ```
 두 숫자를 입력받아서 더하는 Node.js 프로그램을 만들어줘.
@@ -718,7 +717,7 @@ node 파일명.js   # JavaScript 실행
 
 ## [Do] 도전 과제: 사칙연산 계산기
 
-### Gemini에게 요청
+### Claude에게 요청
 
 ```
 calculator.js를 수정해서 사칙연산(+, -, *, /)을 선택할 수 있게 해줘.
@@ -828,7 +827,7 @@ _class: lead
 
 ---
 
-## 실습 3-1: Gemini에게 요청
+## 실습 3-1: Claude에게 요청
 
 ### 프롬프트
 
@@ -914,7 +913,7 @@ Downloads 폴더의 파일들을 확장자별로 분류
 
 ---
 
-## [Do] 실습 3-2: Gemini에게 요청
+## [Do] 실습 3-2: Claude에게 요청
 
 ### 프롬프트
 
@@ -1665,7 +1664,7 @@ AI로 홍보물 만들기!
 
 | 순서 | 콘텐츠 | 도구 |
 |------|--------|------|
-| 1 | 포스터 제목/문구 | Gemini |
+| 1 | 포스터 제목/문구 | Claude |
 | 2 | 홍보 이미지 | Nano Banana |
 | 3 | 최종 편집 | Canva |
 
@@ -1681,7 +1680,7 @@ AI로 홍보물 만들기!
 
 ## [Action] Step 1 - 텍스트 생성
 
-### Gemini가 생성한 결과 확인
+### Claude가 생성한 결과 확인
 
 ```
 포스터 제목: "코딩 첫걸음"
@@ -1788,7 +1787,7 @@ news_headlines.csv
 
 ### 콘텐츠 생성 체험
 
-- [ ] Gemini로 홍보 문구 생성
+- [ ] Claude로 홍보 문구 생성
 - [ ] Nano Banana로 이미지 생성
 - [ ] Canva로 최종 완성
 
@@ -2408,7 +2407,7 @@ config.json
 
 | Part | 주제 | 핵심 기술 |
 |------|------|----------|
-| 1 | AI Agent 소개 | Gemini CLI |
+| 1 | AI Agent 소개 | Claude Code |
 | 2 | JavaScript 기초 | console.log, 변수, 조건문 |
 | 3 | 파일 자동화 | fs, csv-parser |
 | 3 | 우리의 역할 | 선택, 계획, 문서화 |
@@ -2500,7 +2499,7 @@ A: 오늘 만든 것을 실제로 사용해보세요. 필요에 의해 배울 �
 
 ### 오늘의 성과
 
-- Gemini CLI로 AI Agent 체험
+- Claude Code로 AI Agent 체험
 - JavaScript 기초 코드 작성 및 실행
 - 5개 이상의 자동화 프로토타입 제작
 - AI 윤리 및 보안 인식
