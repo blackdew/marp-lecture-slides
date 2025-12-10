@@ -562,7 +562,7 @@ md ai-workshop
 <tbody>
 <tr>
 <td><strong>Do</strong></td>
-<td>자기소개 웹페이지, 계산기 만들기</td>
+<td>자기소개 페이지, 웹 계산기 만들기</td>
 <td>25분</td>
 </tr>
 <tr>
@@ -645,20 +645,21 @@ start about-me.html       <span class="hljs-comment"># Windows</span>
 </blockquote>
 </section>
 </foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="29" data-paginate="true" data-theme="default" lang="ko-KR" data-marpit-pagination="29" style="--paginate:true;--theme:default;" data-marpit-pagination-total="139" data-size="16:9">
-<h2 id="do-%EC%8B%A4%EC%8A%B5-2-2-%EA%B0%84%EB%8B%A8%ED%95%9C-%EA%B3%84%EC%82%B0%EA%B8%B0">[Do] 실습 2-2: 간단한 계산기</h2>
+<h2 id="do-%EC%8B%A4%EC%8A%B5-2-2-%EC%9B%B9-%EA%B3%84%EC%82%B0%EA%B8%B0">[Do] 실습 2-2: 웹 계산기</h2>
 <h3 id="claude%EC%97%90%EA%B2%8C-%EC%9A%94%EC%B2%AD-2">Claude에게 요청</h3>
-<pre is="marp-pre" data-auto-scaling="downscale-only"><code>두 숫자를 입력받아서 더하는 Node.js 프로그램을 만들어줘.
-사용자가 터미널에서 직접 숫자를 입력할 수 있어야 해.
-파일명은 calculator.js로 해줘.
+<pre is="marp-pre" data-auto-scaling="downscale-only"><code>간단한 계산기 웹페이지를 만들어줘.
+
+- 숫자 두 개를 입력하는 칸
+- 사칙연산(+, -, ×, ÷) 버튼
+- 결과 표시 영역
+- 예쁜 디자인
+
+파일명은 calculator.html로 해줘.
 </code></pre>
-<h3 id="%EC%8B%A4%ED%96%89">실행</h3>
-<pre is="marp-pre" data-auto-scaling="downscale-only"><code class="language-bash">node calculator.js
+<h3 id="%EB%B8%8C%EB%9D%BC%EC%9A%B0%EC%A0%80%EC%97%90%EC%84%9C-%EC%97%B4%EA%B8%B0-1">브라우저에서 열기</h3>
+<pre is="marp-pre" data-auto-scaling="downscale-only"><code class="language-bash">open calculator.html        <span class="hljs-comment"># Mac</span>
+start calculator.html       <span class="hljs-comment"># Windows</span>
 </code></pre>
-<h3 id="%ED%99%95%EC%9D%B8-1">확인</h3>
-<ul>
-<li>숫자 두 개를 입력할 수 있는가?</li>
-<li>더한 결과가 나오는가?</li>
-</ul>
 </section>
 </foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="30" data-paginate="true" data-theme="default" lang="ko-KR" data-marpit-pagination="30" style="--paginate:true;--theme:default;" data-marpit-pagination-total="139" data-size="16:9">
 <h2 id="see-%EC%8B%A4%EC%8A%B5-2-2-%EA%B2%B0%EA%B3%BC-%ED%99%95%EC%9D%B8">[See] 실습 2-2: 결과 확인</h2>
@@ -672,24 +673,24 @@ start about-me.html       <span class="hljs-comment"># Windows</span>
 </thead>
 <tbody>
 <tr>
-<td>실행됨?</td>
-<td><code>node calculator.js</code></td>
+<td>브라우저에서 열림?</td>
+<td>계산기 화면이 보임</td>
 </tr>
 <tr>
 <td>숫자 입력됨?</td>
-<td>두 개 숫자 입력 가능</td>
+<td>두 칸에 숫자 입력 가능</td>
 </tr>
 <tr>
-<td>결과 나옴?</td>
-<td>더한 값 출력</td>
+<td>버튼 동작?</td>
+<td>연산 버튼 클릭 시 결과 표시</td>
 </tr>
 </tbody>
 </table>
 <h3 id="%EA%B6%81%EA%B8%88%ED%95%9C-%EC%A0%90-%EB%A9%94%EB%AA%A8">궁금한 점 메모</h3>
 <ul>
-<li><code>readline</code>이 뭐지?</li>
-<li><code>require</code>가 뭐지?</li>
-<li><code>parseInt</code>는 왜 쓰지?</li>
+<li><code>&lt;button&gt;</code>이 뭐지?</li>
+<li><code>onclick</code>이 뭐지?</li>
+<li>JavaScript 함수는 어떻게 동작해?</li>
 </ul>
 <blockquote>
 <p><strong>이제 AI에게 질문할 시간입니다!</strong></p>
@@ -702,11 +703,11 @@ start about-me.html       <span class="hljs-comment"># Windows</span>
 </foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="32" data-paginate="true" data-theme="default" lang="ko-KR" data-marpit-pagination="32" style="--paginate:true;--theme:default;" data-marpit-pagination-total="139" data-size="16:9">
 <h2 id="ask-ai%EC%97%90%EA%B2%8C-%EC%A7%88%EB%AC%B8%ED%95%98%EA%B8%B0">[Ask] AI에게 질문하기</h2>
 <h3 id="%EC%9D%B4%EB%A0%87%EA%B2%8C-%EB%AC%BC%EC%96%B4%EB%B3%B4%EC%84%B8%EC%9A%94">이렇게 물어보세요</h3>
-<pre is="marp-pre" data-auto-scaling="downscale-only"><code>hello.js 코드에서 console.log가 뭐야?
+<pre is="marp-pre" data-auto-scaling="downscale-only"><code>about-me.html 코드에서 &lt;style&gt; 태그가 뭐야?
 </code></pre>
-<pre is="marp-pre" data-auto-scaling="downscale-only"><code>calculator.js에서 readline은 어떻게 작동해?
+<pre is="marp-pre" data-auto-scaling="downscale-only"><code>calculator.html에서 onclick은 어떻게 작동해?
 </code></pre>
-<pre is="marp-pre" data-auto-scaling="downscale-only"><code>const랑 let은 뭐가 달라?
+<pre is="marp-pre" data-auto-scaling="downscale-only"><code>HTML, CSS, JavaScript는 각각 뭐야?
 </code></pre>
 <h3 id="%EC%A7%88%EB%AC%B8-%ED%8C%81">질문 팁</h3>
 <ul>
@@ -716,7 +717,7 @@ start about-me.html       <span class="hljs-comment"># Windows</span>
 </section>
 </foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="33" data-paginate="true" data-theme="default" lang="ko-KR" data-marpit-pagination="33" style="--paginate:true;--theme:default;" data-marpit-pagination-total="139" data-size="16:9">
 <h2 id="ask-%EC%9E%90%EC%A3%BC-%EB%82%98%EC%98%A4%EB%8A%94-%EC%A7%88%EB%AC%B8%EB%93%A4">[Ask] 자주 나오는 질문들</h2>
-<h3 id="%EB%B3%80%EC%88%98-%EA%B4%80%EB%A0%A8">변수 관련</h3>
+<h3 id="htmlcss-%EA%B4%80%EB%A0%A8-%EC%8B%A4%EC%8A%B5-2-1">HTML/CSS 관련 (실습 2-1)</h3>
 <table>
 <thead>
 <tr>
@@ -726,20 +727,20 @@ start about-me.html       <span class="hljs-comment"># Windows</span>
 </thead>
 <tbody>
 <tr>
-<td>&quot;const랑 let 차이?&quot;</td>
-<td>const=고정, let=변경 가능</td>
+<td>&quot;HTML이 뭐야?&quot;</td>
+<td>웹페이지의 구조/내용</td>
 </tr>
 <tr>
-<td>&quot;세미콜론 왜 붙여?&quot;</td>
-<td>문장 끝 표시 (없어도 됨)</td>
+<td>&quot;CSS가 뭐야?&quot;</td>
+<td>웹페이지의 스타일/디자인</td>
 </tr>
 <tr>
-<td>&quot;주석(//)은 뭐야?&quot;</td>
-<td>설명용, 실행 안 됨</td>
+<td>&quot;&lt;div&gt;가 뭐야?&quot;</td>
+<td>내용을 묶는 상자</td>
 </tr>
 </tbody>
 </table>
-<h3 id="%ED%95%A8%EC%88%98-%EA%B4%80%EB%A0%A8">함수 관련</h3>
+<h3 id="javascript-%EA%B4%80%EB%A0%A8-%EC%8B%A4%EC%8A%B5-2-2">JavaScript 관련 (실습 2-2)</h3>
 <table>
 <thead>
 <tr>
@@ -749,16 +750,16 @@ start about-me.html       <span class="hljs-comment"># Windows</span>
 </thead>
 <tbody>
 <tr>
-<td>&quot;console.log가 뭐야?&quot;</td>
-<td>화면 출력 함수</td>
+<td>&quot;onclick이 뭐야?&quot;</td>
+<td>클릭 시 실행되는 이벤트</td>
 </tr>
 <tr>
-<td>&quot;parseInt가 뭐야?&quot;</td>
-<td>문자열→숫자 변환</td>
+<td>&quot;function이 뭐야?&quot;</td>
+<td>재사용 가능한 코드 묶음</td>
 </tr>
 <tr>
-<td>&quot;readline이 뭐야?&quot;</td>
-<td>사용자 입력 받는 모듈</td>
+<td>&quot;document.getElementById?&quot;</td>
+<td>HTML 요소 찾는 함수</td>
 </tr>
 </tbody>
 </table>
@@ -769,51 +770,49 @@ start about-me.html       <span class="hljs-comment"># Windows</span>
 </section>
 </foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="35" data-paginate="true" data-theme="default" lang="ko-KR" data-marpit-pagination="35" style="--paginate:true;--theme:default;" data-marpit-pagination-total="139" data-size="16:9">
 <h2 id="learn-%EC%98%A4%EB%8A%98-%EB%B0%B0%EC%9A%B4-%ED%95%B5%EC%8B%AC">[Learn] 오늘 배운 핵심</h2>
-<h3 id="javascript-%EA%B8%B0%EC%B4%88-%EC%8B%A4%EC%8A%B5%ED%95%98%EB%A9%B4%EC%84%9C-%EB%B0%B0%EC%9A%B4-%EA%B2%83">JavaScript 기초 (실습하면서 배운 것)</h3>
+<h3 id="%EC%8B%A4%EC%8A%B5%ED%95%98%EB%A9%B4%EC%84%9C-%EB%B0%B0%EC%9A%B4-%EA%B2%83">실습하면서 배운 것</h3>
 <table>
 <thead>
 <tr>
-<th>개념</th>
-<th>설명</th>
-<th>예시</th>
+<th>실습</th>
+<th>배운 것</th>
+<th>핵심</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><strong>변수</strong></td>
-<td>데이터를 담는 상자</td>
-<td><code>const name = &quot;홍길동&quot;</code></td>
+<td><strong>자기소개</strong></td>
+<td>HTML/CSS</td>
+<td>구조 + 디자인</td>
 </tr>
 <tr>
-<td><strong>출력</strong></td>
-<td>화면에 결과 표시</td>
-<td><code>console.log(&quot;Hi&quot;)</code></td>
-</tr>
-<tr>
-<td><strong>모듈</strong></td>
-<td>기능 모음 가져오기</td>
-<td><code>require('readline')</code></td>
+<td><strong>웹 계산기</strong></td>
+<td>HTML/CSS/JS</td>
+<td>구조 + 동작</td>
 </tr>
 </tbody>
 </table>
-<h3 id="%ED%95%B5%EC%8B%AC-%EB%AA%85%EB%A0%B9%EC%96%B4">핵심 명령어</h3>
-<pre is="marp-pre" data-auto-scaling="downscale-only"><code class="language-bash">node 파일명.js   <span class="hljs-comment"># JavaScript 실행</span>
-</code></pre>
+<h3 id="agent%EC%99%80-%ED%95%A8%EA%BB%98%ED%95%98%EB%8A%94-%ED%95%99%EC%8A%B5%EB%B2%95">Agent와 함께하는 학습법</h3>
+<ol>
+<li><strong>만들어 달라고 요청</strong> → Agent가 코드 생성</li>
+<li><strong>실행해서 결과 확인</strong> → 동작하는지 체크</li>
+<li><strong>모르는 건 질문</strong> → Agent가 설명</li>
+</ol>
 <blockquote>
 <p><strong>&quot;코드를 외우지 않아도, AI에게 물어보면 됩니다!&quot;</strong></p>
 </blockquote>
 </section>
 </foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="36" data-paginate="true" data-theme="default" lang="ko-KR" data-marpit-pagination="36" style="--paginate:true;--theme:default;" data-marpit-pagination-total="139" data-size="16:9">
-<h2 id="do-%EB%8F%84%EC%A0%84-%EA%B3%BC%EC%A0%9C-%EC%82%AC%EC%B9%99%EC%97%B0%EC%82%B0-%EA%B3%84%EC%82%B0%EA%B8%B0">[Do] 도전 과제: 사칙연산 계산기</h2>
+<h2 id="do-%EB%8F%84%EC%A0%84-%EA%B3%BC%EC%A0%9C-%EA%B3%84%EC%82%B0%EA%B8%B0-%EC%97%85%EA%B7%B8%EB%A0%88%EC%9D%B4%EB%93%9C">[Do] 도전 과제: 계산기 업그레이드</h2>
 <h3 id="claude%EC%97%90%EA%B2%8C-%EC%9A%94%EC%B2%AD-3">Claude에게 요청</h3>
-<pre is="marp-pre" data-auto-scaling="downscale-only"><code>calculator.js를 수정해서 사칙연산(+, -, *, /)을 선택할 수 있게 해줘.
-사용자가 연산자를 선택하면 그에 맞는 계산을 수행해줘.
+<pre is="marp-pre" data-auto-scaling="downscale-only"><code>calculator.html에 다음 기능을 추가해줘:
+- 계산 기록이 아래에 쌓이는 기능
+- C 버튼으로 초기화
 </code></pre>
-<h3 id="%EA%B8%B0%EB%8C%80-%EA%B2%B0%EA%B3%BC">기대 결과</h3>
-<pre is="marp-pre" data-auto-scaling="downscale-only"><code>첫 번째 숫자: 10
-두 번째 숫자: 5
-연산자 (+, -, *, /): *
-결과: 50
+<h3 id="%EB%98%90%EB%8A%94-%EC%83%88%EB%A1%9C%EC%9A%B4-%EB%8F%84%EA%B5%AC-%EB%A7%8C%EB%93%A4%EA%B8%B0">또는 새로운 도구 만들기</h3>
+<pre is="marp-pre" data-auto-scaling="downscale-only"><code>D-Day 계산기 웹페이지를 만들어줘.
+목표 날짜를 입력하면 오늘부터 며칠 남았는지 알려줘.
+파일명은 dday.html로 해줘.
 </code></pre>
 </section>
 </foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="37" data-paginate="true" data-theme="default" lang="ko-KR" data-marpit-pagination="37" style="--paginate:true;--theme:default;" data-marpit-pagination-total="139" data-size="16:9">
@@ -830,25 +829,25 @@ start about-me.html       <span class="hljs-comment"># Windows</span>
 <tbody>
 <tr>
 <td>1</td>
-<td>hello.js 실행 성공</td>
+<td>about-me.html 브라우저에서 열기 성공</td>
 <td>☐</td>
 </tr>
 <tr>
 <td>2</td>
-<td>calculator.js 실행 성공</td>
+<td>calculator.html 브라우저에서 동작 확인</td>
 <td>☐</td>
 </tr>
 <tr>
 <td>3</td>
-<td>도전: 사칙연산 계산기 완료</td>
+<td>도전: 계산기 업그레이드 또는 D-Day 완료</td>
 <td>☐</td>
 </tr>
 </tbody>
 </table>
 <h3 id="%ED%95%B5%EC%8B%AC-%EB%B0%B0%EC%9B%80">핵심 배움</h3>
 <ul>
-<li>JavaScript 기본 문법 (변수, 출력, 조건문)</li>
-<li><code>node 파일명.js</code>로 실행</li>
+<li>HTML/CSS/JavaScript로 웹페이지 만들기 (Agent가 생성)</li>
+<li>브라우저에서 바로 실행하고 확인</li>
 <li>AI가 코드를 생성하고, 우리가 실행하고 검증</li>
 </ul>
 </section>
@@ -986,7 +985,7 @@ csv-parser와 csv-writer 패키지를 사용해줘.
 <pre is="marp-pre" data-auto-scaling="downscale-only"><code>merge_csv.js를 수정해서 담당자별 총 매출 합계도 계산해줘.
 결과를 sales_summary.csv로 저장해줘.
 </code></pre>
-<h3 id="%EA%B8%B0%EB%8C%80-%EA%B2%B0%EA%B3%BC-1">기대 결과</h3>
+<h3 id="%EA%B8%B0%EB%8C%80-%EA%B2%B0%EA%B3%BC">기대 결과</h3>
 <pre is="marp-pre" data-auto-scaling="downscale-only"><code class="language-csv">담당자,총매출
 김철수,1500000
 이영희,2300000
@@ -1081,7 +1080,7 @@ csv-parser와 csv-writer 패키지를 사용해줘.
 <pre is="marp-pre" data-auto-scaling="downscale-only"><code>organize_folder.js를 수정해서 파일들을 날짜(수정일)별로도 정리해줘.
 폴더 구조: images/2024-01-15/photo.jpg 형식으로 해줘.
 </code></pre>
-<h3 id="%EA%B8%B0%EB%8C%80-%EA%B2%B0%EA%B3%BC-2">기대 결과</h3>
+<h3 id="%EA%B8%B0%EB%8C%80-%EA%B2%B0%EA%B3%BC-1">기대 결과</h3>
 <pre is="marp-pre" data-auto-scaling="downscale-only"><code>images/
   2024-01-15/
     photo1.jpg
@@ -1749,7 +1748,7 @@ csv-parser와 csv-writer 패키지를 사용해줘.
 </tr>
 </tbody>
 </table>
-<h3 id="%EA%B8%B0%EB%8C%80-%EA%B2%B0%EA%B3%BC-3">기대 결과</h3>
+<h3 id="%EA%B8%B0%EB%8C%80-%EA%B2%B0%EA%B3%BC-2">기대 결과</h3>
 <pre is="marp-pre" data-auto-scaling="downscale-only"><code class="language-csv">제목,링크,수집일시
 &quot;첫 번째 뉴스 제목&quot;,&quot;https://...&quot;,2024-01-15T10:30:00
 </code></pre>
@@ -2752,8 +2751,8 @@ config.json
 </tr>
 <tr>
 <td>2</td>
-<td>JavaScript 기초</td>
-<td>console.log, 변수, 조건문</td>
+<td>웹페이지 &amp; JS 기초</td>
+<td>HTML/CSS, JavaScript</td>
 </tr>
 <tr>
 <td>3</td>
