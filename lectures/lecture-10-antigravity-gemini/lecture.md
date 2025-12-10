@@ -249,107 +249,65 @@ _class: lead
 
 ---
 
-## 설치 전 준비: Node.js 확인
+## 설치 옵션: Claude Code
 
-### Node.js란?
+### 옵션 A: Claude Code CLI (권장, 유료)
 
-- JavaScript를 컴퓨터에서 실행하게 해주는 런타임
-- Claude Code를 포함한 대부분의 AI CLI 도구가 Node.js 기반
+**설치 가이드**: https://getclaudecode.com/
 
-### 설치 확인
-
-```bash
-node --version
-```
-
-- 버전 번호가 나오면 → 이미 설치됨!
-- `command not found` → Node.js 설치 필요
-
----
-
-## Node.js 설치 (필요한 경우)
-
-### 설치 방법
-
-1. https://nodejs.org/ 접속
-2. **LTS 버전** 다운로드 (안정화 버전)
-3. 설치 프로그램 실행
-4. 터미널 재시작 후 다시 확인
-
-### 확인
-
-```bash
-node --version   # v18 이상 권장
-npm --version    # npm도 함께 설치됨
-```
-
----
-
-## 설치 옵션 1: Claude Code (권장)
-
-### Claude Code CLI 설치
-
-**설치 가이드**: https://docs.anthropic.com/en/docs/claude-code
-
+**설치 명령어**:
 ```bash
 npm install -g @anthropic-ai/claude-code
 ```
 
-### 첫 실행
-
+**실행**:
 ```bash
 claude
 ```
 
-- 처음 실행 시 브라우저에서 Anthropic 계정 인증
-- 인증 완료 후 터미널에서 바로 사용 가능
-
-### 비용
-
-- Anthropic API 사용량 기반 과금
-- **Plan 모드**: 실행 전 계획 검토 가능 (안전장치)
+**비용**: Anthropic API 키 필요 (사용량 기반 과금)
 
 ---
 
-## 설치 옵션 2: Gemini CLI (무료)
+## 설치 옵션: Gemini (무료 대안)
 
-### Gemini CLI 설치
+### 옵션 B: Gemini CLI (무료)
+
+**설치 가이드**: https://getclaudecode.com/
+
+위 가이드의 **4번 Claude Code 설치** 단계에서 아래 명령어로 대체:
 
 ```bash
 npm install -g @google/gemini-cli
 ```
 
-### 실행
-
+**실행**:
 ```bash
 gemini
 ```
 
-### 비용
-
-- **완전 무료** (Google AI Studio API 기반)
+**비용**: 완전 무료 (Google AI Studio API)
 
 ---
 
-## 설치 옵션 3: Codex (ChatGPT 구독자용)
+## 설치 옵션: Codex (ChatGPT 구독자용)
 
-### OpenAI Codex 설치
+### 옵션 C: OpenAI Codex (ChatGPT Plus/Pro 구독자)
+
+**설치 가이드**: https://getclaudecode.com/
+
+위 가이드의 **4번 Claude Code 설치** 단계에서 아래 명령어로 대체:
 
 ```bash
 npm install -g @openai/codex
 ```
 
-### 실행 및 인증
-
+**실행**:
 ```bash
 codex
-# 처음 실행 시 브라우저에서 ChatGPT 계정으로 로그인
 ```
 
-### 비용
-
-- ChatGPT Plus/Pro 구독자: 포함된 크레딧 사용 (추천)
-- API 키: `codex login --api-key <KEY>` (사용량 기반 과금)
+**비용**: ChatGPT Plus/Pro 구독자 크레딧 사용 (추천)
 
 ---
 
