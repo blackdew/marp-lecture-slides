@@ -562,7 +562,7 @@ md ai-workshop
 <tbody>
 <tr>
 <td><strong>Do</strong></td>
-<td>Hello World, 계산기 만들기</td>
+<td>자기소개 웹페이지, 계산기 만들기</td>
 <td>25분</td>
 </tr>
 <tr>
@@ -589,18 +589,24 @@ md ai-workshop
 <p>바로 만들어봅시다!</p>
 </section>
 </foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="27" data-paginate="true" data-theme="default" lang="ko-KR" data-marpit-pagination="27" style="--paginate:true;--theme:default;" data-marpit-pagination-total="139" data-size="16:9">
-<h2 id="do-%EC%8B%A4%EC%8A%B5-2-1-hello-world">[Do] 실습 2-1: Hello World</h2>
-<h3 id="step-1-claude%EC%97%90%EA%B2%8C-%EC%9A%94%EC%B2%AD">Step 1: Claude에게 요청</h3>
-<pre is="marp-pre" data-auto-scaling="downscale-only"><code>Hello World를 출력하는 JavaScript 코드를 만들어서 hello.js로 저장해줘
+<h2 id="do-%EC%8B%A4%EC%8A%B5-2-1-%EC%9E%90%EA%B8%B0%EC%86%8C%EA%B0%9C-%EC%9B%B9%ED%8E%98%EC%9D%B4%EC%A7%80">[Do] 실습 2-1: 자기소개 웹페이지</h2>
+<h3 id="claude%EC%97%90%EA%B2%8C-%EC%9A%94%EC%B2%AD-1">Claude에게 요청</h3>
+<pre is="marp-pre" data-auto-scaling="downscale-only"><code>나의 자기소개 웹페이지를 만들어줘.
+
+이름: [본인 이름]
+직업/소속: [본인 직업]
+관심사: [2-3가지]
+한 줄 소개: [자유롭게]
+
+예쁜 디자인으로 만들어줘. 파일명은 about-me.html로 해줘.
 </code></pre>
-<h3 id="step-2-%EC%8B%A4%ED%96%89">Step 2: 실행</h3>
-<pre is="marp-pre" data-auto-scaling="downscale-only"><code class="language-bash">node hello.js
-</code></pre>
-<h3 id="%EA%B2%B0%EA%B3%BC">결과</h3>
-<pre is="marp-pre" data-auto-scaling="downscale-only"><code>Hello World
+<h3 id="%EB%B8%8C%EB%9D%BC%EC%9A%B0%EC%A0%80%EC%97%90%EC%84%9C-%EC%97%B4%EA%B8%B0">브라우저에서 열기</h3>
+<p>파일 탐색기에서 <code>about-me.html</code>을 더블클릭하거나:</p>
+<pre is="marp-pre" data-auto-scaling="downscale-only"><code class="language-bash">open about-me.html        <span class="hljs-comment"># Mac</span>
+start about-me.html       <span class="hljs-comment"># Windows</span>
 </code></pre>
 <blockquote>
-<p><strong>성공!</strong> Claude가 코드를 만들고, 우리가 실행했습니다!</p>
+<p><strong>와!</strong> 몇 초 만에 웹페이지가 완성되었습니다!</p>
 </blockquote>
 </section>
 </foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="28" data-paginate="true" data-theme="default" lang="ko-KR" data-marpit-pagination="28" style="--paginate:true;--theme:default;" data-marpit-pagination-total="139" data-size="16:9">
@@ -616,32 +622,31 @@ md ai-workshop
 <tbody>
 <tr>
 <td>파일 생성됨?</td>
-<td><code>ls</code> 또는 <code>dir</code>로 확인</td>
+<td><code>about-me.html</code> 파일 존재</td>
 </tr>
 <tr>
-<td>실행됨?</td>
-<td><code>node hello.js</code></td>
+<td>브라우저에서 열림?</td>
+<td>예쁜 페이지가 보임</td>
 </tr>
 <tr>
-<td>결과가 나옴?</td>
-<td>&quot;Hello World&quot; 출력</td>
+<td>내 정보가 있음?</td>
+<td>이름, 직업, 관심사 표시</td>
 </tr>
 </tbody>
 </table>
-<h3 id="%EA%B6%81%EA%B8%88%ED%95%9C-%EC%A0%90%EC%9D%B4-%EC%9E%88%EB%8B%A4%EB%A9%B4">궁금한 점이 있다면?</h3>
-<p>코드를 보고 궁금한 것을 메모해두세요:</p>
+<h3 id="%EC%9D%B4%EA%B2%8C-agent%EC%9D%98-%ED%9E%98%EC%9E%85%EB%8B%88%EB%8B%A4">이게 Agent의 힘입니다</h3>
 <ul>
-<li><code>console.log</code>가 뭐지?</li>
-<li><code>;</code>은 왜 붙이지?</li>
-<li><code>//</code>는 뭐지?</li>
+<li>HTML 코드 작성? → Agent가 함</li>
+<li>CSS 스타일링? → Agent가 함</li>
+<li><strong>당신이 한 것</strong>: 원하는 걸 말했을 뿐</li>
 </ul>
 <blockquote>
-<p><strong>나중에 AI에게 물어볼 거예요!</strong></p>
+<p><strong>&quot;코드를 몰라도, 원하는 걸 만들 수 있다&quot;</strong></p>
 </blockquote>
 </section>
 </foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="29" data-paginate="true" data-theme="default" lang="ko-KR" data-marpit-pagination="29" style="--paginate:true;--theme:default;" data-marpit-pagination-total="139" data-size="16:9">
 <h2 id="do-%EC%8B%A4%EC%8A%B5-2-2-%EA%B0%84%EB%8B%A8%ED%95%9C-%EA%B3%84%EC%82%B0%EA%B8%B0">[Do] 실습 2-2: 간단한 계산기</h2>
-<h3 id="claude%EC%97%90%EA%B2%8C-%EC%9A%94%EC%B2%AD-1">Claude에게 요청</h3>
+<h3 id="claude%EC%97%90%EA%B2%8C-%EC%9A%94%EC%B2%AD-2">Claude에게 요청</h3>
 <pre is="marp-pre" data-auto-scaling="downscale-only"><code>두 숫자를 입력받아서 더하는 Node.js 프로그램을 만들어줘.
 사용자가 터미널에서 직접 숫자를 입력할 수 있어야 해.
 파일명은 calculator.js로 해줘.
@@ -800,7 +805,7 @@ md ai-workshop
 </section>
 </foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="36" data-paginate="true" data-theme="default" lang="ko-KR" data-marpit-pagination="36" style="--paginate:true;--theme:default;" data-marpit-pagination-total="139" data-size="16:9">
 <h2 id="do-%EB%8F%84%EC%A0%84-%EA%B3%BC%EC%A0%9C-%EC%82%AC%EC%B9%99%EC%97%B0%EC%82%B0-%EA%B3%84%EC%82%B0%EA%B8%B0">[Do] 도전 과제: 사칙연산 계산기</h2>
-<h3 id="claude%EC%97%90%EA%B2%8C-%EC%9A%94%EC%B2%AD-2">Claude에게 요청</h3>
+<h3 id="claude%EC%97%90%EA%B2%8C-%EC%9A%94%EC%B2%AD-3">Claude에게 요청</h3>
 <pre is="marp-pre" data-auto-scaling="downscale-only"><code>calculator.js를 수정해서 사칙연산(+, -, *, /)을 선택할 수 있게 해줘.
 사용자가 연산자를 선택하면 그에 맞는 계산을 수행해줘.
 </code></pre>
