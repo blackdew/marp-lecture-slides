@@ -1,4 +1,4 @@
-# Part 3: 파일 자동화 실습
+# Part 3: 반복 업무 위임하기 (파일 자동화 실습)
 
 ## 파일 자동화란?
 
@@ -106,7 +106,7 @@ fs.writeFileSync('output.txt', '안녕하세요!');
 
 ## 실습 3-1: Step by Step
 
-### Step 1: Gemini에게 요청
+### Step 1: Claude에게 요청
 
 ```
 다음 작업을 수행하는 Node.js 스크립트를 만들어줘:
@@ -237,7 +237,7 @@ csvWriter.writeRecords(data)
 
 ## 도전 과제: 담당자별 매출 합계
 
-### Gemini에게 추가 요청
+### Claude에게 추가 요청
 
 ```
 merge_sales.js를 수정해서
@@ -278,7 +278,7 @@ Downloads/
 
 ---
 
-## 실습 3-2: Gemini에게 요청
+## 실습 3-2: Claude에게 요청
 
 ```
 Downloads 폴더의 파일들을 확장자별로 분류하는 Node.js 스크립트를 만들어줘.
@@ -392,7 +392,7 @@ path.dirname('/home/file.txt')   // '/home'
 
 ## 도전 과제: 날짜별 폴더 생성
 
-### Gemini에게 추가 요청
+### Claude에게 추가 요청
 
 ```
 organize_folder.js를 수정해서
@@ -430,7 +430,7 @@ const folderName = `${mtime.getFullYear()}-${String(mtime.getMonth() + 1).padSta
 
 > **"에러는 무서운 게 아니라, AI가 알려주는 힌트예요"**
 
-에러 메시지를 복사해서 Gemini에게 물어보세요!
+에러 메시지를 복사해서 Claude에게 물어보세요!
 
 ---
 
@@ -504,12 +504,12 @@ node merge_sales.js
 ### 방금 경험한 것
 
 ```
-"CSV 합쳐줘" → Gemini가 코드 생성 → 실행 → 완료!
+"CSV 합쳐줘" → Claude가 코드 생성 → 실행 → 완료!
 ```
 
 ### 질문
 
-- Gemini가 만든 코드, 그대로 썼나요?
+- Claude가 만든 코드, 그대로 썼나요?
 - 수정을 요청했나요? 왜?
 - 결과물이 마음에 들었나요?
 

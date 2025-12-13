@@ -1,7 +1,7 @@
 {
   "name": "ai-agent-workshop",
   "version": "1.0.0",
-  "description": "Gemini CLI AI Agent 활용 워크샵 실습 파일",
+  "description": "Claude Code AI Agent 활용 워크샵 실습 파일",
   "main": "index.js",
   "scripts": {
     "start": "echo '실습 파일 준비 완료!'",
@@ -10,7 +10,7 @@
   "keywords": [
     "ai",
     "agent",
-    "gemini",
+    "claude",
     "workshop"
   ],
   "author": "",

@@ -55,7 +55,7 @@ node app.js
 
 ## 첫 번째 Express 앱
 
-### Gemini에게 요청
+### Claude에게 요청
 
 ```
 Express로 간단한 웹 서버를 만들어줘.
@@ -188,7 +188,7 @@ app.post('/submit', (req, res) => {
 
 ## 실습 5-1: 기본 웹앱 만들기
 
-### Gemini에게 요청
+### Claude에게 요청
 
 ```
 Express로 간단한 계산기 웹앱을 만들어줘.
@@ -287,7 +287,7 @@ app.listen(3000, () => console.log('http://localhost:3000'));
 
 ## 템플릿 1: 보고서 자동 생성기
 
-### Gemini에게 요청
+### Claude에게 요청
 
 ```
 Express로 보고서 자동 생성기를 만들어줘.
@@ -371,7 +371,7 @@ app.listen(3000, () => console.log('http://localhost:3000'));
 
 ## 템플릿 2: 수업 노트 요약기
 
-### Gemini에게 요청
+### Claude에게 요청
 
 ```
 Express로 수업 노트 요약기를 만들어줘.
@@ -448,7 +448,7 @@ app.listen(3000, () => console.log('http://localhost:3000'));
 
 ## 템플릿 3: 취업 공고 비교 도구
 
-### Gemini에게 요청
+### Claude에게 요청
 
 ```
 Express로 취업 공고 비교 도구를 만들어줘.

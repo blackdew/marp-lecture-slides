@@ -132,7 +132,7 @@ https://example.com/robots.txt
 
 ---
 
-## 실습 4-1: Gemini에게 요청
+## 실습 4-1: Claude에게 요청
 
 ```
 다음 작업을 수행하는 Node.js 스크립트를 만들어줘:
@@ -265,7 +265,7 @@ const html = $('div').html();
 
 ## 도전 과제: 여러 페이지 크롤링
 
-### Gemini에게 요청
+### Claude에게 요청
 
 ```
 news_crawler.js를 수정해서
@@ -352,7 +352,7 @@ AI 기반 이미지/영상 생성 도구
 
 동아리/팀 행사를 홍보하는 콘텐츠 제작
 
-### Step 1: Gemini에게 텍스트 생성 요청
+### Step 1: Claude에게 텍스트 생성 요청
 
 ```
 우리 동아리 '코딩클럽'의 신입 환영회를 홍보하는 콘텐츠를 만들어줘.
@@ -396,14 +396,14 @@ Vibrant colors, clean design, flat illustration style.
 ### 워크플로우
 
 ```
-Gemini (텍스트) + Nano Banana (이미지) → Canva (편집/완성)
+Claude (텍스트) + Nano Banana (이미지) → Canva (편집/완성)
 ```
 
 ### Canva에서 할 일
 
 1. 적절한 템플릿 선택
 2. Nano Banana 이미지 업로드
-3. Gemini가 만든 문구 배치
+3. Claude가 만든 문구 배치
 4. 색상/폰트 조정
 5. 다운로드
 
@@ -421,7 +421,7 @@ Gemini (텍스트) + Nano Banana (이미지) → Canva (편집/완성)
 
 ### 체크리스트
 
-- [ ] Gemini로 문구 생성
+- [ ] Claude로 문구 생성
 - [ ] Nano Banana로 이미지 생성
 - [ ] Canva에서 3장 완성
 - [ ] 다운로드 (PNG 또는 PDF)
@@ -444,7 +444,7 @@ Gemini (텍스트) + Nano Banana (이미지) → Canva (편집/완성)
 ```
 웹 크롤링 (데이터 수집)
     ↓
-Gemini (분석/요약)
+Claude (분석/요약)
     ↓
 Nano Banana + Canva (시각화)
 ```
@@ -485,7 +485,7 @@ node news_crawler.js
 
 ### 콘텐츠 생성 체험
 
-- [ ] Gemini로 홍보 문구 생성
+- [ ] Claude로 홍보 문구 생성
 - [ ] Nano Banana로 이미지 생성
 - [ ] Canva로 최종 완성
 
