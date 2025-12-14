@@ -881,8 +881,6 @@ _class: lead do
 2. 문서 파일(pdf, docx, xlsx)은 documents/ 폴더로
 3. 동영상 파일(mp4, mov)은 videos/ 폴더로
 4. 나머지는 others/ 폴더로 이동해줘
-
-파일명: organize_downloads.js
 ```
 
 ---
@@ -895,7 +893,7 @@ _class: lead do
 
 | 항목 | 확인 방법 |
 |------|-----------|
-| 스크립트 실행 | `node organize_downloads.js` |
+| 스크립트 실행 | `node 파일명.js` |
 | 폴더 생성됨? | `ls` 또는 `dir` |
 | 파일 이동됨? | 각 폴더 내용 확인 |
 
@@ -917,8 +915,8 @@ _class: lead do
 ### 정리 보고서 만들기
 
 ```
-organize_downloads.js를 수정해서
-정리 결과를 report.txt로 저장해줘.
+위에서 만든 코드를 수정해서
+정리 결과를 report.md로 저장해줘.
 몇 개의 파일이 어디로 이동했는지 알려줘.
 ```
 
