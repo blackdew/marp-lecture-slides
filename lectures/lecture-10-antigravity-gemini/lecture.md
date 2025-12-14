@@ -116,14 +116,18 @@ section.action::before { content: "○ Plan → ○ Confirm → ● Action → �
 section.document::before { content: "○ Plan → ○ Confirm → ○ Action → ● Document"; color: #9b59b6; border-color: #9b59b6; background: linear-gradient(135deg, #f5eef8 0%, #ebdef0 100%); }
 </style>
 
-![bg left:35%](images/img_title_ai_agent.svg)
-
-# Claude Code
-## AI 에이전트 활용 마스터 클래스
-
-**비개발자를 위한 실무 자동화 + 코딩**
-
-> **"혼자 일하는 실무자에서, AI 인턴을 부리는 관리자로."**
+<div style="display: flex; align-items: center; justify-content: center; height: 100%; padding: 0 40px; gap: 40px;">
+  <div style="flex: 1;">
+    <h1 style="margin-bottom: 30px;">Claude Code</h1>
+    <h2 style="margin-bottom: 20px; font-size: 1.8em; color: #3498db;">AI 에이전트 활용 마스터 클래스</h2>
+    <p style="font-size: 1.3em; margin-bottom: 20px;"><strong>비개발자를 위한 실무 자동화 + 코딩</strong></p>
+    <p style="font-size: 1.1em; margin-bottom: 30px;">"혼자 일하는 실무자에서, AI 인턴을 부리는 관리자로."</p>
+  </div>
+  <div style="flex: 0 0 500px; text-align: center;">
+    <img src="images/QpcebDDS5ERX9CC.png" width="500" style="display: block; margin-bottom: 20px;" />
+    <p style="font-size: 2.0em; font-weight: bold; margin-top: 20px;"><a href="https://bit.ly/44ql2io" style="color: #003366; text-decoration: none;">https://bit.ly/44ql2io</a></p>
+  </div>
+</div>
 
 ---
 
@@ -860,6 +864,8 @@ _class: lead do
 3. 정리 결과 보고
 
 ---
+
+<!-- _class: do -->
 
 ## 실습 3-1: Claude에게 요청
 
