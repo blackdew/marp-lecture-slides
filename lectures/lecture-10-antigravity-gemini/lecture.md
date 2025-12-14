@@ -325,23 +325,23 @@ _class: lead
 
 ### 1단계: 설치 가이드 따라하기
 
-**설치 가이드**: https://ai.google.dev/
+**설치 가이드**: https://getclaudecode.com/
 
-**설치 명령어**:
+위 가이드의 **1번~3번을 따라 git과 node를 설치**하고,
+**4번 Claude Code CLI 설치** 단계에서 아래 명령어로 대체:
+
 ```bash
 npm install -g @google/gemini-cli
 ```
 
-### 2단계: 강의용 계정 연결
-
-**계정 공유 링크**: https://example.com/lecture-account (추후 공유 예정)
+### 2단계: 계정 연결
 
 **실행**:
 ```bash
 gemini
 ```
 
-> **참고**: 강의용 계정이 제공되므로 별도 결제가 필요 없습니다.
+> **참고**: 별도 결제가 필요 없습니다.
 
 ---
 
@@ -350,8 +350,6 @@ gemini
 ### 옵션 B: Claude Code (유료)
 
 **설치 가이드**: https://getclaudecode.com/
-
-위 가이드의 **4번 Gemini CLI 설치** 단계에서 아래 명령어로 대체:
 
 ```bash
 npm install -g @anthropic-ai/claude-code
@@ -372,7 +370,7 @@ claude
 
 **설치 가이드**: https://getclaudecode.com/
 
-위 가이드의 **4번 Claude Code 설치** 단계에서 아래 명령어로 대체:
+위 가이드의 **4번 Claude Code CLI 설치** 단계에서 아래 명령어로 대체:
 
 ```bash
 npm install -g @openai/codex
