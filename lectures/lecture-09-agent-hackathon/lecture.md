@@ -9,30 +9,40 @@ paginate: true
 section {
   padding: 60px 80px;
   font-size: 1.1em;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
 }
 
 section.lead {
   padding: 60px 80px;
   text-align: center;
+  justify-content: center;
 }
 
 h1 {
   color: #2c3e50;
-  font-size: 2.5em;
+  font-size: 3.2em;
+  margin-top: 0;
+  font-weight: 700;
 }
 
 h2 {
   color: #3498db;
-  font-size: 1.8em;
+  font-size: 2.6em;
+  margin-top: 0;
+  font-weight: 700;
 }
 
 h3 {
-  font-size: 1.4em;
+  font-size: 1.6em;
+  font-weight: 600;
 }
 
 p, li {
-  font-size: 1.1em;
+  font-size: 0.95em;
   line-height: 1.5;
+  font-weight: 400;
 }
 
 code {
@@ -43,7 +53,7 @@ code {
 }
 
 table {
-  font-size: 1.1em;
+  font-size: 0.95em;
 }
 
 .highlight {
