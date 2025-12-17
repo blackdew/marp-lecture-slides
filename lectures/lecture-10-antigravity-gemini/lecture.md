@@ -23,21 +23,25 @@ h1 {
   color: #2c3e50;
   font-size: 3.2em;
   margin-top: 0;
+  font-weight: 700;
 }
 
 h2 {
   color: #3498db;
-  font-size: 2.2em;
+  font-size: 2.6em;
   margin-top: 0;
+  font-weight: 700;
 }
 
 h3 {
-  font-size: 1.4em;
+  font-size: 1.6em;
+  font-weight: 600;
 }
 
 p, li {
-  font-size: 1.1em;
+  font-size: 0.95em;
   line-height: 1.5;
+  font-weight: 400;
 }
 
 code {
@@ -48,7 +52,7 @@ code {
 }
 
 table {
-  font-size: 1.1em;
+  font-size: 0.95em;
 }
 
 .highlight {
@@ -120,6 +124,15 @@ section.plan::before { content: "● Plan → ○ Confirm → ○ Action → ○
 section.confirm::before { content: "○ Plan → ● Confirm → ○ Action → ○ Document"; color: #27ae60; border-color: #27ae60; background: linear-gradient(135deg, #e8f8f0 0%, #d4edda 100%); }
 section.action::before { content: "○ Plan → ○ Confirm → ● Action → ○ Document"; color: #e74c3c; border-color: #e74c3c; background: linear-gradient(135deg, #fdedec 0%, #fadbd8 100%); }
 section.document::before { content: "○ Plan → ○ Confirm → ○ Action → ● Document"; color: #9b59b6; border-color: #9b59b6; background: linear-gradient(135deg, #f5eef8 0%, #ebdef0 100%); }
+
+/* 2단 레이아웃 */
+.columns {
+  display: flex;
+  gap: 40px;
+}
+.columns > div {
+  flex: 1;
+}
 </style>
 
 <div style="display: flex; align-items: center; justify-content: center; height: 100%; padding: 0 40px; gap: 40px;">
@@ -1328,6 +1341,9 @@ PDF 파일은 어떻게 읽는 거야?
 
 ## 산출물 체크 (Part 3 - 실습)
 
+<div class="columns">
+<div>
+
 ### 실습 3-1: 폴더 정리
 
 - [ ] 스크립트 실행 성공
@@ -1339,6 +1355,9 @@ PDF 파일은 어떻게 읽는 거야?
 - [ ] 날짜 포맷 통일됨
 - [ ] (도전) 담당자별 합계 계산됨
 
+</div>
+<div>
+
 ### 실습 3-3: PDF 요약
 
 - [ ] summary_q1~q3.md 생성됨
@@ -1348,6 +1367,9 @@ PDF 파일은 어떻게 읽는 거야?
 
 - [ ] email_to_team.md 생성됨
 - [ ] (도전) email_to_ceo.md 생성됨
+
+</div>
+</div>
 
 ---
 
