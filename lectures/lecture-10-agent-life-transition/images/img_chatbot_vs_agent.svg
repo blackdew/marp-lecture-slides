@@ -1,0 +1,86 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -80 600 960">
+  <defs>
+    <linearGradient id="bgGrad2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#fef9ef;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#f0f4f8;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+
+  <rect x="0" y="-80" width="600" height="960" fill="url(#bgGrad2)" rx="0"/>
+
+  <!-- Title -->
+  <text x="300" y="40" text-anchor="middle" font-size="22" font-weight="bold" fill="#2c3e50" font-family="sans-serif">챗봇 vs Agent</text>
+
+  <!-- Chatbot Section -->
+  <rect x="60" y="80" width="200" height="300" rx="16" fill="white" stroke="#e0e0e0" stroke-width="1.5"/>
+  <rect x="60" y="80" width="200" height="50" rx="16" fill="#f39c12"/>
+  <rect x="60" y="114" width="200" height="16" fill="#f39c12"/>
+  <text x="160" y="112" text-anchor="middle" font-size="16" font-weight="bold" fill="white" font-family="sans-serif">챗봇</text>
+
+  <!-- Chatbot icon -->
+  <circle cx="160" cy="180" r="30" fill="#f39c12" opacity="0.15"/>
+  <circle cx="150" cy="175" r="4" fill="#f39c12"/>
+  <circle cx="170" cy="175" r="4" fill="#f39c12"/>
+  <path d="M145 188 Q160 198 175 188" stroke="#f39c12" fill="none" stroke-width="2"/>
+
+  <!-- Chatbot features -->
+  <text x="160" y="235" text-anchor="middle" font-size="12" fill="#7f8c8d" font-family="sans-serif">대화만 가능</text>
+  <text x="160" y="258" text-anchor="middle" font-size="12" fill="#7f8c8d" font-family="sans-serif">텍스트 입출력</text>
+  <text x="160" y="281" text-anchor="middle" font-size="12" fill="#7f8c8d" font-family="sans-serif">복사/붙여넣기 필요</text>
+
+  <!-- Chatbot metaphor -->
+  <rect x="85" y="310" width="150" height="50" rx="8" fill="#fff3cd"/>
+  <text x="160" y="332" text-anchor="middle" font-size="11" fill="#856404" font-family="sans-serif">비유: 똑똑한 친구</text>
+  <text x="160" y="350" text-anchor="middle" font-size="11" fill="#856404" font-family="sans-serif">"방법은 알려줄게!"</text>
+
+  <!-- Arrow -->
+  <text x="300" y="230" text-anchor="middle" font-size="30" fill="#3498db">→</text>
+
+  <!-- Agent Section -->
+  <rect x="340" y="80" width="200" height="300" rx="16" fill="white" stroke="#e0e0e0" stroke-width="1.5"/>
+  <rect x="340" y="80" width="200" height="50" rx="16" fill="#3498db"/>
+  <rect x="340" y="114" width="200" height="16" fill="#3498db"/>
+  <text x="440" y="112" text-anchor="middle" font-size="16" font-weight="bold" fill="white" font-family="sans-serif">Agent</text>
+
+  <!-- Agent icon -->
+  <circle cx="440" cy="180" r="30" fill="#3498db" opacity="0.15"/>
+  <circle cx="430" cy="175" r="4" fill="#3498db"/>
+  <circle cx="450" cy="175" r="4" fill="#3498db"/>
+  <path d="M425 188 Q440 198 455 188" stroke="#3498db" fill="none" stroke-width="2"/>
+  <!-- Tool indicators -->
+  <rect x="462" y="160" width="14" height="18" rx="2" fill="#2ecc71" opacity="0.8"/>
+  <text x="469" y="174" text-anchor="middle" fill="white" font-size="9" font-family="monospace">F</text>
+
+  <!-- Agent features -->
+  <text x="440" y="235" text-anchor="middle" font-size="12" fill="#2c3e50" font-weight="bold" font-family="sans-serif">대화 + 실행</text>
+  <text x="440" y="258" text-anchor="middle" font-size="12" fill="#2c3e50" font-weight="bold" font-family="sans-serif">파일 읽기/쓰기/실행</text>
+  <text x="440" y="281" text-anchor="middle" font-size="12" fill="#2c3e50" font-weight="bold" font-family="sans-serif">자동 작업 수행</text>
+
+  <!-- Agent metaphor -->
+  <rect x="365" y="310" width="150" height="50" rx="8" fill="#d4edda"/>
+  <text x="440" y="332" text-anchor="middle" font-size="11" fill="#155724" font-family="sans-serif">비유: 도구 쓰는 동료</text>
+  <text x="440" y="350" text-anchor="middle" font-size="11" fill="#155724" font-family="sans-serif">"내가 직접 해줄게!"</text>
+
+  <!-- Comparison examples -->
+  <rect x="60" y="420" width="480" height="160" rx="12" fill="white" stroke="#e0e0e0" stroke-width="1"/>
+
+  <text x="300" y="450" text-anchor="middle" font-size="14" font-weight="bold" fill="#2c3e50" font-family="sans-serif">같은 요청, 다른 결과</text>
+
+  <!-- Example: chatbot -->
+  <rect x="80" y="465" width="200" height="95" rx="8" fill="#fff8e1"/>
+  <text x="180" y="485" text-anchor="middle" font-size="11" font-weight="bold" fill="#f39c12" font-family="sans-serif">챗봇에게</text>
+  <text x="180" y="505" text-anchor="middle" font-size="11" fill="#666" font-family="sans-serif">"HTML 파일 만들어줘"</text>
+  <text x="180" y="530" text-anchor="middle" font-size="11" fill="#999" font-family="sans-serif">→ 코드를 텍스트로 보여줌</text>
+  <text x="180" y="548" text-anchor="middle" font-size="11" fill="#999" font-family="sans-serif">→ 직접 복사해서 저장해야 함</text>
+
+  <!-- Example: agent -->
+  <rect x="320" y="465" width="200" height="95" rx="8" fill="#e8f5e9"/>
+  <text x="420" y="485" text-anchor="middle" font-size="11" font-weight="bold" fill="#3498db" font-family="sans-serif">Agent에게</text>
+  <text x="420" y="505" text-anchor="middle" font-size="11" fill="#666" font-family="sans-serif">"HTML 파일 만들어줘"</text>
+  <text x="420" y="530" text-anchor="middle" font-size="11" fill="#2c3e50" font-weight="bold" font-family="sans-serif">→ 파일을 직접 생성!</text>
+  <text x="420" y="548" text-anchor="middle" font-size="11" fill="#2c3e50" font-weight="bold" font-family="sans-serif">→ 바로 브라우저에서 열기</text>
+
+  <!-- Bottom message -->
+  <rect x="120" y="620" width="360" height="50" rx="25" fill="#3498db" opacity="0.1"/>
+  <text x="300" y="650" text-anchor="middle" font-size="15" font-weight="bold" fill="#3498db" font-family="sans-serif">Agent = 도구를 쓸 줄 아는 AI 동료</text>
+</svg>

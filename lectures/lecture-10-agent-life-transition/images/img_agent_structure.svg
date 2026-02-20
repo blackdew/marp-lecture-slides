@@ -1,0 +1,87 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -80 600 960">
+  <defs>
+    <linearGradient id="bgGrad3" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#f0f4f8;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#e8eef5;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+
+  <rect x="0" y="-80" width="600" height="960" fill="url(#bgGrad3)" rx="0"/>
+
+  <!-- Title -->
+  <text x="300" y="30" text-anchor="middle" font-size="22" font-weight="bold" fill="#2c3e50" font-family="sans-serif">Agent의 구조</text>
+  <text x="300" y="55" text-anchor="middle" font-size="13" fill="#7f8c8d" font-family="sans-serif">요리사에게 레시피만 vs 재료와 도구까지</text>
+
+  <!-- Central LLM circle -->
+  <circle cx="300" cy="200" r="70" fill="#3498db" opacity="0.12"/>
+  <circle cx="300" cy="200" r="55" fill="#3498db"/>
+  <text x="300" y="193" text-anchor="middle" font-size="20" font-weight="bold" fill="white" font-family="sans-serif">LLM</text>
+  <text x="300" y="215" text-anchor="middle" font-size="12" fill="white" opacity="0.9" font-family="sans-serif">(두뇌)</text>
+
+  <!-- Memory -->
+  <rect x="80" y="115" width="110" height="65" rx="12" fill="#9b59b6"/>
+  <text x="135" y="145" text-anchor="middle" font-size="14" font-weight="bold" fill="white" font-family="sans-serif">Memory</text>
+  <text x="135" y="165" text-anchor="middle" font-size="10" fill="white" opacity="0.9" font-family="sans-serif">기억</text>
+  <line x1="190" y1="150" x2="245" y2="185" stroke="#9b59b6" stroke-width="2" opacity="0.5"/>
+
+  <!-- Planning -->
+  <rect x="410" y="115" width="110" height="65" rx="12" fill="#2ecc71"/>
+  <text x="465" y="145" text-anchor="middle" font-size="14" font-weight="bold" fill="white" font-family="sans-serif">Planning</text>
+  <text x="465" y="165" text-anchor="middle" font-size="10" fill="white" opacity="0.9" font-family="sans-serif">계획</text>
+  <line x1="410" y1="150" x2="355" y2="185" stroke="#2ecc71" stroke-width="2" opacity="0.5"/>
+
+  <!-- Tools (highlighted - key element) -->
+  <rect x="185" y="310" width="230" height="75" rx="16" fill="#e74c3c" stroke="#c0392b" stroke-width="2"/>
+  <text x="300" y="340" text-anchor="middle" font-size="16" font-weight="bold" fill="white" font-family="sans-serif">Tools (도구)</text>
+  <text x="300" y="365" text-anchor="middle" font-size="11" fill="white" opacity="0.9" font-family="sans-serif">Read, Write, Edit, Bash...</text>
+  <line x1="300" y1="270" x2="300" y2="310" stroke="#e74c3c" stroke-width="2.5"/>
+  <!-- Star indicator -->
+  <text x="425" y="342" font-size="18" fill="#ffd700">★</text>
+
+  <!-- Tool examples below -->
+  <g transform="translate(0, 430)">
+    <!-- File tool -->
+    <rect x="60" y="0" width="120" height="55" rx="8" fill="white" stroke="#e0e0e0" stroke-width="1"/>
+    <rect x="90" y="8" width="24" height="30" rx="3" fill="#3498db" opacity="0.2"/>
+    <line x1="96" y1="16" x2="108" y2="16" stroke="#3498db" stroke-width="1.5"/>
+    <line x1="96" y1="22" x2="108" y2="22" stroke="#3498db" stroke-width="1.5"/>
+    <line x1="96" y1="28" x2="104" y2="28" stroke="#3498db" stroke-width="1.5"/>
+    <text x="120" y="30" text-anchor="middle" font-size="11" fill="#555" font-family="sans-serif">파일 조작</text>
+
+    <!-- Code tool -->
+    <rect x="240" y="0" width="120" height="55" rx="8" fill="white" stroke="#e0e0e0" stroke-width="1"/>
+    <rect x="266" y="8" width="28" height="30" rx="3" fill="#2ecc71" opacity="0.2"/>
+    <text x="280" y="28" text-anchor="middle" font-size="13" fill="#2ecc71" font-family="monospace">&lt;/&gt;</text>
+    <text x="300" y="30" text-anchor="middle" font-size="11" fill="#555" font-family="sans-serif">코드 실행</text>
+
+    <!-- Web tool -->
+    <rect x="420" y="0" width="120" height="55" rx="8" fill="white" stroke="#e0e0e0" stroke-width="1"/>
+    <circle cx="456" cy="23" r="14" fill="none" stroke="#f39c12" stroke-width="1.5" opacity="0.5"/>
+    <line x1="442" y1="23" x2="470" y2="23" stroke="#f39c12" stroke-width="1"/>
+    <line x1="456" y1="9" x2="456" y2="37" stroke="#f39c12" stroke-width="1"/>
+    <text x="480" y="30" text-anchor="middle" font-size="11" fill="#555" font-family="sans-serif">웹 검색</text>
+  </g>
+
+  <!-- Connecting lines from tools box to tool examples -->
+  <line x1="230" y1="385" x2="120" y2="430" stroke="#e0e0e0" stroke-width="1" stroke-dasharray="3,3"/>
+  <line x1="300" y1="385" x2="300" y2="430" stroke="#e0e0e0" stroke-width="1" stroke-dasharray="3,3"/>
+  <line x1="370" y1="385" x2="480" y2="430" stroke="#e0e0e0" stroke-width="1" stroke-dasharray="3,3"/>
+
+  <!-- Metaphor section -->
+  <rect x="80" y="530" width="440" height="120" rx="16" fill="white" stroke="#e0e0e0" stroke-width="1"/>
+  <text x="300" y="560" text-anchor="middle" font-size="14" font-weight="bold" fill="#2c3e50" font-family="sans-serif">비유로 이해하기</text>
+
+  <!-- Without tools -->
+  <rect x="100" y="575" width="180" height="55" rx="8" fill="#fff3cd"/>
+  <text x="190" y="596" text-anchor="middle" font-size="12" fill="#856404" font-family="sans-serif">레시피만 준 요리사</text>
+  <text x="190" y="618" text-anchor="middle" font-size="11" fill="#856404" font-family="sans-serif">"이렇게 하면 돼요" (말만)</text>
+
+  <!-- With tools -->
+  <rect x="320" y="575" width="180" height="55" rx="8" fill="#d4edda"/>
+  <text x="410" y="596" text-anchor="middle" font-size="12" fill="#155724" font-family="sans-serif">재료+도구까지 준 요리사</text>
+  <text x="410" y="618" text-anchor="middle" font-size="11" fill="#155724" font-family="sans-serif">"직접 만들어 드릴게요!"</text>
+
+  <!-- Bottom key message -->
+  <rect x="100" y="690" width="400" height="45" rx="22" fill="#e74c3c" opacity="0.1"/>
+  <text x="300" y="718" text-anchor="middle" font-size="14" font-weight="bold" fill="#e74c3c" font-family="sans-serif">핵심: Tools가 Agent를 Agent답게 만든다!</text>
+</svg>
