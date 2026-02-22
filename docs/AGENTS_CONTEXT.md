@@ -12,30 +12,102 @@
 ├── CLAUDE.md -> docs/AGENTS_CONTEXT.md   # Claude Code용 심볼릭 링크
 ├── AGENTS.md -> docs/AGENTS_CONTEXT.md   # 범용 Agents용 심볼릭 링크
 ├── GEMINI.md -> docs/AGENTS_CONTEXT.md   # Gemini용 심볼릭 링크
+├── .claude/
+│   ├── agents/                        # 강의 제작 전문 에이전트
+│   │   ├── lecture-analyst.md         # Phase 1: 수강생/주제/참조 분석
+│   │   ├── instructional-designer.md  # Phase 2: 강의 설계
+│   │   ├── slide-writer.md            # Phase 3: Marp 슬라이드 작성
+│   │   ├── visual-designer.md         # Phase 3: SVG 이미지 생성
+│   │   ├── lecture-reviewer.md        # Phase 4: 품질 검증
+│   │   └── retrospective-agent.md     # Phase 5: 회고 & 학습 추출
+│   ├── commands/                      # Claude Code 스킬 (slash commands)
+│   │   ├── create-lecture.md          # 강의 자동 생성 파이프라인
+│   │   ├── create-lecture-reflect.md  # 사용자 수정 피드백 캡처
+│   │   └── create-lecture-templates.md # CSS/SVG 템플릿 및 컨벤션 참조
+│   └── learnings/                     # 학습 메모리 (Git 추적)
+│       └── create-lecture.md          # 강의 제작 교훈 누적 파일
 ├── docs/
 │   ├── AGENTS_CONTEXT.md              # 마스터 작업 컨텍스트 파일
 │   └── retrospectives/                # 작업 회고 및 학습 내용
 └── lectures/                          # 강의 자료 루트 디렉토리
     └── lecture-XX-<주제명>/           # 개별 강의 폴더 (패턴)
+        ├── requirements.md            # 강의 요구사항 정의서
+        ├── outline.md                 # 강의 개요 및 타임라인
         ├── lecture.md                 # 메인 프레젠테이션 파일
         ├── part-XX.md                 # 모듈화된 콘텐츠 섹션
         ├── images/                    # 시각 자료
         │   └── img_*.svg              # SVG 이미지 파일
+        ├── .work/                     # 중간 산출물 (gitignore 대상)
         └── lecture.html               # 생성된 결과물
 ```
 
 각 강의 폴더의 구성 패턴:
 
+- `requirements.md` - 강의 요구사항 정의서 (대상, 시간, 목표 등)
+- `outline.md` - 강의 개요 및 분 단위 타임라인
 - `lecture.md` - 메인 프레젠테이션 파일 (또는 주제별 파일명)
 - `part-XX.md` - 초안/모듈화된 콘텐츠 파일 (선택사항)
 - `images/` - 시각 자료 디렉토리
+- `.work/` - 자동 파이프라인 중간 산출물 (gitignore 대상)
 - 생성된 출력 파일: `.html`, `.pdf`, `.pptx` (선택사항)
 
 ## 작업 흐름
 
-각 강의는 다음 단계를 따라 진행됩니다:
+### 자동화 파이프라인 (권장)
 
-1. **기획 (Planning):** `outline.md` 또는 유사한 파일에 강의 개요 작성
+`/create-lecture` 스킬을 사용하면 `requirements.md`로부터 완성된 프레젠테이션까지 자동 생성됩니다:
+
+```
+/create-lecture lectures/lecture-XX-주제명 [--plan-only] [--no-images] [--rebuild]
+```
+
+| 옵션 | 설명 |
+|------|------|
+| (없음) | 전체 파이프라인 실행 (학습 → 분석 → 설계 → 제작 → 검증 → 회고) |
+| `--plan-only` | 분석/설계까지만 실행 (outline.md 생성) |
+| `--no-images` | SVG 이미지 생성 건너뛰기 (기존 이미지 재활용) |
+| `--rebuild` | 제작/검증만 재실행 (기존 분석/설계 결과 재활용) |
+
+**전제 조건**: 강의 폴더에 `requirements.md`가 있어야 합니다.
+
+**파이프라인 흐름** (6개 전문 에이전트가 6-Phase로 협업):
+
+0. **학습 주입**: `learnings/create-lecture.md`를 읽어 모든 에이전트에 과거 교훈 주입
+1. **분석**: 수강생 페르소나, 주제 리서치, 기존 자료 분석 (병렬 3개 에이전트)
+2. **설계**: 분 단위 타임라인, 학습 목표, 비주얼 에셋 목록이 포함된 `outline.md` 생성
+3. **제작**: `lecture.md` 슬라이드 작성, SVG 이미지 생성, 실습 섹션 설계
+4. **검증**: 품질 리뷰 (근본원인 분석 포함) 후 `generate-presentation.sh`로 HTML 빌드
+5. **회고**: 리뷰 리포트에서 교훈 추출 → learnings 파일 업데이트 + 스냅샷 저장
+
+중간 산출물은 `.work/` 디렉토리에 저장되며, `--rebuild`로 재활용할 수 있습니다.
+
+#### 자기 개선 루프
+
+파이프라인은 **자기 개선 루프**를 내장하고 있어, 매 실행마다 과거 실수를 학습합니다:
+
+- **Phase 0 (학습 주입)**: `.claude/learnings/create-lecture.md`의 교훈을 모든 에이전트 프롬프트에 주입
+- **Phase 5 (회고)**: 리뷰 리포트의 근본원인 분석에서 새로운 교훈을 추출하여 learnings 파일 업데이트
+- **Reflect**: 사용자가 결과물을 수정한 뒤 `/create-lecture-reflect`를 실행하면 diff 기반 교훈 추출
+
+learnings 파일은 Git 추적 대상으로, 팀원 간에 공유됩니다.
+
+#### 피드백 캡처 (`/create-lecture-reflect`)
+
+```
+/create-lecture-reflect lectures/lecture-XX-주제명
+```
+
+생성된 `lecture.md`를 사용자가 수정한 뒤 실행하면:
+1. 자동 생성본 스냅샷(`.work/generated-lecture.md.snapshot`)과 현재 파일을 비교
+2. 삭제/추가/수정/레이아웃 변경에서 일반화 가능한 교훈 추출
+3. `learnings/create-lecture.md`에 교훈 추가
+4. 3회 이상 반복된 교훈은 "반복 패턴"으로 승격 → `create-lecture-templates.md`에 반영 제안
+
+### 수동 작업 흐름
+
+자동화 파이프라인 대신 수동으로 진행하는 경우:
+
+1. **기획 (Planning):** `requirements.md`에 요구사항 정의, `outline.md`에 강의 개요 작성
 2. **초안 작성 (Drafting):** 모듈화된 `part-0x.md` 파일로 콘텐츠 개발
 3. **검토 (Review):** 대화와 피드백을 통해 콘텐츠 반복 개선
 4. **통합 (Consolidation):** 완성된 파트를 메인 `lecture.md` 파일로 병합
@@ -319,12 +391,32 @@ PR 설명에 포함할 항목:
 
 ## 일반적인 작업 패턴
 
-### 새 강의 만들기
+### 새 강의 만들기 (자동화)
+
+1. 새 디렉토리 생성: `lectures/lecture-XX-주제명`
+2. `requirements.md` 작성 (대상, 시간, 목표, 고려사항, 성공 기준)
+3. 자동 파이프라인 실행:
+
+```
+/create-lecture lectures/lecture-XX-주제명
+```
+
+단계별로 진행하려면:
+
+```
+# 1단계: 분석/설계만 먼저 실행하여 outline.md 검토
+/create-lecture lectures/lecture-XX-주제명 --plan-only
+
+# 2단계: outline.md 확인/수정 후 제작/빌드 실행
+/create-lecture lectures/lecture-XX-주제명 --rebuild
+```
+
+### 새 강의 만들기 (수동)
 
 1. 새 디렉토리 생성: `lectures/lecture-XX-주제명`
 2. `images/` 서브디렉토리 추가
 3. Marp 프런트매터가 포함된 초기 `lecture.md` 생성
-4. 빌드: `./generate-presentation.sh lectures/lecture-XX-주제명 lecture.md`
+4. 빌드: `./generate-presentation.sh lecture-XX-주제명 lecture.md`
 
 ### 콘텐츠 반복 작업
 
