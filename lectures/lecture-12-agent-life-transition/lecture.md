@@ -505,7 +505,8 @@ Project Instructions = Agent에게 주는 프로젝트 설명서
 <div class="highlight">
 
 처음엔 매번 시키고, 패턴이 보이면 기록하고, 반복되면 스킬로 만든다.
-<strong>이 과정 자체가 Agent와 함께 일하는 법을 익히는 것</strong>입니다.
+<strong>이 과정 자체가 Agent와 함께 일하는 법을 익히는 것</strong>이고,
+이 과정을 거치면서 여러분은 <strong>Agent 가속</strong>을 경험하게 됩니다.
 
 </div>
 
