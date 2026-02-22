@@ -54,29 +54,36 @@ code {
 
 table {
   font-size: 0.95em;
+  width: 100%;
+}
+
+.highlight, .success, .question {
+  padding: 12px 16px;
+  margin: 10px 0;
+  font-size: 1.2em;
+  flex-grow: 0;
+  flex-shrink: 0;
+}
+
+.highlight p, .success p, .question p,
+.highlight strong, .success strong, .question strong {
+  margin: 0;
+  padding: 0;
 }
 
 .highlight {
   background: #fff3cd;
-  padding: 15px;
   border-left: 4px solid #ffc107;
-  margin: 15px 0;
-  font-size: 1.2em;
 }
 
 .success {
   background: #d4edda;
-  padding: 15px;
   border-left: 4px solid #28a745;
-  margin: 15px 0;
-  font-size: 1.2em;
 }
 
 .question {
   background: #e3f2fd;
-  padding: 20px;
   border-left: 4px solid #2196f3;
-  margin: 20px 0;
   font-size: 1.3em;
   font-weight: bold;
   color: #1565c0;
