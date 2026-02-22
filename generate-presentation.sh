@@ -7,7 +7,7 @@
 # 인자 확인
 if [ $# -ne 2 ]; then
     echo "사용법: $0 <폴더명> <마크다운파일명>"
-    echo "예시: $0 lectures/lecture-01-ai-data-coding lecture.md"
+    echo "예시: $0 lecture-09-agent-hackathon lecture.md"
     exit 1
 fi
 

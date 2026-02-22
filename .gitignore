@@ -2,6 +2,8 @@
 .claude/*.local.*
 .claude/**/*.local.*
 **/.work/
+# 루트의 임시 스크린샷 제외
+/*.png
 # learnings/ 디렉토리는 Git 추적 대상 (팀 공유)
 # .claude/learnings/ → 추적함
 # .claude/agents/ → 추적함

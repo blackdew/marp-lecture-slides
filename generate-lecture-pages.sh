@@ -5,15 +5,10 @@
 
 # 강의 정보 배열 (폴더명|제목|부제|대상|시간|구성|평가|설명)
 declare -a LECTURES=(
-    "lecture-01-ai-data-coding|Lecture 01: AI 시대를 준비하는|데이터와 코딩 이해|일반인|60분|개념 설명|A (90/100)|데이터는 흔적이다. AI는 흔적 분석 도구다. 코딩은 컴퓨터와 대화하는 방법이다."
-    "lecture-03-ai-agent-intro|Lecture 03: AI Agent 처음 만나기|시니어를 위한 친절한 안내|시니어|60분|단계별 실습|A+ (95/100)|버튼 누르기부터 시작하는 AI Agent 입문. 시니어를 위한 완벽한 최적화."
-    "lecture-04-claude-cli-workflow|Lecture 04-a: Claude CLI로|프로젝트 관리하기|초중급 개발자|90분|워크플로우|A (90/100)|문서 중심 개발 워크플로우. project-plan.md, todo.md, progress.md 활용법."
-    "lecture-04-claude-code-features|Lecture 04-b: Claude Code|기능 완전 정복|초중급 개발자|120분|레퍼런스|A- (87/100)|Skills, Commands, Agents, MCP, Hooks 등 모든 기능을 포괄하는 완전한 가이드."
-    "lecture-05-문서작업-실전|Lecture 05: Claude Code|문서 작업 마스터하기|작가/강사/연구자|150분|4가지 실습|B+ (85/100)|소설 집필, 강의 제작, 논문 작성, 개인 문서화 - 비개발자를 위한 실전 가이드."
-    "lecture-06-claude-code-advanced|Lecture 06: Claude Code|고급 활용법|중급+ 개발자|90분|고급 기능|B+ (85/100)|CLAUDE.md 작성, 컨텍스트 관리, MCP 설계 원칙 등 고급 사용자를 위한 인사이트."
-    "lecture-07-agent-automation-basics|Lecture 07: AI 에이전트로|자동화 시작하기|모든 레벨|120분|철학+실습|A (92/100)|선택, 계획, 문서화 - AI 시대의 핵심 개념과 8개 실습으로 배우는 자동화 기초."
-    "lecture-08-hackathon-practice|Lecture 08: AI 에이전트 해커톤|실무 자동화 실습|실습 참가자|120분|4개 과제|A- (90/100)|CSV 정리, PDF 요약, 메일 작성, 파일 정리 - 실무에서 바로 써먹는 자동화."
     "lecture-09-agent-hackathon|Lecture 09: Just Plan It!|AI 에이전트 해커톤|모든 레벨|300분|6개 Part|A (91/100)|5시간 집중 워크숍. 환경 설정부터 팀 해커톤까지, AI Agent 완전 체험."
+    "lecture-10-antigravity-gemini|Lecture 10: AI 에이전트 활용|Do-See-Ask-Learn 실습|비개발자|360분|6개 Part|미평가|Do-See-Ask-Learn 사이클로 배우는 AI 에이전트. JavaScript 기초부터 파일 자동화까지."
+    "lecture-11-agent-life-transition|Lecture 11: Just Plan It!!|AI Agent로 일과 삶의 전환|대학생/교직원|120분|5개 Part|미평가|동명대학교 특강. AI Agent 체험부터 업무 자동화, 팀 해커톤까지."
+    "lecture-12-agent-life-transition|Lecture 12: AI Agent 활용|생활/업무 전환|대학생/교직원|120분|4개 Act|미평가|동명대학교 특강. Agent 개념 이해부터 역할별 실습, 삶의 전환 로드맵까지."
 )
 
 # 함수: index.html 생성

@@ -1,6 +1,17 @@
 # 강의 시리즈 전체 리뷰 요약
 
-## 📚 리뷰 대상 강의 (총 9개)
+> **참고**: Lecture 01~08은 별도 저장소로 이관되었습니다. 아래 리뷰 내용은 아카이브 목적으로 보존합니다.
+
+## 📚 현재 강의 목록
+
+| 강의 | 주제 | 리뷰 상태 |
+|------|------|-----------|
+| **Lecture 09**: Just Plan It! | AI 에이전트 해커톤 (5시간) | 완료 (A, 91/100) |
+| **Lecture 10**: AI 에이전트 활용 | Do-See-Ask-Learn 실습 (6시간) | 미완료 |
+| **Lecture 11**: Just Plan It!! | AI Agent로 일과 삶의 전환 (2시간) | 미완료 |
+| **Lecture 12**: AI Agent 활용 | 생활/업무 전환 (2시간) | 미완료 |
+
+## 📚 과거 리뷰 대상 강의 (총 9개, 아카이브)
 
 1. **Lecture 01**: AI 시대를 준비하는 데이터와 코딩 이해
 2. **Lecture 03**: AI Agent 처음 만나기 (시니어용)
@@ -247,18 +258,12 @@
 
 ---
 
-## 📂 생성된 리뷰 파일 목록
+## 📂 리뷰 파일 목록
 
-1. `review-lecture-01-ai-data-coding.md`
-2. `review-lecture-03-ai-agent-intro.md`
-3. `review-lecture-04-claude-cli-workflow.md`
-4. `review-lecture-04-claude-code-features.md`
-5. `review-lecture-05-문서작업-실전.md`
-6. `review-lecture-06-claude-code-advanced.md`
-7. `review-lecture-07-agent-automation-basics.md`
-8. `review-lecture-08-hackathon-practice.md`
-9. `review-lecture-09-agent-hackathon.md`
-10. `00-review-summary.md` (이 파일)
+1. `review-lecture-09-agent-hackathon.md`
+2. `00-review-summary.md` (이 파일)
+
+> Lecture 01~08의 개별 리뷰 파일은 해당 강의 폴더와 함께 삭제되었습니다.
 
 ---
 
