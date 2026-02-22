@@ -353,8 +353,6 @@ Agent는 인간 역할의 대부분을 대체하게 될겁니다.
 
 ---
 
-![bg left:35%](images/img_group_prompting.svg)
-
 ## 첫 번째 페어 프롬프팅
 
 **강사 화면을 함께 보며** Agent에게 시키고, 결과를 함께 지켜봅니다.
