@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -80 600 960">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#e8f4fd"/>
+      <stop offset="100%" style="stop-color:#dfe6e9"/>
+    </linearGradient>
+  </defs>
+  <rect x="0" y="-80" width="600" height="960" fill="url(#bg)"/>
+
+  <!-- 윈도우 프레임 -->
+  <rect x="60" y="60" width="480" height="360" fill="#ffffff" stroke="#2c3e50" stroke-width="4" rx="14"/>
+  <rect x="60" y="60" width="480" height="50" fill="#3498db" rx="14"/>
+  <rect x="60" y="95" width="480" height="15" fill="#3498db"/>
+
+  <!-- 윈도우 버튼 -->
+  <circle cx="86" cy="85" r="8" fill="#e74c3c"/>
+  <circle cx="110" cy="85" r="8" fill="#f39c12"/>
+  <circle cx="134" cy="85" r="8" fill="#2ecc71"/>
+
+  <!-- 타이틀 -->
+  <text x="300" y="92" font-family="sans-serif" font-size="22" font-weight="bold" fill="white" text-anchor="middle">Claude Desktop</text>
+
+  <!-- 사이드바 -->
+  <rect x="70" y="120" width="120" height="290" fill="#f4f4f4"/>
+  <rect x="70" y="130" width="120" height="45" fill="#3498db" opacity="0.2"/>
+  <text x="130" y="160" font-family="sans-serif" font-size="22" font-weight="bold" fill="#2c3e50" text-anchor="middle">Projects</text>
+
+  <!-- 프로젝트 목록 (심플) -->
+  <g transform="translate(200, 140)">
+    <rect x="0" y="0" width="330" height="70" fill="#e3f2fd" rx="8"/>
+    <circle cx="35" cy="35" r="22" fill="#3498db"/>
+    <text x="35" y="43" font-family="sans-serif" font-size="22" fill="white" text-anchor="middle" font-weight="bold">1</text>
+    <text x="75" y="42" font-family="sans-serif" font-size="22" font-weight="bold" fill="#2c3e50">논문 작성</text>
+  </g>
+  <g transform="translate(200, 225)">
+    <rect x="0" y="0" width="330" height="70" fill="#f9f9f9" rx="8"/>
+    <circle cx="35" cy="35" r="22" fill="#2ecc71"/>
+    <text x="35" y="43" font-family="sans-serif" font-size="22" fill="white" text-anchor="middle" font-weight="bold">2</text>
+    <text x="75" y="42" font-family="sans-serif" font-size="22" font-weight="bold" fill="#2c3e50">수업 준비</text>
+  </g>
+  <g transform="translate(200, 310)">
+    <rect x="0" y="0" width="330" height="70" fill="#f9f9f9" rx="8"/>
+    <circle cx="35" cy="35" r="22" fill="#9b59b6"/>
+    <text x="35" y="43" font-family="sans-serif" font-size="22" fill="white" text-anchor="middle" font-weight="bold">3</text>
+    <text x="75" y="42" font-family="sans-serif" font-size="22" font-weight="bold" fill="#2c3e50">업무 자동화</text>
+  </g>
+
+  <!-- 설치 3단계 -->
+  <g transform="translate(300, 560)">
+    <circle cx="-150" cy="0" r="30" fill="#3498db"/>
+    <text x="-150" y="10" font-family="sans-serif" font-size="26" font-weight="bold" fill="white" text-anchor="middle">1</text>
+    <text x="-150" y="55" font-family="sans-serif" font-size="22" fill="#2c3e50" text-anchor="middle">다운로드</text>
+
+    <circle cx="0" cy="0" r="30" fill="#2ecc71"/>
+    <text x="0" y="10" font-family="sans-serif" font-size="26" font-weight="bold" fill="white" text-anchor="middle">2</text>
+    <text x="0" y="55" font-family="sans-serif" font-size="22" fill="#2c3e50" text-anchor="middle">가입</text>
+
+    <circle cx="150" cy="0" r="30" fill="#9b59b6"/>
+    <text x="150" y="10" font-family="sans-serif" font-size="26" font-weight="bold" fill="white" text-anchor="middle">3</text>
+    <text x="150" y="55" font-family="sans-serif" font-size="22" fill="#2c3e50" text-anchor="middle">첫 대화</text>
+
+    <!-- 연결선 -->
+    <line x1="-115" y1="0" x2="-35" y2="0" stroke="#7f8c8d" stroke-width="3"/>
+    <line x1="35" y1="0" x2="115" y2="0" stroke="#7f8c8d" stroke-width="3"/>
+  </g>
+</svg>

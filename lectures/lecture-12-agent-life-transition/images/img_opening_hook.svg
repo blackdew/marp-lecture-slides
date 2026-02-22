@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -80 600 960">
+  <defs>
+    <linearGradient id="bgGrad_hook" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#e8f4fd;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#dfe6e9;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  <rect x="0" y="-80" width="600" height="960" fill="url(#bgGrad_hook)" rx="0"/>
+
+  <!-- Browser window -->
+  <rect x="120" y="180" width="360" height="420" rx="8" fill="#ffffff" stroke="#7f8c8d" stroke-width="2"/>
+
+  <!-- Browser address bar -->
+  <rect x="120" y="180" width="360" height="40" rx="8" fill="#ecf0f1"/>
+  <rect x="120" y="205" width="360" height="15" fill="#ecf0f1"/>
+
+  <!-- Browser buttons -->
+  <circle cx="140" cy="200" r="6" fill="#e74c3c"/>
+  <circle cx="160" cy="200" r="6" fill="#f39c12"/>
+  <circle cx="180" cy="200" r="6" fill="#2ecc71"/>
+
+  <!-- URL bar -->
+  <rect x="210" y="192" width="240" height="16" rx="8" fill="#ffffff" stroke="#bdc3c7" stroke-width="1"/>
+  <text x="220" y="203" font-family="sans-serif" font-size="10" fill="#7f8c8d">localhost:3000/profile</text>
+
+  <!-- Page header -->
+  <rect x="140" y="250" width="320" height="60" fill="#3498db"/>
+  <text x="300" y="285" font-family="sans-serif" font-size="20" fill="#ffffff" text-anchor="middle" font-weight="bold">자기소개</text>
+
+  <!-- Profile icon -->
+  <circle cx="220" cy="360" r="30" fill="#bdc3c7"/>
+  <circle cx="220" cy="352" r="12" fill="#7f8c8d"/>
+  <path d="M 200 375 Q 220 390 240 375" fill="#7f8c8d"/>
+
+  <!-- Content blocks -->
+  <rect x="270" y="340" width="180" height="12" rx="2" fill="#3498db" opacity="0.3"/>
+  <rect x="270" y="360" width="150" height="12" rx="2" fill="#3498db" opacity="0.3"/>
+  <rect x="270" y="380" width="170" height="12" rx="2" fill="#3498db" opacity="0.3"/>
+
+  <!-- More content -->
+  <rect x="140" y="420" width="200" height="10" rx="2" fill="#95a5a6" opacity="0.4"/>
+  <rect x="140" y="440" width="240" height="10" rx="2" fill="#95a5a6" opacity="0.4"/>
+  <rect x="140" y="460" width="180" height="10" rx="2" fill="#95a5a6" opacity="0.4"/>
+
+  <!-- "5초 만에 생성됨" badge -->
+  <rect x="340" y="520" width="120" height="35" rx="17.5" fill="#2ecc71"/>
+  <text x="400" y="542" font-family="sans-serif" font-size="14" fill="#ffffff" text-anchor="middle" font-weight="bold">5초 만에 생성</text>
+
+  <!-- Clock icon -->
+  <circle cx="190" cy="537" r="20" fill="#f39c12" opacity="0.9"/>
+  <line x1="190" y1="537" x2="190" y2="525" stroke="#ffffff" stroke-width="3" stroke-linecap="round"/>
+  <line x1="190" y1="537" x2="198" y2="537" stroke="#ffffff" stroke-width="3" stroke-linecap="round"/>
+  <text x="225" y="545" font-family="sans-serif" font-size="22" fill="#f39c12" font-weight="bold">5s</text>
+</svg>

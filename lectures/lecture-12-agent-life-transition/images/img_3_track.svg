@@ -1,0 +1,90 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -80 600 960">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#e8f4fd;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#dfe6e9;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  <rect x="0" y="-80" width="600" height="960" fill="url(#bgGrad)" rx="0"/>
+
+  <!-- 타이틀 -->
+  <text x="300" y="140" font-family="sans-serif" font-size="24" font-weight="bold" fill="#2c3e50" text-anchor="middle">3가지 역할별 시나리오</text>
+
+  <!-- 공통 출발점 -->
+  <circle cx="300" cy="220" r="30" fill="#3498db"/>
+  <text x="300" y="230" font-family="sans-serif" font-size="16" font-weight="bold" fill="#ffffff" text-anchor="middle">AI</text>
+  <text x="300" y="280" font-family="sans-serif" font-size="14" fill="#2c3e50" text-anchor="middle">하나의 도구, 세 가지 활용</text>
+
+  <!-- 분기선 -->
+  <path d="M 300 250 L 150 340" stroke="#3498db" stroke-width="3"/>
+  <path d="M 300 250 L 300 340" stroke="#3498db" stroke-width="3"/>
+  <path d="M 300 250 L 450 340" stroke="#3498db" stroke-width="3"/>
+
+  <!-- Track A: 학생 -->
+  <g transform="translate(70, 350)">
+    <rect x="0" y="0" width="160" height="280" fill="#ffffff" stroke="#2ecc71" stroke-width="3" rx="10"/>
+    <circle cx="80" cy="40" r="25" fill="#2ecc71"/>
+    <path d="M 65 35 L 75 25 L 85 35 L 80 35 L 80 50 L 70 50 L 70 35 Z" fill="#ffffff"/>
+    <text x="80" y="80" font-family="sans-serif" font-size="16" font-weight="bold" fill="#2c3e50" text-anchor="middle">학부생</text>
+
+    <text x="80" y="110" font-family="sans-serif" font-size="12" fill="#7f8c8d" text-anchor="middle">Track A</text>
+
+    <text x="10" y="140" font-family="sans-serif" font-size="13" fill="#2c3e50" font-weight="bold">활용 시나리오:</text>
+    <text x="10" y="165" font-family="sans-serif" font-size="11" fill="#2c3e50">• 과제 리서치 자동화</text>
+    <text x="10" y="185" font-family="sans-serif" font-size="11" fill="#2c3e50">• 리포트 개요 작성</text>
+    <text x="10" y="205" font-family="sans-serif" font-size="11" fill="#2c3e50">• 참고문헌 정리</text>
+    <text x="10" y="225" font-family="sans-serif" font-size="11" fill="#2c3e50">• 팀 프로젝트 회의록</text>
+
+    <rect x="10" y="240" width="140" height="30" fill="#2ecc71" opacity="0.2" rx="5"/>
+    <text x="80" y="262" font-family="sans-serif" font-size="11" fill="#2c3e50" text-anchor="middle" font-weight="bold">학업 효율 90% ↑</text>
+  </g>
+
+  <!-- Track B: 대학원생 -->
+  <g transform="translate(220, 350)">
+    <rect x="0" y="0" width="160" height="280" fill="#ffffff" stroke="#3498db" stroke-width="3" rx="10"/>
+    <circle cx="80" cy="40" r="25" fill="#3498db"/>
+    <rect x="60" y="28" width="40" height="8" fill="#ffffff"/>
+    <rect x="60" y="40" width="40" height="8" fill="#ffffff"/>
+    <circle cx="70" cy="34" r="3" fill="#3498db"/>
+    <circle cx="90" cy="34" r="3" fill="#3498db"/>
+    <text x="80" y="80" font-family="sans-serif" font-size="16" font-weight="bold" fill="#2c3e50" text-anchor="middle">대학원생</text>
+
+    <text x="80" y="110" font-family="sans-serif" font-size="12" fill="#7f8c8d" text-anchor="middle">Track B</text>
+
+    <text x="10" y="140" font-family="sans-serif" font-size="13" fill="#2c3e50" font-weight="bold">활용 시나리오:</text>
+    <text x="10" y="165" font-family="sans-serif" font-size="11" fill="#2c3e50">• 논문 PDF 요약</text>
+    <text x="10" y="185" font-family="sans-serif" font-size="11" fill="#2c3e50">• 문헌 조사 자동화</text>
+    <text x="10" y="205" font-family="sans-serif" font-size="11" fill="#2c3e50">• 실험 데이터 정리</text>
+    <text x="10" y="225" font-family="sans-serif" font-size="11" fill="#2c3e50">• 영문 교정</text>
+
+    <rect x="10" y="240" width="140" height="30" fill="#3498db" opacity="0.2" rx="5"/>
+    <text x="80" y="262" font-family="sans-serif" font-size="11" fill="#2c3e50" text-anchor="middle" font-weight="bold">리서치 시간 70% ↓</text>
+  </g>
+
+  <!-- Track C: 교직원 -->
+  <g transform="translate(370, 350)">
+    <rect x="0" y="0" width="160" height="280" fill="#ffffff" stroke="#e74c3c" stroke-width="3" rx="10"/>
+    <circle cx="80" cy="40" r="25" fill="#e74c3c"/>
+    <rect x="65" y="30" width="30" height="20" fill="#ffffff" rx="2"/>
+    <rect x="70" y="35" width="5" height="5" fill="#e74c3c"/>
+    <rect x="80" y="35" width="5" height="5" fill="#e74c3c"/>
+    <rect x="70" y="42" width="15" height="2" fill="#e74c3c"/>
+    <text x="80" y="80" font-family="sans-serif" font-size="16" font-weight="bold" fill="#2c3e50" text-anchor="middle">교직원</text>
+
+    <text x="80" y="110" font-family="sans-serif" font-size="12" fill="#7f8c8d" text-anchor="middle">Track C</text>
+
+    <text x="10" y="140" font-family="sans-serif" font-size="13" fill="#2c3e50" font-weight="bold">활용 시나리오:</text>
+    <text x="10" y="165" font-family="sans-serif" font-size="11" fill="#2c3e50">• 회의록 자동 작성</text>
+    <text x="10" y="185" font-family="sans-serif" font-size="11" fill="#2c3e50">• 공문 초안 생성</text>
+    <text x="10" y="205" font-family="sans-serif" font-size="11" fill="#2c3e50">• 데이터 표 정리</text>
+    <text x="10" y="225" font-family="sans-serif" font-size="11" fill="#2c3e50">• 행사 기획안 작성</text>
+
+    <rect x="10" y="240" width="140" height="30" fill="#e74c3c" opacity="0.2" rx="5"/>
+    <text x="80" y="262" font-family="sans-serif" font-size="11" fill="#2c3e50" text-anchor="middle" font-weight="bold">반복 업무 80% ↓</text>
+  </g>
+
+  <!-- 공통 메시지 -->
+  <rect x="100" y="680" width="400" height="80" fill="#ffffff" stroke="#9b59b6" stroke-width="3" rx="10" opacity="0.95"/>
+  <text x="300" y="710" font-family="sans-serif" font-size="16" font-weight="bold" fill="#2c3e50" text-anchor="middle">실습: 자신의 역할에 맞는 Track 선택</text>
+  <text x="300" y="740" font-family="sans-serif" font-size="13" fill="#7f8c8d" text-anchor="middle">각 Track별 10분 실습 진행 → 경험 공유</text>
+</svg>

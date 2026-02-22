@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -80 600 960">
+  <defs>
+    <linearGradient id="bgGrad_group" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#e8f4fd;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#dfe6e9;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  <rect x="0" y="-80" width="600" height="960" fill="url(#bgGrad_group)" rx="0"/>
+
+  <!-- Step 1: 제안 (파랑) -->
+  <circle cx="300" cy="180" r="50" fill="#3498db" opacity="0.9"/>
+  <circle cx="300" cy="165" r="20" fill="#ffffff"/>
+  <circle cx="300" cy="155" r="8" fill="#2c3e50"/>
+  <path d="M 285 180 Q 300 195 315 180" fill="#ffffff"/>
+  <text x="300" y="270" font-family="sans-serif" font-size="24" fill="#2c3e50" text-anchor="middle" font-weight="bold">제안</text>
+
+  <!-- Arrow 1 -->
+  <line x1="300" y1="290" x2="300" y2="340" stroke="#7f8c8d" stroke-width="4"/>
+  <polygon points="300,340 290,325 310,325" fill="#7f8c8d"/>
+
+  <!-- Step 2: 투표 (노랑) -->
+  <circle cx="300" cy="390" r="50" fill="#f39c12" opacity="0.9"/>
+  <path d="M 280 405 L 285 385 L 290 405 L 295 390 L 300 405" stroke="#ffffff" stroke-width="4" fill="none" stroke-linecap="round"/>
+  <path d="M 305 405 L 310 390 L 315 405 L 320 385 L 325 405" stroke="#ffffff" stroke-width="4" fill="none" stroke-linecap="round"/>
+  <text x="300" y="480" font-family="sans-serif" font-size="24" fill="#2c3e50" text-anchor="middle" font-weight="bold">투표</text>
+
+  <!-- Arrow 2 -->
+  <line x1="300" y1="500" x2="300" y2="550" stroke="#7f8c8d" stroke-width="4"/>
+  <polygon points="300,550 290,535 310,535" fill="#7f8c8d"/>
+
+  <!-- Step 3: 실행 (초록) -->
+  <circle cx="300" cy="600" r="50" fill="#2ecc71" opacity="0.9"/>
+  <rect x="280" y="585" width="40" height="30" rx="4" fill="#2c3e50"/>
+  <text x="300" y="605" font-family="monospace" font-size="16" fill="#2ecc71" text-anchor="middle">&gt;_</text>
+  <text x="300" y="690" font-family="sans-serif" font-size="24" fill="#2c3e50" text-anchor="middle" font-weight="bold">실행</text>
+
+  <!-- Arrow 3 -->
+  <line x1="300" y1="710" x2="300" y2="760" stroke="#7f8c8d" stroke-width="4"/>
+  <polygon points="300,760 290,745 310,745" fill="#7f8c8d"/>
+
+  <!-- Step 4: 토론 (보라) -->
+  <circle cx="300" cy="810" r="50" fill="#9b59b6" opacity="0.9"/>
+  <ellipse cx="285" cy="810" rx="25" ry="18" fill="#ffffff"/>
+  <ellipse cx="315" cy="810" rx="25" ry="18" fill="#ffffff"/>
+  <path d="M 270 825 Q 285 830 285 825" fill="#ffffff"/>
+  <path d="M 300 825 Q 315 830 315 825" fill="#ffffff"/>
+  <text x="300" y="900" font-family="sans-serif" font-size="24" fill="#2c3e50" text-anchor="middle" font-weight="bold">토론</text>
+
+  <!-- Return arrow (cycle) -->
+  <path d="M 350 810 Q 450 500 350 180" stroke="#7f8c8d" stroke-width="3" fill="none" stroke-dasharray="6,4"/>
+  <polygon points="350,180 345,195 360,190" fill="#7f8c8d"/>
+</svg>

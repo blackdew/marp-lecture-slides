@@ -1,0 +1,78 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -80 600 960">
+  <defs>
+    <linearGradient id="bg4" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#e8f4fd"/>
+      <stop offset="100%" style="stop-color:#dfe6e9"/>
+    </linearGradient>
+  </defs>
+  <rect width="600" height="960" y="-80" fill="url(#bg4)"/>
+
+  <!-- Row 1: 2개 -->
+  <!-- 1. Agent -->
+  <g transform="translate(180, 100)">
+    <circle cx="0" cy="0" r="65" fill="#3498db" opacity="0.15" stroke="#3498db" stroke-width="3"/>
+    <rect x="-18" y="-22" width="36" height="30" rx="6" fill="#3498db"/>
+    <circle cx="-8" cy="-12" r="4" fill="white"/>
+    <circle cx="8" cy="-12" r="4" fill="white"/>
+    <rect x="-10" y="-2" width="20" height="3" rx="1" fill="white"/>
+    <text x="0" y="50" font-family="sans-serif" font-size="26" font-weight="bold" fill="#2c3e50" text-anchor="middle">Agent</text>
+  </g>
+
+  <!-- 2. 페어 프롬프팅 -->
+  <g transform="translate(420, 100)">
+    <circle cx="0" cy="0" r="65" fill="#2ecc71" opacity="0.15" stroke="#2ecc71" stroke-width="3"/>
+    <circle cx="-14" cy="-12" r="12" fill="#2ecc71"/>
+    <circle cx="14" cy="-12" r="12" fill="#2ecc71"/>
+    <text x="0" y="50" font-family="sans-serif" font-size="22" font-weight="bold" fill="#2c3e50" text-anchor="middle">페어</text>
+  </g>
+
+  <!-- Row 2: 3개 -->
+  <!-- 3. 컨텍스트 -->
+  <g transform="translate(110, 310)">
+    <circle cx="0" cy="0" r="65" fill="#9b59b6" opacity="0.15" stroke="#9b59b6" stroke-width="3"/>
+    <rect x="-18" y="-20" width="36" height="28" rx="3" fill="none" stroke="#9b59b6" stroke-width="3"/>
+    <line x1="-10" y1="-10" x2="10" y2="-10" stroke="#9b59b6" stroke-width="3"/>
+    <line x1="-10" y1="-2" x2="10" y2="-2" stroke="#9b59b6" stroke-width="3"/>
+    <text x="0" y="50" font-family="sans-serif" font-size="22" font-weight="bold" fill="#2c3e50" text-anchor="middle">컨텍스트</text>
+  </g>
+
+  <!-- 4. 프롬프트 (중앙, 강조) -->
+  <g transform="translate(300, 310)">
+    <circle cx="0" cy="0" r="75" fill="#e74c3c" opacity="0.12" stroke="#e74c3c" stroke-width="4"/>
+    <rect x="-20" y="-20" width="40" height="28" rx="6" fill="#e74c3c"/>
+    <polygon points="-5,8 5,8 0,18" fill="#e74c3c"/>
+    <text x="0" y="-3" font-family="sans-serif" font-size="22" font-weight="bold" fill="white" text-anchor="middle">?!</text>
+    <text x="0" y="55" font-family="sans-serif" font-size="24" font-weight="bold" fill="#2c3e50" text-anchor="middle">프롬프트</text>
+  </g>
+
+  <!-- 5. 반복 개선 -->
+  <g transform="translate(490, 310)">
+    <circle cx="0" cy="0" r="65" fill="#f39c12" opacity="0.15" stroke="#f39c12" stroke-width="3"/>
+    <path d="M 0 -18 A 18 18 0 1 1 -13 13" fill="none" stroke="#f39c12" stroke-width="5"/>
+    <polygon points="-13,13 -20,5 -6,5" fill="#f39c12"/>
+    <text x="0" y="50" font-family="sans-serif" font-size="22" font-weight="bold" fill="#2c3e50" text-anchor="middle">반복</text>
+  </g>
+
+  <!-- Row 3: 2개 -->
+  <!-- 6. Cowork -->
+  <g transform="translate(180, 520)">
+    <circle cx="0" cy="0" r="65" fill="#3498db" opacity="0.15" stroke="#3498db" stroke-width="3"/>
+    <circle cx="-14" cy="-8" r="10" fill="#3498db"/>
+    <circle cx="14" cy="-8" r="10" fill="#3498db"/>
+    <circle cx="0" cy="12" r="10" fill="#3498db"/>
+    <line x1="-14" y1="-8" x2="14" y2="-8" stroke="#2c3e50" stroke-width="2"/>
+    <line x1="-14" y1="-8" x2="0" y2="12" stroke="#2c3e50" stroke-width="2"/>
+    <line x1="14" y1="-8" x2="0" y2="12" stroke="#2c3e50" stroke-width="2"/>
+    <text x="0" y="50" font-family="sans-serif" font-size="24" font-weight="bold" fill="#2c3e50" text-anchor="middle">Cowork</text>
+  </g>
+
+  <!-- 7. 외부 기억 -->
+  <g transform="translate(420, 520)">
+    <circle cx="0" cy="0" r="65" fill="#7f8c8d" opacity="0.15" stroke="#7f8c8d" stroke-width="3"/>
+    <ellipse cx="0" cy="-14" rx="22" ry="8" fill="none" stroke="#7f8c8d" stroke-width="3"/>
+    <line x1="-22" y1="-14" x2="-22" y2="10" stroke="#7f8c8d" stroke-width="3"/>
+    <line x1="22" y1="-14" x2="22" y2="10" stroke="#7f8c8d" stroke-width="3"/>
+    <ellipse cx="0" cy="10" rx="22" ry="8" fill="none" stroke="#7f8c8d" stroke-width="3"/>
+    <text x="0" y="50" font-family="sans-serif" font-size="22" font-weight="bold" fill="#2c3e50" text-anchor="middle">외부 기억</text>
+  </g>
+</svg>

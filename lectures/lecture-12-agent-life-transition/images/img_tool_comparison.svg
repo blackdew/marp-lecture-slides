@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -80 600 960">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#e8f4fd;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#dfe6e9;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  <rect x="0" y="-80" width="600" height="960" fill="url(#bgGrad)" rx="0"/>
+
+  <!-- Claude -->
+  <g transform="translate(100, 200)">
+    <rect x="0" y="0" width="120" height="180" fill="#ffffff" stroke="#3498db" stroke-width="3" rx="10"/>
+    <circle cx="60" cy="50" r="25" fill="#3498db"/>
+    <circle cx="53" cy="45" r="3" fill="#ffffff"/>
+    <circle cx="67" cy="45" r="3" fill="#ffffff"/>
+    <path d="M 50 58 Q 60 63 70 58" stroke="#ffffff" stroke-width="2" fill="none"/>
+    <text x="60" y="100" font-family="sans-serif" font-size="18" font-weight="bold" fill="#2c3e50" text-anchor="middle">Claude</text>
+    <text x="60" y="120" font-family="sans-serif" font-size="12" fill="#7f8c8d" text-anchor="middle">Desktop</text>
+    <text x="60" y="145" font-family="sans-serif" font-size="14" fill="#2ecc71" text-anchor="middle" font-weight="bold">월 40</text>
+    <text x="60" y="165" font-family="sans-serif" font-size="11" fill="#7f8c8d" text-anchor="middle">Projects 강력</text>
+  </g>
+
+  <!-- ChatGPT -->
+  <g transform="translate(240, 200)">
+    <rect x="0" y="0" width="120" height="180" fill="#ffffff" stroke="#2ecc71" stroke-width="3" rx="10"/>
+    <circle cx="60" cy="50" r="25" fill="#2ecc71"/>
+    <path d="M 50 40 L 60 30 L 70 40 L 70 50 L 60 60 L 50 50 Z" fill="#ffffff"/>
+    <text x="60" y="100" font-family="sans-serif" font-size="18" font-weight="bold" fill="#2c3e50" text-anchor="middle">ChatGPT</text>
+    <text x="60" y="120" font-family="sans-serif" font-size="12" fill="#7f8c8d" text-anchor="middle">Web/App</text>
+    <text x="60" y="145" font-family="sans-serif" font-size="14" fill="#2ecc71" text-anchor="middle" font-weight="bold">월 50</text>
+    <text x="60" y="165" font-family="sans-serif" font-size="11" fill="#7f8c8d" text-anchor="middle">플러그인 多</text>
+  </g>
+
+  <!-- Gemini -->
+  <g transform="translate(380, 200)">
+    <rect x="0" y="0" width="120" height="180" fill="#ffffff" stroke="#9b59b6" stroke-width="3" rx="10"/>
+    <circle cx="60" cy="50" r="25" fill="#9b59b6"/>
+    <polygon points="60,35 70,50 60,65 50,50" fill="#ffffff"/>
+    <circle cx="60" cy="50" r="8" fill="#9b59b6"/>
+    <text x="60" y="100" font-family="sans-serif" font-size="18" font-weight="bold" fill="#2c3e50" text-anchor="middle">Gemini</text>
+    <text x="60" y="120" font-family="sans-serif" font-size="12" fill="#7f8c8d" text-anchor="middle">Web</text>
+    <text x="60" y="145" font-family="sans-serif" font-size="14" fill="#2ecc71" text-anchor="middle" font-weight="bold">무제한</text>
+    <text x="60" y="165" font-family="sans-serif" font-size="11" fill="#7f8c8d" text-anchor="middle">느림, 도구↓</text>
+  </g>
+
+  <!-- 비교 화살표 -->
+  <path d="M 220 300 L 240 300" stroke="#3498db" stroke-width="2" fill="none" stroke-dasharray="5,5"/>
+  <path d="M 360 300 L 380 300" stroke="#3498db" stroke-width="2" fill="none" stroke-dasharray="5,5"/>
+
+  <!-- 선택 가이드 -->
+  <rect x="100" y="450" width="400" height="120" fill="#ffffff" stroke="#f39c12" stroke-width="3" rx="10" opacity="0.9"/>
+  <text x="300" y="485" font-family="sans-serif" font-size="18" font-weight="bold" fill="#2c3e50" text-anchor="middle">추천: Claude Desktop</text>
+  <text x="300" y="515" font-family="sans-serif" font-size="14" fill="#7f8c8d" text-anchor="middle">✓ 무료 플랜 (월 40 메시지)</text>
+  <text x="300" y="540" font-family="sans-serif" font-size="14" fill="#7f8c8d" text-anchor="middle">✓ Projects로 지식 관리</text>
+  <text x="300" y="565" font-family="sans-serif" font-size="14" fill="#7f8c8d" text-anchor="middle">✓ Desktop Extensions (MCP)</text>
+
+  <!-- 타이틀 -->
+  <text x="300" y="120" font-family="sans-serif" font-size="24" font-weight="bold" fill="#2c3e50" text-anchor="middle">무료 AI Agent 도구 비교</text>
+</svg>

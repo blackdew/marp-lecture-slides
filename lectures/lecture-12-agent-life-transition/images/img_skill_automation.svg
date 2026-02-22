@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -80 600 960">
+  <defs>
+    <linearGradient id="bgGrad_skill" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#e8f4fd;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#dfe6e9;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  <rect x="0" y="-80" width="600" height="960" fill="url(#bgGrad_skill)" rx="0"/>
+
+  <!-- User input at top -->
+  <circle cx="300" cy="140" r="25" fill="#2c3e50"/>
+  <circle cx="300" cy="130" r="10" fill="#ecf0f1"/>
+  <path d="M 285 145 Q 300 160 315 145" fill="#ecf0f1"/>
+
+  <rect x="200" y="180" width="200" height="40" rx="8" fill="#3498db" opacity="0.9"/>
+  <text x="300" y="207" font-family="monospace" font-size="16" fill="#ffffff" text-anchor="middle" font-weight="bold">/create-lecture</text>
+
+  <!-- Arrow -->
+  <line x1="300" y1="230" x2="300" y2="260" stroke="#7f8c8d" stroke-width="3"/>
+  <polygon points="300,260 293,248 307,248" fill="#7f8c8d"/>
+
+  <!-- Pipeline steps (4 stages) -->
+  <!-- Step 1: 분석 -->
+  <rect x="220" y="280" width="160" height="60" rx="8" fill="#3498db" opacity="0.2" stroke="#3498db" stroke-width="2"/>
+  <circle cx="255" cy="310" r="15" fill="#3498db"/>
+  <text x="255" y="316" font-family="sans-serif" font-size="18" fill="#ffffff" text-anchor="middle">📊</text>
+  <text x="290" y="315" font-family="sans-serif" font-size="18" fill="#2c3e50" font-weight="bold">분석</text>
+
+  <line x1="300" y1="350" x2="300" y2="380" stroke="#7f8c8d" stroke-width="3"/>
+  <polygon points="300,380 293,368 307,368" fill="#7f8c8d"/>
+
+  <!-- Step 2: 설계 -->
+  <rect x="220" y="390" width="160" height="60" rx="8" fill="#9b59b6" opacity="0.2" stroke="#9b59b6" stroke-width="2"/>
+  <circle cx="255" cy="420" r="15" fill="#9b59b6"/>
+  <text x="255" y="426" font-family="sans-serif" font-size="18" fill="#ffffff" text-anchor="middle">📐</text>
+  <text x="290" y="425" font-family="sans-serif" font-size="18" fill="#2c3e50" font-weight="bold">설계</text>
+
+  <line x1="300" y1="460" x2="300" y2="490" stroke="#7f8c8d" stroke-width="3"/>
+  <polygon points="300,490 293,478 307,478" fill="#7f8c8d"/>
+
+  <!-- Step 3: 제작 -->
+  <rect x="220" y="500" width="160" height="60" rx="8" fill="#f39c12" opacity="0.2" stroke="#f39c12" stroke-width="2"/>
+  <circle cx="255" cy="530" r="15" fill="#f39c12"/>
+  <text x="255" y="536" font-family="sans-serif" font-size="18" fill="#ffffff" text-anchor="middle">⚙️</text>
+  <text x="290" y="535" font-family="sans-serif" font-size="18" fill="#2c3e50" font-weight="bold">제작</text>
+
+  <line x1="300" y1="570" x2="300" y2="600" stroke="#7f8c8d" stroke-width="3"/>
+  <polygon points="300,600 293,588 307,588" fill="#7f8c8d"/>
+
+  <!-- Step 4: 검증 -->
+  <rect x="220" y="610" width="160" height="60" rx="8" fill="#2ecc71" opacity="0.2" stroke="#2ecc71" stroke-width="2"/>
+  <circle cx="255" cy="640" r="15" fill="#2ecc71"/>
+  <text x="255" y="646" font-family="sans-serif" font-size="18" fill="#ffffff" text-anchor="middle">✓</text>
+  <text x="290" y="645" font-family="sans-serif" font-size="18" fill="#2c3e50" font-weight="bold">검증</text>
+
+  <line x1="300" y1="680" x2="300" y2="710" stroke="#7f8c8d" stroke-width="3"/>
+  <polygon points="300,710 293,698 307,698" fill="#7f8c8d"/>
+
+  <!-- Output at bottom -->
+  <rect x="240" y="730" width="120" height="80" rx="8" fill="#2ecc71" opacity="0.9"/>
+  <rect x="250" y="745" width="100" height="8" rx="2" fill="#ffffff"/>
+  <rect x="250" y="760" width="90" height="8" rx="2" fill="#ffffff"/>
+  <rect x="250" y="775" width="95" height="8" rx="2" fill="#ffffff"/>
+  <rect x="250" y="790" width="85" height="8" rx="2" fill="#ffffff"/>
+
+  <!-- "자동" label on left side -->
+  <text x="140" y="430" font-family="sans-serif" font-size="24" fill="#3498db" font-weight="bold" writing-mode="tb">자동</text>
+  <line x1="160" y1="280" x2="160" y2="670" stroke="#3498db" stroke-width="4"/>
+  <polygon points="160,280 153,292 167,292" fill="#3498db"/>
+  <polygon points="160,670 153,658 167,658" fill="#3498db"/>
+</svg>
