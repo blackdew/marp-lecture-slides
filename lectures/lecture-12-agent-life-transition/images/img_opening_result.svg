@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -80 600 960">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#e8f4fd"/>
+      <stop offset="100%" style="stop-color:#dfe6e9"/>
+    </linearGradient>
+  </defs>
+
+  <rect x="0" y="-80" width="600" height="960" fill="url(#bg)"/>
+
+  <!-- Before -->
+  <text x="300" y="100" text-anchor="middle" font-size="28" font-weight="bold" fill="#e74c3c" font-family="sans-serif">Before</text>
+
+  <rect x="150" y="140" width="300" height="180" fill="#f4f4f4" stroke="#e74c3c" stroke-width="2" rx="10"/>
+  <!-- 지저분한 줄들 -->
+  <rect x="175" y="170" width="200" height="6" fill="#bdc3c7" rx="3"/>
+  <rect x="175" y="190" width="180" height="6" fill="#bdc3c7" rx="3"/>
+  <rect x="175" y="210" width="220" height="6" fill="#bdc3c7" rx="3"/>
+  <rect x="175" y="230" width="160" height="6" fill="#bdc3c7" rx="3"/>
+  <rect x="175" y="250" width="190" height="6" fill="#bdc3c7" rx="3"/>
+  <rect x="175" y="270" width="140" height="6" fill="#bdc3c7" rx="3"/>
+  <text x="300" y="305" text-anchor="middle" font-size="14" fill="#e74c3c" font-family="sans-serif">3시간 소요</text>
+
+  <!-- 화살표 -->
+  <polygon points="300,370 280,345 320,345" fill="#3498db"/>
+
+  <!-- After -->
+  <text x="300" y="430" text-anchor="middle" font-size="28" font-weight="bold" fill="#2ecc71" font-family="sans-serif">After</text>
+
+  <rect x="150" y="460" width="300" height="180" fill="#fff" stroke="#2ecc71" stroke-width="2" rx="10"/>
+  <!-- 깔끔한 요약 -->
+  <rect x="175" y="480" width="250" height="30" fill="#d4edda" rx="5"/>
+  <text x="300" y="500" text-anchor="middle" font-size="13" font-weight="bold" fill="#155724" font-family="sans-serif">요약</text>
+  <!-- 표 -->
+  <rect x="175" y="520" width="250" height="100" fill="#e3f2fd" rx="5"/>
+  <line x1="175" y1="550" x2="425" y2="550" stroke="#90caf9" stroke-width="1"/>
+  <line x1="175" y1="575" x2="425" y2="575" stroke="#90caf9" stroke-width="1"/>
+  <line x1="175" y1="600" x2="425" y2="600" stroke="#90caf9" stroke-width="1"/>
+  <line x1="260" y1="520" x2="260" y2="620" stroke="#90caf9" stroke-width="1"/>
+  <text x="300" y="540" text-anchor="middle" font-size="12" font-weight="bold" fill="#1565c0" font-family="sans-serif">액션아이템</text>
+
+  <text x="300" y="660" text-anchor="middle" font-size="16" font-weight="bold" fill="#2ecc71" font-family="sans-serif">5분 완료!</text>
+</svg>
