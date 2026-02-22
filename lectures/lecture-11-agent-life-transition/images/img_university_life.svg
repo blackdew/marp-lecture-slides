@@ -9,8 +9,8 @@
   <rect x="0" y="-80" width="600" height="960" fill="url(#bgGrad6)" rx="0"/>
 
   <!-- Title -->
-  <text x="300" y="40" text-anchor="middle" font-size="22" font-weight="bold" fill="#2c3e50" font-family="sans-serif">대학생활 AI 활용</text>
-  <line x1="180" y1="60" x2="420" y2="60" stroke="#3498db" stroke-width="2" opacity="0.4"/>
+  <text x="300" y="40" text-anchor="middle" font-size="22" font-weight="bold" fill="#2c3e50" font-family="sans-serif">일과 삶의 AI Agent 활용</text>
+  <line x1="160" y1="60" x2="440" y2="60" stroke="#3498db" stroke-width="2" opacity="0.4"/>
 
   <!-- Central laptop icon -->
   <g transform="translate(300, 200)">
@@ -29,7 +29,7 @@
     <rect x="-10" y="29" width="20" height="2" rx="1" fill="#7f8c8d"/>
   </g>
 
-  <!-- Use case 1: Report/Assignment (top-left) -->
+  <!-- Role 1: 학생 (top-left) -->
   <g transform="translate(130, 120)">
     <circle cx="0" cy="0" r="40" fill="#2ecc71" opacity="0.12"/>
     <circle cx="0" cy="0" r="30" fill="#2ecc71"/>
@@ -38,55 +38,40 @@
     <line x1="-5" y1="-5" x2="5" y2="-5" stroke="white" stroke-width="1.5"/>
     <line x1="-5" y1="0" x2="5" y2="0" stroke="white" stroke-width="1.5"/>
     <line x1="-5" y1="5" x2="2" y2="5" stroke="white" stroke-width="1.5"/>
-    <text x="0" y="48" text-anchor="middle" font-size="13" font-weight="bold" fill="#2c3e50" font-family="sans-serif">과제</text>
-    <text x="0" y="65" text-anchor="middle" font-size="10" fill="#7f8c8d" font-family="sans-serif">리포트 초안</text>
-    <text x="0" y="80" text-anchor="middle" font-size="10" fill="#7f8c8d" font-family="sans-serif">자료 정리</text>
+    <text x="0" y="48" text-anchor="middle" font-size="13" font-weight="bold" fill="#2c3e50" font-family="sans-serif">학생</text>
+    <text x="0" y="65" text-anchor="middle" font-size="10" fill="#7f8c8d" font-family="sans-serif">과제 리서치</text>
+    <text x="0" y="80" text-anchor="middle" font-size="10" fill="#7f8c8d" font-family="sans-serif">발표 자료</text>
   </g>
   <!-- Connector to center -->
   <line x1="165" y1="155" x2="245" y2="180" stroke="#2ecc71" stroke-width="1.5" opacity="0.3" stroke-dasharray="4,3"/>
 
-  <!-- Use case 2: Coding/Project (top-right) -->
+  <!-- Role 2: 대학원생 (top-right) -->
   <g transform="translate(470, 120)">
-    <circle cx="0" cy="0" r="40" fill="#e74c3c" opacity="0.12"/>
-    <circle cx="0" cy="0" r="30" fill="#e74c3c"/>
-    <!-- Code icon -->
-    <text x="0" y="6" text-anchor="middle" font-size="20" fill="white" font-family="monospace">&lt;/&gt;</text>
-    <text x="0" y="48" text-anchor="middle" font-size="13" font-weight="bold" fill="#2c3e50" font-family="sans-serif">코딩</text>
-    <text x="0" y="65" text-anchor="middle" font-size="10" fill="#7f8c8d" font-family="sans-serif">프로젝트 개발</text>
-    <text x="0" y="80" text-anchor="middle" font-size="10" fill="#7f8c8d" font-family="sans-serif">디버깅</text>
+    <circle cx="0" cy="0" r="40" fill="#3498db" opacity="0.12"/>
+    <circle cx="0" cy="0" r="30" fill="#3498db"/>
+    <!-- Search/Research icon (magnifying glass) -->
+    <circle cx="-3" cy="-3" r="8" fill="none" stroke="white" stroke-width="2.5"/>
+    <line x1="3" y1="3" x2="9" y2="9" stroke="white" stroke-width="2.5" stroke-linecap="round"/>
+    <text x="0" y="48" text-anchor="middle" font-size="13" font-weight="bold" fill="#2c3e50" font-family="sans-serif">대학원생</text>
+    <text x="0" y="65" text-anchor="middle" font-size="10" fill="#7f8c8d" font-family="sans-serif">논문 탐색</text>
+    <text x="0" y="80" text-anchor="middle" font-size="10" fill="#7f8c8d" font-family="sans-serif">문헌 정리</text>
   </g>
   <!-- Connector to center -->
-  <line x1="435" y1="155" x2="355" y2="180" stroke="#e74c3c" stroke-width="1.5" opacity="0.3" stroke-dasharray="4,3"/>
+  <line x1="435" y1="155" x2="355" y2="180" stroke="#3498db" stroke-width="1.5" opacity="0.3" stroke-dasharray="4,3"/>
 
-  <!-- Use case 3: Career Prep (bottom-left) -->
-  <g transform="translate(130, 310)">
+  <!-- Role 3: 교직원 (bottom-center) -->
+  <g transform="translate(300, 310)">
     <circle cx="0" cy="0" r="40" fill="#f39c12" opacity="0.12"/>
     <circle cx="0" cy="0" r="30" fill="#f39c12"/>
-    <!-- Briefcase icon -->
+    <!-- Clipboard/Briefcase icon -->
     <rect x="-12" y="-8" width="24" height="18" rx="3" fill="none" stroke="white" stroke-width="2.5"/>
     <rect x="-5" y="-14" width="10" height="8" rx="2" fill="none" stroke="white" stroke-width="2"/>
-    <text x="0" y="48" text-anchor="middle" font-size="13" font-weight="bold" fill="#2c3e50" font-family="sans-serif">취업준비</text>
-    <text x="0" y="65" text-anchor="middle" font-size="10" fill="#7f8c8d" font-family="sans-serif">자기소개서</text>
-    <text x="0" y="80" text-anchor="middle" font-size="10" fill="#7f8c8d" font-family="sans-serif">면접 대비</text>
+    <text x="0" y="48" text-anchor="middle" font-size="13" font-weight="bold" fill="#2c3e50" font-family="sans-serif">교직원</text>
+    <text x="0" y="65" text-anchor="middle" font-size="10" fill="#7f8c8d" font-family="sans-serif">회의록 자동화</text>
+    <text x="0" y="80" text-anchor="middle" font-size="10" fill="#7f8c8d" font-family="sans-serif">문서 작성</text>
   </g>
   <!-- Connector to center -->
-  <line x1="165" y1="280" x2="245" y2="230" stroke="#f39c12" stroke-width="1.5" opacity="0.3" stroke-dasharray="4,3"/>
-
-  <!-- Use case 4: Time Management (bottom-right) -->
-  <g transform="translate(470, 310)">
-    <circle cx="0" cy="0" r="40" fill="#9b59b6" opacity="0.12"/>
-    <circle cx="0" cy="0" r="30" fill="#9b59b6"/>
-    <!-- Clock icon -->
-    <circle cx="0" cy="0" r="13" fill="none" stroke="white" stroke-width="2.5"/>
-    <line x1="0" y1="0" x2="0" y2="-8" stroke="white" stroke-width="2" stroke-linecap="round"/>
-    <line x1="0" y1="0" x2="6" y2="3" stroke="white" stroke-width="2" stroke-linecap="round"/>
-    <circle cx="0" cy="0" r="1.5" fill="white"/>
-    <text x="0" y="48" text-anchor="middle" font-size="13" font-weight="bold" fill="#2c3e50" font-family="sans-serif">시간관리</text>
-    <text x="0" y="65" text-anchor="middle" font-size="10" fill="#7f8c8d" font-family="sans-serif">할일 관리</text>
-    <text x="0" y="80" text-anchor="middle" font-size="10" fill="#7f8c8d" font-family="sans-serif">시간표 정리</text>
-  </g>
-  <!-- Connector to center -->
-  <line x1="435" y1="280" x2="355" y2="230" stroke="#9b59b6" stroke-width="1.5" opacity="0.3" stroke-dasharray="4,3"/>
+  <line x1="300" y1="280" x2="300" y2="240" stroke="#f39c12" stroke-width="1.5" opacity="0.3" stroke-dasharray="4,3"/>
 
   <!-- Bottom section: Before vs After -->
   <rect x="60" y="430" width="480" height="210" rx="16" fill="white" stroke="#e0e0e0" stroke-width="1"/>
@@ -95,10 +80,9 @@
   <!-- Before -->
   <rect x="80" y="480" width="210" height="140" rx="10" fill="#fff3cd"/>
   <text x="185" y="505" text-anchor="middle" font-size="14" font-weight="bold" fill="#856404" font-family="sans-serif">Before</text>
-  <text x="100" y="530" font-size="12" fill="#856404" font-family="sans-serif">- 자료 검색 2시간</text>
-  <text x="100" y="550" font-size="12" fill="#856404" font-family="sans-serif">- 복붙 + 수동 정리</text>
-  <text x="100" y="570" font-size="12" fill="#856404" font-family="sans-serif">- 코딩 = 전공자만</text>
-  <text x="100" y="590" font-size="12" fill="#856404" font-family="sans-serif">- 막막한 취업 준비</text>
+  <text x="100" y="530" font-size="12" fill="#856404" font-family="sans-serif">- 반복 작업에 시간 소모</text>
+  <text x="100" y="550" font-size="12" fill="#856404" font-family="sans-serif">- 수동 정리와 검색</text>
+  <text x="100" y="570" font-size="12" fill="#856404" font-family="sans-serif">- 전문 도구는 어려움</text>
 
   <!-- Arrow -->
   <text x="305" y="555" text-anchor="middle" font-size="28" fill="#3498db">→</text>
@@ -106,12 +90,11 @@
   <!-- After -->
   <rect x="310" y="480" width="210" height="140" rx="10" fill="#d4edda"/>
   <text x="415" y="505" text-anchor="middle" font-size="14" font-weight="bold" fill="#155724" font-family="sans-serif">After</text>
-  <text x="330" y="530" font-size="12" fill="#155724" font-weight="bold" font-family="sans-serif">- 리서치 10분 완료</text>
-  <text x="330" y="550" font-size="12" fill="#155724" font-weight="bold" font-family="sans-serif">- AI가 구조화해서 정리</text>
-  <text x="330" y="570" font-size="12" fill="#155724" font-weight="bold" font-family="sans-serif">- 누구나 앱 만들기</text>
-  <text x="330" y="590" font-size="12" fill="#155724" font-weight="bold" font-family="sans-serif">- 체계적 경쟁력 분석</text>
+  <text x="330" y="530" font-size="12" fill="#155724" font-weight="bold" font-family="sans-serif">- AI가 초안과 구조화</text>
+  <text x="330" y="550" font-size="12" fill="#155724" font-weight="bold" font-family="sans-serif">- 역할별 맞춤 도구</text>
+  <text x="330" y="570" font-size="12" fill="#155724" font-weight="bold" font-family="sans-serif">- 누구나 쉽게 시작</text>
 
   <!-- Bottom message -->
-  <rect x="100" y="680" width="400" height="50" rx="25" fill="#3498db" opacity="0.1"/>
-  <text x="300" y="710" text-anchor="middle" font-size="15" font-weight="bold" fill="#3498db" font-family="sans-serif">AI Agent = 나만의 만능 조교</text>
+  <rect x="80" y="680" width="440" height="50" rx="25" fill="#3498db" opacity="0.1"/>
+  <text x="300" y="710" text-anchor="middle" font-size="15" font-weight="bold" fill="#3498db" font-family="sans-serif">AI Agent = 나만의 업무/학업 파트너</text>
 </svg>
