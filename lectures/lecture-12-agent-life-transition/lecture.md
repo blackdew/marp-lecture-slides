@@ -793,9 +793,8 @@ Agent의 한계를 알면 실망 대신 <strong>대응</strong>할 수 있습니
 
 <div class="highlight">
 
-강의 자료 및 실습 파일: [강의 자료 배포 링크]
-
-문의: blackdew7@gmail.com
+강의 슬라이드: https://blackdew.github.io/marp-lecture-slides/lectures/lecture-12-agent-life-transition/
+소통 핑 시트: https://docs.google.com/spreadsheets/d/1qHH7OLVaZXR1uyhAc-PvUOic-wdSgeLE4J4jBQE6-qE/
 
 </div>
 
