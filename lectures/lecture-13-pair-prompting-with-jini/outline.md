@@ -17,10 +17,12 @@
 
 | 시간 | 미니비트 | 라이브 산출물 |
 |---|---|---|
-| 25-30분 | **outline.md 라이브 작성 (1차)** | `lecture-13/outline.md` 본문 채워나감 |
+| 25-30분 | **청중 주제 받기 + outline 라이브 작성** | 청중 채팅 ↔ 백업(A/B) ↔ `lecture-14-{topic}/outline.md` 라이브 |
 | **30-33분** | ⭐ **STOP — "내가 뭘 빠뜨렸지?" 묻기** | 숙번님이 지니에게 blind spot 요청 → *메타인지 도구 라이브 시연* |
 | 33-38분 | **빠진 부분 채우며 메모리 추가** | `~/.config/gyeol/memory/semantics/` 신규 토픽 |
 | 38-45분 | **반복 가능 패턴 → 스킬화** | `~/.claude/skills/lecture-companion/SKILL.md` 신규 |
+
+> 미니비트 4-1 상세 흐름은 [`backup-topics.md`](backup-topics.md) 참조. 청중 활발/미지근/침묵 시나리오별 분기 + 백업 주제 A (AI 시대의 학습법) / B (Spec-driven 프로젝트) 시드 포함.
 
 ## 메시지가 형식에 박혀 있는 구조
 
