@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -80 600 960">
+  <defs>
+    <linearGradient id="bg3" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#e8f4fd"/>
+      <stop offset="100%" style="stop-color:#dfe6e9"/>
+    </linearGradient>
+    <marker id="arrB" markerWidth="12" markerHeight="12" refX="10" refY="4" orient="auto">
+      <polygon points="0 0, 12 4, 0 8" fill="#3498db"/>
+    </marker>
+    <marker id="arrG" markerWidth="12" markerHeight="12" refX="10" refY="4" orient="auto">
+      <polygon points="0 0, 12 4, 0 8" fill="#2ecc71"/>
+    </marker>
+  </defs>
+  <rect width="600" height="960" y="-80" fill="url(#bg3)"/>
+
+  <!-- 드라이버 (사람) -->
+  <g transform="translate(160, 200)">
+    <circle cx="0" cy="0" r="50" fill="#3498db" opacity="0.2"/>
+    <circle cx="0" cy="-10" r="22" fill="#3498db"/>
+    <rect x="-20" y="15" width="40" height="35" rx="8" fill="#3498db"/>
+    <text x="0" y="110" font-family="sans-serif" font-size="32" font-weight="bold" fill="#3498db" text-anchor="middle">사람</text>
+  </g>
+
+  <!-- 네비게이터 (AI) -->
+  <g transform="translate(440, 200)">
+    <circle cx="0" cy="0" r="50" fill="#2ecc71" opacity="0.2"/>
+    <rect x="-22" y="-20" width="44" height="40" rx="8" fill="#2ecc71"/>
+    <circle cx="-10" cy="-8" r="5" fill="white"/>
+    <circle cx="10" cy="-8" r="5" fill="white"/>
+    <rect x="-12" y="5" width="24" height="4" rx="2" fill="white"/>
+    <text x="0" y="110" font-family="sans-serif" font-size="32" font-weight="bold" fill="#2ecc71" text-anchor="middle">AI</text>
+  </g>
+
+  <!-- 양방향 화살표 -->
+  <path d="M 220 170 Q 300 120, 380 170" fill="none" stroke="#3498db" stroke-width="4" marker-end="url(#arrB)"/>
+  <path d="M 380 230 Q 300 280, 220 230" fill="none" stroke="#2ecc71" stroke-width="4" marker-end="url(#arrG)"/>
+  <text x="300" y="140" font-family="sans-serif" font-size="22" fill="#3498db" text-anchor="middle">요청</text>
+  <text x="300" y="285" font-family="sans-serif" font-size="22" fill="#2ecc71" text-anchor="middle">실행</text>
+
+  <!-- 4단계 사이클 -->
+  <g transform="translate(300, 520)">
+    <!-- 큰 원형 배경 -->
+    <circle cx="0" cy="0" r="140" fill="#f39c12" opacity="0.08" stroke="#f39c12" stroke-width="2"/>
+
+    <!-- 4단계를 십자 배치 -->
+    <g transform="translate(0, -90)">
+      <circle cx="0" cy="0" r="38" fill="#f39c12" opacity="0.3"/>
+      <text x="0" y="10" font-family="sans-serif" font-size="28" font-weight="bold" fill="#2c3e50" text-anchor="middle">관찰</text>
+    </g>
+    <g transform="translate(90, 0)">
+      <circle cx="0" cy="0" r="38" fill="#3498db" opacity="0.3"/>
+      <text x="0" y="10" font-family="sans-serif" font-size="28" font-weight="bold" fill="#2c3e50" text-anchor="middle">시도</text>
+    </g>
+    <g transform="translate(0, 90)">
+      <circle cx="0" cy="0" r="38" fill="#2ecc71" opacity="0.3"/>
+      <text x="0" y="10" font-family="sans-serif" font-size="28" font-weight="bold" fill="#2c3e50" text-anchor="middle">비교</text>
+    </g>
+    <g transform="translate(-90, 0)">
+      <circle cx="0" cy="0" r="38" fill="#9b59b6" opacity="0.3"/>
+      <text x="0" y="10" font-family="sans-serif" font-size="28" font-weight="bold" fill="#2c3e50" text-anchor="middle">개선</text>
+    </g>
+
+    <!-- 순환 화살표 (단순한 곡선) -->
+    <path d="M 30,-80 A 90,90 0 0,1 80,-30" fill="none" stroke="#2c3e50" stroke-width="3"/>
+    <path d="M 80,30 A 90,90 0 0,1 30,80" fill="none" stroke="#2c3e50" stroke-width="3"/>
+    <path d="M -30,80 A 90,90 0 0,1 -80,30" fill="none" stroke="#2c3e50" stroke-width="3"/>
+    <path d="M -80,-30 A 90,90 0 0,1 -30,-80" fill="none" stroke="#2c3e50" stroke-width="3"/>
+  </g>
+</svg>

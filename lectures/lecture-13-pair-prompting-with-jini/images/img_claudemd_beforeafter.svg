@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -80 600 960">
+  <defs>
+    <linearGradient id="bgGrad_beforeafter" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#e8f4fd;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#dfe6e9;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  <rect x="0" y="-80" width="600" height="960" fill="url(#bgGrad_beforeafter)" rx="0"/>
+
+  <!-- Before section (top) -->
+  <rect x="120" y="140" width="360" height="280" rx="12" fill="#e74c3c" opacity="0.15"/>
+
+  <text x="300" y="180" font-family="sans-serif" font-size="28" fill="#e74c3c" text-anchor="middle" font-weight="bold">Before</text>
+
+  <!-- Multiple conversation bubbles (chaos) -->
+  <ellipse cx="200" cy="240" rx="60" ry="30" fill="#ffffff" stroke="#e74c3c" stroke-width="2"/>
+  <text x="200" y="248" font-family="sans-serif" font-size="12" fill="#7f8c8d" text-anchor="middle">설명...</text>
+
+  <ellipse cx="350" cy="270" rx="65" ry="32" fill="#ffffff" stroke="#e74c3c" stroke-width="2"/>
+  <text x="350" y="278" font-family="sans-serif" font-size="12" fill="#7f8c8d" text-anchor="middle">다시 설명...</text>
+
+  <ellipse cx="220" cy="320" rx="70" ry="30" fill="#ffffff" stroke="#e74c3c" stroke-width="2"/>
+  <text x="220" y="328" font-family="sans-serif" font-size="12" fill="#7f8c8d" text-anchor="middle">또 다시...</text>
+
+  <ellipse cx="380" cy="350" rx="60" ry="28" fill="#ffffff" stroke="#e74c3c" stroke-width="2"/>
+  <text x="380" y="358" font-family="sans-serif" font-size="12" fill="#7f8c8d" text-anchor="middle">반복...</text>
+
+  <!-- Red X icon -->
+  <line x1="435" y1="165" x2="465" y2="195" stroke="#e74c3c" stroke-width="4" stroke-linecap="round"/>
+  <line x1="465" y1="165" x2="435" y2="195" stroke="#e74c3c" stroke-width="4" stroke-linecap="round"/>
+
+  <!-- Divider with arrow -->
+  <line x1="150" y1="450" x2="450" y2="450" stroke="#7f8c8d" stroke-width="3"/>
+  <polygon points="450,450 435,443 435,457" fill="#7f8c8d"/>
+  <circle cx="300" cy="450" r="30" fill="#3498db"/>
+  <polygon points="300,440 310,450 300,460 295,455 305,450 295,445" fill="#ffffff"/>
+
+  <!-- After section (bottom) -->
+  <rect x="120" y="490" width="360" height="280" rx="12" fill="#2ecc71" opacity="0.15"/>
+
+  <text x="300" y="530" font-family="sans-serif" font-size="28" fill="#2ecc71" text-anchor="middle" font-weight="bold">After</text>
+
+  <!-- Document icon (CLAUDE.md) -->
+  <rect x="180" y="570" width="80" height="100" rx="6" fill="#3498db" opacity="0.9"/>
+  <rect x="180" y="570" width="80" height="25" fill="#2c3e50"/>
+  <text x="220" y="588" font-family="sans-serif" font-size="12" fill="#ffffff" text-anchor="middle" font-weight="bold">CLAUDE</text>
+  <line x1="190" y1="610" x2="250" y2="610" stroke="#ffffff" stroke-width="2"/>
+  <line x1="190" y1="625" x2="250" y2="625" stroke="#ffffff" stroke-width="2"/>
+  <line x1="190" y1="640" x2="240" y2="640" stroke="#ffffff" stroke-width="2"/>
+  <line x1="190" y1="655" x2="245" y2="655" stroke="#ffffff" stroke-width="2"/>
+
+  <!-- Arrow -->
+  <line x1="280" y1="620" x2="330" y2="620" stroke="#2c3e50" stroke-width="4"/>
+  <polygon points="330,620 315,613 315,627" fill="#2c3e50"/>
+
+  <!-- Result icon -->
+  <rect x="340" y="580" width="70" height="80" rx="6" fill="#2ecc71" opacity="0.9"/>
+  <circle cx="375" cy="610" r="12" fill="#ffffff"/>
+  <line x1="375" y1="610" x2="375" y2="625" stroke="#ffffff" stroke-width="3"/>
+  <line x1="375" y1="625" x2="385" y2="640" stroke="#ffffff" stroke-width="3"/>
+  <rect x="350" y="635" width="50" height="15" rx="2" fill="#ffffff"/>
+
+  <!-- Green checkmark -->
+  <circle cx="450" cy="520" r="20" fill="#2ecc71"/>
+  <polyline points="440,520 447,527 460,512" stroke="#ffffff" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
