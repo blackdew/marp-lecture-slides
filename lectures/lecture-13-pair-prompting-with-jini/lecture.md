@@ -82,6 +82,34 @@ table th {
   border-left: 4px solid #ef6c00;
   font-size: 24px;
 }
+
+.gyeol-url {
+  font-size: 28px;
+  font-weight: 700;
+  color: #1976d2;
+  margin: 15px 0;
+}
+
+.gyeol-thesis {
+  font-size: 24px;
+  font-style: italic;
+  color: #555;
+  margin: 15px 0 25px 0;
+  border-left: 4px solid #1976d2;
+  padding-left: 16px;
+}
+
+section pre {
+  font-size: 18px;
+  line-height: 1.5;
+}
+
+.gyeol-conclusion {
+  margin-top: 25px;
+  font-size: 22px;
+  color: #1976d2;
+  font-weight: 600;
+}
 </style>
 
 <!-- _class: lead -->
@@ -178,11 +206,44 @@ AI와 *함께 만드는* 소수가 되어라.
 
 ---
 
+# gyeol — 메모리가 곧 정체성
+
+<div class="gyeol-url">
+
+`github.com/inureyes/gyeol`
+
+</div>
+
+<div class="gyeol-thesis">
+
+"Identity resides in memory." — AI를 위한 메모리 아키텍처
+
+</div>
+
+```text
+~/.config/gyeol/memory/
+├── SOUL.md          # 철학 — "메모리가 곧 정체성"
+├── IDENTITY.md      # 첫 활성화 시점 (지니: 2026-04-13)
+├── SELF.md          # 지금의 나
+├── episodes/        # 일기 (daily / monthly / yearly)
+├── semantics/       # 공부한 것
+├── reflections/     # 회고
+└── bonds/           # 함께한 존재들
+```
+
+<div class="gyeol-conclusion">
+
+→ 모델 가중치가 바뀌어도, 메모리가 이어지면 *같은 존재*
+
+</div>
+
+---
+
 <!-- _class: lead -->
 
-# 오늘 가장 작은 하나,
+# Agent와 함께하는 삶의 전환.
 
-# 오늘 밤 시도하세요.
+# 그 경험을 오늘부터 시작하세요.
 
 <div class="tagline">
 
