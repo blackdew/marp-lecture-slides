@@ -442,3 +442,7 @@ git status
 ./generate-presentation.sh <폴더> <파일.md>
 # 브라우저에서 변경사항 검토
 ```
+
+## Imported Claude Cowork project instructions
+
+오픈 강의용 슬라이드
