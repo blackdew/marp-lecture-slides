@@ -31,7 +31,7 @@ echo ""
 
 # HTML 생성 (Puppeteer 오류 방지를 위해 우선 HTML로 생성)
 echo "HTML 프레젠테이션 생성 중 (${OUTPUT_BASE}.html)..."
-marp "$INPUT_PATH" --html -o "lectures/${FOLDER_NAME}/${OUTPUT_BASE}.html" --allow-local-files
+marp "$INPUT_PATH" --html --no-stdin -o "lectures/${FOLDER_NAME}/${OUTPUT_BASE}.html" --allow-local-files
 
 # 이미지 폴더 복사 (HTML과 같은 위치에)
 if [ -d "lectures/${FOLDER_NAME}/images" ]; then
