@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 900">
+  <rect width="600" height="900" fill="none"/>
+
+  <!-- 챗봇 패널 -->
+  <rect x="70" y="70" width="460" height="320" rx="20" fill="#eceff1" stroke="#b0bec5" stroke-width="2"/>
+  <rect x="220" y="120" width="160" height="86" rx="20" fill="#ffffff" stroke="#90a4ae" stroke-width="2.5"/>
+  <path d="M268,204 L268,236 L300,204 Z" fill="#ffffff" stroke="#90a4ae" stroke-width="2.5"/>
+  <circle cx="262" cy="163" r="9" fill="#90a4ae"/>
+  <circle cx="300" cy="163" r="9" fill="#90a4ae"/>
+  <circle cx="338" cy="163" r="9" fill="#90a4ae"/>
+  <text x="300" y="296" text-anchor="middle" font-family="sans-serif" font-size="42" font-weight="700" fill="#455a64">챗봇</text>
+  <text x="300" y="342" text-anchor="middle" font-family="sans-serif" font-size="22" fill="#607d8b">물어보면 답을 알려준다</text>
+
+  <!-- VS -->
+  <circle cx="300" cy="450" r="44" fill="#455a64"/>
+  <text x="300" y="462" text-anchor="middle" font-family="sans-serif" font-size="30" font-weight="800" fill="#ffffff">VS</text>
+
+  <!-- 에이전트 패널 -->
+  <rect x="70" y="510" width="460" height="320" rx="20" fill="#e3f2fd" stroke="#1976d2" stroke-width="3"/>
+  <rect x="232" y="548" width="136" height="124" rx="14" fill="#ffffff" stroke="#1976d2" stroke-width="2.5"/>
+  <path d="M250,584 l8,9 l15,-17" fill="none" stroke="#2e7d32" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+  <rect x="286" y="580" width="62" height="8" rx="4" fill="#b0bec5"/>
+  <path d="M250,614 l8,9 l15,-17" fill="none" stroke="#2e7d32" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+  <rect x="286" y="610" width="62" height="8" rx="4" fill="#b0bec5"/>
+  <path d="M250,644 l8,9 l15,-17" fill="none" stroke="#2e7d32" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+  <rect x="286" y="640" width="62" height="8" rx="4" fill="#b0bec5"/>
+  <text x="300" y="736" text-anchor="middle" font-family="sans-serif" font-size="42" font-weight="700" fill="#1565c0">에이전트</text>
+  <text x="300" y="782" text-anchor="middle" font-family="sans-serif" font-size="22" fill="#546e7a">맡기면 일을 끝까지 해낸다</text>
+</svg>

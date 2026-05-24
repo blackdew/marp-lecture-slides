@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 880">
+  <rect width="600" height="880" fill="none"/>
+  <defs>
+    <marker id="ah" markerWidth="14" markerHeight="14" refX="7" refY="7" orient="auto">
+      <path d="M0,0 L14,7 L0,14 Z" fill="#1976d2"/>
+    </marker>
+  </defs>
+
+  <!-- 연결 화살표 -->
+  <line x1="300" y1="213" x2="300" y2="270" stroke="#1976d2" stroke-width="5" marker-end="url(#ah)"/>
+  <line x1="300" y1="403" x2="300" y2="460" stroke="#1976d2" stroke-width="5" marker-end="url(#ah)"/>
+  <line x1="300" y1="593" x2="300" y2="650" stroke="#1976d2" stroke-width="5" marker-end="url(#ah)"/>
+  <!-- 반복 루프 -->
+  <path d="M500,720 C578,720 578,150 506,150" fill="none" stroke="#1976d2" stroke-width="5" stroke-dasharray="9,8" marker-end="url(#ah)"/>
+
+  <!-- 1. 목표 -->
+  <rect x="100" y="90" width="400" height="120" rx="18" fill="#e3f2fd" stroke="#1976d2" stroke-width="3"/>
+  <circle cx="100" cy="150" r="26" fill="#1565c0"/>
+  <text x="100" y="159" text-anchor="middle" font-family="sans-serif" font-size="28" font-weight="700" fill="#ffffff">1</text>
+  <text x="312" y="144" text-anchor="middle" font-family="sans-serif" font-size="38" font-weight="700" fill="#0d47a1">목표</text>
+  <text x="312" y="180" text-anchor="middle" font-family="sans-serif" font-size="21" fill="#546e7a">무엇을 할지 정한다</text>
+
+  <!-- 2. 계획 -->
+  <rect x="100" y="280" width="400" height="120" rx="18" fill="#e3f2fd" stroke="#1976d2" stroke-width="3"/>
+  <circle cx="100" cy="340" r="26" fill="#1565c0"/>
+  <text x="100" y="349" text-anchor="middle" font-family="sans-serif" font-size="28" font-weight="700" fill="#ffffff">2</text>
+  <text x="312" y="334" text-anchor="middle" font-family="sans-serif" font-size="38" font-weight="700" fill="#0d47a1">계획</text>
+  <text x="312" y="370" text-anchor="middle" font-family="sans-serif" font-size="21" fill="#546e7a">단계로 나눈다</text>
+
+  <!-- 3. 실행 -->
+  <rect x="100" y="470" width="400" height="120" rx="18" fill="#e3f2fd" stroke="#1976d2" stroke-width="3"/>
+  <circle cx="100" cy="530" r="26" fill="#1565c0"/>
+  <text x="100" y="539" text-anchor="middle" font-family="sans-serif" font-size="28" font-weight="700" fill="#ffffff">3</text>
+  <text x="312" y="524" text-anchor="middle" font-family="sans-serif" font-size="38" font-weight="700" fill="#0d47a1">실행</text>
+  <text x="312" y="560" text-anchor="middle" font-family="sans-serif" font-size="21" fill="#546e7a">도구를 써서 해낸다</text>
+
+  <!-- 4. 점검 -->
+  <rect x="100" y="660" width="400" height="120" rx="18" fill="#e3f2fd" stroke="#1976d2" stroke-width="3"/>
+  <circle cx="100" cy="720" r="26" fill="#1565c0"/>
+  <text x="100" y="729" text-anchor="middle" font-family="sans-serif" font-size="28" font-weight="700" fill="#ffffff">4</text>
+  <text x="312" y="714" text-anchor="middle" font-family="sans-serif" font-size="38" font-weight="700" fill="#0d47a1">점검</text>
+  <text x="312" y="750" text-anchor="middle" font-family="sans-serif" font-size="21" fill="#546e7a">잘 됐는지 확인한다</text>
+</svg>
