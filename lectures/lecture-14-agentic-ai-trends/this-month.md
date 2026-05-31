@@ -5,7 +5,7 @@ size: 16:9
 paginate: true
 ---
 
-<!-- 갱신: 2026-05-24 | 범위: 이번달 (2026년 5월) -->
+<!-- 갱신: 2026-05-31 | 범위: 이번달 (2026년 5월) -->
 
 <style>
 section {
@@ -149,7 +149,7 @@ table th {
 
 <div class="lead-meta">
 
-갱신 2026-05-24 · 범위: 2026년 5월 누적
+갱신 2026-05-31 · 범위: 2026년 5월 누적
 
 </div>
 
@@ -163,10 +163,10 @@ table th {
 
 </div>
 
-- 새 모델 줄줄이 — 더 빠르고 싸고, '에이전트'에 특화
+- 새 모델 줄줄이 — Gemini 3.5 Flash·Claude Opus 4.8 등
 - Google I/O 2026 — "에이전트 Gemini 시대" 선언
-- 금융·광고·쇼핑에서 실제 적용 사례 등장
-- 도입 기업들이 두 자릿수 ROI(투자 대비 효과)를 보고
+- 금융·광고·쇼핑·헬스케어 등 적용 영역이 넓어짐
+- AI가 직접 PC를 다루는 'Computer Use'가 본격 확산
 
 <div class="note">
 
@@ -176,13 +176,14 @@ table th {
 
 ---
 
-# 5월에 나온 모델들
+# 5월에 나온 모델·도구
 
-| 모델 | 등장 | 핵심 한 줄 |
+| 무엇 | 등장 | 핵심 한 줄 |
 |---|---|---|
 | Gemini 3.5 Flash | 5/19 | 작고 빠른데 최상위급 성능 |
-| GPT-5.5 Instant | 5/5 | ChatGPT 기본 모델, 기억 기능 |
-| Claude Opus 4.7 | 4월 말~ | 긴 문서·금융 분석에 강함 |
+| Claude Opus 4.8 | 5/28 | 코딩·정직성에서 또 한 단계 |
+| Codex Computer Use (Windows) | 5/29 | PC 화면을 직접 보고 클릭 |
+| Gemini Spark | 5/19 | 24시간 도는 개인 비서 |
 
 <div class="note">
 
@@ -192,7 +193,7 @@ table th {
 
 <div class="src">
 
-출처: [LLM 업데이트 — llm-stats](https://llm-stats.com/llm-updates)
+출처: [LLM 업데이트 — llm-stats](https://llm-stats.com/llm-updates) · [Anthropic](https://www.anthropic.com/news/claude-opus-4-8)
 
 </div>
 
@@ -200,10 +201,10 @@ table th {
 
 # 모델이 어떻게 강해졌나
 
-- Gemini 3.5 Flash — 작년 최상위 모델을 시험 11/15개에서 앞섬
-- Claude Opus 4.7 — 수년치 기업 공시를 한 번에 읽고 분석
-- GPT-5.5 — 과거 대화·파일·메일을 기억해 답을 개인화
-- 공통 방향 — 더 길게, 더 정확히, 더 싸게 '일하는' 능력
+- Gemini 3.5 Flash — 작년 최상위 모델을 시험 11/15에서 앞섬
+- Claude Opus 4.8 — 에이전트 코딩 64.3% → 69.2%로 상승
+- Claude Opus 4.7~4.8 — 수년치 기업 공시를 한 번에 분석
+- 공통 — 'PC 직접 사용'과 '오래 일하기' 능력이 핵심으로
 
 <div class="highlight">
 
@@ -213,22 +214,22 @@ table th {
 
 <div class="src">
 
-출처: [Gemini 3.5 — DeepMind](https://deepmind.google/models/gemini/flash/) · [Claude Opus 4.7 — Anthropic](https://www.anthropic.com/news/finance-agents)
+출처: [Gemini 3.5 — DeepMind](https://deepmind.google/models/gemini/flash/) · [TechCrunch](https://techcrunch.com/2026/05/28/anthropic-releases-opus-4-8-with-new-dynamic-workflow-tool/)
 
 </div>
 
 ---
 
-# 비즈니스 적용 ① — 금융
+# 비즈니스 적용 ① — 금융·헬스케어
 
-- Anthropic이 은행용 에이전트 묶음을 출시 (5월)
-- Claude Opus 4.7이 한 기업의 수년치 공시를 한 번에 분석
-- 푸는 문제 — 애널리스트가 며칠 걸리던 자료 검토를 단축
-- 엑셀·PPT·워드·메일을 넘나들며 보고서까지 작성
+- Anthropic — 은행용 에이전트 묶음 출시 (5월 초)
+- Claude가 엑셀·PPT·워드·메일을 넘나들며 보고서까지 작성
+- Cognizant TriZetto — 의료 사전승인을 AI 에이전트가 처리
+- 푸는 문제 — 며칠 걸리던 자료 검토·보험 승인을 단축
 
 <div class="note">
 
-정밀함이 생명인 금융이 'AI 에이전트 1호 격전지'가 됐다
+정밀함이 생명인 금융·의료가 'AI 에이전트 1호 격전지'가 됐다
 
 </div>
 
@@ -243,9 +244,9 @@ table th {
 # 비즈니스 적용 ② — 광고·쇼핑·일상
 
 - Netflix — AI 에이전트가 광고 캠페인을 직접 사고 최적화
-- 푸는 문제 — 광고주가 일일이 손보던 운영을 AI가 대신
 - Klarna — ChatGPT 안에서 1억 개 넘는 상품을 찾아주는 쇼핑
 - Gemini Spark — 청구서 숨은 수수료 찾기 등 개인 일상까지
+- Salesforce — 여러 에이전트가 한 팀처럼 일 (6/15부터)
 
 <div class="note">
 
@@ -255,7 +256,7 @@ table th {
 
 <div class="src">
 
-출처: [PPC Land — 넷플릭스 2026 업프런트](https://ppc.land/netflix-2026-upfront-250m-viewers-ai-agents-and-15-new-ad-markets/)
+출처: [PPC Land — 넷플릭스](https://ppc.land/netflix-2026-upfront-250m-viewers-ai-agents-and-15-new-ad-markets/) · [Salesforce](https://www.salesforce.com/news/stories/summer-2026-product-release-announcement/)
 
 </div>
 
@@ -286,10 +287,11 @@ table th {
 
 | 회사 | 무엇을 내놨나 |
 |---|---|
-| Fiserv | 은행용 에이전트 운영체제 |
+| NVIDIA + SAP | 안전한 에이전트 런타임 OpenShell |
+| Salesforce | 멀티 에이전트 오케스트레이션 |
+| Fiserv | 은행용 에이전트 운영체제 agentOS |
 | Dell | PC에서 직접 도는 에이전트 |
 | Camunda | 업무 절차를 스스로 개선하는 도구 |
-| Salesforce | 영업 화면에 들어온 'AI 동료' |
 
 <div class="note">
 
@@ -299,7 +301,7 @@ table th {
 
 <div class="src">
 
-출처: [주간 AI 뉴스 정리](https://www.buildfastwithai.com/blogs/ai-news-today-may-18-2026)
+출처: [NVIDIA·SAP](https://blogs.nvidia.com/blog/sap-specialized-agents/) · [주간 AI 뉴스 정리](https://www.buildfastwithai.com/blogs/ai-news-today-may-18-2026)
 
 </div>
 
@@ -313,8 +315,9 @@ table th {
 
 </div>
 
-- 새 모델들이 더 길게·정확히·싸게 '일하는' 능력으로 경쟁
-- 금융·광고·쇼핑에서 실제 적용 사례가 등장
+- 모델들이 더 길게·정확히·싸게 '일하는' 능력으로 경쟁
+- 금융·헬스케어·광고·쇼핑에 실제 적용 사례 등장
+- AI가 PC를 직접 다루는 'Computer Use'가 확산
 - 도입 성과가 ROI 숫자로 확인되기 시작
 
 <div class="note">
@@ -335,28 +338,28 @@ table th {
 <span class="link">youtube.com/live/wYSncx9zLIU</span>
 </a>
 
+<a class="card" href="https://www.anthropic.com/news/claude-opus-4-8">
+<span class="outlet">ANTHROPIC</span>
+<span class="head">Claude Opus 4.8 — 새 플래그십 모델 (5/28)</span>
+<span class="link">anthropic.com</span>
+</a>
+
 <a class="card" href="https://blog.google/innovation-and-ai/sundar-pichai-io-2026/">
 <span class="outlet">GOOGLE 블로그</span>
 <span class="head">에이전트 Gemini 시대 — I/O 2026 키노트</span>
 <span class="link">blog.google</span>
 </a>
 
-<a class="card" href="https://fortune.com/2026/05/05/anthropic-wall-street-financial-services-agents-jamie-dimon/">
-<span class="outlet">FORTUNE</span>
-<span class="head">Anthropic, 은행용 AI 에이전트로 월街 진출</span>
-<span class="link">fortune.com</span>
+<a class="card" href="https://blogs.nvidia.com/blog/sap-specialized-agents/">
+<span class="outlet">NVIDIA</span>
+<span class="head">SAP와 '안전한 에이전트 런타임' OpenShell</span>
+<span class="link">blogs.nvidia.com</span>
 </a>
 
-<a class="card" href="https://ppc.land/netflix-2026-upfront-250m-viewers-ai-agents-and-15-new-ad-markets/">
-<span class="outlet">PPC LAND</span>
-<span class="head">Netflix, AI 에이전트가 광고를 직접 구매</span>
-<span class="link">ppc.land</span>
-</a>
-
-<a class="card" href="https://www.anthropic.com/news/finance-agents">
-<span class="outlet">ANTHROPIC</span>
-<span class="head">금융 서비스용 에이전트 공식 발표</span>
-<span class="link">anthropic.com</span>
+<a class="card" href="https://www.salesforce.com/news/stories/summer-2026-product-release-announcement/">
+<span class="outlet">SALESFORCE</span>
+<span class="head">Summer '26 — 멀티 에이전트 오케스트레이션</span>
+<span class="link">salesforce.com</span>
 </a>
 
 <a class="card" href="https://aimonk.com/agentic-ai-examples-enterprise-roi-case-studies/">
