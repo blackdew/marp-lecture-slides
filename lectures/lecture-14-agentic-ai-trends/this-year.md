@@ -5,7 +5,7 @@ size: 16:9
 paginate: true
 ---
 
-<!-- 갱신: 2026-05-31 | 범위: 올해 (2026년) -->
+<!-- 갱신: 2026-06-21 | 범위: 올해 (2026년) -->
 
 <style>
 section {
@@ -95,7 +95,7 @@ table th {
 
 <div class="lead-meta">
 
-갱신 2026-05-31 · 범위: 2026년 누적
+갱신 2026-06-21 · 범위: 2026년 누적
 
 </div>
 
@@ -124,9 +124,9 @@ table th {
 
 # 모델 경쟁 — 신모델 러시
 
-- 올 들어 주요 AI가 줄줄이 새 버전을 내놓음
-- Gemini 3.5 Flash(5/19)·Claude Opus 4.8(5/28) 등 신모델 줄지어
-- 공통점 — 자랑하는 건 '에이전트로 얼마나 일을 잘하나'
+- 상반기 내내 주요 AI가 줄줄이 새 버전을 내놓음
+- 5월 Gemini 3.5 Flash·Claude Opus 4.8, 6월 Gemini 3.5 Pro·GPT 신형
+- 한 달 새 3종이 동시 경쟁 — 한 회사에 묶이지 않고 골라 쓰는 흐름
 - AI가 PC 화면을 직접 보고 클릭하는 'Computer Use' 정식 확산
 
 <div class="note">
@@ -137,7 +137,7 @@ table th {
 
 <div class="src">
 
-출처 — llm-stats, TechCrunch
+출처 — llm-stats, TechCrunch, TechTimes
 
 </div>
 
@@ -146,19 +146,19 @@ table th {
 # 파일럿에서 프로덕션으로
 
 - 작년까지는 '시범 운영'이 대부분이었다
-- 올해 4월 말, 주요 기업용 에이전트 플랫폼이 동시 출시
-- Google·OpenAI 등 — 에이전트를 본격 업무에 투입
-- 기업 앱의 40%가 연내 에이전트 탑재 전망
+- 올해 기업 72%가 에이전트를 실제 운영에 투입
+- 도입 평균 ROI 171%(미국 192%) — 전통 자동화의 3배 수준
+- 기업 앱의 80%가 연내 에이전트 탑재 전망
 
 <div class="highlight">
 
-전환점 — "한번 해볼까?"에서 "이미 쓰고 있다"로
+전환점 — "한번 해볼까?"에서 "얼마나 절감됐나"로
 
 </div>
 
 <div class="src">
 
-출처 — Gartner, FifthRow
+출처 — Gartner, AI Monk(ROI 사례집)
 
 </div>
 
@@ -168,7 +168,7 @@ table th {
 
 - MCP는 AI와 도구를 잇는 '공용 콘센트' 규격 (2024년 등장)
 - 월 다운로드가 1억 회 가까이로 폭증
-- 기업 78%가 MCP 기반 에이전트를 실제로 운영
+- 서로 다른 회사의 에이전트끼리 연결하는 다리로도 쓰임
 - 한 회사 것이 아니라 업계 공용 표준으로 관리됨
 
 <div class="note">
@@ -179,18 +179,18 @@ table th {
 
 <div class="src">
 
-출처 — digitalapplied, Wikipedia
+출처 — digitalapplied, Cognizant
 
 </div>
 
 ---
 
-# Anthropic의 금융권 진출
+# 산업별 전용 에이전트로
 
 - 5월, Anthropic이 은행용 에이전트 묶음을 출시
 - Claude가 엑셀·PPT·워드·메일을 하나로 넘나들며 작업
-- 소상공인용 — 회계·결제·고객관리 앱 안에서 동작
-- AI 회사들이 '산업별 전용 에이전트'로 경쟁을 옮김
+- 의료 사전승인·물류·광고 구매 등 산업별 적용 확산
+- AI 회사들이 '산업 맞춤 에이전트'로 경쟁을 옮김
 
 <div class="note">
 
@@ -200,7 +200,7 @@ table th {
 
 <div class="src">
 
-출처 — Fortune
+출처 — Fortune, AWS
 
 </div>
 
@@ -235,9 +235,9 @@ table th {
 
 </div>
 
-- 모델은 더 빨라지고 저렴해졌다
-- 기업은 실제로 도입하기 시작했다
-- 표준(MCP)이 자리잡았다
+- 모델은 더 빨라지고 저렴해졌다 (매달 신모델)
+- 기업은 실제로 도입해 ROI 숫자를 확인하기 시작했다
+- 표준(MCP)이 자리잡아 에이전트끼리도 협업한다
 - 남은 숙제는 '안전하게 쓰기'
 
 <div class="note">

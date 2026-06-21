@@ -5,7 +5,7 @@ size: 16:9
 paginate: true
 ---
 
-<!-- 갱신: 2026-05-31 | 범위: 지난주 (2026-05-24 ~ 2026-05-30) -->
+<!-- 갱신: 2026-06-21 | 범위: 지난주 (2026-06-14 ~ 2026-06-20) -->
 
 <style>
 section {
@@ -145,11 +145,11 @@ table th {
 
 # Agentic AI 동향
 
-## 지난주 — 2026.05.24 ~ 05.30
+## 지난주 — 2026.06.14 ~ 06.20
 
 <div class="lead-meta">
 
-갱신 2026-05-31 · 범위: 지난 한 주
+갱신 2026-06-21 · 범위: 지난 한 주
 
 </div>
 
@@ -159,77 +159,77 @@ table th {
 
 <div class="big">
 
-지난주의 중심 — 새 모델 Claude Opus 4.8, 그리고 'AI 동료팀'
+지난주의 중심 — 새 모델 3종 경쟁, 그리고 '에이전트끼리 협업'
 
 </div>
 
-- 새 모델 Claude Opus 4.8 — 코딩·정직성에서 한 단계 진전
-- OpenAI Codex — Windows PC를 직접 보고 클릭하기 시작
-- Salesforce — 여러 에이전트가 팀으로 일하는 기능 출시 임박
-- NVIDIA + SAP — 기업 업무에 '안전한 에이전트 런타임' 결합
+- 새 모델 러시 — Gemini 3.5 Pro 출시 임박 (한 달 새 3종 경쟁)
+- 서로 다른 회사의 에이전트가 한 흐름으로 협업 시작
+- 기업 도입이 '실험'을 넘어 '실제 운영' 단계로
+- NVIDIA·구글·메타 등 'AI 동료'를 만드는 판이 더 커짐
 
 <div class="src">
 
-영상: [Claude Opus 4.8 공개 영상 (YouTube)](https://www.youtube.com/watch?v=1FQyjzdYx18)
+영상: [한 달 새 신모델 3종 — 정리 영상 (YouTube)](https://www.youtube.com/watch?v=iYCRoY_x1HM)
 
 </div>
 
 ---
 
-# 새 모델 — Claude Opus 4.8, 무엇이 좋아졌나
+# 새 모델 — Gemini 3.5 Pro, 출시 임박
 
-- 5/28 공개 — Anthropic의 새 플래그십 모델
-- 에이전트형 코딩 점수 64.3% → 69.2%로 상승
-- '잘 모를 때 모른다고 말하기'가 이전보다 늘었다
-- 빠른 모드(Fast mode) — 2.5배 속도·약 3배 저렴
+- 6/19 기준 — 기업 고객 대상 제한 미리보기, 일반 출시 임박
+- 한 번에 읽는 분량(맥락)이 200만 단어 수준으로 커짐
+- 'Deep Think' — 어려운 문제를 더 오래 곱씹어 푸는 방식
+- 같은 달에 GPT·Claude까지 — 신모델 3종이 동시 경쟁
 
 <div class="highlight">
 
-핵심 — 더 길게 일하고, 덜 우기는 모델로 진화 중
+핵심 — 한 회사에 묶이지 않고 골라 쓰는 시대로
 
 </div>
 
 <div class="src">
 
-출처: [Anthropic 공식](https://www.anthropic.com/news/claude-opus-4-8) · [TechCrunch](https://techcrunch.com/2026/05/28/anthropic-releases-opus-4-8-with-new-dynamic-workflow-tool/)
+출처: [TechTimes — Gemini 3.5 Pro](https://www.techtimes.com/articles/317919/20260606/google-gemini-35-pro-nears-june-launch-2-million-token-context-deep-think-reasoning.htm) · [신모델 3종 정리](https://www.essamamdani.com/blog/june-2026-ai-model-flood-gpt-gemini-claude)
 
 </div>
 
 ---
 
-# 새 에이전트 — Codex가 Windows를 직접 쓴다
+# 새 에이전트 — 서로 다른 AI가 한 팀으로
 
-- 5/29 OpenAI — Codex의 'Computer Use'가 Windows 11에 정식 적용
-- PC 화면을 보고 직접 클릭·타이핑하며 일을 진행
-- 폰(아이폰·안드로이드)에서 PC 작업 상태를 원격 확인
-- 사례 — 보고서 양식 채우기, 사내 앱 자동 입력 등
+- 6/18 Cognizant — ServiceNow의 AI 에이전트와 연동 발표
+- 그동안 회사마다 따로 놀던 에이전트를 한 곳에서 지휘
+- MCP(에이전트용 공용 콘센트 규격)로 연결돼 별도 작업 불필요
+- 새 에이전트가 추가되면 자동 인식·배정
 
 <div class="note">
 
-회사 PC를 켜둔 채 외출해도, 폰으로 진행 상황을 보고 멈출 수 있다
+MCP — AI와 도구·다른 AI를 같은 방식으로 꽂아 쓰게 해주는 표준
 
 </div>
 
 <div class="src">
 
-출처: [OpenAI 릴리스 노트 정리](https://releasebot.io/updates/openai) · [Codex Changelog](https://developers.openai.com/codex/changelog)
+출처: [Cognizant 공식 (6/18)](https://news.cognizant.com/2026-06-18-Cognizant-expands-cross-platform-agentic-AI-with-new-ServiceNow-AI-Agent-interoperability)
 
 </div>
 
 ---
 
-# 비즈니스 적용 — 'AI 동료팀'이 들어온다
+# 비즈니스 적용 — 숫자로 보는 도입 성과
 
-| 회사 | 무엇을 내놨나 | 푸는 문제 |
-|---|---|---|
-| Salesforce | 여러 에이전트가 한 팀처럼 일 (6/15 출시) | 고객이 같은 얘기 반복 |
-| NVIDIA+SAP | 안전한 에이전트 런타임(OpenShell) | 사내 데이터 새는 위험 |
-| Cognizant | 의료 사전승인 자동화(TriZetto) | 보험 승인 대기 며칠 |
-| OpenAI Foundation | 일자리 전환 지원 2.5억 달러 | AI로 줄어드는 일자리 |
+| 지표 | 결과 |
+|---|---|
+| 에이전트 '실제 운영' 도입 | 기업 72% |
+| 도입 평균 ROI | 171% (미국 192%) |
+| 고객지원 통화 시간 | 약 25% 단축 |
+| 상담 전환(돌려주기) | 최대 60% 감소 |
 
 <div class="src">
 
-출처: [Salesforce 공식](https://www.salesforce.com/news/stories/summer-2026-product-release-announcement/) · [NVIDIA·SAP](https://blogs.nvidia.com/blog/sap-specialized-agents/)
+출처: [기업 도입 ROI 사례집](https://aimonk.com/agentic-ai-examples-enterprise-roi-case-studies/) · [도입 통계 2026](https://paul-okhrem.com/enterprise-ai-agents-statistics-2026/)
 
 </div>
 
@@ -237,20 +237,20 @@ table th {
 
 # 그 외 주목할 소식
 
-- OpenAI — 구형 모델 o3·GPT-4.5 단계 종료 예고 (5/28)
-- ChatGPT Enterprise — 스킬·업로드 보안·감사로그 강화
-- Anthropic — 거액 자금 조달 협상 보도 (가치 9천억 달러대)
-- SAP Sapphire — '자율 기업(Autonomous Enterprise)' 비전 공식화
+- NVIDIA — 기업용 '에이전트 개발 판' 공개 (17개 SW 기업 합류)
+- 구글 검색 — 관심 주제를 알아서 챙겨주는 '정보 에이전트' 시작
+- 구글 검색 — 식당·체험 예약까지 에이전트가 대신 처리
+- 메타 — 기업용 AI 에이전트를 전 세계로 확대
 
 <div class="note">
 
-모델만이 아니라 — 모델을 안전하게 돌릴 '판'까지 빠르게 짜이는 중
+모델만이 아니라 — 모델을 '업무에 꽂는 판'이 빠르게 깔리는 중
 
 </div>
 
 <div class="src">
 
-출처: [Bloomberg — Anthropic 자금](https://www.bloomberg.com/news/articles/2026-05-12/anthropic-in-talks-to-raise-30-billion-at-900-billion-valuation) · [SAP Sapphire](https://news.sap.com/2026/05/sap-sapphire-sap-unveils-autonomous-enterprise/)
+출처: [NVIDIA 에이전트 플랫폼](https://nvidianews.nvidia.com/news/ai-agents) · [Google 검색 I/O 2026](https://blog.google/products-and-platforms/products/search/search-io-2026/)
 
 </div>
 
@@ -264,10 +264,10 @@ table th {
 
 </div>
 
-- 모델은 '말 잘하는' 단계를 넘어 '오래 일하는' 단계로
-- PC를 직접 다루는 AI가 평범한 사무 도구처럼 자리 잡는 중
-- 기업의 고민은 "쓸까?"가 아니라 "안전하게 어떻게 굴리나"
-- 일자리 변화에 대한 사회적 대응(기금)도 함께 등장
+- 새 모델은 매달 나온다 — 이름 외우기보다 '골라 쓰기'가 중요
+- 서로 다른 회사의 AI가 한 팀처럼 협업하기 시작했다
+- 기업은 '쓸까?'를 넘어 '얼마나 절감됐나'를 따지는 단계
+- 식당 예약 같은 일상까지 검색이 대신 처리해준다
 
 <div class="note">
 
@@ -281,40 +281,40 @@ table th {
 
 <div class="cards">
 
-<a class="card video" href="https://www.youtube.com/watch?v=1FQyjzdYx18">
+<a class="card video" href="https://www.youtube.com/watch?v=iYCRoY_x1HM">
 <span class="outlet">▶ YOUTUBE</span>
-<span class="head">Claude Opus 4.8 공식 소개 영상</span>
+<span class="head">신모델 3종(Claude·GPT·Gemini) 정리 영상</span>
 <span class="link">youtube.com</span>
 </a>
 
-<a class="card" href="https://www.anthropic.com/news/claude-opus-4-8">
-<span class="outlet">ANTHROPIC</span>
-<span class="head">Claude Opus 4.8 공식 발표</span>
-<span class="link">anthropic.com</span>
+<a class="card" href="https://www.techtimes.com/articles/317919/20260606/google-gemini-35-pro-nears-june-launch-2-million-token-context-deep-think-reasoning.htm">
+<span class="outlet">TECHTIMES</span>
+<span class="head">Gemini 3.5 Pro — 6월 출시 임박, 맥락 200만</span>
+<span class="link">techtimes.com</span>
 </a>
 
-<a class="card" href="https://techcrunch.com/2026/05/28/anthropic-releases-opus-4-8-with-new-dynamic-workflow-tool/">
-<span class="outlet">TECHCRUNCH</span>
-<span class="head">Opus 4.8 — '동적 워크플로'로 큰 작업까지</span>
-<span class="link">techcrunch.com</span>
+<a class="card" href="https://news.cognizant.com/2026-06-18-Cognizant-expands-cross-platform-agentic-AI-with-new-ServiceNow-AI-Agent-interoperability">
+<span class="outlet">COGNIZANT</span>
+<span class="head">서로 다른 에이전트를 한 곳에서 지휘 (6/18)</span>
+<span class="link">news.cognizant.com</span>
 </a>
 
-<a class="card" href="https://releasebot.io/updates/openai">
-<span class="outlet">OPENAI 릴리스</span>
-<span class="head">Codex Windows Computer Use 출시 (5/29)</span>
-<span class="link">releasebot.io</span>
-</a>
-
-<a class="card" href="https://www.salesforce.com/news/stories/summer-2026-product-release-announcement/">
-<span class="outlet">SALESFORCE</span>
-<span class="head">Summer '26 — 멀티 에이전트 오케스트레이션</span>
-<span class="link">salesforce.com</span>
-</a>
-
-<a class="card" href="https://blogs.nvidia.com/blog/sap-specialized-agents/">
+<a class="card" href="https://nvidianews.nvidia.com/news/ai-agents">
 <span class="outlet">NVIDIA</span>
-<span class="head">SAP와 함께 '안전한 에이전트 런타임' 공개</span>
-<span class="link">blogs.nvidia.com</span>
+<span class="head">기업용 '에이전트 개발 판' 공개</span>
+<span class="link">nvidianews.nvidia.com</span>
+</a>
+
+<a class="card" href="https://blog.google/products-and-platforms/products/search/search-io-2026/">
+<span class="outlet">GOOGLE 블로그</span>
+<span class="head">검색의 '정보 에이전트'와 예약 자동화</span>
+<span class="link">blog.google</span>
+</a>
+
+<a class="card" href="https://aimonk.com/agentic-ai-examples-enterprise-roi-case-studies/">
+<span class="outlet">사례집</span>
+<span class="head">기업 Agentic AI 도입 ROI 사례 모음</span>
+<span class="link">aimonk.com</span>
 </a>
 
 </div>

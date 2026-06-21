@@ -5,7 +5,7 @@ size: 16:9
 paginate: true
 ---
 
-<!-- 갱신: 2026-05-31 | 범위: 이번달 (2026년 5월) -->
+<!-- 갱신: 2026-06-21 | 범위: 이번달 (2026년 6월) -->
 
 <style>
 section {
@@ -145,45 +145,45 @@ table th {
 
 # Agentic AI 동향
 
-## 이번달 — 2026년 5월
+## 이번달 — 2026년 6월
 
 <div class="lead-meta">
 
-갱신 2026-05-31 · 범위: 2026년 5월 누적
+갱신 2026-06-21 · 범위: 2026년 6월 누적
 
 </div>
 
 ---
 
-# 5월 한눈에
+# 6월 한눈에
 
 <div class="big">
 
-2026년 5월 — 모델은 강해지고, 일터로 들어갔다
+2026년 6월 — 신모델 3종 경쟁, 그리고 PC가 '에이전트 판'으로
 
 </div>
 
-- 새 모델 줄줄이 — Gemini 3.5 Flash·Claude Opus 4.8 등
-- Google I/O 2026 — "에이전트 Gemini 시대" 선언
-- 금융·광고·쇼핑·헬스케어 등 적용 영역이 넓어짐
-- AI가 직접 PC를 다루는 'Computer Use'가 본격 확산
+- 한 달 새 신모델 3종(Claude·Gemini·GPT) 동시 경쟁
+- Windows가 에이전트를 직접 실행하는 판으로 진화
+- 서로 다른 회사의 에이전트끼리 협업하기 시작
+- 도입 성과가 ROI 숫자로 계속 확인됨
 
 <div class="note">
 
-아래에서 새 모델 → 적용 사례 → 성과 순으로 본다
+아래에서 새 모델 → 실행 판 → 협업 → 성과 순으로 본다
 
 </div>
 
 ---
 
-# 5월에 나온 모델·도구
+# 6월에 나온·임박한 모델
 
-| 무엇 | 등장 | 핵심 한 줄 |
+| 무엇 | 등장·상태 | 핵심 한 줄 |
 |---|---|---|
-| Gemini 3.5 Flash | 5/19 | 작고 빠른데 최상위급 성능 |
-| Claude Opus 4.8 | 5/28 | 코딩·정직성에서 또 한 단계 |
-| Codex Computer Use (Windows) | 5/29 | PC 화면을 직접 보고 클릭 |
-| Gemini Spark | 5/19 | 24시간 도는 개인 비서 |
+| Claude Fable 5 | 6/9 출시 | 어려운 추론에서 최상위급 |
+| Gemini 3.5 Pro | 6월 임박 | 맥락 200만·'Deep Think' |
+| GPT 신형 | 6월 예고 | 맥락 150만으로 확대 |
+| Windows 에이전트 | Build 2026 | PC가 에이전트 실행 판으로 |
 
 <div class="note">
 
@@ -193,7 +193,7 @@ table th {
 
 <div class="src">
 
-출처: [LLM 업데이트 — llm-stats](https://llm-stats.com/llm-updates) · [Anthropic](https://www.anthropic.com/news/claude-opus-4-8)
+출처: [LLM 업데이트 — llm-stats](https://llm-stats.com/llm-updates) · [신모델 3종 정리](https://www.essamamdani.com/blog/june-2026-ai-model-flood-gpt-gemini-claude)
 
 </div>
 
@@ -201,10 +201,10 @@ table th {
 
 # 모델이 어떻게 강해졌나
 
-- Gemini 3.5 Flash — 작년 최상위 모델을 시험 11/15에서 앞섬
-- Claude Opus 4.8 — 에이전트 코딩 64.3% → 69.2%로 상승
-- Claude Opus 4.7~4.8 — 수년치 기업 공시를 한 번에 분석
-- 공통 — 'PC 직접 사용'과 '오래 일하기' 능력이 핵심으로
+- Claude Fable 5 — 길고 복잡한 작업일수록 격차가 더 벌어짐
+- Gemini 3.5 Pro — 한 번에 읽는 분량(맥락)이 200만 단어급
+- 'Deep Think' — 어려운 문제를 더 오래 곱씹어 정확도를 높임
+- 공통 — '오래 일하기'와 'PC 직접 사용'이 핵심 경쟁력
 
 <div class="highlight">
 
@@ -214,49 +214,49 @@ table th {
 
 <div class="src">
 
-출처: [Gemini 3.5 — DeepMind](https://deepmind.google/models/gemini/flash/) · [TechCrunch](https://techcrunch.com/2026/05/28/anthropic-releases-opus-4-8-with-new-dynamic-workflow-tool/)
+출처: [TechTimes — Gemini 3.5 Pro](https://www.techtimes.com/articles/317919/20260606/google-gemini-35-pro-nears-june-launch-2-million-token-context-deep-think-reasoning.htm) · [LLM 업데이트](https://llm-stats.com/llm-updates)
 
 </div>
 
 ---
 
-# 비즈니스 적용 ① — 금융·헬스케어
+# 새 판 — PC가 에이전트를 직접 돌린다
 
-- Anthropic — 은행용 에이전트 묶음 출시 (5월 초)
-- Claude가 엑셀·PPT·워드·메일을 넘나들며 보고서까지 작성
-- Cognizant TriZetto — 의료 사전승인을 AI 에이전트가 처리
-- 푸는 문제 — 며칠 걸리던 자료 검토·보험 승인을 단축
+- Microsoft Build 2026 — Windows를 'AI 에이전트 실행 판'으로 선언
+- Windows 365 for Agents·실행 컨테이너 등 도구 공개
+- NVIDIA — 기업용 '에이전트 개발 판' 공개 (17개 SW 기업 합류)
+- 안전 장치(OpenShell)로 사내 데이터 보호하며 에이전트 실행
 
 <div class="note">
 
-정밀함이 생명인 금융·의료가 'AI 에이전트 1호 격전지'가 됐다
+모델만이 아니라 — 모델을 안전하게 돌릴 '판'까지 빠르게 짜이는 중
 
 </div>
 
 <div class="src">
 
-출처: [Fortune](https://fortune.com/2026/05/05/anthropic-wall-street-financial-services-agents-jamie-dimon/) · [AWS](https://aws.amazon.com/blogs/aws/introducing-anthropics-claude-opus-4-7-model-in-amazon-bedrock/)
+출처: [Microsoft Build 2026](https://redmondmag.com/articles/2026/06/02/microsoft-uses-build-2026-to-put-ai-agents-at-the-center-of-windows.aspx) · [NVIDIA 플랫폼](https://nvidianews.nvidia.com/news/ai-agents)
 
 </div>
 
 ---
 
-# 비즈니스 적용 ② — 광고·쇼핑·일상
+# 에이전트끼리 협업이 시작되다
 
-- Netflix — AI 에이전트가 광고 캠페인을 직접 사고 최적화
-- Klarna — ChatGPT 안에서 1억 개 넘는 상품을 찾아주는 쇼핑
-- Gemini Spark — 청구서 숨은 수수료 찾기 등 개인 일상까지
-- Salesforce — 여러 에이전트가 한 팀처럼 일 (6/15부터)
+- 6/18 Cognizant — ServiceNow의 AI 에이전트와 연동 발표
+- 그동안 회사마다 따로 놀던 에이전트를 한 곳에서 지휘
+- MCP(공용 콘센트 규격)로 연결돼 별도 작업 없이 자동 연동
+- 구글 검색 — '정보 에이전트'와 식당·체험 예약 자동화 시작
 
 <div class="note">
 
-전문 업무를 넘어, 광고·쇼핑·집안일까지 에이전트가 들어왔다
+MCP — AI와 도구·다른 AI를 같은 방식으로 꽂아 쓰게 해주는 표준
 
 </div>
 
 <div class="src">
 
-출처: [PPC Land — 넷플릭스](https://ppc.land/netflix-2026-upfront-250m-viewers-ai-agents-and-15-new-ad-markets/) · [Salesforce](https://www.salesforce.com/news/stories/summer-2026-product-release-announcement/)
+출처: [Cognizant (6/18)](https://news.cognizant.com/2026-06-18-Cognizant-expands-cross-platform-agentic-AI-with-new-ServiceNow-AI-Agent-interoperability) · [Google 검색 I/O 2026](https://blog.google/products-and-platforms/products/search/search-io-2026/)
 
 </div>
 
@@ -264,10 +264,12 @@ table th {
 
 # 숫자로 보는 도입 성과
 
-- 기업 72% — 에이전트를 '실험'이 아닌 '실제 운영'에 사용
-- 도입 기업 평균 ROI 171% 보고 (투자보다 효과가 큼)
-- Klarna — 고객지원 에이전트로 853명분 업무를 처리
-- General Mills — 물류 최적화로 2천만 달러 넘게 절감
+| 지표 | 결과 |
+|---|---|
+| 에이전트 '실제 운영' 도입 | 기업 72% |
+| 도입 평균 ROI | 171% (미국 192%) |
+| 1년 내 ROI 달성 | 임원 74% |
+| 고객지원 통화 시간 | 약 25% 단축 |
 
 <div class="highlight">
 
@@ -277,48 +279,24 @@ table th {
 
 <div class="src">
 
-출처: [Agentic AI 도입 ROI 사례집](https://aimonk.com/agentic-ai-examples-enterprise-roi-case-studies/)
+출처: [도입 ROI 사례집](https://aimonk.com/agentic-ai-examples-enterprise-roi-case-studies/) · [도입 통계 2026](https://paul-okhrem.com/enterprise-ai-agents-statistics-2026/)
 
 </div>
 
 ---
 
-# 업무 자동화 플랫폼이 쏟아지다
-
-| 회사 | 무엇을 내놨나 |
-|---|---|
-| NVIDIA + SAP | 안전한 에이전트 런타임 OpenShell |
-| Salesforce | 멀티 에이전트 오케스트레이션 |
-| Fiserv | 은행용 에이전트 운영체제 agentOS |
-| Dell | PC에서 직접 도는 에이전트 |
-| Camunda | 업무 절차를 스스로 개선하는 도구 |
-
-<div class="note">
-
-'AI를 어디에 붙일까'에서 '이미 붙어 있다'로
-
-</div>
-
-<div class="src">
-
-출처: [NVIDIA·SAP](https://blogs.nvidia.com/blog/sap-specialized-agents/) · [주간 AI 뉴스 정리](https://www.buildfastwithai.com/blogs/ai-news-today-may-18-2026)
-
-</div>
-
----
-
-# 5월, 여기까지
+# 6월, 여기까지
 
 <div class="big">
 
-5월 요약 — 모델은 강해지고, 사례는 구체적이 됐다
+6월 요약 — 모델은 골라 쓰고, 에이전트는 협업한다
 
 </div>
 
-- 모델들이 더 길게·정확히·싸게 '일하는' 능력으로 경쟁
-- 금융·헬스케어·광고·쇼핑에 실제 적용 사례 등장
-- AI가 PC를 직접 다루는 'Computer Use'가 확산
-- 도입 성과가 ROI 숫자로 확인되기 시작
+- 신모델 3종이 동시 경쟁 — 한 회사 묶임에서 벗어나는 흐름
+- Windows·NVIDIA 등 에이전트 '실행 판'이 빠르게 깔림
+- 서로 다른 회사의 에이전트끼리 협업하기 시작
+- 도입 성과가 ROI 숫자로 계속 확인됨
 
 <div class="note">
 
@@ -332,34 +310,34 @@ table th {
 
 <div class="cards">
 
-<a class="card video" href="https://www.youtube.com/live/wYSncx9zLIU">
+<a class="card video" href="https://www.youtube.com/watch?v=iYCRoY_x1HM">
 <span class="outlet">▶ YOUTUBE</span>
-<span class="head">Google I/O '26 키노트 풀영상</span>
-<span class="link">youtube.com/live/wYSncx9zLIU</span>
+<span class="head">신모델 3종(Claude·GPT·Gemini) 정리 영상</span>
+<span class="link">youtube.com</span>
 </a>
 
-<a class="card" href="https://www.anthropic.com/news/claude-opus-4-8">
-<span class="outlet">ANTHROPIC</span>
-<span class="head">Claude Opus 4.8 — 새 플래그십 모델 (5/28)</span>
-<span class="link">anthropic.com</span>
+<a class="card" href="https://www.techtimes.com/articles/317919/20260606/google-gemini-35-pro-nears-june-launch-2-million-token-context-deep-think-reasoning.htm">
+<span class="outlet">TECHTIMES</span>
+<span class="head">Gemini 3.5 Pro — 6월 출시 임박, 맥락 200만</span>
+<span class="link">techtimes.com</span>
 </a>
 
-<a class="card" href="https://blog.google/innovation-and-ai/sundar-pichai-io-2026/">
-<span class="outlet">GOOGLE 블로그</span>
-<span class="head">에이전트 Gemini 시대 — I/O 2026 키노트</span>
-<span class="link">blog.google</span>
+<a class="card" href="https://redmondmag.com/articles/2026/06/02/microsoft-uses-build-2026-to-put-ai-agents-at-the-center-of-windows.aspx">
+<span class="outlet">REDMOND</span>
+<span class="head">Build 2026 — Windows가 에이전트 실행 판으로</span>
+<span class="link">redmondmag.com</span>
 </a>
 
-<a class="card" href="https://blogs.nvidia.com/blog/sap-specialized-agents/">
+<a class="card" href="https://nvidianews.nvidia.com/news/ai-agents">
 <span class="outlet">NVIDIA</span>
-<span class="head">SAP와 '안전한 에이전트 런타임' OpenShell</span>
-<span class="link">blogs.nvidia.com</span>
+<span class="head">기업용 '에이전트 개발 판' 공개</span>
+<span class="link">nvidianews.nvidia.com</span>
 </a>
 
-<a class="card" href="https://www.salesforce.com/news/stories/summer-2026-product-release-announcement/">
-<span class="outlet">SALESFORCE</span>
-<span class="head">Summer '26 — 멀티 에이전트 오케스트레이션</span>
-<span class="link">salesforce.com</span>
+<a class="card" href="https://news.cognizant.com/2026-06-18-Cognizant-expands-cross-platform-agentic-AI-with-new-ServiceNow-AI-Agent-interoperability">
+<span class="outlet">COGNIZANT</span>
+<span class="head">서로 다른 에이전트를 한 곳에서 지휘 (6/18)</span>
+<span class="link">news.cognizant.com</span>
 </a>
 
 <a class="card" href="https://aimonk.com/agentic-ai-examples-enterprise-roi-case-studies/">
