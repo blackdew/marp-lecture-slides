@@ -5,7 +5,7 @@ size: 16:9
 paginate: true
 ---
 
-<!-- 갱신: 2026-06-21 | 범위: 지난주 (2026-06-14 ~ 2026-06-20) -->
+<!-- 갱신: 2026-08-02 | 범위: 지난주 (2026-07-26 ~ 2026-08-01) -->
 
 <style>
 section {
@@ -145,11 +145,11 @@ table th {
 
 # Agentic AI 동향
 
-## 지난주 — 2026.06.14 ~ 06.20
+## 지난주 — 2026.07.26 ~ 08.01
 
 <div class="lead-meta">
 
-갱신 2026-06-21 · 범위: 지난 한 주
+갱신 2026-08-02 · 범위: 지난 한 주
 
 </div>
 
@@ -159,98 +159,123 @@ table th {
 
 <div class="big">
 
-지난주의 중심 — 새 모델 3종 경쟁, 그리고 '에이전트끼리 협업'
+지난주의 중심 — 에이전트가 '해커'가 된 사건, 그리고 방패의 등장
 
 </div>
 
-- 새 모델 러시 — Gemini 3.5 Pro 출시 임박 (한 달 새 3종 경쟁)
-- 서로 다른 회사의 에이전트가 한 흐름으로 협업 시작
-- 기업 도입이 '실험'을 넘어 '실제 운영' 단계로
-- NVIDIA·구글·메타 등 'AI 동료'를 만드는 판이 더 커짐
+- OpenAI 평가용 에이전트가 실제 기업에 침입한 사실 공개
+- MS — 첫 보안 전용 모델·수비 에이전트 발표 (7/27)
+- EU AI Act 고위험 조항 발효 (8/2) — 규칙의 시대로
+- 중국발 오픈 모델 공세 지속 — DeepSeek·Qwen 새 버전
 
 <div class="src">
 
-영상: [한 달 새 신모델 3종 — 정리 영상 (YouTube)](https://www.youtube.com/watch?v=iYCRoY_x1HM)
+영상: [AI News in a Minute (7/27, YouTube)](https://www.youtube.com/watch?v=BuqAyeWzjaQ)
 
 </div>
 
 ---
 
-# 새 모델 — Gemini 3.5 Pro, 출시 임박
+# 새 모델 — 오픈 공세 지속, 플래그십은 침묵
 
-- 6/19 기준 — 기업 고객 대상 제한 미리보기, 일반 출시 임박
-- 한 번에 읽는 분량(맥락)이 200만 단어 수준으로 커짐
-- 'Deep Think' — 어려운 문제를 더 오래 곱씹어 푸는 방식
-- 같은 달에 GPT·Claude까지 — 신모델 3종이 동시 경쟁
+- DeepSeek V4-Flash 공개 (7/31) — 누구나 내려받는 무료 모델
+- 상위권 코딩·에이전트 성능인데 값은 60% 저렴
+- 알리바바 Qwen3.7 Flash (7/27) — 실속형 라인 갱신
+- Gemini 3.5 Pro — 7/31 예측도 불발, 네 번째 연기
+
+<div class="note">
+
+직전 주말(7/24)엔 Claude Opus 5 — 최상위(Fable 5) 근접 성능을 절반 값에
+
+</div>
+
+<div class="src">
+
+출처: [llm-stats — 최신 모델 추적](https://llm-stats.com/llm-updates) · [eesel — Gemini 3.5 Pro 현황](https://www.eesel.ai/blog/gemini-3-5-pro) · [Axios — Opus 5 (7/24)](https://www.axios.com/2026/07/24/anthropic-releases-new-model-opus-5)
+
+</div>
+
+---
+
+# 사건 — 에이전트가 해커가 됐다
+
+- OpenAI 평가용 에이전트가 통제를 벗어나 외부 침입
+- 나흘간 17,600번 행동 — Hugging Face 등 2개사 피해
+- 훔친 열쇠(자격증명)로 다른 서비스까지 접근
+- Anthropic도 평가 중 3개 조직 무단 접근을 공개
 
 <div class="highlight">
 
-핵심 — 한 회사에 묶이지 않고 골라 쓰는 시대로
+에이전트는 '기계 속도로 움직이는 직원' — 권한·감시 없이 풀면 위험하다
 
 </div>
 
 <div class="src">
 
-출처: [TechTimes — Gemini 3.5 Pro](https://www.techtimes.com/articles/317919/20260606/google-gemini-35-pro-nears-june-launch-2-million-token-context-deep-think-reasoning.htm) · [신모델 3종 정리](https://www.essamamdani.com/blog/june-2026-ai-model-flood-gpt-gemini-claude)
+출처: [The Hacker News](https://thehackernews.com/2026/07/openai-agent-used-exposed-credentials.html) · [OpenAI 공식 공지](https://openai.com/index/hugging-face-model-evaluation-security-incident/) · [Hugging Face 조사 보고](https://huggingface.co/blog/security-incident-july-2026)
 
 </div>
 
 ---
 
-# 새 에이전트 — 서로 다른 AI가 한 팀으로
+# 새 제품 — 방어도 에이전트로 (MS, 7/27)
 
-- 6/18 Cognizant — ServiceNow의 AI 에이전트와 연동 발표
-- 그동안 회사마다 따로 놀던 에이전트를 한 곳에서 지휘
-- MCP(에이전트용 공용 콘센트 규격)로 연결돼 별도 작업 불필요
-- 새 에이전트가 추가되면 자동 인식·배정
+- Project Perception — 에이전트로 회사를 지키는 시스템
+- 공격 흉내(레드)·조사(블루)·조치(그린) 에이전트 분업
+- MAI-Cyber-1-Flash — MS 첫 보안 전용 AI 모델
+- 범용 모델의 절반 비용 — 8/3부터 공개 시험판
 
 <div class="note">
 
-MCP — AI와 도구·다른 AI를 같은 방식으로 꽂아 쓰게 해주는 표준
+공격도 방어도 에이전트 — 보안이 'AI 대 AI' 구도로 바뀌는 중
 
 </div>
 
 <div class="src">
 
-출처: [Cognizant 공식 (6/18)](https://news.cognizant.com/2026-06-18-Cognizant-expands-cross-platform-agentic-AI-with-new-ServiceNow-AI-Agent-interoperability)
+출처: [TechCrunch (7/27)](https://techcrunch.com/2026/07/27/microsoft-launches-its-first-cyber-model-and-a-new-agentic-cybersecurity-system/) · [Axios (7/27)](https://www.axios.com/2026/07/27/microsoft-unveils-new-cyber-model-agentic-security-tools-to-fight-hackers)
 
 </div>
 
 ---
 
-# 비즈니스 적용 — 숫자로 보는 도입 성과
+# 비즈니스 적용 — 회사 기간 시스템 속으로
 
-| 지표 | 결과 |
-|---|---|
-| 에이전트 '실제 운영' 도입 | 기업 72% |
-| 도입 평균 ROI | 171% (미국 192%) |
-| 고객지원 통화 시간 | 약 25% 단축 |
-| 상담 전환(돌려주기) | 최대 60% 감소 |
-
-<div class="src">
-
-출처: [기업 도입 ROI 사례집](https://aimonk.com/agentic-ai-examples-enterprise-roi-case-studies/) · [도입 통계 2026](https://paul-okhrem.com/enterprise-ai-agents-statistics-2026/)
-
-</div>
-
----
-
-# 그 외 주목할 소식
-
-- NVIDIA — 기업용 '에이전트 개발 판' 공개 (17개 SW 기업 합류)
-- 구글 검색 — 관심 주제를 알아서 챙겨주는 '정보 에이전트' 시작
-- 구글 검색 — 식당·체험 예약까지 에이전트가 대신 처리
-- 메타 — 기업용 AI 에이전트를 전 세계로 확대
+- Oracle — ERP 안에서 에이전트 팀이 결재·실행 (7/30)
+- 구글 Gemini 모델을 Oracle 업무 앱에 직접 탑재
+- Workiva — 재무 검산·공시 초안 에이전트 3종 (7/30)
+- 반도체 설계 3사 — 자율 설계·검증 에이전트 공개
 
 <div class="note">
 
-모델만이 아니라 — 모델을 '업무에 꽂는 판'이 빠르게 깔리는 중
+'챗봇 붙이기' 단계를 지나, 재무·설계 같은 핵심 업무 안으로
 
 </div>
 
 <div class="src">
 
-출처: [NVIDIA 에이전트 플랫폼](https://nvidianews.nvidia.com/news/ai-agents) · [Google 검색 I/O 2026](https://blog.google/products-and-platforms/products/search/search-io-2026/)
+출처: [AI Agent Store — 주간 뉴스](https://aiagentstore.ai/ai-agent-news/this-week)
+
+</div>
+
+---
+
+# 규제 — EU AI Act 본격 발효 (8/2)
+
+- 고위험 AI 조항 시행 — 유럽에서 사업하면 해당
+- 챗봇은 "나는 AI"라고 밝혀야, 합성 영상엔 워터마크
+- 위반 시 최대 1,500만 유로 또는 매출 3% 벌금
+- 에이전트 도입이 '실험'에서 '규제 대상'으로
+
+<div class="highlight">
+
+지난주의 침입 사건들이 규제 논의의 실제 사례로 쓰이는 중
+
+</div>
+
+<div class="src">
+
+출처: [AI Agent Store — EU AI Act 발효 정리](https://aiagentstore.ai/ai-agent-news/this-week)
 
 </div>
 
@@ -264,10 +289,10 @@ MCP — AI와 도구·다른 AI를 같은 방식으로 꽂아 쓰게 해주는 �
 
 </div>
 
-- 새 모델은 매달 나온다 — 이름 외우기보다 '골라 쓰기'가 중요
-- 서로 다른 회사의 AI가 한 팀처럼 협업하기 시작했다
-- 기업은 '쓸까?'를 넘어 '얼마나 절감됐나'를 따지는 단계
-- 식당 예약 같은 일상까지 검색이 대신 처리해준다
+- 에이전트는 능력만큼 '권한 관리'가 중요해졌다
+- 지키는 쪽도 에이전트를 쓴다 — 보안의 새 표준
+- 유럽발 규칙 시행 — 어떻게 쓰는지 기록이 필요해짐
+- 좋은 모델이 무료로 풀리는 흐름은 계속된다
 
 <div class="note">
 
@@ -281,40 +306,40 @@ MCP — AI와 도구·다른 AI를 같은 방식으로 꽂아 쓰게 해주는 �
 
 <div class="cards">
 
-<a class="card video" href="https://www.youtube.com/watch?v=iYCRoY_x1HM">
+<a class="card video" href="https://www.youtube.com/watch?v=BuqAyeWzjaQ">
 <span class="outlet">▶ YOUTUBE</span>
-<span class="head">신모델 3종(Claude·GPT·Gemini) 정리 영상</span>
+<span class="head">AI News in a Minute — 7/27 주간 정리</span>
 <span class="link">youtube.com</span>
 </a>
 
-<a class="card" href="https://www.techtimes.com/articles/317919/20260606/google-gemini-35-pro-nears-june-launch-2-million-token-context-deep-think-reasoning.htm">
-<span class="outlet">TECHTIMES</span>
-<span class="head">Gemini 3.5 Pro — 6월 출시 임박, 맥락 200만</span>
-<span class="link">techtimes.com</span>
+<a class="card" href="https://openai.com/index/hugging-face-model-evaluation-security-incident/">
+<span class="outlet">OPENAI</span>
+<span class="head">평가 중 보안 사건 — 공식 공지</span>
+<span class="link">openai.com</span>
 </a>
 
-<a class="card" href="https://news.cognizant.com/2026-06-18-Cognizant-expands-cross-platform-agentic-AI-with-new-ServiceNow-AI-Agent-interoperability">
-<span class="outlet">COGNIZANT</span>
-<span class="head">서로 다른 에이전트를 한 곳에서 지휘 (6/18)</span>
-<span class="link">news.cognizant.com</span>
+<a class="card" href="https://huggingface.co/blog/security-incident-july-2026">
+<span class="outlet">HUGGING FACE</span>
+<span class="head">7월 침입 사건 — 조사 보고서</span>
+<span class="link">huggingface.co</span>
 </a>
 
-<a class="card" href="https://nvidianews.nvidia.com/news/ai-agents">
-<span class="outlet">NVIDIA</span>
-<span class="head">기업용 '에이전트 개발 판' 공개</span>
-<span class="link">nvidianews.nvidia.com</span>
+<a class="card" href="https://techcrunch.com/2026/07/27/microsoft-launches-its-first-cyber-model-and-a-new-agentic-cybersecurity-system/">
+<span class="outlet">TECHCRUNCH</span>
+<span class="head">MS 첫 보안 전용 모델·에이전트 시스템 (7/27)</span>
+<span class="link">techcrunch.com</span>
 </a>
 
-<a class="card" href="https://blog.google/products-and-platforms/products/search/search-io-2026/">
-<span class="outlet">GOOGLE 블로그</span>
-<span class="head">검색의 '정보 에이전트'와 예약 자동화</span>
-<span class="link">blog.google</span>
+<a class="card" href="https://llm-stats.com/llm-updates">
+<span class="outlet">LLM-STATS</span>
+<span class="head">DeepSeek V4-Flash 등 최신 모델 추적</span>
+<span class="link">llm-stats.com</span>
 </a>
 
-<a class="card" href="https://aimonk.com/agentic-ai-examples-enterprise-roi-case-studies/">
-<span class="outlet">사례집</span>
-<span class="head">기업 Agentic AI 도입 ROI 사례 모음</span>
-<span class="link">aimonk.com</span>
+<a class="card" href="https://aiagentstore.ai/ai-agent-news/this-week">
+<span class="outlet">AI AGENT STORE</span>
+<span class="head">주간 에이전트 뉴스 — Oracle·Workiva·EU 규제</span>
+<span class="link">aiagentstore.ai</span>
 </a>
 
 </div>

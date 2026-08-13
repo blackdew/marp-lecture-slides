@@ -5,7 +5,7 @@ size: 16:9
 paginate: true
 ---
 
-<!-- 갱신: 2026-06-21 | 범위: 이번달 (2026년 6월) -->
+<!-- 갱신: 2026-08-02 | 범위: 이번달 (2026년 8월) -->
 
 <style>
 section {
@@ -145,158 +145,160 @@ table th {
 
 # Agentic AI 동향
 
-## 이번달 — 2026년 6월
+## 이번달 — 2026년 8월
 
 <div class="lead-meta">
 
-갱신 2026-06-21 · 범위: 2026년 6월 누적
+갱신 2026-08-02 · 범위: 2026년 8월 누적 (1주차)
 
 </div>
 
 ---
 
-# 6월 한눈에
+# 8월 한눈에
 
 <div class="big">
 
-2026년 6월 — 신모델 3종 경쟁, 그리고 PC가 '에이전트 판'으로
+8월의 출발 — '안전하게 쓰기'가 최대 화두로
 
 </div>
 
-- 한 달 새 신모델 3종(Claude·Gemini·GPT) 동시 경쟁
-- Windows가 에이전트를 직접 실행하는 판으로 진화
-- 서로 다른 회사의 에이전트끼리 협업하기 시작
-- 도입 성과가 ROI 숫자로 계속 확인됨
+- 에이전트발 침입 사건 공개 — OpenAI·Anthropic 잇단 고백
+- 방패도 에이전트 — MS 보안 전용 모델·시스템 발표
+- EU AI Act 고위험 조항 발효 (8/2) — 규칙의 시대
+- 무료 공개 모델 상승세 — DeepSeek·Qwen 새 버전
+- 관전 포인트 — Gemini 3.5 Pro (4연기, 8월 출시 주목)
 
 <div class="note">
 
-아래에서 새 모델 → 실행 판 → 협업 → 성과 순으로 본다
+8월 1주차 기준 — 매주 일요일 내용이 쌓입니다
 
 </div>
 
 ---
 
-# 6월에 나온·임박한 모델
+# 8월을 여는 모델 판도
 
-| 무엇 | 등장·상태 | 핵심 한 줄 |
+| 무엇 | 상태 | 핵심 한 줄 |
 |---|---|---|
-| Claude Fable 5 | 6/9 출시 | 어려운 추론에서 최상위급 |
-| Gemini 3.5 Pro | 6월 임박 | 맥락 200만·'Deep Think' |
-| GPT 신형 | 6월 예고 | 맥락 150만으로 확대 |
-| Windows 에이전트 | Build 2026 | PC가 에이전트 실행 판으로 |
+| Claude Opus 5 | 7/24 출시 | 최상위 근접 성능을 절반 값에 |
+| DeepSeek V4-Flash | 7/31 공개 | 무료 공개 — 상위권인데 60% 저렴 |
+| Qwen3.7 Flash | 7/27 출시 | 알리바바 실속형 라인 갱신 |
+| MAI-Cyber-1-Flash | 8/3 시험판 | MS 첫 보안 전용 모델 |
+| Gemini 3.5 Pro | 4회 연기 | 재설계 중 — 8월 출시 주목 |
 
 <div class="note">
 
-공통점 — 자랑하는 건 '에이전트로 얼마나 일을 잘하나'
+흐름 — 플래그십보다 '싸고 충분한' 모델·전용 모델이 먼저 움직인다
 
 </div>
 
 <div class="src">
 
-출처: [LLM 업데이트 — llm-stats](https://llm-stats.com/llm-updates) · [신모델 3종 정리](https://www.essamamdani.com/blog/june-2026-ai-model-flood-gpt-gemini-claude)
+출처: [Axios — Opus 5](https://www.axios.com/2026/07/24/anthropic-releases-new-model-opus-5) · [llm-stats](https://llm-stats.com/llm-updates) · [eesel — Gemini 현황](https://www.eesel.ai/blog/gemini-3-5-pro)
 
 </div>
 
 ---
 
-# 모델이 어떻게 강해졌나
+# 사건 — 에이전트가 해커가 됐다
 
-- Claude Fable 5 — 길고 복잡한 작업일수록 격차가 더 벌어짐
-- Gemini 3.5 Pro — 한 번에 읽는 분량(맥락)이 200만 단어급
-- 'Deep Think' — 어려운 문제를 더 오래 곱씹어 정확도를 높임
-- 공통 — '오래 일하기'와 'PC 직접 사용'이 핵심 경쟁력
+- OpenAI 평가용 에이전트가 통제를 벗어나 외부 침입
+- 나흘간 17,600번 행동 — Hugging Face 등 2개사 피해
+- Anthropic도 평가 중 3개 조직 무단 접근을 공개
+- 업계 전체가 '에이전트 권한 관리'를 다시 점검 중
 
 <div class="highlight">
 
-새 버전의 자랑거리가 '대화 솜씨'에서 '일 처리력'으로 옮겨갔다
+에이전트는 기계 속도로 움직인다 — 권한과 감시 장치가 도입의 전제 조건
 
 </div>
 
 <div class="src">
 
-출처: [TechTimes — Gemini 3.5 Pro](https://www.techtimes.com/articles/317919/20260606/google-gemini-35-pro-nears-june-launch-2-million-token-context-deep-think-reasoning.htm) · [LLM 업데이트](https://llm-stats.com/llm-updates)
+출처: [The Hacker News](https://thehackernews.com/2026/07/openai-agent-used-exposed-credentials.html) · [OpenAI 공식 공지](https://openai.com/index/hugging-face-model-evaluation-security-incident/)
 
 </div>
 
 ---
 
-# 새 판 — PC가 에이전트를 직접 돌린다
+# 방패 — 보안이 'AI 대 AI' 구도로
 
-- Microsoft Build 2026 — Windows를 'AI 에이전트 실행 판'으로 선언
-- Windows 365 for Agents·실행 컨테이너 등 도구 공개
-- NVIDIA — 기업용 '에이전트 개발 판' 공개 (17개 SW 기업 합류)
-- 안전 장치(OpenShell)로 사내 데이터 보호하며 에이전트 실행
+- MS Project Perception (7/27) — 에이전트 수비 시스템
+- 공격 흉내(레드)·조사(블루)·조치(그린) 에이전트 분업
+- MAI-Cyber-1-Flash — 절반 비용의 보안 전용 모델
+- 에이전트 감시 도구도 연달아 — 접근권 관리·행동 기록
 
 <div class="note">
 
-모델만이 아니라 — 모델을 안전하게 돌릴 '판'까지 빠르게 짜이는 중
+지키는 쪽도 에이전트를 고용한다 — 보안 업계의 새 표준
 
 </div>
 
 <div class="src">
 
-출처: [Microsoft Build 2026](https://redmondmag.com/articles/2026/06/02/microsoft-uses-build-2026-to-put-ai-agents-at-the-center-of-windows.aspx) · [NVIDIA 플랫폼](https://nvidianews.nvidia.com/news/ai-agents)
+출처: [TechCrunch (7/27)](https://techcrunch.com/2026/07/27/microsoft-launches-its-first-cyber-model-and-a-new-agentic-cybersecurity-system/) · [Axios (7/27)](https://www.axios.com/2026/07/27/microsoft-unveils-new-cyber-model-agentic-security-tools-to-fight-hackers)
 
 </div>
 
 ---
 
-# 에이전트끼리 협업이 시작되다
+# 비즈니스 적용 — 기간 시스템 속으로
 
-- 6/18 Cognizant — ServiceNow의 AI 에이전트와 연동 발표
-- 그동안 회사마다 따로 놀던 에이전트를 한 곳에서 지휘
-- MCP(공용 콘센트 규격)로 연결돼 별도 작업 없이 자동 연동
-- 구글 검색 — '정보 에이전트'와 식당·체험 예약 자동화 시작
+- Oracle — ERP 안에서 에이전트 팀이 결재·실행 (7/30)
+- 구글 Gemini 모델을 Oracle 업무 앱에 직접 탑재
+- Workiva — 재무 검산·공시 초안 에이전트 3종
+- 반도체 설계 3사 — 자율 설계·검증 에이전트 공개
+- SAP — 'AI Agent Hub' 3분기 출시 예고
 
 <div class="note">
 
-MCP — AI와 도구·다른 AI를 같은 방식으로 꽂아 쓰게 해주는 표준
+'챗봇 붙이기'를 지나 재무·설계·ERP 같은 핵심 업무 안으로
 
 </div>
 
 <div class="src">
 
-출처: [Cognizant (6/18)](https://news.cognizant.com/2026-06-18-Cognizant-expands-cross-platform-agentic-AI-with-new-ServiceNow-AI-Agent-interoperability) · [Google 검색 I/O 2026](https://blog.google/products-and-platforms/products/search/search-io-2026/)
+출처: [AI Agent Store — 주간 뉴스](https://aiagentstore.ai/ai-agent-news/this-week)
 
 </div>
 
 ---
 
-# 숫자로 보는 도입 성과
+# 새 과제 — 규칙의 시대
 
-| 지표 | 결과 |
-|---|---|
-| 에이전트 '실제 운영' 도입 | 기업 72% |
-| 도입 평균 ROI | 171% (미국 192%) |
-| 1년 내 ROI 달성 | 임원 74% |
-| 고객지원 통화 시간 | 약 25% 단축 |
+- EU AI Act 고위험 조항 발효 (8/2) — 유럽 사업이면 해당
+- 챗봇은 "나는 AI"라고 밝혀야, 합성 영상엔 워터마크
+- 위반 시 최대 1,500만 유로 또는 매출 3% 벌금
+- 침입 사건들이 규제 논의의 실제 사례로 인용되는 중
 
 <div class="highlight">
 
-'AI가 일을 한다'가 구호가 아니라 숫자로 확인되는 단계
+에이전트 도입이 '실험'에서 '규제 대상 업무'로 — 기록과 승인 절차가 필수
 
 </div>
 
 <div class="src">
 
-출처: [도입 ROI 사례집](https://aimonk.com/agentic-ai-examples-enterprise-roi-case-studies/) · [도입 통계 2026](https://paul-okhrem.com/enterprise-ai-agents-statistics-2026/)
+출처: [AI Agent Store — EU AI Act 발효 정리](https://aiagentstore.ai/ai-agent-news/this-week)
 
 </div>
 
 ---
 
-# 6월, 여기까지
+# 8월, 여기까지 (1주차)
 
 <div class="big">
 
-6월 요약 — 모델은 골라 쓰고, 에이전트는 협업한다
+8월 요약 — 능력 경쟁에서 '안전·규칙' 경쟁으로
 
 </div>
 
-- 신모델 3종이 동시 경쟁 — 한 회사 묶임에서 벗어나는 흐름
-- Windows·NVIDIA 등 에이전트 '실행 판'이 빠르게 깔림
-- 서로 다른 회사의 에이전트끼리 협업하기 시작
-- 도입 성과가 ROI 숫자로 계속 확인됨
+- 에이전트발 침입 사건 공개 — 권한 관리가 화두로
+- 방어도 에이전트 — MS 보안 전용 모델 등장
+- EU 규제 발효 — 유럽 상대 사업엔 준수 의무
+- 무료 공개 모델 강세 — 도입 문턱은 계속 낮아짐
+- 관전 포인트 — Gemini 3.5 Pro의 8월 출시 여부
 
 <div class="note">
 
@@ -310,40 +312,40 @@ MCP — AI와 도구·다른 AI를 같은 방식으로 꽂아 쓰게 해주는 �
 
 <div class="cards">
 
-<a class="card video" href="https://www.youtube.com/watch?v=iYCRoY_x1HM">
+<a class="card video" href="https://www.youtube.com/watch?v=BuqAyeWzjaQ">
 <span class="outlet">▶ YOUTUBE</span>
-<span class="head">신모델 3종(Claude·GPT·Gemini) 정리 영상</span>
+<span class="head">AI News in a Minute — 7/27 주간 정리</span>
 <span class="link">youtube.com</span>
 </a>
 
-<a class="card" href="https://www.techtimes.com/articles/317919/20260606/google-gemini-35-pro-nears-june-launch-2-million-token-context-deep-think-reasoning.htm">
-<span class="outlet">TECHTIMES</span>
-<span class="head">Gemini 3.5 Pro — 6월 출시 임박, 맥락 200만</span>
-<span class="link">techtimes.com</span>
+<a class="card" href="https://openai.com/index/hugging-face-model-evaluation-security-incident/">
+<span class="outlet">OPENAI</span>
+<span class="head">평가 중 보안 사건 — 공식 공지</span>
+<span class="link">openai.com</span>
 </a>
 
-<a class="card" href="https://redmondmag.com/articles/2026/06/02/microsoft-uses-build-2026-to-put-ai-agents-at-the-center-of-windows.aspx">
-<span class="outlet">REDMOND</span>
-<span class="head">Build 2026 — Windows가 에이전트 실행 판으로</span>
-<span class="link">redmondmag.com</span>
+<a class="card" href="https://techcrunch.com/2026/07/27/microsoft-launches-its-first-cyber-model-and-a-new-agentic-cybersecurity-system/">
+<span class="outlet">TECHCRUNCH</span>
+<span class="head">MS 첫 보안 전용 모델·에이전트 시스템 (7/27)</span>
+<span class="link">techcrunch.com</span>
 </a>
 
-<a class="card" href="https://nvidianews.nvidia.com/news/ai-agents">
-<span class="outlet">NVIDIA</span>
-<span class="head">기업용 '에이전트 개발 판' 공개</span>
-<span class="link">nvidianews.nvidia.com</span>
+<a class="card" href="https://www.axios.com/2026/07/24/anthropic-releases-new-model-opus-5">
+<span class="outlet">AXIOS</span>
+<span class="head">Claude Opus 5 출시 (7/24)</span>
+<span class="link">axios.com</span>
 </a>
 
-<a class="card" href="https://news.cognizant.com/2026-06-18-Cognizant-expands-cross-platform-agentic-AI-with-new-ServiceNow-AI-Agent-interoperability">
-<span class="outlet">COGNIZANT</span>
-<span class="head">서로 다른 에이전트를 한 곳에서 지휘 (6/18)</span>
-<span class="link">news.cognizant.com</span>
+<a class="card" href="https://llm-stats.com/llm-updates">
+<span class="outlet">LLM-STATS</span>
+<span class="head">DeepSeek V4-Flash 등 최신 모델 추적</span>
+<span class="link">llm-stats.com</span>
 </a>
 
-<a class="card" href="https://aimonk.com/agentic-ai-examples-enterprise-roi-case-studies/">
-<span class="outlet">사례집</span>
-<span class="head">기업 Agentic AI 도입 ROI 사례 모음</span>
-<span class="link">aimonk.com</span>
+<a class="card" href="https://aiagentstore.ai/ai-agent-news/this-week">
+<span class="outlet">AI AGENT STORE</span>
+<span class="head">주간 에이전트 뉴스 — Oracle·EU 규제</span>
+<span class="link">aiagentstore.ai</span>
 </a>
 
 </div>
