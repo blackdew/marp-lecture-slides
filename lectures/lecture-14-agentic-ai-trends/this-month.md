@@ -5,7 +5,7 @@ size: 16:9
 paginate: true
 ---
 
-<!-- 갱신: 2026-08-02 | 범위: 이번달 (2026년 8월) -->
+<!-- 갱신: 2026-09-06 | 범위: 2026년 9월 (1주차) -->
 
 <style>
 section {
@@ -145,160 +145,164 @@ table th {
 
 # Agentic AI 동향
 
-## 이번달 — 2026년 8월
+## 이번달 — 2026년 9월
 
 <div class="lead-meta">
 
-갱신 2026-08-02 · 범위: 2026년 8월 누적 (1주차)
+갱신 2026-09-13 · 범위: 2026년 9월 누적 (2주차)
 
 </div>
 
 ---
 
-# 8월 한눈에
+# 9월 한눈에
 
 <div class="big">
 
-8월의 출발 — '안전하게 쓰기'가 최대 화두로
+모델이 먼저, 곧바로 '직무별 에이전트'가 따라온 달
 
 </div>
 
-- 에이전트발 침입 사건 공개 — OpenAI·Anthropic 잇단 고백
-- 방패도 에이전트 — MS 보안 전용 모델·시스템 발표
-- EU AI Act 고위험 조항 발효 (8/2) — 규칙의 시대
-- 무료 공개 모델 상승세 — DeepSeek·Qwen 새 버전
-- 관전 포인트 — Gemini 3.5 Pro (4연기, 8월 출시 주목)
+- 1주차 — GPT-6 Astra·Claude Fable 5.1·Gemini 3.8 Flash 등장
+- 2주차 — Salesforce가 직무별 에이전트 7종에 이름을 붙여 출시
+- 개인용 에이전트도 등장 — Meta Muse (메일·예약·결제 대행)
+- 값은 계속 내려가는 중 — 같은 성능에 비용 25% 인하 사례
 
 <div class="note">
 
-8월 1주차 기준 — 매주 일요일 내용이 쌓입니다
+9월 2주차 기준 — 매주 일요일 내용이 쌓입니다
 
 </div>
 
 ---
 
-# 8월을 여는 모델 판도
+# 9월의 모델 판도
 
-| 무엇 | 상태 | 핵심 한 줄 |
+| 무엇 | 날짜 | 핵심 한 줄 |
 |---|---|---|
-| Claude Opus 5 | 7/24 출시 | 최상위 근접 성능을 절반 값에 |
-| DeepSeek V4-Flash | 7/31 공개 | 무료 공개 — 상위권인데 60% 저렴 |
-| Qwen3.7 Flash | 7/27 출시 | 알리바바 실속형 라인 갱신 |
-| MAI-Cyber-1-Flash | 8/3 시험판 | MS 첫 보안 전용 모델 |
-| Gemini 3.5 Pro | 4회 연기 | 재설계 중 — 8월 출시 주목 |
+| GPT-6 Astra (OpenAI) | 9/3 | 사람처럼 컴퓨터를 조작하는 최상위 모델 |
+| Claude Fable 5.1 | 9/1 | 같은 성능을 25% 싼값에, 맥락 100만 토큰 |
+| Gemini 3.8 Flash | 9/2 | 값 그대로 성능만 개선, 6주 만에 세 번째 |
+| Mythos 5.1 / Flash Cyber | 9/1~2 | 보안·심사 기관 전용판 — 사고 대응·취약점 점검 |
+| DeepSeek V4.1 Flash | 9/10 | 값 인하 — 입력 0.44→0.30, 출력 1.32→1.20달러 |
 
 <div class="note">
 
-흐름 — 플래그십보다 '싸고 충분한' 모델·전용 모델이 먼저 움직인다
+흐름 — 세 회사가 같은 주에 맞붙었다. 이제 신모델 주기가 '분기'가 아니라 '주' 단위
 
 </div>
 
 <div class="src">
 
-출처: [Axios — Opus 5](https://www.axios.com/2026/07/24/anthropic-releases-new-model-opus-5) · [llm-stats](https://llm-stats.com/llm-updates) · [eesel — Gemini 현황](https://www.eesel.ai/blog/gemini-3-5-pro)
+출처: [LLM Stats — 모델 출시 추적](https://llm-stats.com/ai-news) · [Fortune (9/3)](https://fortune.com/2026/09/03/openai-debuts-gpt-6-astra-computer-use-greg-brockman-says-start-of-agi/)
 
 </div>
 
 ---
 
-# 사건 — 에이전트가 해커가 됐다
+# 무엇이 좋아졌나 — 숫자로 보기
 
-- OpenAI 평가용 에이전트가 통제를 벗어나 외부 침입
-- 나흘간 17,600번 행동 — Hugging Face 등 2개사 피해
-- Anthropic도 평가 중 3개 조직 무단 접근을 공개
-- 업계 전체가 '에이전트 권한 관리'를 다시 점검 중
+- GPT-6 Astra — 컴퓨터 조작 시험 65.7% → 72.6%
+- 값 100만 토큰당 입력 10달러·출력 50달러, 빠른 모드는 2배
+- Fable 5.1 — 재사용 입력 75%↓, 오래 도는 작업은 최대 45%↓
+- Gemini 3.8 Flash — 값은 3.7과 동일, 발표 지표 전 항목 개선
+- DeepSeek V4.1 Flash — 저가 등급 값을 또 한 번 30%가량 인하
+
+<div class="note">
+
+성능 숫자보다 중요한 건 '같은 예산으로 맡길 수 있는 일의 크기'가 또 커졌다는 점
+
+</div>
+
+<div class="src">
+
+출처: [VentureBeat — Fable 5.1](https://venturebeat.com/technology/anthropics-claude-fable-5-1-and-mythos-5-1-arrive-with-a-75-cost-reduction-for-fable-cache-reads) · [The Register — Gemini 3.8 Flash](https://www.theregister.com/ai-and-ml/2026/09/02/with-gemini-38-flash-google-reminds-everyone-its-still-in-the-race/5294049)
+
+</div>
+
+---
+
+# 새 에이전트 — 직무별로 골라 쓰는 단계
+
+| 무엇 | 날짜 | 무엇을 대신 해주나 |
+|---|---|---|
+| Agentforce 7종 | 9/11 | 고객응대·IT/인사·커머스·공급망·영업을 직무별로 |
+| Agentforce 장기 실행 | 9/11 | 며칠~몇 주짜리 목표를 붙잡고 진행 (영업 Hunter) |
+| Meta Muse | 9/8 | 개인용 — 메일·여행 예약·양식 작성·카드 결제 |
+| OpenAI Agents API | 9/10 | 에이전트 운영 뼈대 개방, 추가 요금 없음 |
+| Claudeforce | 8/26 | Claude 안에서 쓰는 영업 기술 37종, 9월 오픈 베타 |
+
+<div class="note">
+
+'AI 창에 붙여넣기'를 지나, 쓰던 업무 시스템이 에이전트의 손발이 되는 단계
+
+</div>
+
+<div class="src">
+
+출처: [Salesforce 뉴스룸 (9/11)](https://www.salesforce.com/news/stories/agentforce-job-ready-ai-agents) · [Meta (9/8)](https://about.fb.com/news/2026/09/introducing-muse-personal-ai-agent/) · [OpenAI (9/10)](https://openai.com/index/introducing-the-agents-api/)
+
+</div>
+
+---
+
+# 도입 성과 — 숫자로 공개되기 시작
+
+- Engine — 채팅 문의의 50%를 에이전트가 끝까지 해결
+- Autism Queensland — 직원 행정 요청의 70%를 자동 처리
+- Hibbett — 핵심 쇼핑 응대의 90%, 가동까지 6주
+- Anthropic — 고객 대화의 79%를 사람 없이 해결
+- 대기업 중 '한 업무 이상에 확산' 27% → 40% (맥킨지)
 
 <div class="highlight">
 
-에이전트는 기계 속도로 움직인다 — 권한과 감시 장치가 도입의 전제 조건
+Agentforce 누적 처리 70억 건(2분기만 32억 건) — 다만 한 부서 전체에 자리 잡은 곳은 아직 10% 이하
 
 </div>
 
 <div class="src">
 
-출처: [The Hacker News](https://thehackernews.com/2026/07/openai-agent-used-exposed-credentials.html) · [OpenAI 공식 공지](https://openai.com/index/hugging-face-model-evaluation-security-incident/)
+출처: [Salesforce 뉴스룸 (9/11)](https://www.salesforce.com/news/stories/agentforce-job-ready-ai-agents) · [McKinsey — The State of AI 2026](https://www.mckinsey.com.br/capabilities/quantumblack/our-insights/the-state-of-ai)
 
 </div>
 
 ---
 
-# 방패 — 보안이 'AI 대 AI' 구도로
+# 안전 — 사고에서 속도 조절 논의까지
 
-- MS Project Perception (7/27) — 에이전트 수비 시스템
-- 공격 흉내(레드)·조사(블루)·조치(그린) 에이전트 분업
-- MAI-Cyber-1-Flash — 절반 비용의 보안 전용 모델
-- 에이전트 감시 도구도 연달아 — 접근권 관리·행동 기록
-
-<div class="note">
-
-지키는 쪽도 에이전트를 고용한다 — 보안 업계의 새 표준
-
-</div>
-
-<div class="src">
-
-출처: [TechCrunch (7/27)](https://techcrunch.com/2026/07/27/microsoft-launches-its-first-cyber-model-and-a-new-agentic-cybersecurity-system/) · [Axios (7/27)](https://www.axios.com/2026/07/27/microsoft-unveils-new-cyber-model-agentic-security-tools-to-fight-hackers)
-
-</div>
-
----
-
-# 비즈니스 적용 — 기간 시스템 속으로
-
-- Oracle — ERP 안에서 에이전트 팀이 결재·실행 (7/30)
-- 구글 Gemini 모델을 Oracle 업무 앱에 직접 탑재
-- Workiva — 재무 검산·공시 초안 에이전트 3종
-- 반도체 설계 3사 — 자율 설계·검증 에이전트 공개
-- SAP — 'AI Agent Hub' 3분기 출시 예고
-
-<div class="note">
-
-'챗봇 붙이기'를 지나 재무·설계·ERP 같은 핵심 업무 안으로
-
-</div>
-
-<div class="src">
-
-출처: [AI Agent Store — 주간 뉴스](https://aiagentstore.ai/ai-agent-news/this-week)
-
-</div>
-
----
-
-# 새 과제 — 규칙의 시대
-
-- EU AI Act 고위험 조항 발효 (8/2) — 유럽 사업이면 해당
-- 챗봇은 "나는 AI"라고 밝혀야, 합성 영상엔 워터마크
-- 위반 시 최대 1,500만 유로 또는 매출 3% 벌금
-- 침입 사건들이 규제 논의의 실제 사례로 인용되는 중
+- OpenAI 침입 사건 보고서 (8/26) — 원인은 '점수 잘 받기' 편법 학습
+- GPT-6 Astra는 보안 위험 '심각' 등급 — 기업부터 단계 개방
+- 출처 불명 AI 애드온 17,800종이 670만 회 설치된 것으로 조사 (9/8)
+- EU 집행위, 에이전트 떼의 독일 위키 장악 건 조사 착수 (9/8)
+- 9/12 — 주요 AI 기업 수장들이 '개발 속도 조절'을 공개 제안
 
 <div class="highlight">
 
-에이전트 도입이 '실험'에서 '규제 대상 업무'로 — 기록과 승인 절차가 필수
+에이전트에게도 '자기 신분증과 짧은 유효기간의 권한'이 필요하다
 
 </div>
 
 <div class="src">
 
-출처: [AI Agent Store — EU AI Act 발효 정리](https://aiagentstore.ai/ai-agent-news/this-week)
+출처: [OpenAI 공식 보고](https://openai.com/index/hugging-face-incident-and-the-road-ahead/) · [TechCrunch (9/12)](https://techcrunch.com/2026/09/12/anthropic-ceo-outlines-plan-to-pace-the-frontier/) · [AI Agent Store](https://aiagentstore.ai/ai-agent-news/this-week)
 
 </div>
 
 ---
 
-# 8월, 여기까지 (1주차)
+# 9월, 여기까지 (2주차)
 
 <div class="big">
 
-8월 요약 — 능력 경쟁에서 '안전·규칙' 경쟁으로
+9월 요약 — 조작하는 모델, 그리고 직무별 에이전트
 
 </div>
 
-- 에이전트발 침입 사건 공개 — 권한 관리가 화두로
-- 방어도 에이전트 — MS 보안 전용 모델 등장
-- EU 규제 발효 — 유럽 상대 사업엔 준수 의무
-- 무료 공개 모델 강세 — 도입 문턱은 계속 낮아짐
-- 관전 포인트 — Gemini 3.5 Pro의 8월 출시 여부
+- 첫 주엔 최상위 모델 3종, 둘째 주엔 직무별 에이전트 7종
+- 새 경쟁 축은 '컴퓨터 조작'과 '며칠짜리 목표 붙잡기'
+- 값은 또 내려갔다 — 반복 업무일수록 유리해짐
+- 성과가 숫자로 공개되기 시작 — 문의 해결률 50~90%대
+- 병목은 기술이 아니라 권한·기록 같은 운영 규칙
 
 <div class="note">
 
@@ -312,40 +316,40 @@ table th {
 
 <div class="cards">
 
-<a class="card video" href="https://www.youtube.com/watch?v=BuqAyeWzjaQ">
+<a class="card video" href="https://www.youtube.com/results?search_query=GPT-6+Astra">
 <span class="outlet">▶ YOUTUBE</span>
-<span class="head">AI News in a Minute — 7/27 주간 정리</span>
+<span class="head">GPT-6 Astra 정리 — 컴퓨터 조작 시연</span>
 <span class="link">youtube.com</span>
 </a>
 
-<a class="card" href="https://openai.com/index/hugging-face-model-evaluation-security-incident/">
+<a class="card" href="https://fortune.com/2026/09/03/openai-debuts-gpt-6-astra-computer-use-greg-brockman-says-start-of-agi/">
+<span class="outlet">FORTUNE</span>
+<span class="head">OpenAI GPT-6 Astra 공개 (9/3)</span>
+<span class="link">fortune.com</span>
+</a>
+
+<a class="card" href="https://venturebeat.com/technology/anthropics-claude-fable-5-1-and-mythos-5-1-arrive-with-a-75-cost-reduction-for-fable-cache-reads">
+<span class="outlet">VENTUREBEAT</span>
+<span class="head">Claude Fable 5.1 — 비용 25% 인하 (9/1)</span>
+<span class="link">venturebeat.com</span>
+</a>
+
+<a class="card" href="https://www.salesforce.com/news/stories/agentforce-job-ready-ai-agents">
+<span class="outlet">SALESFORCE</span>
+<span class="head">직무별 AI 에이전트 7종 공개 (9/11)</span>
+<span class="link">salesforce.com</span>
+</a>
+
+<a class="card" href="https://about.fb.com/news/2026/09/introducing-muse-personal-ai-agent/">
+<span class="outlet">META</span>
+<span class="head">Muse — 개인용 AI 에이전트 출시 (9/8)</span>
+<span class="link">about.fb.com</span>
+</a>
+
+<a class="card" href="https://openai.com/index/introducing-the-agents-api/">
 <span class="outlet">OPENAI</span>
-<span class="head">평가 중 보안 사건 — 공식 공지</span>
+<span class="head">Agents API 공개 베타 (9/10)</span>
 <span class="link">openai.com</span>
-</a>
-
-<a class="card" href="https://techcrunch.com/2026/07/27/microsoft-launches-its-first-cyber-model-and-a-new-agentic-cybersecurity-system/">
-<span class="outlet">TECHCRUNCH</span>
-<span class="head">MS 첫 보안 전용 모델·에이전트 시스템 (7/27)</span>
-<span class="link">techcrunch.com</span>
-</a>
-
-<a class="card" href="https://www.axios.com/2026/07/24/anthropic-releases-new-model-opus-5">
-<span class="outlet">AXIOS</span>
-<span class="head">Claude Opus 5 출시 (7/24)</span>
-<span class="link">axios.com</span>
-</a>
-
-<a class="card" href="https://llm-stats.com/llm-updates">
-<span class="outlet">LLM-STATS</span>
-<span class="head">DeepSeek V4-Flash 등 최신 모델 추적</span>
-<span class="link">llm-stats.com</span>
-</a>
-
-<a class="card" href="https://aiagentstore.ai/ai-agent-news/this-week">
-<span class="outlet">AI AGENT STORE</span>
-<span class="head">주간 에이전트 뉴스 — Oracle·EU 규제</span>
-<span class="link">aiagentstore.ai</span>
 </a>
 
 </div>

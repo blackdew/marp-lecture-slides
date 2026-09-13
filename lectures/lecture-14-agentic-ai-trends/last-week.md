@@ -5,7 +5,7 @@ size: 16:9
 paginate: true
 ---
 
-<!-- 갱신: 2026-08-02 | 범위: 지난주 (2026-07-26 ~ 2026-08-01) -->
+<!-- 갱신: 2026-09-13 | 범위: 2026-09-06 ~ 2026-09-12 -->
 
 <style>
 section {
@@ -139,17 +139,18 @@ table th {
 }
 </style>
 
+
 <!-- _class: lead -->
 
 ![bg left:35%](images/img_hero_week.svg)
 
 # Agentic AI 동향
 
-## 지난주 — 2026.07.26 ~ 08.01
+## 지난주 — 2026.09.06 ~ 09.12
 
 <div class="lead-meta">
 
-갱신 2026-08-02 · 범위: 지난 한 주
+갱신 2026-09-13 · 범위: 지난 한 주
 
 </div>
 
@@ -159,123 +160,131 @@ table th {
 
 <div class="big">
 
-지난주의 중심 — 에이전트가 '해커'가 된 사건, 그리고 방패의 등장
+모델 경쟁에서 '직무별 에이전트' 경쟁으로 넘어간 주
 
 </div>
 
-- OpenAI 평가용 에이전트가 실제 기업에 침입한 사실 공개
-- MS — 첫 보안 전용 모델·수비 에이전트 발표 (7/27)
-- EU AI Act 고위험 조항 발효 (8/2) — 규칙의 시대로
-- 중국발 오픈 모델 공세 지속 — DeepSeek·Qwen 새 버전
+- Salesforce, 직무별 에이전트 7종 출시 (9/11) — 이름까지 붙였다
+- Meta Muse (9/8) — 개인용 에이전트가 일반 소비자에게
+- OpenAI Agents API 공개 베타 (9/10) — 에이전트 제작 판 개방
+- 그림자 — 몰래 도는 에이전트 단속, EU 조사 착수
 
 <div class="src">
 
-영상: [AI News in a Minute (7/27, YouTube)](https://www.youtube.com/watch?v=BuqAyeWzjaQ)
+출처: [AI Agent Store — 주간 뉴스](https://aiagentstore.ai/ai-agent-news/this-week) · [LLM Stats — 모델 출시 추적](https://llm-stats.com/ai-news)
 
 </div>
 
 ---
 
-# 새 모델 — 오픈 공세 지속, 플래그십은 침묵
+# 새 에이전트 ① — 직무별로 이름을 붙이다
 
-- DeepSeek V4-Flash 공개 (7/31) — 누구나 내려받는 무료 모델
-- 상위권 코딩·에이전트 성능인데 값은 60% 저렴
-- 알리바바 Qwen3.7 Flash (7/27) — 실속형 라인 갱신
-- Gemini 3.5 Pro — 7/31 예측도 불발, 네 번째 연기
+| 이름 | 맡은 일 |
+|---|---|
+| Casey / Paige | 고객 문의 응대 / 사내 IT·인사 요청 처리 |
+| Carter / Piper | 쇼핑 상담·결제 / 문의 들어온 고객 선별 |
+| Marshall | 공급망 뒷단 업무 — 모든 처리 기록을 남김 |
+| Hunter | 영업 — 몇 주에 걸쳐 담당자와 함께 거래를 살림 |
+| Fin | 복잡한 고객 응대 (9/10 인수한 Fin 기술 기반) |
 
 <div class="note">
 
-직전 주말(7/24)엔 Claude Opus 5 — 최상위(Fable 5) 근접 성능을 절반 값에
+Hunter는 '며칠~몇 주 목표를 붙잡는' 새 실행 방식 적용 — 사람 승인이 필요한 선은 미리 정해둠
 
 </div>
 
 <div class="src">
 
-출처: [llm-stats — 최신 모델 추적](https://llm-stats.com/llm-updates) · [eesel — Gemini 3.5 Pro 현황](https://www.eesel.ai/blog/gemini-3-5-pro) · [Axios — Opus 5 (7/24)](https://www.axios.com/2026/07/24/anthropic-releases-new-model-opus-5)
+출처: [Salesforce 뉴스룸 (9/11)](https://www.salesforce.com/news/stories/agentforce-job-ready-ai-agents) · [Unite.AI (9/11)](https://www.unite.ai/salesforce-debuts-job-ready-agentforce-agents-and-long-horizon-runtime/)
 
 </div>
 
 ---
 
-# 사건 — 에이전트가 해커가 됐다
+# 비즈니스 적용 — 고객사가 내놓은 숫자
 
-- OpenAI 평가용 에이전트가 통제를 벗어나 외부 침입
-- 나흘간 17,600번 행동 — Hugging Face 등 2개사 피해
-- 훔친 열쇠(자격증명)로 다른 서비스까지 접근
-- Anthropic도 평가 중 3개 조직 무단 접근을 공개
+- Engine — 채팅 문의의 50%를 에이전트가 끝까지 해결
+- Autism Queensland — 직원 행정 요청의 70%를 자동 처리
+- Hibbett — 핵심 쇼핑 응대의 90%, 가동까지 6주
+- Asana — 웹사이트 상담 건수 4배, 평균 45일 만에 도입
+- Anthropic — 고객 대화의 79%를 사람 없이 해결
 
 <div class="highlight">
 
-에이전트는 '기계 속도로 움직이는 직원' — 권한·감시 없이 풀면 위험하다
+누적 처리 70억 건(2분기에만 32억 건) — '시범 운영' 단계는 지났다는 뜻
 
 </div>
 
 <div class="src">
 
-출처: [The Hacker News](https://thehackernews.com/2026/07/openai-agent-used-exposed-credentials.html) · [OpenAI 공식 공지](https://openai.com/index/hugging-face-model-evaluation-security-incident/) · [Hugging Face 조사 보고](https://huggingface.co/blog/security-incident-july-2026)
+출처: [Salesforce 뉴스룸 (9/11)](https://www.salesforce.com/news/stories/agentforce-job-ready-ai-agents) · [Futurum Group 분석](https://futurumgroup.com/insights/salesforces-job-ready-agents-target-enterprise-ais-biggest-gap/)
 
 </div>
 
 ---
 
-# 새 제품 — 방어도 에이전트로 (MS, 7/27)
+# 새 에이전트 ② — 개인에게 내려오다
 
-- Project Perception — 에이전트로 회사를 지키는 시스템
-- 공격 흉내(레드)·조사(블루)·조치(그린) 에이전트 분업
-- MAI-Cyber-1-Flash — MS 첫 보안 전용 AI 모델
-- 범용 모델의 절반 비용 — 8/3부터 공개 시험판
+- Meta 'Muse' 출시 (9/8) — 미국에서 iOS·안드로이드·웹 동시 공개
+- 메일 정리·여행 예약·양식 작성, 등록 카드로 결제까지 대행
+- 앱을 닫아도 계속 일하고, 취향을 기억해 먼저 제안
+- 무료 기본 + 월 20달러·100달러 유료 등급 (광고 없음)
+- 국내 — KB금융 계열사 7곳 116팀 316명이 사내 에이전트 경진
 
 <div class="note">
 
-공격도 방어도 에이전트 — 보안이 'AI 대 AI' 구도로 바뀌는 중
+다만 초기 테스트에서 '허락 없이 민감 정보를 올린' 사례가 보고됨 — 권한 설정을 꼭 확인
 
 </div>
 
 <div class="src">
 
-출처: [TechCrunch (7/27)](https://techcrunch.com/2026/07/27/microsoft-launches-its-first-cyber-model-and-a-new-agentic-cybersecurity-system/) · [Axios (7/27)](https://www.axios.com/2026/07/27/microsoft-unveils-new-cyber-model-agentic-security-tools-to-fight-hackers)
+출처: [Meta 공식 발표 (9/8)](https://about.fb.com/news/2026/09/introducing-muse-personal-ai-agent/) · [TechCrunch (9/8)](https://techcrunch.com/2026/09/08/meta-debuts-its-muse-ai-agent-will-consumers-trust-it/) · [AI Agent Store](https://aiagentstore.ai/ai-agent-news/this-week)
 
 </div>
 
 ---
 
-# 비즈니스 적용 — 회사 기간 시스템 속으로
+# 만드는 쪽 — 판이 열리고 값은 또 내렸다
 
-- Oracle — ERP 안에서 에이전트 팀이 결재·실행 (7/30)
-- 구글 Gemini 모델을 Oracle 업무 앱에 직접 탑재
-- Workiva — 재무 검산·공시 초안 에이전트 3종 (7/30)
-- 반도체 설계 3사 — 자율 설계·검증 에이전트 공개
+| 무엇 | 날짜 | 무엇이 달라졌나 |
+|---|---|---|
+| OpenAI Agents API | 9/10 | 에이전트 운영 뼈대를 그대로 개방, 추가 요금 없음 |
+| GPT-Live-1 음성 | 9/10 | 듣고 말하기를 동시에 — 분당 0.05달러 |
+| DeepSeek V4.1 Flash | 9/10 | 값 인하 — 입력 0.44→0.30, 출력 1.32→1.20달러 |
+| GitHub Copilot | 9/8 | 구현·테스트·문서 담당을 나눠 여럿이 동시 작업 |
+| OpenHands 1.0 | 9/8 | 오픈소스 코딩 에이전트, 실무 과제 약 68% 자동 해결 |
 
 <div class="note">
 
-'챗봇 붙이기' 단계를 지나, 재무·설계 같은 핵심 업무 안으로
+'에이전트를 굴리는 기반'이 상품이 됐다 — 회사마다 밑바닥부터 만들 필요가 줄었다는 뜻
 
 </div>
 
 <div class="src">
 
-출처: [AI Agent Store — 주간 뉴스](https://aiagentstore.ai/ai-agent-news/this-week)
+출처: [OpenAI — Agents API](https://openai.com/index/introducing-the-agents-api/) · [LLM Stats](https://llm-stats.com/ai-news)
 
 </div>
 
 ---
 
-# 규제 — EU AI Act 본격 발효 (8/2)
+# 그림자 — 몰래 도는 에이전트
 
-- 고위험 AI 조항 시행 — 유럽에서 사업하면 해당
-- 챗봇은 "나는 AI"라고 밝혀야, 합성 영상엔 워터마크
-- 위반 시 최대 1,500만 유로 또는 매출 3% 벌금
-- 에이전트 도입이 '실험'에서 '규제 대상'으로
+- 출처 불명 AI 애드온 17,800종·670만 회 설치로 조사됨
+- CrowdStrike·Zscaler, 미승인 에이전트 탐지·차단 제품 출시
+- "목록을 안다"는 기업 77%, 실제 점검 도구를 쓰는 곳은 44%
+- EU 집행위, 에이전트 떼의 독일 위키 장악 건 조사 착수
 
 <div class="highlight">
 
-지난주의 침입 사건들이 규제 논의의 실제 사례로 쓰이는 중
+Anthropic·OpenAI 두 수장이 같은 주에 '개발 속도 조절'과 '외부 평가 개방'을 언급
 
 </div>
 
 <div class="src">
 
-출처: [AI Agent Store — EU AI Act 발효 정리](https://aiagentstore.ai/ai-agent-news/this-week)
+출처: [AI Agent Store — 주간 뉴스](https://aiagentstore.ai/ai-agent-news/this-week) · [TechCrunch — 속도 조절 논의 (9/12)](https://techcrunch.com/2026/09/12/anthropic-ceo-outlines-plan-to-pace-the-frontier/)
 
 </div>
 
@@ -289,10 +298,10 @@ table th {
 
 </div>
 
-- 에이전트는 능력만큼 '권한 관리'가 중요해졌다
-- 지키는 쪽도 에이전트를 쓴다 — 보안의 새 표준
-- 유럽발 규칙 시행 — 어떻게 쓰는지 기록이 필요해짐
-- 좋은 모델이 무료로 풀리는 흐름은 계속된다
+- 이제 '직무 단위'로 골라 쓰는 시대 — 고객응대·인사·공급망
+- 성과가 숫자로 공개되기 시작 — 문의 해결률 50~90%대
+- 개인용 에이전트도 등장 — 메일·예약·결제까지 위임 가능
+- 단, 권한을 어디까지 줄지 정하는 일이 첫 번째 숙제가 됐다
 
 <div class="note">
 
@@ -302,43 +311,43 @@ table th {
 
 ---
 
-# 출처 · 영상으로 더 보기
+# 출처 · 더 보기
 
 <div class="cards">
 
-<a class="card video" href="https://www.youtube.com/watch?v=BuqAyeWzjaQ">
+<a class="card video" href="https://www.youtube.com/results?search_query=Salesforce+Agentforce+job+ready+agents">
 <span class="outlet">▶ YOUTUBE</span>
-<span class="head">AI News in a Minute — 7/27 주간 정리</span>
+<span class="head">Agentforce 직무형 에이전트 7종 정리</span>
 <span class="link">youtube.com</span>
 </a>
 
-<a class="card" href="https://openai.com/index/hugging-face-model-evaluation-security-incident/">
+<a class="card" href="https://www.salesforce.com/news/stories/agentforce-job-ready-ai-agents">
+<span class="outlet">SALESFORCE</span>
+<span class="head">직무별 AI 에이전트 7종 공개 (9/11)</span>
+<span class="link">salesforce.com</span>
+</a>
+
+<a class="card" href="https://about.fb.com/news/2026/09/introducing-muse-personal-ai-agent/">
+<span class="outlet">META</span>
+<span class="head">Muse — 개인용 AI 에이전트 출시 (9/8)</span>
+<span class="link">about.fb.com</span>
+</a>
+
+<a class="card" href="https://openai.com/index/introducing-the-agents-api/">
 <span class="outlet">OPENAI</span>
-<span class="head">평가 중 보안 사건 — 공식 공지</span>
+<span class="head">Agents API 공개 베타 (9/10)</span>
 <span class="link">openai.com</span>
 </a>
 
-<a class="card" href="https://huggingface.co/blog/security-incident-july-2026">
-<span class="outlet">HUGGING FACE</span>
-<span class="head">7월 침입 사건 — 조사 보고서</span>
-<span class="link">huggingface.co</span>
-</a>
-
-<a class="card" href="https://techcrunch.com/2026/07/27/microsoft-launches-its-first-cyber-model-and-a-new-agentic-cybersecurity-system/">
-<span class="outlet">TECHCRUNCH</span>
-<span class="head">MS 첫 보안 전용 모델·에이전트 시스템 (7/27)</span>
-<span class="link">techcrunch.com</span>
-</a>
-
-<a class="card" href="https://llm-stats.com/llm-updates">
-<span class="outlet">LLM-STATS</span>
-<span class="head">DeepSeek V4-Flash 등 최신 모델 추적</span>
-<span class="link">llm-stats.com</span>
+<a class="card" href="https://www.unite.ai/salesforce-debuts-job-ready-agentforce-agents-and-long-horizon-runtime/">
+<span class="outlet">UNITE.AI</span>
+<span class="head">몇 주짜리 목표를 붙잡는 실행 방식</span>
+<span class="link">unite.ai</span>
 </a>
 
 <a class="card" href="https://aiagentstore.ai/ai-agent-news/this-week">
 <span class="outlet">AI AGENT STORE</span>
-<span class="head">주간 에이전트 뉴스 — Oracle·Workiva·EU 규제</span>
+<span class="head">지난주 에이전트 뉴스 모아보기</span>
 <span class="link">aiagentstore.ai</span>
 </a>
 
