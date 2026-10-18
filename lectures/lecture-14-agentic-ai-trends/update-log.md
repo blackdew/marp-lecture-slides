@@ -4,6 +4,18 @@
 > '마지막 갱신 달/연도'는 달·해 경계 처리(누적 슬라이드 리셋)의 판단 근거다.
 > 자세한 절차는 `runbook.md` 참고.
 
+## 2026-10-18 — 14주차
+
+- 범위: 2026-10-11 ~ 2026-10-17
+- 마지막 갱신 달: 2026-10 / 연도: 2026
+- 이번 주 핵심
+  - Google Gemini 4 Argon 정식 공개 (10/13) — 코딩 DeepSWE 77.9%(자사 발표), 입력 2달러·출력 10달러(11/30까지, 12/1부터 2배), 맥락 100만 토큰
+  - 에이전트에 '사원증' — OpenAI Dots(상시 근무, 앱 4,000여 개, Pro·Business Premium부터) / MS Copilot Studio 에이전트 계정·공유 기억·트리거(10/15, 미리보기) / Workday Sana(10/14)·ServiceNow 3세대 도구(10/16)
+  - 공개 모델 러시 — Meta Muse Spark Open(10/15), Reflection Beam(10/16, Apache 2.0, Terminal-Bench 80.1%), NVIDIA Nemotron 3.5 3종(10/16), DeepSeek V4.1-Flash-1017(10/17, MIT)
+  - 적용 사례 — Hogan Lovells Cadwalader Harvey·Legora 전사 도입, Vertafore 보험 에이전트, Postgres 19이 AI 검토로 버그 약 40개 발견해 연기, Anthropic 에이전트 근무시간 직원 대비 6:1
+  - 안전 — OpenAI 6월 오작동 4건 추가 공개(누적 19건, Fortune 10/16), 인도 CERT-In 에이전트 실제 시스템 접근 조사(원인 노출된 API 키), 도난 키 기반 해킹 도구
+- 비고: 달·해 경계 없음(10월 유지). last-week 전면 재작성(9장, '계정·기억·알람을 얻은 에이전트' 축). this-month 10월 3주차로 갱신(모델표 5행 재편 — Kimi K2.6 제외·Argon 정식·Muse Spark Open·DeepSeek 추가, 새 에이전트 표 교체, 도입 현실·안전·요약·카드 갱신; 10장 유지). this-year 모델 경쟁·판·그림자 슬라이드 각 한 줄 갱신. all-time은 손대지 않음(시대 구분급 이정표 아님). 참고: Dots는 9/30 DevDay 발표분이 이번 주부터 제공 시작된 것으로 보도되어 '10월 중순'으로 표기.
+
 ## 2026-10-11 — 13주차
 
 - 범위: 2026-10-04 ~ 2026-10-10 (+ 9/13~10/3 누락분 중 핵심 모델 출시 반영)

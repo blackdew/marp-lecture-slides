@@ -5,7 +5,7 @@ size: 16:9
 paginate: true
 ---
 
-<!-- 갱신: 2026-10-11 | 범위: 2026년 10월 (1~2주차) -->
+<!-- 갱신: 2026-10-18 | 범위: 2026년 10월 (1~3주차) -->
 
 <style>
 section {
@@ -149,7 +149,7 @@ table th {
 
 <div class="lead-meta">
 
-갱신 2026-10-11 · 범위: 2026년 10월 누적 (2주차)
+갱신 2026-10-18 · 범위: 2026년 10월 누적 (3주차)
 
 </div>
 
@@ -159,18 +159,18 @@ table th {
 
 <div class="big">
 
-'성능은 그대로, 값은 5분의 1' — 그리고 에이전트가 팀원이 된 달
+'값은 5분의 1' — 그리고 에이전트가 사원증·기억·알람을 얻은 달
 
 </div>
 
 - 9월 말~10월 초 — 상위 모델 3종이 값을 크게 낮춰 재출시
-- 10/7 — 가장 작은 모델 Claude Haiku 5.5, 값 75%↓
-- 10/8 — Google Gemini Agent, 이메일 주소를 가진 AI 팀원
+- 10/7 Haiku 5.5 — 가장 작은 모델도 업무급, 값 75%↓
+- 10/8~15 — Gemini Agent·OpenAI Dots·MS 에이전트 계정, 'AI 팀원' 경쟁
 - 현실 — 기업 85%가 실험 중, 운영은 5%
 
 <div class="note">
 
-10월 2주차 기준 — 매주 일요일 내용이 쌓입니다
+10월 3주차 기준 — 매주 일요일 내용이 쌓입니다
 
 </div>
 
@@ -180,21 +180,21 @@ table th {
 
 | 무엇 | 날짜 | 핵심 한 줄 |
 |---|---|---|
-| Claude Sonnet 5.5 | 9/28 | 30%+ 빨라짐, 값은 그대로 (입력 2달러) |
+| Claude Sonnet 5.5 · Haiku 5.5 | 9/28 · 10/7 | 30%+ 빨라짐 / 가장 작은 모델 값 75%↓ |
 | GPT-6.1 Sol (OpenAI) | 9/30 | 최상위 Astra에 근접, 값은 5분의 1 |
-| Gemini 4 Argon (Google) | 9/30 | 제한 공개, 한 번에 최대 100만 토큰 출력 |
-| Claude Haiku 5.5 | 10/7 | 가장 작은 모델 — 값 75%↓ |
-| Kimi K2.6 (Moonshot) | 10/5 | 무료 공개, 에이전트 1,000개 동시 운용 |
+| Gemini 4 Argon (Google) | 10/13 | 정식 공개, 한 번에 100만 토큰 |
+| Muse Spark Open (Meta) | 10/15 | 모델 파일 공개 (사용 조건 있음) |
+| DeepSeek V4.1-Flash | 10/17 | MIT 라이선스 공개, 100만 토큰 |
 
 <div class="note">
 
-흐름 — 최상위 성능을 '일상 가격'으로 내려보내는 경쟁이 본격화
+흐름 — 최상위 성능을 '일상 가격'으로 내리고, 열어 공개하는 경쟁이 본격화
 
 </div>
 
 <div class="src">
 
-출처: [AI Weekly — Sonnet 5.5](https://aiweekly.co/alerts/anthropic-ships-claude-sonnet-55-30-faster-with-706-on-terminal-bench-40) · [ProPakistani — GPT-6.1 Sol](https://propakistani.pk/2026/09/30/gpt-6-1-sol-brings-astra-level-performance-at-5x-lower-cost/) · [DEV — Gemini 4 Argon](https://dev.to/hassann/what-is-gemini-4-argon-18b5)
+출처: [AI Weekly — Sonnet 5.5](https://aiweekly.co/alerts/anthropic-ships-claude-sonnet-55-30-faster-with-706-on-terminal-bench-40) · [ProPakistani — GPT-6.1 Sol](https://propakistani.pk/2026/09/30/gpt-6-1-sol-brings-astra-level-performance-at-5x-lower-cost/) · [Thunai — Gemini 4 Argon](https://www.thunai.ai/blog/gemini-argon-4-enterprise-ai-orchestration) · [AI Weekly 정리](https://aiweekly.co/ai-news-today)
 
 </div>
 
@@ -202,11 +202,11 @@ table th {
 
 # 무엇이 좋아졌나 — 숫자로 보기
 
-- GPT-6.1 Sol — 입력 2달러·출력 10달러 (Astra는 10·50달러)
-- 코딩 시험은 Astra와 동률, 비용은 약 5분의 1
-- 규칙을 우회하려던 비율 64.4% → 23.5%로 감소
+- GPT-6.1 Sol — 입력 2달러·출력 10달러 (Astra는 10·50달러), 코딩은 동률
 - Sonnet 5.5 — 터미널 작업 시험 10.3% → 70.6%
 - Haiku 5.5 — 컴퓨터 조작 시험 15.7% → 72.4%
+- Gemini 4 Argon — 코딩 시험 77.9%, 입력 2달러(11/30까지, 12/1부터 2배)
+- Reflection Beam — 오픈 모델인데 터미널 시험 80.1%
 
 <div class="note">
 
@@ -216,7 +216,7 @@ table th {
 
 <div class="src">
 
-출처: [ProPakistani](https://propakistani.pk/2026/09/30/gpt-6-1-sol-brings-astra-level-performance-at-5x-lower-cost/) · [AI Weekly — Sonnet 5.5](https://aiweekly.co/alerts/anthropic-ships-claude-sonnet-55-30-faster-with-706-on-terminal-bench-40) · [AI Weekly — Haiku 5.5](https://aiweekly.co/alerts/introducing-claude-haiku-55)
+출처: [ProPakistani](https://propakistani.pk/2026/09/30/gpt-6-1-sol-brings-astra-level-performance-at-5x-lower-cost/) · [AI Weekly — Sonnet 5.5](https://aiweekly.co/alerts/anthropic-ships-claude-sonnet-55-30-faster-with-706-on-terminal-bench-40) · [AI Weekly — Haiku 5.5](https://aiweekly.co/alerts/introducing-claude-haiku-55) · [Thunai](https://www.thunai.ai/blog/gemini-argon-4-enterprise-ai-orchestration) · [VentureBeat](https://venturebeat.com/technology/reflections-beam-aims-to-undercut-chinese-open-models-with-fewer-tokens-not-cheaper-tokens)
 
 </div>
 
@@ -227,10 +227,10 @@ table th {
 | 무엇 | 날짜 | 무엇을 대신 해주나 |
 |---|---|---|
 | Gemini Agent | 10/8 | 목표를 받아 계획·실행, 자기 이메일 계정 보유 |
-| Oracle Fusion Claw | 10/5 | 회계·구매(ERP) 프로그램 안에서 에이전트 조율 |
-| Microsoft Autopilot | 10/5 | 며칠씩 혼자 도는 에이전트, 직원 1인 1개 구상 |
-| TikTok 쇼핑 도우미 | 10/5 | 앱 안에서 추천부터 원클릭 결제까지 |
-| Ironclad Agent | 10/9 | 계약 이력을 학습해 계약 업무 보조 |
+| OpenAI Dots | 10월 중순 | 창을 닫아도 계속, 앱 4,000여 개 연동 |
+| MS Copilot Studio | 10/15 | 에이전트 계정·공유 기억·알람 (미리보기) |
+| Workday Sana | 10/14 | 인사·재무·IT 업무의 첫 창구 |
+| ServiceNow 3세대 | 10/16 | 직원이 코딩 없이 에이전트 제작 |
 
 <div class="note">
 
@@ -240,7 +240,7 @@ table th {
 
 <div class="src">
 
-출처: [TechCrunch (10/8)](https://techcrunch.com/2026/10/08/google-brings-agentic-ai-to-gemini-starting-with-businesses/) · [AI Agent Store](https://aiagentstore.ai/ai-agent-news/this-week)
+출처: [TechCrunch (10/8)](https://techcrunch.com/2026/10/08/google-brings-agentic-ai-to-gemini-starting-with-businesses/) · [AI Weekly — Dots](https://aiweekly.co/alerts/openai-launches-dots-always-on-chatgpt-agents-at-devday) · [NeoTeo](https://www.neoteo.com/en/microsoft-announces-persistent-agents-for-copilot-studio) · [AI Agent Store](https://aiagentstore.ai/ai-agent-news/this-week)
 
 </div>
 
@@ -250,8 +250,8 @@ table th {
 
 - 대기업 85%가 에이전트 실험 중
 - 실제 운영에 투입한 곳은 5%, 시범에서 키운 곳은 11~14%
-- HackerRank 면접 에이전트 — 시범 중 약 50만 건 진행
-- Gemini Enterprise — 포천 100대 기업의 약 90%가 사용 (구글)
+- 로펌 Hogan Lovells Cadwalader — Harvey·Legora 전사 도입 (10/16)
+- 기술 책임자 설문 — 대부분 아직 '개인 생산성' 수준
 - 가트너 — 2027년까지 에이전트 프로젝트 40% 이상 중단 전망
 
 <div class="highlight">
@@ -262,7 +262,7 @@ table th {
 
 <div class="src">
 
-출처: [AI Agent Store — 주간 뉴스](https://aiagentstore.ai/ai-agent-news/this-week) · [TechCrunch (10/8)](https://techcrunch.com/2026/10/08/google-brings-agentic-ai-to-gemini-starting-with-businesses/)
+출처: [AI Agent Store — 주간 뉴스](https://aiagentstore.ai/ai-agent-news/this-week) · [LegalTechnology](https://legaltechnology.com/hogan-lovells-cadwalader-unveils-firmwide-ai-strategy-signs-with-harvey-and-legora/) · [TechCrunch (10/8)](https://techcrunch.com/2026/10/08/google-brings-agentic-ai-to-gemini-starting-with-businesses/)
 
 </div>
 
@@ -271,36 +271,36 @@ table th {
 # 안전 — 신원 확인과 사고 보고
 
 - Amazon, Meta Muse 차단 — 대리 쇼핑 때 신원을 밝히지 않았다는 이유
-- Anthropic, 모델의 의도 밖 행동 4유형 보고서 공개 (10/9)
-- 필라델피아 경찰, 허위 살인 제보가 AI 모델발로 확인
+- OpenAI, 6월 오작동 4건 추가 공개 (누적 19건) — 막힌 정부 사이트 자료를 우회해 내려받은 사례 포함
+- 인도 CERT-In — 에이전트가 실제 기업 시스템에 닿은 사고 조사, 원인은 노출된 열쇠(API 키)
 - 백악관 — AI 기업의 사고 보고·시정을 국가 안보 문제로 규정
 
 <div class="highlight">
 
-에이전트도 '누가, 누구를 대신해' 일하는지 밝히는 규칙이 필요해졌다
+에이전트에 계정을 줄수록 '무엇을 못 하게 막을지'가 먼저 정해져야 한다
 
 </div>
 
 <div class="src">
 
-출처: [AI News 10/9](https://aidapted.ro/en/articles/ai-news-october-9-2026) · [AI Agent Store](https://aiagentstore.ai/ai-agent-news/this-week)
+출처: [Fortune (10/16)](https://fortune.com/2026/10/16/openai-discloses-four-more-rogue-incidents-involving-financial-medical-and-government-data/) · [AI Agents 뉴스 브리프 10/17](https://aiagentsdirectory.com/news/ai-agents-news-brief-october-17-2026) · [AI News 10/9](https://aidapted.ro/en/articles/ai-news-october-9-2026)
 
 </div>
 
 ---
 
-# 10월, 여기까지 (2주차)
+# 10월, 여기까지 (3주차)
 
 <div class="big">
 
-10월 요약 — 싸진 최상위 모델, 팀원이 된 에이전트
+10월 요약 — 싸진 최상위 모델, 사원증을 받은 에이전트
 
 </div>
 
 - 상위 모델이 5분의 1 값으로, 작은 모델도 업무를 맡을 만큼 성장
-- 새 경쟁 축은 '조직 안에 에이전트를 앉히는 방식'
-- 쇼핑·결제 대행이 늘며 신원 확인 규칙 충돌이 시작
-- 운영 투입은 아직 5% — 지금 시작하는 쪽이 앞선다
+- 모델 파일을 공개하는 곳이 늘어 내 PC·사내 서버에서도 가동
+- 에이전트에 계정·기억·알람을 주는 '팀원화' 경쟁이 한창
+- 운영 투입은 아직 5% — 사고 기록도 쌓이는 중이라 권한 설계가 관건
 
 <div class="note">
 
@@ -314,10 +314,16 @@ table th {
 
 <div class="cards">
 
-<a class="card video" href="https://www.youtube.com/results?search_query=GPT-6.1+Sol">
+<a class="card video" href="https://www.youtube.com/results?search_query=OpenAI+Dots+Gemini+4+Argon">
 <span class="outlet">▶ YOUTUBE</span>
-<span class="head">GPT-6.1 Sol 정리 — 값은 5분의 1</span>
+<span class="head">OpenAI Dots · Gemini 4 Argon 영상 모아보기</span>
 <span class="link">youtube.com</span>
+</a>
+
+<a class="card" href="https://www.thunai.ai/blog/gemini-argon-4-enterprise-ai-orchestration">
+<span class="outlet">THUNAI</span>
+<span class="head">Gemini 4 Argon 정식 공개 (10/13)</span>
+<span class="link">thunai.ai</span>
 </a>
 
 <a class="card" href="https://propakistani.pk/2026/09/30/gpt-6-1-sol-brings-astra-level-performance-at-5x-lower-cost/">
@@ -326,22 +332,16 @@ table th {
 <span class="link">propakistani.pk</span>
 </a>
 
-<a class="card" href="https://aiweekly.co/alerts/anthropic-ships-claude-sonnet-55-30-faster-with-706-on-terminal-bench-40">
-<span class="outlet">AI WEEKLY</span>
-<span class="head">Claude Sonnet 5.5 — 30% 빨라짐 (9/28)</span>
-<span class="link">aiweekly.co</span>
+<a class="card" href="https://www.neoteo.com/en/microsoft-announces-persistent-agents-for-copilot-studio">
+<span class="outlet">NEOTEO</span>
+<span class="head">MS, Copilot Studio 에이전트 계정 (10/15)</span>
+<span class="link">neoteo.com</span>
 </a>
 
-<a class="card" href="https://aiweekly.co/alerts/introducing-claude-haiku-55">
-<span class="outlet">AI WEEKLY</span>
-<span class="head">Claude Haiku 5.5 — 값 75% 인하 (10/7)</span>
-<span class="link">aiweekly.co</span>
-</a>
-
-<a class="card" href="https://techcrunch.com/2026/10/08/google-brings-agentic-ai-to-gemini-starting-with-businesses/">
-<span class="outlet">TECHCRUNCH</span>
-<span class="head">구글, 기업용 Gemini 에이전트 (10/8)</span>
-<span class="link">techcrunch.com</span>
+<a class="card" href="https://fortune.com/2026/10/16/openai-discloses-four-more-rogue-incidents-involving-financial-medical-and-government-data/">
+<span class="outlet">FORTUNE</span>
+<span class="head">OpenAI, 오작동 4건 추가 공개 (10/16)</span>
+<span class="link">fortune.com</span>
 </a>
 
 <a class="card" href="https://aiagentstore.ai/ai-agent-news/this-week">

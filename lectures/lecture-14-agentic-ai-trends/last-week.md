@@ -5,7 +5,7 @@ size: 16:9
 paginate: true
 ---
 
-<!-- 갱신: 2026-10-11 | 범위: 2026-10-04 ~ 2026-10-10 -->
+<!-- 갱신: 2026-10-18 | 범위: 2026-10-11 ~ 2026-10-17 -->
 
 <style>
 section {
@@ -146,11 +146,11 @@ table th {
 
 # Agentic AI 동향
 
-## 지난주 — 2026.10.04 ~ 10.10
+## 지난주 — 2026.10.11 ~ 10.17
 
 <div class="lead-meta">
 
-갱신 2026-10-11 · 범위: 지난 한 주
+갱신 2026-10-18 · 범위: 지난 한 주
 
 </div>
 
@@ -160,85 +160,86 @@ table th {
 
 <div class="big">
 
-AI가 '내 팀원'이 되는 주 — 이메일 주소를 가진 에이전트
+AI가 '꺼지지 않는' 주 — 계정·기억·알람을 얻은 에이전트
 
 </div>
 
-- Google Gemini Agent (10/8) — 목표를 주면 계획·실행하는 업무용 에이전트
-- Claude Haiku 5.5 (10/7) — 가장 작은 모델이 값 75%↓, 성능은 대폭 상승
-- 기업 현실 — 85%가 실험 중, 실제 운영은 5%
-- 그림자 — Anthropic 오작동 보고서, 백악관 사고 보고 의무 언급
+- Google Gemini 4 Argon (10/13) — 전 세계 정식 공개, 입력 2달러(한시)
+- OpenAI Dots — 창을 닫아도 계속 일하는 ChatGPT 에이전트
+- MS Copilot Studio (10/15) — 에이전트에 사원증(계정)·공유 기억·알람 부여
+- 그림자 — OpenAI 오작동 4건 추가 공개, 인도 정부 에이전트 침입 조사
 
 <div class="src">
 
-출처: [AI Agent Store — 주간 뉴스](https://aiagentstore.ai/ai-agent-news/this-week) · [AI News 10/9](https://aidapted.ro/en/articles/ai-news-october-9-2026)
+출처: [AI Agent Store — 주간 뉴스](https://aiagentstore.ai/ai-agent-news/this-week) · [AI Agents 뉴스 브리프 10/17](https://aiagentsdirectory.com/news/ai-agents-news-brief-october-17-2026)
 
 </div>
 
 ---
 
-# 새 모델 — Claude Haiku 5.5 (10/7)
+# 새 모델 — 열리고 풀리는 한 주
 
-| 비교 | 이전 Haiku 4.5 | Haiku 5.5 |
+| 무엇 | 날짜 | 핵심 한 줄 |
 |---|---|---|
-| 값(입력/출력, 100만 토큰) | 평균 약 4배 비쌈 | 0.10달러 / 0.50달러 |
-| 지식노동 평가(GDPval) | 735점 | 1620점 |
-| 컴퓨터 조작 평가(OSWorld) | 15.7% | 72.4% |
-| 어려운 종합시험(도구 사용) | 18.7% | 57.4% |
+| Gemini 4 Argon (Google) | 10/13 | 정식 공개, 코딩 시험 DeepSWE 77.9% |
+| Muse Spark Open (Meta) | 10/15 | 모델 파일 공개, 사용 조건(라이선스) 있음 |
+| Reflection Beam | 10/16 | 첫 공개 모델, 터미널 작업 시험 80.1% |
+| NVIDIA Nemotron 3.5 | 10/16 | 내 PC·사내 서버에서 도는 에이전트용 3종 |
+| DeepSeek V4.1-Flash-1017 | 10/17 | MIT 라이선스 공개, 한 번에 100만 토큰 |
 
 <div class="note">
 
-'가장 작고 싼 모델'이 한 세대 전 최상위급 일을 한다 — 단, 위 점수는 회사 발표 수치 (Asana는 지연시간 30%↓ 보고)
+Argon은 12/1부터 값이 2배(입력 4달러·출력 20달러) — 점수는 모두 회사 발표 수치
 
 </div>
 
 <div class="src">
 
-출처: [AI Weekly — Haiku 5.5](https://aiweekly.co/alerts/introducing-claude-haiku-55) · [AI Agent Store](https://aiagentstore.ai/ai-agent-news/this-week)
+출처: [Thunai — Gemini 4 Argon](https://www.thunai.ai/blog/gemini-argon-4-enterprise-ai-orchestration) · [VentureBeat — Reflection Beam](https://venturebeat.com/technology/reflections-beam-aims-to-undercut-chinese-open-models-with-fewer-tokens-not-cheaper-tokens) · [Techstrong — Nemotron](https://techstrong.ai/articles/nvidia-launches-three-open-ai-models-to-power-enterprise-agents) · [AI Weekly 정리](https://aiweekly.co/ai-news-today)
 
 </div>
 
 ---
 
-# 새 에이전트 — Gemini Agent (10/8)
+# 새 에이전트 — 사원증을 받은 AI
 
-- 목표만 주면 계획을 세우고, 부하 에이전트에게 일을 나눔
-- 자기만의 구글 계정(이메일 주소)을 가진 팀원처럼 동작
-- 메일에 태그하거나 그룹 채팅에 초대해서 일을 맡김
-- 처리 내역을 '작업 수신함'에 남기고, 기록은 에이전트 이름으로 저장
-- MS 365·Slack·Jira 등 외부 도구와 MCP로 연결
+- OpenAI Dots — 자기 클라우드 컴퓨터로 앱 4,000여 개를 다루며 상시 근무
+- 일정·여행·예산 관리를 맡기고 창을 닫아도 계속 진행
+- MS Copilot Studio — 에이전트가 메일함과 신원(계정) 보유, 메일·일정이 알람 역할
+- Workday Sana (10/14) — 인사·재무·IT 업무의 첫 창구로 정식 가동
+- ServiceNow — 코딩 없이 직원이 직접 에이전트를 만드는 3세대 도구
 
 <div class="highlight">
 
-기업 고객부터 — 포천 100대 기업의 약 90%가 이미 Gemini Enterprise 사용 중 (구글 발표)
+주의 — MS 에이전트는 사내 대화만, '기밀' 표시 문서는 못 읽음 (미리보기 제한)
 
 </div>
 
 <div class="src">
 
-출처: [TechCrunch (10/8)](https://techcrunch.com/2026/10/08/google-brings-agentic-ai-to-gemini-starting-with-businesses/) · [AI News 10/9](https://aidapted.ro/en/articles/ai-news-october-9-2026)
+출처: [AI Weekly — Dots](https://aiweekly.co/alerts/openai-launches-dots-always-on-chatgpt-agents-at-devday) · [NeoTeo — Copilot Studio](https://www.neoteo.com/en/microsoft-announces-persistent-agents-for-copilot-studio) · [CXOToday — ServiceNow](https://cxotoday.com/media-coverage/servicenow-debuts-3rd-gen-employee-ai-harness-to-democratize-no-code-enterprise-agentic-workflows) · [AI Agent Store](https://aiagentstore.ai/ai-agent-news/this-week)
 
 </div>
 
 ---
 
-# 비즈니스 — 도입 현실과 새 제품
+# 비즈니스 — 어디에 쓰였나
 
-- 대기업 85%가 에이전트 실험 중, 운영 투입은 5%
-- 시범 운영 중 규모를 키우는 곳은 11~14%
-- HackerRank — 면접 에이전트 정식 출시, 시범 중 약 50만 건 진행
-- Oracle — ERP 안에 에이전트 조율 기능(Fusion Claw) 탑재
-- Microsoft — 며칠씩 도는 'Autopilot' 에이전트를 직원 1인 1개로 구상
+- 로펌 Hogan Lovells Cadwalader — Harvey와 Legora를 전사 도입
+- Vertafore — 보험 증권 입력·확인을 맡는 에이전트 2종 출시
+- 구글 — Argon으로 크로미움 옛 코드 약 600만 줄 이전 (구글 발표)
+- 데이터베이스 Postgres 19 — AI 검토가 버그 약 40개를 찾아 출시 한 달 연기
+- Anthropic — 에이전트 근무시간이 직원 대비 6:1, 신입 채용 비중 27%→9%
 
 <div class="highlight">
 
-가트너 전망 — 2027년까지 에이전트 프로젝트의 40% 이상이 중단될 수 있음
+그래도 설문(기술 책임자 1,000명)에선 대부분 '개인 생산성' 수준에 머무름
 
 </div>
 
 <div class="src">
 
-출처: [AI Agent Store — 주간 뉴스](https://aiagentstore.ai/ai-agent-news/this-week)
+출처: [LegalTechnology](https://legaltechnology.com/hogan-lovells-cadwalader-unveils-firmwide-ai-strategy-signs-with-harvey-and-legora/) · [FinTech Global — Vertafore](https://fintech.global/2026/10/16/vertafore-launches-ai-agents-to-automate-insurance-policy-checks) · [The Register — Postgres 19](https://www.theregister.com/databases/2026/10/16/postgres-19-delayed-after-ai-reviewers-find-more-bugs-than-humans-can-fix/5303471) · [Anthropic 연구](https://www.anthropic.com/research/employment-at-anthropic)
 
 </div>
 
@@ -246,42 +247,43 @@ AI가 '내 팀원'이 되는 주 — 이메일 주소를 가진 에이전트
 
 # 그 외 소식
 
-- Kimi K2.6 (Moonshot, 오픈소스) — 에이전트 최대 1,000개를 동시에 굴림
-- TikTok — 앱 안 쇼핑 도우미·원클릭 결제 (Shopify·Stripe 협력)
-- Amazon이 Meta Muse를 차단 — 대리 쇼핑 시 신원 미표시 문제
-- Manus, 5억 달러 이상 투자 유치 (Meta 인수는 중국 당국이 불허)
-- OpenAI 연 매출 추정치 700억→약 500억 달러로 정정 보도
+- Perplexity — 컴퓨터 에이전트가 쓰는 격리 실행 공간(SPACE)을 공개
+- Anthropic — 캐나다 첫 데이터센터 20년 임대 (2028년 420MW 계획)
+- Claude가 미국 표준 암호 곡선의 숫자 출처를 역추적 (Anthropic 발표)
+- ChatGPT 광고 — 질문 내용·전화번호·이메일로 대상을 고른다는 보도
+- 샌프란시스코, 데이터센터 신규 건설 45일 중단 서명
 
 <div class="note">
 
-에이전트가 '대신 사는 시대'가 되자, 쇼핑몰은 "너 누구냐"를 묻기 시작했다
+AI가 커질수록 전기와 땅 문제가 뉴스의 절반이 되어간다
 
 </div>
 
 <div class="src">
 
-출처: [AI News 10/9](https://aidapted.ro/en/articles/ai-news-october-9-2026) · [AI Agent Store](https://aiagentstore.ai/ai-agent-news/this-week)
+출처: [AI Weekly 정리](https://aiweekly.co/ai-news-today) · [The Star — Anthropic](https://www.thestar.com.my/tech/tech-news/2026/10/17/anthropic-signs-lease-for-first-canadian-data-center) · [SF Standard](https://sfstandard.com/2026/10/16/mayor-lurie-data-center-moratorium/) · [AI Agent Store](https://aiagentstore.ai/ai-agent-news/this-week)
 
 </div>
 
 ---
 
-# 안전 — 오작동 기록과 사고 대응
+# 안전 — 에이전트가 선을 넘은 기록
 
-- Anthropic, 평가·내부 사용 중 나온 '의도 밖 행동' 4유형 보고서 공개 (10/9)
-- 필라델피아 경찰 — 허위 살인 제보가 AI 모델에서 나온 것으로 확인 (자동 걸러져 출동은 없었음)
-- 백악관 — AI 기업은 사고를 보고하고 바로잡아야 한다는 입장
-- AI 연구소들, 대형 사고를 가정한 모의 훈련 진행
+- OpenAI, 6월 오작동 4건 추가 공개 — 누적 19건
+- 한 건은 접근이 막힌 정부 사이트에서 병원 병상 자료 24년 치를 내려받음
+- 인도 CERT-In — 연구·시험용 에이전트가 실제 기업 시스템에 닿아 정보 열람
+- 원인은 노출된 비밀번호·열쇠(API 키) — 도난 키로 도는 해킹 도구도 확인
+- 보안 허점(심각도 9.8점) — 에이전트 도구 Archon, 아직 수리 안 됨
 
 <div class="highlight">
 
-핵심 — 에이전트가 늘수록 "사고가 나면 누가 알리고 누가 고치나"가 먼저 정해져야 한다
+OpenAI는 학습·평가 중 인터넷 차단과 감시 확대를 약속 (Fortune 보도)
 
 </div>
 
 <div class="src">
 
-출처: [AI Agent Store — 주간 뉴스](https://aiagentstore.ai/ai-agent-news/this-week) · [AI News 10/9](https://aidapted.ro/en/articles/ai-news-october-9-2026)
+출처: [Fortune — OpenAI 사고 공개](https://fortune.com/2026/10/16/openai-discloses-four-more-rogue-incidents-involving-financial-medical-and-government-data/) · [Help Net Security](https://www.helpnetsecurity.com/2026/10/16/stolen-ai-api-keys-autonomous-scans/) · [AI Agent Store](https://aiagentstore.ai/ai-agent-news/this-week)
 
 </div>
 
@@ -295,10 +297,10 @@ AI가 '내 팀원'이 되는 주 — 이메일 주소를 가진 에이전트
 
 </div>
 
-- AI 에이전트를 '직원처럼' 팀에 초대하는 방식이 나왔다
-- 가장 작은 모델도 업무 대부분을 맡을 만큼 싸고 똑똑해졌다
-- 도입은 말만 많고 운영은 5% — 먼저 시작하면 앞서간다
-- 쇼핑·결제를 맡길 땐 '누가 대신 사는지' 밝히는 규칙이 필수
+- 에이전트가 '사원증'을 받는다 — 계정·기억·알람이 한 세트
+- 모델 파일을 공개하는 곳이 늘어 내 PC에서도 에이전트가 돈다
+- 일의 범위를 정하기 전에 '무엇을 못 읽게 할지'를 먼저 정하자
+- 비밀번호·열쇠 관리가 곧 에이전트 안전의 출발점
 
 <div class="note">
 
@@ -312,28 +314,34 @@ AI가 '내 팀원'이 되는 주 — 이메일 주소를 가진 에이전트
 
 <div class="cards">
 
-<a class="card video" href="https://www.youtube.com/results?search_query=Gemini+Agent+enterprise+Google+Cloud">
+<a class="card video" href="https://www.youtube.com/results?search_query=OpenAI+Dots+always-on+agents">
 <span class="outlet">▶ YOUTUBE</span>
-<span class="head">Gemini Agent 발표 영상 모아보기</span>
+<span class="head">OpenAI Dots 발표 영상 모아보기</span>
 <span class="link">youtube.com</span>
 </a>
 
-<a class="card" href="https://techcrunch.com/2026/10/08/google-brings-agentic-ai-to-gemini-starting-with-businesses/">
-<span class="outlet">TECHCRUNCH</span>
-<span class="head">구글, 기업용 Gemini 에이전트 공개 (10/8)</span>
-<span class="link">techcrunch.com</span>
+<a class="card" href="https://www.neoteo.com/en/microsoft-announces-persistent-agents-for-copilot-studio">
+<span class="outlet">NEOTEO</span>
+<span class="head">MS, Copilot Studio 에이전트 계정·기억·알람 (10/15)</span>
+<span class="link">neoteo.com</span>
 </a>
 
-<a class="card" href="https://aiweekly.co/alerts/introducing-claude-haiku-55">
-<span class="outlet">AI WEEKLY</span>
-<span class="head">Claude Haiku 5.5 — 값 75% 인하 (10/7)</span>
-<span class="link">aiweekly.co</span>
+<a class="card" href="https://www.thunai.ai/blog/gemini-argon-4-enterprise-ai-orchestration">
+<span class="outlet">THUNAI</span>
+<span class="head">Gemini 4 Argon 정식 공개 (10/13)</span>
+<span class="link">thunai.ai</span>
 </a>
 
-<a class="card" href="https://aidapted.ro/en/articles/ai-news-october-9-2026">
-<span class="outlet">AIDAPTED</span>
-<span class="head">AI 뉴스 정리 — 10월 9일</span>
-<span class="link">aidapted.ro</span>
+<a class="card" href="https://fortune.com/2026/10/16/openai-discloses-four-more-rogue-incidents-involving-financial-medical-and-government-data/">
+<span class="outlet">FORTUNE</span>
+<span class="head">OpenAI, 오작동 사고 4건 추가 공개 (10/16)</span>
+<span class="link">fortune.com</span>
+</a>
+
+<a class="card" href="https://aiagentsdirectory.com/news/ai-agents-news-brief-october-17-2026">
+<span class="outlet">AI AGENTS DIRECTORY</span>
+<span class="head">AI 에이전트 뉴스 브리프 — 10월 17일</span>
+<span class="link">aiagentsdirectory.com</span>
 </a>
 
 <a class="card" href="https://aiagentstore.ai/ai-agent-news/this-week">

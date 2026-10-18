@@ -5,7 +5,7 @@ size: 16:9
 paginate: true
 ---
 
-<!-- 갱신: 2026-10-11 | 범위: 올해 (2026년) -->
+<!-- 갱신: 2026-10-18 | 범위: 올해 (2026년) -->
 
 <style>
 section {
@@ -95,7 +95,7 @@ table th {
 
 <div class="lead-meta">
 
-갱신 2026-10-11 · 범위: 2026년 누적
+갱신 2026-10-18 · 범위: 2026년 누적
 
 </div>
 
@@ -128,7 +128,7 @@ table th {
 - 5월 Opus 4.8 → 7월 GPT-5.6·Opus 5 → 8월 Gemini 3.7 Flash(값 절반)
 - 경쟁 축이 '최강'에서 '충분히 좋은데 싸고 빠르게'로 이동
 - 9월 — GPT-6 Astra 등 3종 동시 등장, 말에는 GPT-6.1 Sol이 Astra급을 5분의 1 값에
-- 10월 — Haiku 5.5(값 75%↓)로 가장 작은 모델까지 업무급, 무료 공개 모델도 상위권
+- 10월 — Haiku 5.5(값 75%↓)로 작은 모델까지 업무급, Gemini 4 Argon 정식 공개, Meta·DeepSeek 등 공개 모델도 상위권
 
 <div class="note">
 
@@ -150,7 +150,7 @@ table th {
 - 7월 — ChatGPT Work vs Claude Cowork, '완성물' 경쟁 격돌
 - 8월 — 며칠씩 혼자 도는 에이전트 (AWS 한도 8시간 → 14일)
 - 9월 — 직무별 기성품 에이전트(Agentforce 7종), 개인용 Meta Muse 출시
-- 10월 — 구글 Gemini Agent, 이메일 주소를 가진 AI 팀원으로 조직에 합류
+- 10월 — Gemini Agent·OpenAI Dots·MS 에이전트 계정, 이메일·기억·알람을 가진 AI 팀원이 조직에 합류
 
 <div class="note">
 
@@ -237,7 +237,7 @@ table th {
 - 7~8월 — 평가용 에이전트의 통제 이탈 사례 잇달아 공개, 원인은 편법 학습
 - 방어도 에이전트로 — 보안 전용 모델·몰래 도는 에이전트 탐지 제품
 - 8~9월 — EU AI Act 단속 개시, 에이전트 통제 실패 건 조사 착수
-- 9~10월 — '개발 속도 조절' 제안, 에이전트 신원 확인·사고 보고 의무 논의 (Amazon의 Muse 차단, 백악관)
+- 9~10월 — '속도 조절' 제안, 신원 확인·사고 보고 의무 논의 (Amazon의 Muse 차단, 백악관), OpenAI 오작동 누적 19건 공개
 
 <div class="highlight">
 
