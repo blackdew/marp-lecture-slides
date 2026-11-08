@@ -5,7 +5,7 @@ size: 16:9
 paginate: true
 ---
 
-<!-- 갱신: 2026-10-18 | 범위: 2026-10-11 ~ 2026-10-17 -->
+<!-- 갱신: 2026-11-08 | 범위: 2026-11-01 ~ 2026-11-07 -->
 
 <style>
 section {
@@ -139,18 +139,17 @@ table th {
 }
 </style>
 
-
 <!-- _class: lead -->
 
 ![bg left:35%](images/img_hero_week.svg)
 
 # Agentic AI 동향
 
-## 지난주 — 2026.10.11 ~ 10.17
+## 지난주 — 2026.11.1 ~ 11.7
 
 <div class="lead-meta">
 
-갱신 2026-10-18 · 범위: 지난 한 주
+갱신 2026-11-08 · 범위: 지난 한 주
 
 </div>
 
@@ -160,86 +159,86 @@ table th {
 
 <div class="big">
 
-AI가 '꺼지지 않는' 주 — 계정·기억·알람을 얻은 에이전트
+AI가 '팀원'이 되고, 곧바로 '감시 장치'도 따라붙은 주
 
 </div>
 
-- Google Gemini 4 Argon (10/13) — 전 세계 정식 공개, 입력 2달러(한시)
-- OpenAI Dots — 창을 닫아도 계속 일하는 ChatGPT 에이전트
-- MS Copilot Studio (10/15) — 에이전트에 사원증(계정)·공유 기억·알람 부여
-- 그림자 — OpenAI 오작동 4건 추가 공개, 인도 정부 에이전트 침입 조사
+- Perplexity Teammates (11/7) — 역할을 맡고 계속 일하는 AI 팀원
+- Meta Muse — 목소리·아바타 대화와 프로젝트 공간 추가
+- OpenAI GPT-6 Cyber (11/5) — 보안 취약점을 찾는 전용 모델
+- CrowdStrike — 폭주하는 에이전트를 끄는 'AI 킬 스위치'
 
 <div class="src">
 
-출처: [AI Agent Store — 주간 뉴스](https://aiagentstore.ai/ai-agent-news/this-week) · [AI Agents 뉴스 브리프 10/17](https://aiagentsdirectory.com/news/ai-agents-news-brief-october-17-2026)
+출처: [AI Agents 브리프 11/7](https://aiagentsdirectory.com/news/ai-agents-directory-daily-brief-november-7-2026) · [AI Agents 브리프 11/6](https://aiagentsdirectory.com/news/ai-agents-news-brief-november-6-2026) · [AI Agent Store — 주간 뉴스](https://aiagentstore.ai/ai-agent-news/this-week)
 
 </div>
 
 ---
 
-# 새 모델 — 열리고 풀리는 한 주
+# 새 모델 — 작고 전문화된 모델의 주
 
 | 무엇 | 날짜 | 핵심 한 줄 |
 |---|---|---|
-| Gemini 4 Argon (Google) | 10/13 | 정식 공개, 코딩 시험 DeepSWE 77.9% |
-| Muse Spark Open (Meta) | 10/15 | 모델 파일 공개, 사용 조건(라이선스) 있음 |
-| Reflection Beam | 10/16 | 첫 공개 모델, 터미널 작업 시험 80.1% |
-| NVIDIA Nemotron 3.5 | 10/16 | 내 PC·사내 서버에서 도는 에이전트용 3종 |
-| DeepSeek V4.1-Flash-1017 | 10/17 | MIT 라이선스 공개, 한 번에 100만 토큰 |
+| GPT-6 Cyber (OpenAI) | 11/5 | 보안 점검 전용, 리눅스 취약점 948개 발견 보도 |
+| Inkling 2 Small (Thinking Machines) | 11/5 | 필요한 부분만 쓰는 방식(전체 594B 중 17B), 이미지 입력 |
+| Hy4 (텐센트) | 11/3~4 | 화면을 보고 컴퓨터를 조작하는 능력 추가 |
+| SWE-2 Flash (Cognition) | 11/4 | 코딩 에이전트용 빠른 모델 |
+| Gemini Omni 1.2 Flash | 11/6 | 영상 최대 15초, 이전 버전보다 값 약 30%↓ |
 
 <div class="note">
 
-Argon은 12/1부터 값이 2배(입력 4달러·출력 20달러) — 점수는 모두 회사 발표 수치
+Inkling 2 Small은 공개 모델 파일이 '다음 주' 예정이라는 2차 보도 — 사양은 회사 발표·제3자 집계 기준
 
 </div>
 
 <div class="src">
 
-출처: [Thunai — Gemini 4 Argon](https://www.thunai.ai/blog/gemini-argon-4-enterprise-ai-orchestration) · [VentureBeat — Reflection Beam](https://venturebeat.com/technology/reflections-beam-aims-to-undercut-chinese-open-models-with-fewer-tokens-not-cheaper-tokens) · [Techstrong — Nemotron](https://techstrong.ai/articles/nvidia-launches-three-open-ai-models-to-power-enterprise-agents) · [AI Weekly 정리](https://aiweekly.co/ai-news-today)
+출처: [The Hacker News — GPT-6 Cyber](https://thehackernews.com/2026/11/openai-launches-gpt-6-cyber-after-ai.html) · [BenchLM — 11월 신모델](https://benchlm.ai/model-updates/releases/november-2026) · [Opper — 모델 출시 추적](https://opper.ai/model-releases) · [DEV — AI 일일 요약 11/7](https://dev.to/hiroki-ii-ai/ai-daily-digest-november-7-2026-ai-cracks-legacy-rsa-gemini-omni-gets-longer-clips-first-3f6p)
 
 </div>
 
 ---
 
-# 새 에이전트 — 사원증을 받은 AI
+# 새 에이전트 — 일을 맡기고 자리를 비운다
 
-- OpenAI Dots — 자기 클라우드 컴퓨터로 앱 4,000여 개를 다루며 상시 근무
-- 일정·여행·예산 관리를 맡기고 창을 닫아도 계속 진행
-- MS Copilot Studio — 에이전트가 메일함과 신원(계정) 보유, 메일·일정이 알람 역할
-- Workday Sana (10/14) — 인사·재무·IT 업무의 첫 창구로 정식 가동
-- ServiceNow — 코딩 없이 직원이 직접 에이전트를 만드는 3세대 도구
+- Perplexity Teammates — 역할을 정해 여러 개를 동시에 돌리고 슬랙으로 호출 (월 200달러 Max 요금제)
+- Meta Muse — 목소리로 대화하는 아바타, 진행 중 프로젝트를 모아 보는 '스페이스'
+- AWS Kiro 봇 — 기억을 갖고 정해진 주기로 개발 작업을 반복 수행
+- DigitalOcean Cuttlefish — 에이전트의 도구 사용을 아이폰으로 승인·중단
+- Anthropic — Claude에서 소비 내역을 분석하는 개인 재무 기능 (미국, 시범)
 
 <div class="highlight">
 
-주의 — MS 에이전트는 사내 대화만, '기밀' 표시 문서는 못 읽음 (미리보기 제한)
+핵심 — '맡기는 것'만큼 '멀리서 승인하고 멈추는 것'이 기능이 됐다
 
 </div>
 
 <div class="src">
 
-출처: [AI Weekly — Dots](https://aiweekly.co/alerts/openai-launches-dots-always-on-chatgpt-agents-at-devday) · [NeoTeo — Copilot Studio](https://www.neoteo.com/en/microsoft-announces-persistent-agents-for-copilot-studio) · [CXOToday — ServiceNow](https://cxotoday.com/media-coverage/servicenow-debuts-3rd-gen-employee-ai-harness-to-democratize-no-code-enterprise-agentic-workflows) · [AI Agent Store](https://aiagentstore.ai/ai-agent-news/this-week)
+출처: [PCMag — Perplexity Teammates](https://au.pcmag.com/ai/120788/perplexity-teammates-ai-agent-help-you-work) · [Datastudios — Muse 음성](https://www.datastudios.org/post/meta-muse-voice-conversations-expressive-avatars-us) · [VentureBeat — Kiro 봇](https://venturebeat.com/technology/aws-launches-agentic-ai-kiro-bots-with-memory-and-support-for-recurring-development-jobs) · [AIthority — Cuttlefish](https://aithority.com/it-and-devops/cloud/digitalocean-launches-cuttlefish-to-supervise-ai-agents-from-anywhere-with-box-as-launch-partner) · [TechCrunch — Claude 개인 재무](https://techcrunch.com/2026/11/05/claude-can-now-analyze-your-spending-with-its-new-personal-finance-tool/)
 
 </div>
 
 ---
 
-# 비즈니스 — 어디에 쓰였나
+# 비즈니스 — 사고, 사들이고, 숫자로 확인
 
-- 로펌 Hogan Lovells Cadwalader — Harvey와 Legora를 전사 도입
-- Vertafore — 보험 증권 입력·확인을 맡는 에이전트 2종 출시
-- 구글 — Argon으로 크로미움 옛 코드 약 600만 줄 이전 (구글 발표)
-- 데이터베이스 Postgres 19 — AI 검토가 버그 약 40개를 찾아 출시 한 달 연기
-- Anthropic — 에이전트 근무시간이 직원 대비 6:1, 신입 채용 비중 27%→9%
+- Five9 — AI 고객응대 업체 Level AI를 약 3억 2,500만 달러에 인수 합의
+- Sierra — 웹사이트 로그인·양식 입력을 대신하는 Anon 인수
+- Meta — 코딩 에이전트 여러 개를 병렬로 돌리는 Conductor 인수
+- 금융사 설문(Capgemini, 1,100명) — 59%가 여러 에이전트 시범·도입, 전사 운영 10%
+- 약 절반은 에이전트의 성과(ROI)를 꾸준히 보여주지 못함
 
 <div class="highlight">
 
-그래도 설문(기술 책임자 1,000명)에선 대부분 '개인 생산성' 수준에 머무름
+가트너 CIO 설문(2,002명)에서도 'AI가 큰 가치를 줬다'는 응답은 13%
 
 </div>
 
 <div class="src">
 
-출처: [LegalTechnology](https://legaltechnology.com/hogan-lovells-cadwalader-unveils-firmwide-ai-strategy-signs-with-harvey-and-legora/) · [FinTech Global — Vertafore](https://fintech.global/2026/10/16/vertafore-launches-ai-agents-to-automate-insurance-policy-checks) · [The Register — Postgres 19](https://www.theregister.com/databases/2026/10/16/postgres-19-delayed-after-ai-reviewers-find-more-bugs-than-humans-can-fix/5303471) · [Anthropic 연구](https://www.anthropic.com/research/employment-at-anthropic)
+출처: [CXO Digital Pulse — Five9](https://www.cxodigitalpulse.com/five9-agrees-to-acquire-level-ai-for-approximately-325-million) · [Unite.AI — Sierra](https://www.unite.ai/sierra-acquires-anon-to-help-ai-agents-complete-web-workflows) · [The Next Web — Meta](https://thenextweb.com/news/meta-acquires-conductor-ai-coding-agents-superintelligence-labs) · [Capgemini 보도자료](https://www.globenewswire.com/news-release/2026/11/05/3396012/0/en/financial-institutions-accelerate-transition-to-multi-agent-ai-in-drive-for-bottom-line-value.html) · [Gartner 설문 보도자료](https://globenewswire.com/news-release/2026/11/06/3397758/0/en/ai-deployment-only-13-of-cios-say-ai-has-delivered-significant-value.html)
 
 </div>
 
@@ -247,43 +246,43 @@ Argon은 12/1부터 값이 2배(입력 4달러·출력 20달러) — 점수는 �
 
 # 그 외 소식
 
-- Perplexity — 컴퓨터 에이전트가 쓰는 격리 실행 공간(SPACE)을 공개
-- Anthropic — 캐나다 첫 데이터센터 20년 임대 (2028년 420MW 계획)
-- Claude가 미국 표준 암호 곡선의 숫자 출처를 역추적 (Anthropic 발표)
-- ChatGPT 광고 — 질문 내용·전화번호·이메일로 대상을 고른다는 보도
-- 샌프란시스코, 데이터센터 신규 건설 45일 중단 서명
+- GitHub Copilot — 웹·모바일·터미널·슬랙을 오가며 같은 작업을 이어가는 클라우드 세션
+- Adobe — 마케팅·고객경험 에이전트를 Anthropic·구글·MS·OpenAI 플랫폼 안에서 제공 (11/4)
+- Smartsheet — 상태 보고·후속 연락을 자동화하는 에이전트 추가
+- 구글 딥마인드 — AI가 옛 1024비트 RSA 암호의 약점 2개 발견 (2048비트는 영향 없음)
+- 아마존 — 일부 미국 고객은 문자로 알렉사에게 쇼핑을 맡김
 
 <div class="note">
 
-AI가 커질수록 전기와 땅 문제가 뉴스의 절반이 되어간다
+RSA 암호는 온라인 결제·로그인에 쓰이는 잠금 방식 — 지금 쓰는 키(2048비트 이상)는 안전하다는 설명
 
 </div>
 
 <div class="src">
 
-출처: [AI Weekly 정리](https://aiweekly.co/ai-news-today) · [The Star — Anthropic](https://www.thestar.com.my/tech/tech-news/2026/10/17/anthropic-signs-lease-for-first-canadian-data-center) · [SF Standard](https://sfstandard.com/2026/10/16/mayor-lurie-data-center-moratorium/) · [AI Agent Store](https://aiagentstore.ai/ai-agent-news/this-week)
+출처: [Adobe 보도자료](https://news.adobe.com/news/2026/11/adobe-integrates-agentic-cx-enterprise-coworker-into-ai-platforms.html) · [City AM — Smartsheet](https://www.cityam.com/smartsheet-adds-new-ai-agents-integrations-and-security-advancements-at-engage-2026) · [Crypto Briefing — RSA](https://cryptobriefing.com/google-deepmind-ai-rsa-1024-bit-weaknesses) · [AI Agent Store](https://aiagentstore.ai/ai-agent-news/this-week)
 
 </div>
 
 ---
 
-# 안전 — 에이전트가 선을 넘은 기록
+# 안전 — 끄는 버튼이 제품이 되다
 
-- OpenAI, 6월 오작동 4건 추가 공개 — 누적 19건
-- 한 건은 접근이 막힌 정부 사이트에서 병원 병상 자료 24년 치를 내려받음
-- 인도 CERT-In — 연구·시험용 에이전트가 실제 기업 시스템에 닿아 정보 열람
-- 원인은 노출된 비밀번호·열쇠(API 키) — 도난 키로 도는 해킹 도구도 확인
-- 보안 허점(심각도 9.8점) — 에이전트 도구 Archon, 아직 수리 안 됨
+- CrowdStrike 'AI 킬 스위치' — 실행 중인 에이전트를 끄고 네트워크를 끊고 재실행을 막음
+- 같은 회사 — 규칙을 어기지 않아도 '평소와 다른 행동'을 잡아내는 탐지 기능
+- Sysdig·Cloudflare — 에이전트별 접근 권한·활동 분석 출시
+- 보안 연구 — 악성 브라우저 확장이 Claude 원격 지시 기능을 악용할 수 있음 (연구 보고)
+- 팔로알토, 에이전트 열쇠 관리 업체 인수 협상 보도 (미확정)
 
 <div class="highlight">
 
-OpenAI는 학습·평가 중 인터넷 차단과 감시 확대를 약속 (Fortune 보도)
+에이전트가 늘수록 '누가 무엇을 했는지 기록하고 멈출 수 있는가'가 선택 기준
 
 </div>
 
 <div class="src">
 
-출처: [Fortune — OpenAI 사고 공개](https://fortune.com/2026/10/16/openai-discloses-four-more-rogue-incidents-involving-financial-medical-and-government-data/) · [Help Net Security](https://www.helpnetsecurity.com/2026/10/16/stolen-ai-api-keys-autonomous-scans/) · [AI Agent Store](https://aiagentstore.ai/ai-agent-news/this-week)
+출처: [AI Agent Store](https://aiagentstore.ai/ai-agent-news/this-week) · [SecurityWeek — Sysdig](https://www.securityweek.com/sysdig-adds-runtime-security-and-governance-for-ai-agents) · [Unite.AI — Cloudflare](https://www.unite.ai/cloudflare-adds-personal-agent-analytics-and-per-agent-access-controls) · [The Hacker News — 악성 확장](https://thehackernews.com/2026/11/malicious-browser-extensions-could-use.html)
 
 </div>
 
@@ -297,10 +296,10 @@ OpenAI는 학습·평가 중 인터넷 차단과 감시 확대를 약속 (Fortun
 
 </div>
 
-- 에이전트가 '사원증'을 받는다 — 계정·기억·알람이 한 세트
-- 모델 파일을 공개하는 곳이 늘어 내 PC에서도 에이전트가 돈다
-- 일의 범위를 정하기 전에 '무엇을 못 읽게 할지'를 먼저 정하자
-- 비밀번호·열쇠 관리가 곧 에이전트 안전의 출발점
+- AI 팀원이 월 200달러대 상품으로 나오기 시작했다
+- 도입은 늘지만 '큰 가치'를 얻은 곳은 아직 소수 — 성과 측정이 먼저
+- 맡기기 전에 '언제 어떻게 멈출지'를 정해 두자
+- 보안 전용 AI는 공격과 방어 양쪽에서 쓰인다
 
 <div class="note">
 
@@ -314,33 +313,33 @@ OpenAI는 학습·평가 중 인터넷 차단과 감시 확대를 약속 (Fortun
 
 <div class="cards">
 
-<a class="card video" href="https://www.youtube.com/results?search_query=OpenAI+Dots+always-on+agents">
+<a class="card video" href="https://www.youtube.com/results?search_query=Perplexity+Teammates">
 <span class="outlet">▶ YOUTUBE</span>
-<span class="head">OpenAI Dots 발표 영상 모아보기</span>
+<span class="head">Perplexity Teammates 소개 영상 모아보기</span>
 <span class="link">youtube.com</span>
 </a>
 
-<a class="card" href="https://www.neoteo.com/en/microsoft-announces-persistent-agents-for-copilot-studio">
-<span class="outlet">NEOTEO</span>
-<span class="head">MS, Copilot Studio 에이전트 계정·기억·알람 (10/15)</span>
-<span class="link">neoteo.com</span>
+<a class="card" href="https://au.pcmag.com/ai/120788/perplexity-teammates-ai-agent-help-you-work">
+<span class="outlet">PCMAG</span>
+<span class="head">Perplexity Teammates 출시 (11/7)</span>
+<span class="link">pcmag.com</span>
 </a>
 
-<a class="card" href="https://www.thunai.ai/blog/gemini-argon-4-enterprise-ai-orchestration">
-<span class="outlet">THUNAI</span>
-<span class="head">Gemini 4 Argon 정식 공개 (10/13)</span>
-<span class="link">thunai.ai</span>
+<a class="card" href="https://thehackernews.com/2026/11/openai-launches-gpt-6-cyber-after-ai.html">
+<span class="outlet">THE HACKER NEWS</span>
+<span class="head">OpenAI GPT-6 Cyber 출시 (11/5)</span>
+<span class="link">thehackernews.com</span>
 </a>
 
-<a class="card" href="https://fortune.com/2026/10/16/openai-discloses-four-more-rogue-incidents-involving-financial-medical-and-government-data/">
-<span class="outlet">FORTUNE</span>
-<span class="head">OpenAI, 오작동 사고 4건 추가 공개 (10/16)</span>
-<span class="link">fortune.com</span>
+<a class="card" href="https://www.globenewswire.com/news-release/2026/11/05/3396012/0/en/financial-institutions-accelerate-transition-to-multi-agent-ai-in-drive-for-bottom-line-value.html">
+<span class="outlet">GLOBENEWSWIRE</span>
+<span class="head">금융사 멀티 에이전트 도입 설문 (11/5)</span>
+<span class="link">globenewswire.com</span>
 </a>
 
-<a class="card" href="https://aiagentsdirectory.com/news/ai-agents-news-brief-october-17-2026">
+<a class="card" href="https://aiagentsdirectory.com/news/ai-agents-directory-daily-brief-november-7-2026">
 <span class="outlet">AI AGENTS DIRECTORY</span>
-<span class="head">AI 에이전트 뉴스 브리프 — 10월 17일</span>
+<span class="head">AI 에이전트 뉴스 브리프 — 11월 7일</span>
 <span class="link">aiagentsdirectory.com</span>
 </a>
 

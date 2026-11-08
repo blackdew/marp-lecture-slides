@@ -5,7 +5,7 @@ size: 16:9
 paginate: true
 ---
 
-<!-- 갱신: 2026-10-18 | 범위: 2026년 10월 (1~3주차) -->
+<!-- 갱신: 2026-11-08 | 범위: 2026년 11월 (1주차) -->
 
 <style>
 section {
@@ -145,162 +145,140 @@ table th {
 
 # Agentic AI 동향
 
-## 이번달 — 2026년 10월
+## 이번달 — 2026년 11월
 
 <div class="lead-meta">
 
-갱신 2026-10-18 · 범위: 2026년 10월 누적 (3주차)
+갱신 2026-11-08 · 범위: 2026년 11월 누적 (1주차)
 
 </div>
 
 ---
 
-# 10월 한눈에
+# 11월 한눈에
 
 <div class="big">
 
-'값은 5분의 1' — 그리고 에이전트가 사원증·기억·알람을 얻은 달
+'AI 팀원'이 상품이 되고, '끄는 버튼'도 함께 팔리는 달
 
 </div>
 
-- 9월 말~10월 초 — 상위 모델 3종이 값을 크게 낮춰 재출시
-- 10/7 Haiku 5.5 — 가장 작은 모델도 업무급, 값 75%↓
-- 10/8~15 — Gemini Agent·OpenAI Dots·MS 에이전트 계정, 'AI 팀원' 경쟁
-- 현실 — 기업 85%가 실험 중, 운영은 5%
+- 11/7 Perplexity Teammates — 역할을 맡아 계속 일하는 AI 팀원 (월 200달러대)
+- 11/5 GPT-6 Cyber — 보안 점검 전용 모델
+- 11/3~5 CrowdStrike 등 — 에이전트 감시·킬 스위치 제품 잇따라
+- 현실 — 가트너 설문에서 'AI가 큰 가치를 줬다'는 CIO 13%
 
 <div class="note">
 
-10월 3주차 기준 — 매주 일요일 내용이 쌓입니다
+11월 1주차 기준 — 매주 일요일 내용이 쌓입니다 (10월 내용은 올해 슬라이드로 통합)
 
 </div>
 
 ---
 
-# 10월의 모델 판도
+# 11월의 모델 — 전문화·소형화
 
 | 무엇 | 날짜 | 핵심 한 줄 |
 |---|---|---|
-| Claude Sonnet 5.5 · Haiku 5.5 | 9/28 · 10/7 | 30%+ 빨라짐 / 가장 작은 모델 값 75%↓ |
-| GPT-6.1 Sol (OpenAI) | 9/30 | 최상위 Astra에 근접, 값은 5분의 1 |
-| Gemini 4 Argon (Google) | 10/13 | 정식 공개, 한 번에 100만 토큰 |
-| Muse Spark Open (Meta) | 10/15 | 모델 파일 공개 (사용 조건 있음) |
-| DeepSeek V4.1-Flash | 10/17 | MIT 라이선스 공개, 100만 토큰 |
+| GPT-6 Cyber (OpenAI) | 11/5 | 보안 전용, 리눅스 취약점 948개 발견 보도 |
+| Inkling 2 Small | 11/5 | 전체 594B 중 17B만 사용, 이미지 입력 |
+| Hy4 (텐센트) | 11/3~4 | 화면을 보고 컴퓨터 조작 |
+| SWE-2 Flash (Cognition) | 11/4 | 코딩 에이전트용 빠른 모델 |
+| Gemini Omni 1.2 Flash | 11/6 | 영상 15초, 값 약 30%↓ |
 
 <div class="note">
 
-흐름 — 최상위 성능을 '일상 가격'으로 내리고, 열어 공개하는 경쟁이 본격화
+흐름 — 범용 '최강'보다 용도별 전문 모델과 값싼 모델이 늘어난다
 
 </div>
 
 <div class="src">
 
-출처: [AI Weekly — Sonnet 5.5](https://aiweekly.co/alerts/anthropic-ships-claude-sonnet-55-30-faster-with-706-on-terminal-bench-40) · [ProPakistani — GPT-6.1 Sol](https://propakistani.pk/2026/09/30/gpt-6-1-sol-brings-astra-level-performance-at-5x-lower-cost/) · [Thunai — Gemini 4 Argon](https://www.thunai.ai/blog/gemini-argon-4-enterprise-ai-orchestration) · [AI Weekly 정리](https://aiweekly.co/ai-news-today)
+출처: [The Hacker News](https://thehackernews.com/2026/11/openai-launches-gpt-6-cyber-after-ai.html) · [BenchLM — 11월 신모델](https://benchlm.ai/model-updates/releases/november-2026) · [Opper](https://opper.ai/model-releases) · [DEV — 11/7 요약](https://dev.to/hiroki-ii-ai/ai-daily-digest-november-7-2026-ai-cracks-legacy-rsa-gemini-omni-gets-longer-clips-first-3f6p)
 
 </div>
 
 ---
 
-# 무엇이 좋아졌나 — 숫자로 보기
-
-- GPT-6.1 Sol — 입력 2달러·출력 10달러 (Astra는 10·50달러), 코딩은 동률
-- Sonnet 5.5 — 터미널 작업 시험 10.3% → 70.6%
-- Haiku 5.5 — 컴퓨터 조작 시험 15.7% → 72.4%
-- Gemini 4 Argon — 코딩 시험 77.9%, 입력 2달러(11/30까지, 12/1부터 2배)
-- Reflection Beam — 오픈 모델인데 터미널 시험 80.1%
-
-<div class="note">
-
-대부분 회사 발표 수치 — 같은 값으로 맡길 수 있는 일의 크기가 또 커졌다는 방향이 핵심
-
-</div>
-
-<div class="src">
-
-출처: [ProPakistani](https://propakistani.pk/2026/09/30/gpt-6-1-sol-brings-astra-level-performance-at-5x-lower-cost/) · [AI Weekly — Sonnet 5.5](https://aiweekly.co/alerts/anthropic-ships-claude-sonnet-55-30-faster-with-706-on-terminal-bench-40) · [AI Weekly — Haiku 5.5](https://aiweekly.co/alerts/introducing-claude-haiku-55) · [Thunai](https://www.thunai.ai/blog/gemini-argon-4-enterprise-ai-orchestration) · [VentureBeat](https://venturebeat.com/technology/reflections-beam-aims-to-undercut-chinese-open-models-with-fewer-tokens-not-cheaper-tokens)
-
-</div>
-
----
-
-# 새 에이전트 — 팀원처럼 초대한다
+# 새 에이전트 — 맡기고 자리를 비운다
 
 | 무엇 | 날짜 | 무엇을 대신 해주나 |
 |---|---|---|
-| Gemini Agent | 10/8 | 목표를 받아 계획·실행, 자기 이메일 계정 보유 |
-| OpenAI Dots | 10월 중순 | 창을 닫아도 계속, 앱 4,000여 개 연동 |
-| MS Copilot Studio | 10/15 | 에이전트 계정·공유 기억·알람 (미리보기) |
-| Workday Sana | 10/14 | 인사·재무·IT 업무의 첫 창구 |
-| ServiceNow 3세대 | 10/16 | 직원이 코딩 없이 에이전트 제작 |
+| Perplexity Teammates | 11/7 | 역할별 에이전트 동시 가동, 슬랙 호출 |
+| Meta Muse | 11/6~7 | 음성 대화 아바타, 프로젝트 공간 |
+| AWS Kiro 봇 | 11/5 | 기억하며 정기 개발 작업 반복 |
+| DigitalOcean Cuttlefish | 11/5 | 아이폰으로 도구 사용 승인·중단 |
+| Claude 개인 재무 | 11/5 | 소비 내역 분석 (미국·시범) |
 
 <div class="note">
 
-'AI 창'에 가는 단계를 지나, 일하는 곳에 AI 동료를 앉히는 단계
+'맡기는 기능'과 '멀리서 승인·중단하는 기능'이 한 세트로 나온다
 
 </div>
 
 <div class="src">
 
-출처: [TechCrunch (10/8)](https://techcrunch.com/2026/10/08/google-brings-agentic-ai-to-gemini-starting-with-businesses/) · [AI Weekly — Dots](https://aiweekly.co/alerts/openai-launches-dots-always-on-chatgpt-agents-at-devday) · [NeoTeo](https://www.neoteo.com/en/microsoft-announces-persistent-agents-for-copilot-studio) · [AI Agent Store](https://aiagentstore.ai/ai-agent-news/this-week)
+출처: [PCMag](https://au.pcmag.com/ai/120788/perplexity-teammates-ai-agent-help-you-work) · [VentureBeat — Kiro](https://venturebeat.com/technology/aws-launches-agentic-ai-kiro-bots-with-memory-and-support-for-recurring-development-jobs) · [AIthority — Cuttlefish](https://aithority.com/it-and-devops/cloud/digitalocean-launches-cuttlefish-to-supervise-ai-agents-from-anywhere-with-box-as-launch-partner) · [TechCrunch](https://techcrunch.com/2026/11/05/claude-can-now-analyze-your-spending-with-its-new-personal-finance-tool/)
 
 </div>
 
 ---
 
-# 도입 현실 — 말은 많고 운영은 적다
+# 도입 현실 — 사고팔고, 그러나 성과는 아직
 
-- 대기업 85%가 에이전트 실험 중
-- 실제 운영에 투입한 곳은 5%, 시범에서 키운 곳은 11~14%
-- 로펌 Hogan Lovells Cadwalader — Harvey·Legora 전사 도입 (10/16)
-- 기술 책임자 설문 — 대부분 아직 '개인 생산성' 수준
-- 가트너 — 2027년까지 에이전트 프로젝트 40% 이상 중단 전망
+- Five9 — Level AI 약 3억 2,500만 달러 인수 합의 (11/5)
+- Sierra — 웹 조작 기술 Anon 인수, Meta — 코딩 에이전트 업체 Conductor 인수
+- 금융사 59%가 멀티 에이전트 시범·도입, 전사 운영은 10%
+- 가트너 CIO 설문 — 큰 가치를 얻었다는 응답 13%
+- 약 절반이 에이전트의 ROI를 꾸준히 증명하지 못함
 
 <div class="highlight">
 
-작게 시작해 숫자로 확인한 곳만 규모를 키우고 있다
+인수·투자는 활발한데 '성과 측정'이 병목이다
 
 </div>
 
 <div class="src">
 
-출처: [AI Agent Store — 주간 뉴스](https://aiagentstore.ai/ai-agent-news/this-week) · [LegalTechnology](https://legaltechnology.com/hogan-lovells-cadwalader-unveils-firmwide-ai-strategy-signs-with-harvey-and-legora/) · [TechCrunch (10/8)](https://techcrunch.com/2026/10/08/google-brings-agentic-ai-to-gemini-starting-with-businesses/)
+출처: [CXO Digital Pulse](https://www.cxodigitalpulse.com/five9-agrees-to-acquire-level-ai-for-approximately-325-million) · [Unite.AI — Sierra](https://www.unite.ai/sierra-acquires-anon-to-help-ai-agents-complete-web-workflows) · [Capgemini 보도자료](https://www.globenewswire.com/news-release/2026/11/05/3396012/0/en/financial-institutions-accelerate-transition-to-multi-agent-ai-in-drive-for-bottom-line-value.html) · [Gartner 설문 보도](https://globenewswire.com/news-release/2026/11/06/3397758/0/en/ai-deployment-only-13-of-cios-say-ai-has-delivered-significant-value.html)
 
 </div>
 
 ---
 
-# 안전 — 신원 확인과 사고 보고
+# 안전 — 감시와 킬 스위치
 
-- Amazon, Meta Muse 차단 — 대리 쇼핑 때 신원을 밝히지 않았다는 이유
-- OpenAI, 6월 오작동 4건 추가 공개 (누적 19건) — 막힌 정부 사이트 자료를 우회해 내려받은 사례 포함
-- 인도 CERT-In — 에이전트가 실제 기업 시스템에 닿은 사고 조사, 원인은 노출된 열쇠(API 키)
-- 백악관 — AI 기업의 사고 보고·시정을 국가 안보 문제로 규정
+- CrowdStrike — AI 킬 스위치(끄기·네트워크 차단·재실행 방지)와 이상 행동 탐지
+- Sysdig·Cloudflare — 에이전트별 접근 권한과 활동 분석
+- 연구 보고 — 악성 브라우저 확장이 Claude 원격 지시 기능을 악용 가능
+- 딥마인드 — AI가 옛 1024비트 RSA 약점 발견 (2048비트는 영향 없음)
 
 <div class="highlight">
 
-에이전트에 계정을 줄수록 '무엇을 못 하게 막을지'가 먼저 정해져야 한다
+에이전트 수가 늘수록 '기록하고 멈출 수 있는가'가 도입 조건이 된다
 
 </div>
 
 <div class="src">
 
-출처: [Fortune (10/16)](https://fortune.com/2026/10/16/openai-discloses-four-more-rogue-incidents-involving-financial-medical-and-government-data/) · [AI Agents 뉴스 브리프 10/17](https://aiagentsdirectory.com/news/ai-agents-news-brief-october-17-2026) · [AI News 10/9](https://aidapted.ro/en/articles/ai-news-october-9-2026)
+출처: [AI Agent Store](https://aiagentstore.ai/ai-agent-news/this-week) · [SecurityWeek](https://www.securityweek.com/sysdig-adds-runtime-security-and-governance-for-ai-agents) · [The Hacker News](https://thehackernews.com/2026/11/malicious-browser-extensions-could-use.html) · [Crypto Briefing](https://cryptobriefing.com/google-deepmind-ai-rsa-1024-bit-weaknesses)
 
 </div>
 
 ---
 
-# 10월, 여기까지 (3주차)
+# 11월, 여기까지 (1주차)
 
 <div class="big">
 
-10월 요약 — 싸진 최상위 모델, 사원증을 받은 에이전트
+11월 요약 — AI 팀원은 상품이 되고, 안전장치는 필수품이 된다
 
 </div>
 
-- 상위 모델이 5분의 1 값으로, 작은 모델도 업무를 맡을 만큼 성장
-- 모델 파일을 공개하는 곳이 늘어 내 PC·사내 서버에서도 가동
-- 에이전트에 계정·기억·알람을 주는 '팀원화' 경쟁이 한창
-- 운영 투입은 아직 5% — 사고 기록도 쌓이는 중이라 권한 설계가 관건
+- 보안·영상 등 용도별 전문 모델이 늘었다
+- 역할을 맡아 계속 일하는 에이전트가 월 구독 상품이 됐다
+- 인수합병은 활발하나 큰 가치를 얻은 기업은 13%
+- 킬 스위치·권한 관리 제품이 쏟아진다
 
 <div class="note">
 
@@ -314,34 +292,34 @@ table th {
 
 <div class="cards">
 
-<a class="card video" href="https://www.youtube.com/results?search_query=OpenAI+Dots+Gemini+4+Argon">
+<a class="card video" href="https://www.youtube.com/results?search_query=Perplexity+Teammates">
 <span class="outlet">▶ YOUTUBE</span>
-<span class="head">OpenAI Dots · Gemini 4 Argon 영상 모아보기</span>
+<span class="head">Perplexity Teammates 영상 모아보기</span>
 <span class="link">youtube.com</span>
 </a>
 
-<a class="card" href="https://www.thunai.ai/blog/gemini-argon-4-enterprise-ai-orchestration">
-<span class="outlet">THUNAI</span>
-<span class="head">Gemini 4 Argon 정식 공개 (10/13)</span>
-<span class="link">thunai.ai</span>
+<a class="card" href="https://au.pcmag.com/ai/120788/perplexity-teammates-ai-agent-help-you-work">
+<span class="outlet">PCMAG</span>
+<span class="head">Perplexity Teammates 출시 (11/7)</span>
+<span class="link">pcmag.com</span>
 </a>
 
-<a class="card" href="https://propakistani.pk/2026/09/30/gpt-6-1-sol-brings-astra-level-performance-at-5x-lower-cost/">
-<span class="outlet">PROPAKISTANI</span>
-<span class="head">GPT-6.1 Sol, 5분의 1 비용 (9/30)</span>
-<span class="link">propakistani.pk</span>
+<a class="card" href="https://thehackernews.com/2026/11/openai-launches-gpt-6-cyber-after-ai.html">
+<span class="outlet">THE HACKER NEWS</span>
+<span class="head">OpenAI GPT-6 Cyber (11/5)</span>
+<span class="link">thehackernews.com</span>
 </a>
 
-<a class="card" href="https://www.neoteo.com/en/microsoft-announces-persistent-agents-for-copilot-studio">
-<span class="outlet">NEOTEO</span>
-<span class="head">MS, Copilot Studio 에이전트 계정 (10/15)</span>
-<span class="link">neoteo.com</span>
+<a class="card" href="https://venturebeat.com/technology/aws-launches-agentic-ai-kiro-bots-with-memory-and-support-for-recurring-development-jobs">
+<span class="outlet">VENTUREBEAT</span>
+<span class="head">AWS Kiro 봇 — 기억과 반복 작업 (11/5)</span>
+<span class="link">venturebeat.com</span>
 </a>
 
-<a class="card" href="https://fortune.com/2026/10/16/openai-discloses-four-more-rogue-incidents-involving-financial-medical-and-government-data/">
-<span class="outlet">FORTUNE</span>
-<span class="head">OpenAI, 오작동 4건 추가 공개 (10/16)</span>
-<span class="link">fortune.com</span>
+<a class="card" href="https://www.globenewswire.com/news-release/2026/11/05/3396012/0/en/financial-institutions-accelerate-transition-to-multi-agent-ai-in-drive-for-bottom-line-value.html">
+<span class="outlet">GLOBENEWSWIRE</span>
+<span class="head">금융사 멀티 에이전트 설문 (11/5)</span>
+<span class="link">globenewswire.com</span>
 </a>
 
 <a class="card" href="https://aiagentstore.ai/ai-agent-news/this-week">
