@@ -5,7 +5,7 @@ size: 16:9
 paginate: true
 ---
 
-<!-- 갱신: 2026-11-08 | 범위: 2026-11-01 ~ 2026-11-07 -->
+<!-- 갱신: 2026-11-22 | 범위: 2026-11-15 ~ 2026-11-21 -->
 
 <style>
 section {
@@ -145,11 +145,11 @@ table th {
 
 # Agentic AI 동향
 
-## 지난주 — 2026.11.1 ~ 11.7
+## 지난주 — 2026.11.15 ~ 11.21
 
 <div class="lead-meta">
 
-갱신 2026-11-08 · 범위: 지난 한 주
+갱신 2026-11-22 · 범위: 지난 한 주
 
 </div>
 
@@ -159,130 +159,130 @@ table th {
 
 <div class="big">
 
-AI가 '팀원'이 되고, 곧바로 '감시 장치'도 따라붙은 주
+최상위 모델 2종이 같은 주에 나오고, AI가 내 컴퓨터를 대신 쓰기 시작한 주
 
 </div>
 
-- Perplexity Teammates (11/7) — 역할을 맡고 계속 일하는 AI 팀원
-- Meta Muse — 목소리·아바타 대화와 프로젝트 공간 추가
-- OpenAI GPT-6 Cyber (11/5) — 보안 취약점을 찾는 전용 모델
-- CrowdStrike — 폭주하는 에이전트를 끄는 'AI 킬 스위치'
+- OpenAI GPT-6.2 Astra·Sol (11/17) — 최상위 모델 값 20%↓
+- Google Gemini 4 Neon (11/18) — 코딩 에이전트 평가 1위(자사 발표)
+- Gemini for Mac (11/19) — 파일 정리·양식 입력을 대신
+- Anthropic 나스닥 상장 (11/19) — 약 810억 달러 조달
 
 <div class="src">
 
-출처: [AI Agents 브리프 11/7](https://aiagentsdirectory.com/news/ai-agents-directory-daily-brief-november-7-2026) · [AI Agents 브리프 11/6](https://aiagentsdirectory.com/news/ai-agents-news-brief-november-6-2026) · [AI Agent Store — 주간 뉴스](https://aiagentstore.ai/ai-agent-news/this-week)
+출처: [OpenAI — GPT-6.2](https://openai.com/id-ID/index/introducing-gpt-6-2-astra-sol/) · [Google — Gemini 4 Neon](https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-neon/) · [The Neuron — 11/20 요약](https://www.theneuron.ai/digest/everything-that-happened-in-ai-today-friday-november-20-2026/) · [AI Agents 브리프 11/21](https://aiagentsdirectory.com/news/ai-agents-directory-daily-brief-november-21-2026)
 
 </div>
 
 ---
 
-# 새 모델 — 작고 전문화된 모델의 주
+# 새 모델 — 이틀 사이 최상위급 2종
 
-| 무엇 | 날짜 | 핵심 한 줄 |
+| 무엇 | 날짜 | 무엇이 좋아졌나 |
 |---|---|---|
-| GPT-6 Cyber (OpenAI) | 11/5 | 보안 점검 전용, 리눅스 취약점 948개 발견 보도 |
-| Inkling 2 Small (Thinking Machines) | 11/5 | 필요한 부분만 쓰는 방식(전체 594B 중 17B), 이미지 입력 |
-| Hy4 (텐센트) | 11/3~4 | 화면을 보고 컴퓨터를 조작하는 능력 추가 |
-| SWE-2 Flash (Cognition) | 11/4 | 코딩 에이전트용 빠른 모델 |
-| Gemini Omni 1.2 Flash | 11/6 | 영상 최대 15초, 이전 버전보다 값 약 30%↓ |
+| GPT-6.2 Astra (OpenAI) | 11/17 | 값 20%↓ (입력 8·출력 40달러), 실무 평가 +6점 |
+| GPT-6.2 Sol (OpenAI) | 11/17 | 값 그대로 (2·10달러), 실무 평가 +5점 |
+| Gemini 4 Neon (Google) | 11/18 | 전작 대비 작업당 비용 32%↓, 맥락 100만 토큰 |
+| Qwen4-Max (알리바바) | 11/16 | 입력 1.5달러대, 맥락 100만 토큰 |
+| MAI 모델 7종 (MS) | 11/16~19 | 코딩·보안·음성 등 자체 모델, '더 싸게' 표방 |
 
 <div class="note">
 
-Inkling 2 Small은 공개 모델 파일이 '다음 주' 예정이라는 2차 보도 — 사양은 회사 발표·제3자 집계 기준
+값은 100만 토큰(약 책 몇 권 분량의 글자)당 가격 · 성능 수치는 모두 회사 자체 발표
 
 </div>
 
 <div class="src">
 
-출처: [The Hacker News — GPT-6 Cyber](https://thehackernews.com/2026/11/openai-launches-gpt-6-cyber-after-ai.html) · [BenchLM — 11월 신모델](https://benchlm.ai/model-updates/releases/november-2026) · [Opper — 모델 출시 추적](https://opper.ai/model-releases) · [DEV — AI 일일 요약 11/7](https://dev.to/hiroki-ii-ai/ai-daily-digest-november-7-2026-ai-cracks-legacy-rsa-gemini-omni-gets-longer-clips-first-3f6p)
+출처: [OpenAI](https://openai.com/id-ID/index/introducing-gpt-6-2-astra-sol/) · [Google 블로그](https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-neon/) · [llm-stats — Qwen4-Max](https://llm-stats.com/blog/research/qwen4-max-launch) · [Microsoft — Ignite 2026](https://microsoft.ai/news/microsoft-ignite-2026/) · [InfoWorld — MAI Code 2](https://www.infoworld.com/article/4250152/microsoft-launches-mai-code-2-models-to-challenge-openai-and-anthropic-in-ai-coding.html)
 
 </div>
 
 ---
 
-# 새 에이전트 — 일을 맡기고 자리를 비운다
+# 새 모델 — 숫자 뒤의 이야기
 
-- Perplexity Teammates — 역할을 정해 여러 개를 동시에 돌리고 슬랙으로 호출 (월 200달러 Max 요금제)
-- Meta Muse — 목소리로 대화하는 아바타, 진행 중 프로젝트를 모아 보는 '스페이스'
-- AWS Kiro 봇 — 기억을 갖고 정해진 주기로 개발 작업을 반복 수행
-- DigitalOcean Cuttlefish — 에이전트의 도구 사용을 아이폰으로 승인·중단
-- Anthropic — Claude에서 소비 내역을 분석하는 개인 재무 기능 (미국, 시범)
+- GPT-6.2 Astra — 외부 평가 지수 62점, 1위 모델(65점)보다 실행 비용은 약 7분의 1
+- 그러나 사용자 반응은 엇갈림 — "긴 작업 중 자꾸 멈추고 되묻는다"는 불만
+- OpenAI 스스로 'AI 자기 개선' 위험 '높음' 등급을 처음 매긴 공개 모델
+- Gemini 4 Neon — 자판기 운영 모의 평가·업무 자동화 평가에서 1위(자사 발표)
+- 구글은 12월 1일부터 일부 Gemini 4 모델 값을 2배로 올릴 예정
 
 <div class="highlight">
 
-핵심 — '맡기는 것'만큼 '멀리서 승인하고 멈추는 것'이 기능이 됐다
+핵심 — '더 똑똑하게'보다 '같은 일을 더 싸게'가 이번 경쟁의 주제
 
 </div>
 
 <div class="src">
 
-출처: [PCMag — Perplexity Teammates](https://au.pcmag.com/ai/120788/perplexity-teammates-ai-agent-help-you-work) · [Datastudios — Muse 음성](https://www.datastudios.org/post/meta-muse-voice-conversations-expressive-avatars-us) · [VentureBeat — Kiro 봇](https://venturebeat.com/technology/aws-launches-agentic-ai-kiro-bots-with-memory-and-support-for-recurring-development-jobs) · [AIthority — Cuttlefish](https://aithority.com/it-and-devops/cloud/digitalocean-launches-cuttlefish-to-supervise-ai-agents-from-anywhere-with-box-as-launch-partner) · [TechCrunch — Claude 개인 재무](https://techcrunch.com/2026/11/05/claude-can-now-analyze-your-spending-with-its-new-personal-finance-tool/)
+출처: [Wccftech — GPT-6.2 반응](https://wccftech.com/openais-gpt-6-2-astra-becomes-the-first-model-to-achieve-a-100-score-on-arc-agi-3-while-being-8x-cheaper-than-anthropics-fable-5-2-but-actual-users-are-not-impressed/?type=AI) · [Gagadget](https://gagadget.com/en/734695-openai-ships-gpt-62-astra-seven-weeks-after-scrapping-61/) · [ITdaily — Neon 가격](https://itdaily.com/news/software/google-gemini-4-neon/)
 
 </div>
 
 ---
 
-# 비즈니스 — 사고, 사들이고, 숫자로 확인
+# 새 에이전트 — 내 컴퓨터를 대신 쓴다
 
-- Five9 — AI 고객응대 업체 Level AI를 약 3억 2,500만 달러에 인수 합의
-- Sierra — 웹사이트 로그인·양식 입력을 대신하는 Anon 인수
-- Meta — 코딩 에이전트 여러 개를 병렬로 돌리는 Conductor 인수
-- 금융사 설문(Capgemini, 1,100명) — 59%가 여러 에이전트 시범·도입, 전사 운영 10%
-- 약 절반은 에이전트의 성과(ROI)를 꾸준히 보여주지 못함
-
-<div class="highlight">
-
-가트너 CIO 설문(2,002명)에서도 'AI가 큰 가치를 줬다'는 응답은 13%
-
-</div>
-
-<div class="src">
-
-출처: [CXO Digital Pulse — Five9](https://www.cxodigitalpulse.com/five9-agrees-to-acquire-level-ai-for-approximately-325-million) · [Unite.AI — Sierra](https://www.unite.ai/sierra-acquires-anon-to-help-ai-agents-complete-web-workflows) · [The Next Web — Meta](https://thenextweb.com/news/meta-acquires-conductor-ai-coding-agents-superintelligence-labs) · [Capgemini 보도자료](https://www.globenewswire.com/news-release/2026/11/05/3396012/0/en/financial-institutions-accelerate-transition-to-multi-agent-ai-in-drive-for-bottom-line-value.html) · [Gartner 설문 보도자료](https://globenewswire.com/news-release/2026/11/06/3397758/0/en/ai-deployment-only-13-of-cios-say-ai-has-delivered-significant-value.html)
-
-</div>
-
----
-
-# 그 외 소식
-
-- GitHub Copilot — 웹·모바일·터미널·슬랙을 오가며 같은 작업을 이어가는 클라우드 세션
-- Adobe — 마케팅·고객경험 에이전트를 Anthropic·구글·MS·OpenAI 플랫폼 안에서 제공 (11/4)
-- Smartsheet — 상태 보고·후속 연락을 자동화하는 에이전트 추가
-- 구글 딥마인드 — AI가 옛 1024비트 RSA 암호의 약점 2개 발견 (2048비트는 영향 없음)
-- 아마존 — 일부 미국 고객은 문자로 알렉사에게 쇼핑을 맡김
+- Gemini for Mac — 파일 정리·양식 입력·앱 조작을 대신 (미국·영어·유료 구독자)
+- 실행 전 화면 미리보기, 언제든 멈춤·승인 가능
+- MS Copilot Autopilot — 자기 회사 계정을 가진 자율 에이전트 (보도)
+- Zoho Desk — 단순 문의는 AI가, 미묘한 건은 사람에게 넘김
+- 애플 — 기기 조작·앱·웹·코딩을 맡는 에이전트 개발 중 (블룸버그 보도, 미확인)
 
 <div class="note">
 
-RSA 암호는 온라인 결제·로그인에 쓰이는 잠금 방식 — 지금 쓰는 키(2048비트 이상)는 안전하다는 설명
+'컴퓨터 조작'은 AI가 사람처럼 화면을 보고 클릭·입력하는 기능
 
 </div>
 
 <div class="src">
 
-출처: [Adobe 보도자료](https://news.adobe.com/news/2026/11/adobe-integrates-agentic-cx-enterprise-coworker-into-ai-platforms.html) · [City AM — Smartsheet](https://www.cityam.com/smartsheet-adds-new-ai-agents-integrations-and-security-advancements-at-engage-2026) · [Crypto Briefing — RSA](https://cryptobriefing.com/google-deepmind-ai-rsa-1024-bit-weaknesses) · [AI Agent Store](https://aiagentstore.ai/ai-agent-news/this-week)
+출처: [TechCrunch — Gemini for Mac](https://techcrunch.com/2026/11/19/google-gives-gemini-the-ability-to-use-your-mac-for-you/) · [Emergent — Copilot Autopilot](https://emergent.sh/news/microsoft-copilot-autopilot-launches-agent) · [MSP Channel — Zoho](https://msp-channel.com/news/24871-zoho-desk-adds-ai-powered-blended-agents-and-workflow-automation-tools) · [Bloomberg — 애플](https://bloomberg.com/news/articles/2026-11-19/apple-is-working-on-ai-agent-for-device-control-apps-browsing-and-coding)
 
 </div>
 
 ---
 
-# 안전 — 끄는 버튼이 제품이 되다
+# 비즈니스 — 상장, 투자, 그리고 실제 성과
 
-- CrowdStrike 'AI 킬 스위치' — 실행 중인 에이전트를 끄고 네트워크를 끊고 재실행을 막음
-- 같은 회사 — 규칙을 어기지 않아도 '평소와 다른 행동'을 잡아내는 탐지 기능
-- Sysdig·Cloudflare — 에이전트별 접근 권한·활동 분석 출시
-- 보안 연구 — 악성 브라우저 확장이 Claude 원격 지시 기능을 악용할 수 있음 (연구 보고)
-- 팔로알토, 에이전트 열쇠 관리 업체 인수 협상 보도 (미확정)
+- Anthropic 나스닥 상장 (11/19) — 주당 83달러, 약 810억 달러 조달, 기업가치 약 1.5조 달러
+- 상장 첫날 시초가 111.5달러 → 종가 97.17달러
+- OpenAI 사내 사례 — 코딩 에이전트가 3개월간 속도 저하 1,700여 건 조사, 600여 건 원인 규명
+- 원인 제안 정확도 70% — 수정은 여전히 사람이 검토 후 반영
+- Model ML — 금융 분석 에이전트로 2억 5천만 달러 투자 유치
 
 <div class="highlight">
 
-에이전트가 늘수록 '누가 무엇을 했는지 기록하고 멈출 수 있는가'가 선택 기준
+'AI가 찾고, 사람이 확인한다' — 실제 현장에서 통하는 분업 방식
 
 </div>
 
 <div class="src">
 
-출처: [AI Agent Store](https://aiagentstore.ai/ai-agent-news/this-week) · [SecurityWeek — Sysdig](https://www.securityweek.com/sysdig-adds-runtime-security-and-governance-for-ai-agents) · [Unite.AI — Cloudflare](https://www.unite.ai/cloudflare-adds-personal-agent-analytics-and-per-agent-access-controls) · [The Hacker News — 악성 확장](https://thehackernews.com/2026/11/malicious-browser-extensions-could-use.html)
+출처: [ABC7 — Anthropic 상장](https://abc7.com/story/what-know-before-anthropic-goes-public/20054746/) · [Renaissance Capital](https://www.renaissancecapital.com/IPO-Center/News/122657/anthropic-sets-terms-for-61-billion-ipo-targeting-a-1-2-trillion-market-cap) · [OpenAI — Performance Factory](https://openai.com/index/how-openai-performance-factory-keeps-chatgpt-fast/) · [BigGo — Model ML](https://finance.biggo.com/news/0eab7536-3f15-443e-b311-67be1d9afea8)
+
+</div>
+
+---
+
+# 안전 — 편리함의 대가가 드러난 주
+
+- Meta Muse — 남의 잔고·메시지가 보였다는 직원 제보 (보도, Meta는 시험판 문제라 설명)
+- EU 집행위 — AI 해킹 도구가 쓰인 것으로 보이는 공격에 급여·의료비 시스템 중단 (보도)
+- OpenAI 의료용 에이전트 — 접속 가능한 앱 제한·관리자 승인 단계 추가
+- 미 상원 — 상장사의 AI 관련 공시를 늘리는 법안 발의
+- Canva — 생성형 AI 기능을 한 번에 끄는 스위치 제공
+
+<div class="highlight">
+
+에이전트에게 맡길수록 '무엇을 볼 수 있게 할지'를 먼저 정해야 한다
+
+</div>
+
+<div class="src">
+
+출처: [TechCrunch — Muse](https://techcrunch.com/2026/11/19/metas-ai-agent-muse-is-mixing-up-conversations-and-exposing-private-data-report-says/) · [The Register — EU 공격](https://www.theregister.com/cyber-crime/2026/11/19/european-commission-scrambles-to-contain-ai-assisted-cyberattack/5311103) · [BERI — 의료 에이전트](https://www.beri.net/article/chatgpt-for-healthcare-computer-use-agents-20-plugins-availity-oracle-hdi-healthadminbench-baa-admin-approvals-ehr) · [The Verge — Canva](https://www.theverge.com/ai-artificial-intelligence/1037126/canva-ai-features-off-button)
 
 </div>
 
@@ -296,10 +296,10 @@ RSA 암호는 온라인 결제·로그인에 쓰이는 잠금 방식 — 지금 
 
 </div>
 
-- AI 팀원이 월 200달러대 상품으로 나오기 시작했다
-- 도입은 늘지만 '큰 가치'를 얻은 곳은 아직 소수 — 성과 측정이 먼저
-- 맡기기 전에 '언제 어떻게 멈출지'를 정해 두자
-- 보안 전용 AI는 공격과 방어 양쪽에서 쓰인다
+- 최상위 AI도 매달 싸진다 — 지금 비싸서 미룬 일도 곧 가능해진다
+- 'AI가 내 컴퓨터를 쓰는' 기능이 일반 구독 상품으로 들어왔다
+- 평가 점수와 실제 사용감은 다르다 — 직접 내 일로 시험해 보자
+- 개인 정보가 닿는 에이전트는 권한부터 좁게 시작하자
 
 <div class="note">
 
@@ -313,40 +313,40 @@ RSA 암호는 온라인 결제·로그인에 쓰이는 잠금 방식 — 지금 
 
 <div class="cards">
 
-<a class="card video" href="https://www.youtube.com/results?search_query=Perplexity+Teammates">
+<a class="card video" href="https://www.youtube.com/results?search_query=Gemini+4+Neon">
 <span class="outlet">▶ YOUTUBE</span>
-<span class="head">Perplexity Teammates 소개 영상 모아보기</span>
+<span class="head">Gemini 4 Neon 소개 영상 모아보기</span>
 <span class="link">youtube.com</span>
 </a>
 
-<a class="card" href="https://au.pcmag.com/ai/120788/perplexity-teammates-ai-agent-help-you-work">
-<span class="outlet">PCMAG</span>
-<span class="head">Perplexity Teammates 출시 (11/7)</span>
-<span class="link">pcmag.com</span>
+<a class="card" href="https://openai.com/id-ID/index/introducing-gpt-6-2-astra-sol/">
+<span class="outlet">OPENAI</span>
+<span class="head">GPT-6.2 Astra·Sol 공개 (11/17)</span>
+<span class="link">openai.com</span>
 </a>
 
-<a class="card" href="https://thehackernews.com/2026/11/openai-launches-gpt-6-cyber-after-ai.html">
-<span class="outlet">THE HACKER NEWS</span>
-<span class="head">OpenAI GPT-6 Cyber 출시 (11/5)</span>
-<span class="link">thehackernews.com</span>
+<a class="card" href="https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-neon/">
+<span class="outlet">GOOGLE</span>
+<span class="head">Gemini 4 Neon 공개 (11/18)</span>
+<span class="link">blog.google</span>
 </a>
 
-<a class="card" href="https://www.globenewswire.com/news-release/2026/11/05/3396012/0/en/financial-institutions-accelerate-transition-to-multi-agent-ai-in-drive-for-bottom-line-value.html">
-<span class="outlet">GLOBENEWSWIRE</span>
-<span class="head">금융사 멀티 에이전트 도입 설문 (11/5)</span>
-<span class="link">globenewswire.com</span>
+<a class="card" href="https://techcrunch.com/2026/11/19/google-gives-gemini-the-ability-to-use-your-mac-for-you/">
+<span class="outlet">TECHCRUNCH</span>
+<span class="head">Gemini가 Mac을 대신 조작 (11/19)</span>
+<span class="link">techcrunch.com</span>
 </a>
 
-<a class="card" href="https://aiagentsdirectory.com/news/ai-agents-directory-daily-brief-november-7-2026">
-<span class="outlet">AI AGENTS DIRECTORY</span>
-<span class="head">AI 에이전트 뉴스 브리프 — 11월 7일</span>
-<span class="link">aiagentsdirectory.com</span>
+<a class="card" href="https://openai.com/index/how-openai-performance-factory-keeps-chatgpt-fast/">
+<span class="outlet">OPENAI</span>
+<span class="head">코딩 에이전트로 ChatGPT 속도 지키기</span>
+<span class="link">openai.com</span>
 </a>
 
-<a class="card" href="https://aiagentstore.ai/ai-agent-news/this-week">
-<span class="outlet">AI AGENT STORE</span>
-<span class="head">이번 주 에이전트 뉴스 모아보기</span>
-<span class="link">aiagentstore.ai</span>
+<a class="card" href="https://www.theneuron.ai/digest/everything-that-happened-in-ai-today-friday-november-20-2026/">
+<span class="outlet">THE NEURON</span>
+<span class="head">11월 20일 AI 소식 모아보기</span>
+<span class="link">theneuron.ai</span>
 </a>
 
 </div>
