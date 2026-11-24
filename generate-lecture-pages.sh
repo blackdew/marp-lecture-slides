@@ -10,6 +10,8 @@ declare -a LECTURES=(
     "lecture-10-antigravity-gemini|Lecture 10: AI 에이전트 활용|Do-See-Ask-Learn 실습|비개발자|360분|6개 Part|미평가|Do-See-Ask-Learn 사이클로 배우는 AI 에이전트. JavaScript 기초부터 파일 자동화까지."
     "lecture-11-agent-life-transition|Lecture 11: Just Plan It!!|AI Agent로 일과 삶의 전환|대학생/교직원|120분|5개 Part|미평가|동명대학교 특강. AI Agent 체험부터 업무 자동화, 팀 해커톤까지."
     "lecture-12-agent-life-transition|Lecture 12: AI Agent 활용|생활/업무 전환|대학생/교직원|120분|4개 Act|미평가|동명대학교 특강. Agent 개념 이해부터 역할별 실습, 삶의 전환 로드맵까지."
+    "lecture-13-pair-prompting-with-jini|Lecture 13: 지니와 페어 프롬프팅|에이전트 시대의 자산|고려대 컴퓨터학과 학생|60분|6개 Beat|미평가|라이브 페어 프롬프팅 특강. 청중이 준 주제로 강사와 AI 페어가 60분 동안 실제로 만들어 보입니다."
+    "lecture-14-agentic-ai-trends|Lecture 14: Agentic AI 동향|매주 갱신되는 동향 브리핑|비개발자·일반인|파일당 5~12분|4종 슬라이드|미평가|전체·올해·이번달·지난주 네 가지 시간 범위의 동향 슬라이드. 매주 일요일 저녁 자동 갱신됩니다.|last-week.html"
     "lecture-15-codex-4weeks|Lecture 15: 에이전트와 함께하는 삶의 전환|Codex 4주 과정 (1주차)|비전공자 30~60대|120분×4주|4개 주차|미평가|비전공자 대상 4주 연속 과정. 1주차는 동기부여와 생각의 전환. 터미널 없이 ChatGPT 데스크탑의 Codex만 사용.|week1.html"
 )
 
