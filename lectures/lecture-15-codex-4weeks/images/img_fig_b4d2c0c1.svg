@@ -1,0 +1,4 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" role="img" aria-label="옆에 서서 기다리는 사람" fill="none" stroke="#13735F" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+<circle cx="34" cy="34" r="12"/><path d="M14 94v-22a20 20 0 0 1 40 0v22"/>
+<circle cx="86" cy="34" r="12" opacity=".9"/><path d="M66 94v-22a20 20 0 0 1 40 0v22" opacity=".9"/>
+<rect x="72" y="62" width="28" height="18" rx="3"/></svg>
