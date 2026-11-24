@@ -130,11 +130,32 @@ def lnkrow(url, label):
 
 
 def cards(items, cols=3, tight=False):
-    return '\n'.join('- **%s** — %s' % (_inline(a), _inline(b)) for a, b in items)
+    """deck.cards 와 같은 딕셔너리(lab·num·h·p·cl)를 받습니다."""
+    out = []
+    for it in items:
+        lead = ' '.join(x for x in (_inline(it.get('num')), _inline(it.get('lab'))) if x)
+        head, body = _inline(it.get('h')), _inline(it.get('p'))
+        seg = []
+        if lead and head:
+            seg.append('%s **%s**' % (lead, head))
+        elif head or lead:
+            seg.append('**%s**' % (head or lead))
+        if body:
+            seg.append(body)
+        if seg:
+            out.append('- ' + ' — '.join(seg))
+    return '\n'.join(out)
 
 
 def steps(items, ordered=True):
-    return '\n'.join('%d. %s' % (i, _inline(x)) for i, x in enumerate(items, 1))
+    """deck.steps 와 같은 (굵은 글씨, 설명) 2-튜플을 받습니다."""
+    out = []
+    for i, (b, s) in enumerate(items, 1):
+        head, tail = _inline(b), _inline(s)
+        mark = '%d.' % i if ordered else '-'
+        out.append('%s **%s** — %s' % (mark, head, tail) if tail
+                   else '%s %s' % (mark, head))
+    return '\n'.join(out)
 
 
 def term(label, code, copy=False, lead=None):

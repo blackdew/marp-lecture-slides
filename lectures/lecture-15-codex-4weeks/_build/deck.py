@@ -158,6 +158,10 @@ FONTS = ('<link rel="stylesheet" href="https://fonts.googleapis.com/css2?'
 
 def page(title, slides):
     return (
+        '<!DOCTYPE html>\n'
+        '<meta charset="utf-8">\n'
+        '<meta name="viewport" content="width=device-width, initial-scale=1, '
+        'viewport-fit=cover">\n'
         '<title>' + title + '</title>\n'
         '<meta name="claude:viewport-fit-sides" content="cover">\n'
         + FONTS + '\n<style>' + CSS + '</style>\n'
