@@ -4,10 +4,11 @@
 # 메타정보 + iframe + 댓글 시스템
 
 # 강의 정보 배열 (폴더명|제목|부제|대상|시간|구성|평가|설명|메인파일)
+# 평가 필드는 "라벨:값" 형태로 쓰면 라벨을 바꿉니다 (예: 산출물:프로토타입 5개 이상)
 # 메인파일을 비워 두면 lecture.html 을 씁니다. 자체 HTML 덱이 있으면 그 파일명을 적습니다.
 declare -a LECTURES=(
     "lecture-09-agent-hackathon|Lecture 09: Just Plan It!|AI 에이전트 해커톤|모든 레벨|300분|6개 Part|A (91/100)|5시간 집중 워크숍. 환경 설정부터 팀 해커톤까지, AI Agent 완전 체험."
-    "lecture-10-antigravity-gemini|Lecture 10: AI 에이전트 활용|Do-See-Ask-Learn 실습|비개발자|360분|6개 Part|미평가|Do-See-Ask-Learn 사이클로 배우는 AI 에이전트. JavaScript 기초부터 파일 자동화까지."
+    "lecture-10-antigravity-gemini|Lecture 10: Gemini CLI|AI 에이전트 활용 마스터 클래스|비개발자 및 일반 업무 사용자|360분 (6시간)|6개 Part|산출물:프로토타입 5개 이상|비개발자를 위한 실무 자동화 + 코딩. Do-See-Ask-Learn 사이클로 배우는 AI 에이전트."
     "lecture-11-agent-life-transition|Lecture 11: Just Plan It!!|AI Agent로 일과 삶의 전환|대학생/교직원|120분|5개 Part|미평가|동명대학교 특강. AI Agent 체험부터 업무 자동화, 팀 해커톤까지."
     "lecture-12-agent-life-transition|Lecture 12: AI Agent 활용|생활/업무 전환|대학생/교직원|120분|4개 Act|미평가|동명대학교 특강. Agent 개념 이해부터 역할별 실습, 삶의 전환 로드맵까지."
     "lecture-13-pair-prompting-with-jini|Lecture 13: 지니와 페어 프롬프팅|에이전트 시대의 자산|고려대 컴퓨터학과 학생|60분|6개 Beat|미평가|라이브 페어 프롬프팅 특강. 청중이 준 주제로 강사와 AI 페어가 60분 동안 실제로 만들어 보입니다."
@@ -30,11 +31,37 @@ generate_index_html() {
     # 강의 번호 추출
     local lecture_num=$(echo "$folder" | grep -oE "lecture-[0-9]+" | sed 's/lecture-//')
 
-    # 리뷰 파일 경로 결정
-    local review_file="../../docs/review-${folder}.md"
+    # 네 번째 메타 항목: "라벨:값" 형태면 라벨을 바꾸고, 아니면 평가로 봅니다
+    local meta4_label="평가"
+    local meta4_value="$rating"
+    local meta4_class=' class="rating"'
+    case "$rating" in
+      *:*)
+        meta4_label="${rating%%:*}"
+        meta4_value="${rating#*:}"
+        meta4_class=""
+        ;;
+    esac
+
+    # 액션 버튼: 리뷰 문서가 실제로 있을 때만 링크를 넣습니다
+    local actions_html="                <a href=\"${mainfile}\" target=\"_blank\" class=\"btn btn-primary\">
+                    슬라이드 전체화면으로 보기
+                </a>"
+    if [ -f "docs/review-${folder}.md" ]; then
+      actions_html="${actions_html}
+                <a href=\"../../docs/review-${folder}.md\" class=\"btn btn-secondary\">
+                    강의 리뷰 보기
+                </a>"
+    fi
+    actions_html="${actions_html}
+                <a href=\"../../\" class=\"btn btn-secondary\">
+                    전체 강의 목록
+                </a>"
 
     cat > "lectures/${folder}/index.html" << EOF
 <!DOCTYPE html>
+<!-- 이 파일은 generate-lecture-pages.sh 가 생성합니다. 직접 고치지 마세요.
+     내용을 바꾸려면 그 스크립트의 LECTURES 배열을 고치고 다시 실행하세요. -->
 <html lang="ko">
 <head>
     <meta charset="UTF-8">
@@ -233,26 +260,26 @@ generate_index_html() {
     <div class="container">
         <!-- 헤더 섹션 -->
         <div class="header">
-            <h1>🎯 ${title}</h1>
+            <h1>${title}</h1>
             <p class="subtitle">${subtitle}</p>
 
             <!-- 메타 정보 -->
             <div class="meta-info">
                 <div class="meta-item">
-                    <strong>📊 대상</strong>
+                    <strong>대상</strong>
                     <span>${target}</span>
                 </div>
                 <div class="meta-item">
-                    <strong>⏱️ 시간</strong>
+                    <strong>시간</strong>
                     <span>${duration}</span>
                 </div>
                 <div class="meta-item">
-                    <strong>📁 구성</strong>
+                    <strong>구성</strong>
                     <span>${structure}</span>
                 </div>
                 <div class="meta-item">
-                    <strong>⭐ 평가</strong>
-                    <span class="rating">${rating}</span>
+                    <strong>${meta4_label}</strong>
+                    <span${meta4_class}>${meta4_value}</span>
                 </div>
             </div>
 
@@ -263,21 +290,13 @@ generate_index_html() {
 
             <!-- 액션 버튼 -->
             <div class="actions">
-                <a href="${mainfile}" target="_blank" class="btn btn-primary">
-                    🖥️ 슬라이드 전체화면으로 보기
-                </a>
-                <a href="${review_file}" class="btn btn-secondary">
-                    📝 강의 리뷰 보기
-                </a>
-                <a href="../../" class="btn btn-secondary">
-                    🏠 전체 강의 목록
-                </a>
+${actions_html}
             </div>
         </div>
 
         <!-- 슬라이드 미리보기 -->
         <div class="slide-container">
-            <h2>📊 슬라이드 미리보기</h2>
+            <h2>슬라이드 미리보기</h2>
             <p style="color: #666; margin-bottom: 15px;">
                 아래에서 슬라이드를 미리 볼 수 있습니다. 전체화면으로 보려면 위의 버튼을 클릭하세요.
             </p>
@@ -286,7 +305,7 @@ generate_index_html() {
 
         <!-- 댓글 섹션 -->
         <div class="comments-section">
-            <h2>💬 강의에 대한 의견을 남겨주세요</h2>
+            <h2>강의에 대한 의견을 남겨주세요</h2>
             <p>
                 GitHub 계정으로 로그인하여 댓글을 남길 수 있습니다.
             </p>
