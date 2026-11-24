@@ -107,12 +107,27 @@ export PATH="$HOME/.npm-global/bin:$PATH"
 - 각 파일 슬라이드 수가 직전 주와 크게 어긋나지 않는지 확인.
 - 오버플로우 위험 점검: 슬라이드당 불릿 5개·표 5행·문장 길이.
 
-### 9. 커밋
+### 9. 커밋과 게시
+
+커밋만 하면 공개 사이트에 반영되지 않는다. **push까지 해야 이 단계가 끝난다.**
 
 ```bash
 git add lectures/lecture-14-agentic-ai-trends
 git commit -m "docs: Agentic AI 동향 주간 갱신 (YYYY-MM-DD)"
+git push origin main
 ```
+
+### 10. 게시 확인
+
+푸시가 실제로 올라갔는지 확인한다. 로컬과 원격의 해시가 같아야 한다.
+
+```bash
+git fetch origin
+git log --oneline origin/main..main   # 아무것도 안 나와야 정상
+```
+
+여기서 커밋이 나오면 게시되지 않은 것이다. 2026-09-13부터 11-22까지 다섯 주 분량이
+이 확인 없이 로컬에만 쌓여, 공개 슬라이드가 두 달 넘게 멈춰 있었던 적이 있다.
 
 ## 큐레이션 원칙
 
