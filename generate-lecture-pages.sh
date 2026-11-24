@@ -3,13 +3,14 @@
 # 각 강의에 대한 상세 페이지(index.html) 생성 스크립트
 # 메타정보 + iframe + 댓글 시스템
 
-# 강의 정보 배열 (폴더명|제목|부제|대상|시간|구성|평가|설명)
+# 강의 정보 배열 (폴더명|제목|부제|대상|시간|구성|평가|설명|메인파일)
+# 메인파일을 비워 두면 lecture.html 을 씁니다. 자체 HTML 덱이 있으면 그 파일명을 적습니다.
 declare -a LECTURES=(
     "lecture-09-agent-hackathon|Lecture 09: Just Plan It!|AI 에이전트 해커톤|모든 레벨|300분|6개 Part|A (91/100)|5시간 집중 워크숍. 환경 설정부터 팀 해커톤까지, AI Agent 완전 체험."
     "lecture-10-antigravity-gemini|Lecture 10: AI 에이전트 활용|Do-See-Ask-Learn 실습|비개발자|360분|6개 Part|미평가|Do-See-Ask-Learn 사이클로 배우는 AI 에이전트. JavaScript 기초부터 파일 자동화까지."
     "lecture-11-agent-life-transition|Lecture 11: Just Plan It!!|AI Agent로 일과 삶의 전환|대학생/교직원|120분|5개 Part|미평가|동명대학교 특강. AI Agent 체험부터 업무 자동화, 팀 해커톤까지."
     "lecture-12-agent-life-transition|Lecture 12: AI Agent 활용|생활/업무 전환|대학생/교직원|120분|4개 Act|미평가|동명대학교 특강. Agent 개념 이해부터 역할별 실습, 삶의 전환 로드맵까지."
-    "lecture-15-codex-4weeks|Lecture 15: 에이전트와 함께하는 삶의 전환|Codex 4주 과정 (1주차)|비전공자 30~60대|120분×4주|4개 주차|미평가|비전공자 대상 4주 연속 과정. 1주차는 동기부여와 생각의 전환. 터미널 없이 ChatGPT 데스크탑의 Codex만 사용."
+    "lecture-15-codex-4weeks|Lecture 15: 에이전트와 함께하는 삶의 전환|Codex 4주 과정 (1주차)|비전공자 30~60대|120분×4주|4개 주차|미평가|비전공자 대상 4주 연속 과정. 1주차는 동기부여와 생각의 전환. 터미널 없이 ChatGPT 데스크탑의 Codex만 사용.|week1.html"
 )
 
 # 함수: index.html 생성
@@ -22,6 +23,7 @@ generate_index_html() {
     local structure=$6
     local rating=$7
     local description=$8
+    local mainfile=${9:-lecture.html}
 
     # 강의 번호 추출
     local lecture_num=$(echo "$folder" | grep -oE "lecture-[0-9]+" | sed 's/lecture-//')
@@ -36,6 +38,7 @@ generate_index_html() {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>${title} ${subtitle}</title>
+    <link rel="stylesheet" href="../../assets/css/giscus-custom.css">
     <style>
         * {
             margin: 0;
@@ -258,7 +261,7 @@ generate_index_html() {
 
             <!-- 액션 버튼 -->
             <div class="actions">
-                <a href="lecture.html" target="_blank" class="btn btn-primary">
+                <a href="${mainfile}" target="_blank" class="btn btn-primary">
                     🖥️ 슬라이드 전체화면으로 보기
                 </a>
                 <a href="${review_file}" class="btn btn-secondary">
@@ -276,28 +279,28 @@ generate_index_html() {
             <p style="color: #666; margin-bottom: 15px;">
                 아래에서 슬라이드를 미리 볼 수 있습니다. 전체화면으로 보려면 위의 버튼을 클릭하세요.
             </p>
-            <iframe src="lecture.html" title="${title} 슬라이드"></iframe>
+            <iframe src="${mainfile}" title="${title} 슬라이드"></iframe>
         </div>
 
         <!-- 댓글 섹션 -->
         <div class="comments-section">
             <h2>💬 강의에 대한 의견을 남겨주세요</h2>
-            <p style="color: #666; margin-bottom: 20px;">
+            <p>
                 GitHub 계정으로 로그인하여 댓글을 남길 수 있습니다.
             </p>
 
-            <!-- Giscus 댓글 시스템 -->
             <script src="https://giscus.app/client.js"
                     data-repo="blackdew/marp-lecture-slides"
-                    data-repo-id="R_kgDONgVZDg"
+                    data-repo-id="R_kgDOQElocA"
                     data-category="General"
-                    data-category-id="DIC_kwDONgVZDs4Clel5"
-                    data-mapping="pathname"
+                    data-category-id="DIC_kwDOQElocM4CyAGd"
+                    data-mapping="specific"
+                    data-term="${folder}"
                     data-strict="0"
                     data-reactions-enabled="1"
                     data-emit-metadata="0"
                     data-input-position="bottom"
-                    data-theme="preferred_color_scheme"
+                    data-theme="https://blackdew.github.io/marp-lecture-slides/assets/css/giscus-theme-custom.css"
                     data-lang="ko"
                     crossorigin="anonymous"
                     async>
@@ -316,13 +319,14 @@ echo "=== 강의 상세 페이지 생성 시작 ==="
 echo ""
 
 for lecture in "${LECTURES[@]}"; do
-    IFS='|' read -r folder title subtitle target duration structure rating description <<< "$lecture"
+    IFS='|' read -r folder title subtitle target duration structure rating description mainfile <<< "$lecture"
+    mainfile=${mainfile:-lecture.html}
 
-    # lecture.html이 있는지 확인
-    if [ -f "lectures/${folder}/lecture.html" ]; then
-        generate_index_html "$folder" "$title" "$subtitle" "$target" "$duration" "$structure" "$rating" "$description"
+    # 메인 슬라이드 파일이 있는지 확인
+    if [ -f "lectures/${folder}/${mainfile}" ]; then
+        generate_index_html "$folder" "$title" "$subtitle" "$target" "$duration" "$structure" "$rating" "$description" "$mainfile"
     else
-        echo "⚠ Skipped: lectures/${folder}/lecture.html not found"
+        echo "⚠ Skipped: lectures/${folder}/${mainfile} not found"
     fi
 done
 
