@@ -136,6 +136,7 @@ Marp CLI의 `--pdf` 옵션 대신 다음 방법 권장:
 | lecture-10-antigravity-gemini | AI 에이전트 활용 (Do-See-Ask-Learn) | 비개발자 | 6시간 |
 | lecture-11-agent-life-transition | Just Plan It!! AI Agent로 일과 삶의 전환 | 대학생/교직원 | 2시간 |
 | lecture-12-agent-life-transition | AI Agent 활용 생활/업무 전환 | 대학생/교직원 | 2시간 |
+| lecture-15-codex-4weeks | 에이전트와 함께하는 삶의 전환 (Codex 4주) | 비전공자 30~60대 | 2시간 × 4주 |
 
 ## 라이선스
 

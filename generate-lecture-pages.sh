@@ -9,6 +9,7 @@ declare -a LECTURES=(
     "lecture-10-antigravity-gemini|Lecture 10: AI 에이전트 활용|Do-See-Ask-Learn 실습|비개발자|360분|6개 Part|미평가|Do-See-Ask-Learn 사이클로 배우는 AI 에이전트. JavaScript 기초부터 파일 자동화까지."
     "lecture-11-agent-life-transition|Lecture 11: Just Plan It!!|AI Agent로 일과 삶의 전환|대학생/교직원|120분|5개 Part|미평가|동명대학교 특강. AI Agent 체험부터 업무 자동화, 팀 해커톤까지."
     "lecture-12-agent-life-transition|Lecture 12: AI Agent 활용|생활/업무 전환|대학생/교직원|120분|4개 Act|미평가|동명대학교 특강. Agent 개념 이해부터 역할별 실습, 삶의 전환 로드맵까지."
+    "lecture-15-codex-4weeks|Lecture 15: 에이전트와 함께하는 삶의 전환|Codex 4주 과정 (1주차)|비전공자 30~60대|120분×4주|4개 주차|미평가|비전공자 대상 4주 연속 과정. 1주차는 동기부여와 생각의 전환. 터미널 없이 ChatGPT 데스크탑의 Codex만 사용."
 )
 
 # 함수: index.html 생성

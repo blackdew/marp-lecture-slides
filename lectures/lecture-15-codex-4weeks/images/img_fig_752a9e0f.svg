@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" role="img" aria-label="여러 번 반복해서 시도하는 화살표" fill="none" stroke="#13735F" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+<path d="M98 60a38 38 0 1 1-11-27"/><path d="M88 8v26H62"/>
+<circle cx="60" cy="104" r="3" fill="#13735F" stroke="none" opacity=".5"/>
+<circle cx="76" cy="104" r="3" fill="#13735F" stroke="none" opacity=".7"/>
+<circle cx="92" cy="104" r="3" fill="#13735F" stroke="none"/></svg>
