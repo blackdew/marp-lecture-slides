@@ -57,8 +57,8 @@ marp lectures/<폴더>/<파일.md> --pptx
 ```text
 .
 ├── generate-presentation.sh      # 메인 빌드 스크립트
-├── generate-lecture-pages.sh     # 강의별 index.html 생성 스크립트
-├── index.html                    # 강의 목록 포탈 페이지
+├── generate-lecture-pages.sh     # 강의 상세 페이지 + 포털 목록 생성 스크립트
+├── index.html                    # 강의 목록 포탈 (카드 목록은 위 스크립트가 생성)
 ├── assets/css/                   # 공통 CSS (Giscus 댓글 테마 등)
 ├── docs/
 │   ├── AGENTS_CONTEXT.md         # AI 에이전트용 작업 컨텍스트

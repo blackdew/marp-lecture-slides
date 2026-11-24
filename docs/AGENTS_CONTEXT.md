@@ -9,8 +9,8 @@
 ```text
 .
 ├── generate-presentation.sh          # 메인 빌드 스크립트
-├── generate-lecture-pages.sh         # 강의별 index.html 생성 스크립트
-├── index.html                        # 강의 목록 포탈 페이지
+├── generate-lecture-pages.sh         # 강의 상세 페이지 + 포털 목록 생성 스크립트
+├── index.html                        # 강의 목록 포탈 (카드 목록은 위 스크립트가 생성)
 ├── assets/css/                       # 공통 CSS (Giscus 댓글 테마 등)
 ├── CLAUDE.md -> docs/AGENTS_CONTEXT.md   # Claude Code용 심볼릭 링크
 ├── AGENTS.md -> docs/AGENTS_CONTEXT.md   # 범용 Agents용 심볼릭 링크
@@ -424,6 +424,33 @@ PR 설명에 포함할 항목:
 2. `images/` 서브디렉토리 추가
 3. Marp 프런트매터가 포함된 초기 `lecture.md` 생성
 4. 빌드: `./generate-presentation.sh lecture-XX-주제명 lecture.md`
+
+### 강의 등재 (포털 + 상세 페이지)
+
+강의 폴더를 만든 뒤 포털과 상세 페이지에 올리려면 **`generate-lecture-pages.sh`의 `LECTURES` 배열 한 곳만** 고치고 스크립트를 실행합니다.
+
+```bash
+./generate-lecture-pages.sh
+```
+
+배열 한 줄의 형식은 파이프로 구분한 13개 필드입니다.
+
+```text
+폴더명|제목|부제|대상|시간|구성|평가|설명|메인파일|카드제목|카드부제|카드태그|카드뱃지
+```
+
+| 구간 | 쓰이는 곳 | 비우면 |
+|------|-----------|--------|
+| 1~8 | 강의 상세 페이지 메타 정보 | 필수 |
+| 9 메인파일 | 상세 페이지 iframe과 포털 링크 | `lecture.html` |
+| 10 카드제목 | 포털 카드 제목 | 제목에서 `Lecture NN: ` 제거 |
+| 11 카드부제 | 포털 카드 부제 | 부제 필드 사용 |
+| 12 카드태그 | 포털 카드 태그 (쉼표 구분) | 태그 영역 생략 |
+| 13 카드뱃지 | `Lecture NN · 값` 형태 강조 | 번호만 표시 |
+
+루트 `index.html`은 `<!-- LECTURE_CARDS:START -->` ~ `<!-- LECTURE_CARDS:END -->` 사이만 교체됩니다. 소개 문구·푸터·CSS는 직접 고치면 되고, 카드 목록은 직접 고치지 마십시오.
+
+강의를 내릴 때도 배열에서 해당 줄을 지우고 스크립트를 실행하면 포털 카드가 사라집니다.
 
 ### 콘텐츠 반복 작업
 

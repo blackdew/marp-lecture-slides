@@ -1,17 +1,22 @@
 #!/bin/bash
 
-# 각 강의에 대한 상세 페이지(index.html) 생성 스크립트
-# 메타정보 + iframe + 댓글 시스템
+# 강의 상세 페이지(lectures/*/index.html)와 루트 포털(index.html)의 강의 목록 생성
+# 메타정보 + iframe + 댓글 시스템. 포털 카드까지 LECTURES 배열 하나에서 만듭니다
 
-# 강의 정보 배열 (폴더명|제목|부제|대상|시간|구성|평가|설명|메인파일)
+# 강의 정보 배열
+#   폴더명|제목|부제|대상|시간|구성|평가|설명|메인파일|카드제목|카드부제|카드태그|카드뱃지
+#
+# 앞의 9개는 강의 상세 페이지용, 뒤의 4개는 루트 포털 카드용입니다.
 # 평가 필드는 "라벨:값" 형태로 쓰면 라벨을 바꿉니다 (예: 산출물:프로토타입 5개 이상)
 # 메인파일을 비워 두면 lecture.html 을 씁니다. 자체 HTML 덱이 있으면 그 파일명을 적습니다.
+# 카드제목을 비우면 제목에서 "Lecture NN: " 을 떼어 씁니다. 카드부제를 비우면 부제를 씁니다.
+# 카드태그는 쉼표로 구분합니다. 카드뱃지를 적으면 "Lecture NN · 값" 으로 표시합니다.
 declare -a LECTURES=(
-    "lecture-09-agent-hackathon|Lecture 09: Just Plan It!|AI 에이전트 해커톤|모든 레벨|300분|6개 Part|A (91/100)|5시간 집중 워크숍. 환경 설정부터 팀 해커톤까지, AI Agent 완전 체험."
-    "lecture-10-antigravity-gemini|Lecture 10: Gemini CLI|AI 에이전트 활용 마스터 클래스|비개발자 및 일반 업무 사용자|360분 (6시간)|6개 Part|산출물:프로토타입 5개 이상|비개발자를 위한 실무 자동화 + 코딩. Do-See-Ask-Learn 사이클로 배우는 AI 에이전트."
-    "lecture-11-agent-life-transition|Lecture 11: Just Plan It!!|AI Agent로 일과 삶의 전환|대학생/교직원|120분|5개 Part|미평가|동명대학교 특강. AI Agent 체험부터 업무 자동화, 팀 해커톤까지."
-    "lecture-12-agent-life-transition|Lecture 12: AI Agent 활용|생활/업무 전환|대학생/교직원|120분|4개 Act|미평가|동명대학교 특강. Agent 개념 이해부터 역할별 실습, 삶의 전환 로드맵까지."
-    "lecture-15-codex-4weeks|Lecture 15: 에이전트와 함께하는 삶의 전환|Codex 4주 과정 (1주차)|비전공자 30~60대|120분×4주|4개 주차|미평가|비전공자 대상 4주 연속 과정. 1주차는 동기부여와 생각의 전환. 터미널 없이 ChatGPT 데스크탑의 Codex만 사용.|week1.html"
+    "lecture-09-agent-hackathon|Lecture 09: Just Plan It!|AI 에이전트 해커톤|모든 레벨|300분|6개 Part|A (91/100)|5시간 집중 워크숍. 환경 설정부터 팀 해커톤까지, AI Agent 완전 체험.||Just Plan It!|5시간 집중 해커톤|워크숍,5시간,종합|"
+    "lecture-10-antigravity-gemini|Lecture 10: Gemini CLI|AI 에이전트 활용 마스터 클래스|비개발자 및 일반 업무 사용자|360분 (6시간)|6개 Part|산출물:프로토타입 5개 이상|비개발자를 위한 실무 자동화 + 코딩. Do-See-Ask-Learn 사이클로 배우는 AI 에이전트.||Gemini CLI - AI 에이전트 활용 마스터 클래스|비개발자를 위한 실무 자동화 + 코딩|Gemini CLI,6시간,비개발자|"
+    "lecture-11-agent-life-transition|Lecture 11: Just Plan It!!|AI Agent로 일과 삶의 전환|대학생/교직원|120분|5개 Part|미평가|동명대학교 특강. AI Agent 체험부터 업무 자동화, 팀 해커톤까지.||Just Plan It!! AI Agent로 일과 삶의 전환|동명대학교 특강 — Agent 체험부터 팀 해커톤까지|AI Agent,2시간,초급~중급|"
+    "lecture-12-agent-life-transition|Lecture 12: AI Agent 활용|생활/업무 전환|대학생/교직원|120분|4개 Act|미평가|동명대학교 특강. Agent 개념 이해부터 역할별 실습, 삶의 전환 로드맵까지.||AI Agent 활용 생활/업무 전환|동명대학교 특강 — 시연 + 직접 실습 중심|AI Agent,2시간,초급~중급|"
+    "lecture-15-codex-4weeks|Lecture 15: 에이전트와 함께하는 삶의 전환|Codex 4주 과정 (1주차)|비전공자 30~60대|120분×4주|4개 주차|미평가|비전공자 대상 4주 연속 과정. 1주차는 동기부여와 생각의 전환. 터미널 없이 ChatGPT 데스크탑의 Codex만 사용.|week1.html|에이전트와 함께하는 삶의 전환|비전공자 4주 과정 — ChatGPT 데스크탑의 Codex만 사용|Codex,2시간 × 4주,비전공자|NEW"
 )
 
 # 함수: index.html 생성
@@ -333,12 +338,90 @@ EOF
     echo "✓ Generated: lectures/${folder}/index.html"
 }
 
+# 함수: 포털 카드 한 장의 HTML 출력
+generate_portal_card() {
+    local folder=$1
+    local title=$2
+    local subtitle=$3
+    local mainfile=$4
+    local card_title=$5
+    local card_subtitle=$6
+    local card_tags=$7
+    local card_badge=$8
+
+    local lecture_num=$(echo "$folder" | grep -oE "lecture-[0-9]+" | sed 's/lecture-//')
+
+    # 카드 문구를 비워 두면 상세 페이지용 필드에서 가져옵니다
+    [ -n "$card_title" ] || card_title="${title#*: }"
+    [ -n "$card_subtitle" ] || card_subtitle="$subtitle"
+
+    local label="Lecture ${lecture_num}"
+    [ -z "$card_badge" ] || label="${label} · ${card_badge}"
+
+    printf '            <!-- Lecture %s -->\n' "$lecture_num"
+    printf '            <a href="lectures/%s/%s" class="lecture-card">\n' "$folder" "$mainfile"
+    printf '                <span class="lecture-number">%s</span>\n' "$label"
+    printf '                <div class="lecture-title">%s</div>\n' "$card_title"
+    printf '                <div class="lecture-subtitle">%s</div>\n' "$card_subtitle"
+    if [ -n "$card_tags" ]; then
+        printf '                <div class="lecture-tags">\n'
+        local IFS=','
+        local tag
+        for tag in $card_tags; do
+            printf '                    <span class="tag">%s</span>\n' "$tag"
+        done
+        printf '                </div>\n'
+    fi
+    printf '            </a>\n'
+}
+
+# 함수: 루트 포털(index.html)의 강의 목록 교체
+# LECTURE_CARDS 마커 사이만 바꾸므로 소개 문구와 푸터는 그대로 둡니다
+generate_portal() {
+    local portal="index.html"
+
+    if ! grep -q 'LECTURE_CARDS:START' "$portal" || ! grep -q 'LECTURE_CARDS:END' "$portal"; then
+        echo "⚠ Skipped: ${portal} 에 LECTURE_CARDS 마커가 없습니다"
+        return 1
+    fi
+
+    local cards=$(mktemp)
+    local out=$(mktemp)
+    local count=0
+    local i
+
+    # 포털은 최신 강의가 위로 오도록 배열을 역순으로 씁니다
+    for (( i=${#LECTURES[@]}-1; i>=0; i-- )); do
+        IFS='|' read -r folder title subtitle target duration structure rating description \
+            mainfile card_title card_subtitle card_tags card_badge <<< "${LECTURES[$i]}"
+        mainfile=${mainfile:-lecture.html}
+
+        [ -f "lectures/${folder}/${mainfile}" ] || continue
+
+        [ "$count" -eq 0 ] || printf '\n' >> "$cards"
+        generate_portal_card "$folder" "$title" "$subtitle" "$mainfile" \
+            "$card_title" "$card_subtitle" "$card_tags" "$card_badge" >> "$cards"
+        count=$((count + 1))
+    done
+
+    awk -v cards="$cards" '
+        index($0, "LECTURE_CARDS:START") { print; while ((getline line < cards) > 0) print line; skip = 1; next }
+        index($0, "LECTURE_CARDS:END")   { skip = 0 }
+        !skip { print }
+    ' "$portal" > "$out"
+
+    mv "$out" "$portal"
+    rm -f "$cards"
+    echo "✓ Generated: ${portal} (강의 카드 ${count}개)"
+}
+
 # 메인 실행
-echo "=== 강의 상세 페이지 생성 시작 ==="
+echo "=== 페이지 생성 시작 ==="
 echo ""
 
 for lecture in "${LECTURES[@]}"; do
-    IFS='|' read -r folder title subtitle target duration structure rating description mainfile <<< "$lecture"
+    IFS='|' read -r folder title subtitle target duration structure rating description \
+        mainfile card_title card_subtitle card_tags card_badge <<< "$lecture"
     mainfile=${mainfile:-lecture.html}
 
     # 메인 슬라이드 파일이 있는지 확인
@@ -349,6 +432,8 @@ for lecture in "${LECTURES[@]}"; do
     fi
 done
 
+generate_portal
+
 echo ""
 echo "=== 생성 완료 ==="
-echo "브라우저에서 lectures/<폴더>/index.html을 열어보세요!"
+echo "브라우저에서 index.html 또는 lectures/<폴더>/index.html을 열어보세요!"
