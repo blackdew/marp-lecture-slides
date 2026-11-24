@@ -10,13 +10,13 @@
 
   <!-- Title -->
   <text x="300" y="30" text-anchor="middle" font-size="22" font-weight="bold" fill="#2c3e50" font-family="sans-serif">Agent의 구조</text>
-  <text x="300" y="55" text-anchor="middle" font-size="13" fill="#7f8c8d" font-family="sans-serif">요리사에게 레시피만 vs 재료와 도구까지</text>
+  <text x="300" y="55" text-anchor="middle" font-size="13" fill="#7f8c8d" font-family="sans-serif">방법 설명만 vs 실제 작업 수행까지</text>
 
   <!-- Central LLM circle -->
   <circle cx="300" cy="200" r="70" fill="#3498db" opacity="0.12"/>
   <circle cx="300" cy="200" r="55" fill="#3498db"/>
   <text x="300" y="193" text-anchor="middle" font-size="20" font-weight="bold" fill="white" font-family="sans-serif">LLM</text>
-  <text x="300" y="215" text-anchor="middle" font-size="12" fill="white" opacity="0.9" font-family="sans-serif">(두뇌)</text>
+  <text x="300" y="215" text-anchor="middle" font-size="12" fill="white" opacity="0.9" font-family="sans-serif">(추론)</text>
 
   <!-- Memory -->
   <rect x="80" y="115" width="110" height="65" rx="12" fill="#9b59b6"/>
@@ -67,18 +67,18 @@
   <line x1="300" y1="385" x2="300" y2="430" stroke="#e0e0e0" stroke-width="1" stroke-dasharray="3,3"/>
   <line x1="370" y1="385" x2="480" y2="430" stroke="#e0e0e0" stroke-width="1" stroke-dasharray="3,3"/>
 
-  <!-- Metaphor section -->
+  <!-- Difference section -->
   <rect x="80" y="530" width="440" height="120" rx="16" fill="white" stroke="#e0e0e0" stroke-width="1"/>
-  <text x="300" y="560" text-anchor="middle" font-size="14" font-weight="bold" fill="#2c3e50" font-family="sans-serif">비유로 이해하기</text>
+  <text x="300" y="560" text-anchor="middle" font-size="14" font-weight="bold" fill="#2c3e50" font-family="sans-serif">차이로 이해하기</text>
 
   <!-- Without tools -->
   <rect x="100" y="575" width="180" height="55" rx="8" fill="#fff3cd"/>
-  <text x="190" y="596" text-anchor="middle" font-size="12" fill="#856404" font-family="sans-serif">레시피만 준 요리사</text>
+  <text x="190" y="596" text-anchor="middle" font-size="12" fill="#856404" font-family="sans-serif">챗봇 (도구 없음)</text>
   <text x="190" y="618" text-anchor="middle" font-size="11" fill="#856404" font-family="sans-serif">"이렇게 하면 돼요" (말만)</text>
 
   <!-- With tools -->
   <rect x="320" y="575" width="180" height="55" rx="8" fill="#d4edda"/>
-  <text x="410" y="596" text-anchor="middle" font-size="12" fill="#155724" font-family="sans-serif">재료+도구까지 준 요리사</text>
+  <text x="410" y="596" text-anchor="middle" font-size="12" fill="#155724" font-family="sans-serif">Agent (도구 사용)</text>
   <text x="410" y="618" text-anchor="middle" font-size="11" fill="#155724" font-family="sans-serif">"직접 만들어 드릴게요!"</text>
 
   <!-- Bottom key message -->

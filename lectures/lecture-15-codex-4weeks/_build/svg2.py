@@ -3,9 +3,9 @@ from svg1 import DEFS, AC, ACF, ACB, _box, _arrow
 
 # (a) 지식과 맥락의 비대칭
 ASYM = """
-<svg viewBox="0 0 960 268" role="img" aria-label="조수는 분야 지식이 많고 내 맥락은 전혀 모르며, 나는 지식은 적지만 내 맥락을 전부 안다">
+<svg viewBox="0 0 960 268" role="img" aria-label="에이전트는 분야 지식이 많고 내 맥락은 전혀 모르며, 나는 지식은 적지만 내 맥락을 전부 안다">
 """ + DEFS + """
-<text x="0" y="16" fill="currentColor" font-size="12" font-weight="600" opacity=".55" letter-spacing="2">조수</text>
+<text x="0" y="16" fill="currentColor" font-size="12" font-weight="600" opacity=".55" letter-spacing="2">에이전트</text>
 <text x="150" y="52" text-anchor="end" fill="currentColor" font-size="13" opacity=".7">분야 지식</text>
 <rect x="166" y="32" width="700" height="30" rx="4" """ + ACB + """ stroke-width="1.5"/>
 <text x="878" y="52" font-size="12.5" font-weight="600" """ + ACF + """>거의 전부</text>
@@ -28,7 +28,7 @@ ASYM = """
 
 # (b) 질문 비용
 COST = """
-<svg viewBox="0 0 960 208" role="img" aria-label="사람에게 묻는 데는 미안함과 창피함과 대기 시간이 들지만 조수에게는 들지 않아, 혼자 헤매는 대신 바로 묻게 된다">
+<svg viewBox="0 0 960 208" role="img" aria-label="사람에게 묻는 데는 미안함과 창피함과 대기 시간이 들지만 에이전트에게는 들지 않아, 혼자 헤매는 대신 바로 묻게 된다">
 """ + DEFS + """
 <text x="0" y="16" fill="currentColor" font-size="13" font-weight="600" opacity=".55" letter-spacing="2">사람에게 물을 때 드는 비용</text>
 <rect x="0" y="32" width="196" height="52" rx="6" stroke="currentColor" fill="none" stroke-width="1.5" opacity=".65"/>
@@ -39,7 +39,7 @@ COST = """
 <text x="510" y="64" text-anchor="middle" fill="currentColor" font-size="15" opacity=".82">기다리는 시간</text>
 <text x="626" y="64" fill="currentColor" font-size="14" opacity=".62">→ 그래서 혼자 헤맵니다</text>
 
-<text x="0" y="128" font-size="13" font-weight="600" letter-spacing="2" """ + ACF + """>조수에게 물을 때</text>
+<text x="0" y="128" font-size="13" font-weight="600" letter-spacing="2" """ + ACF + """>에이전트에게 물을 때</text>
 <rect x="0" y="144" width="608" height="52" rx="6" style="stroke:var(--acc);fill:var(--acc);fill-opacity:.22" stroke-width="1.5"/>
 <text x="304" y="176" text-anchor="middle" font-size="15.5" font-weight="600" """ + ACF + """>0 에 가깝습니다</text>
 <rect x="626" y="144" width="334" height="52" rx="6" stroke="currentColor" fill="none" stroke-width="1.5" opacity=".3" stroke-dasharray="5 4"/>
@@ -94,5 +94,5 @@ PATH = """
 <text x="910" y="112" text-anchor="middle" font-size="13.5" font-weight="600" """ + ACF + """>되는 일</text>
 <text x="910" y="132" text-anchor="middle" fill="currentColor" font-size="11.5" opacity=".65">1번 칸으로</text>
 <path d="M910 142 C 910 220, 70 230, 70 148" fill="none" stroke="currentColor" stroke-width="1.5" opacity=".35" stroke-dasharray="6 5" marker-end="url(#ar)"/>
-<text x="490" y="20" text-anchor="middle" fill="currentColor" font-size="12.5" opacity=".7">조수가 똑똑해진 게 아니라, 당신이 잘 시키게 된 것입니다</text>
+<text x="490" y="20" text-anchor="middle" fill="currentColor" font-size="12.5" opacity=".7">에이전트가 똑똑해진 게 아니라, 당신이 잘 시키게 된 것입니다</text>
 </svg>"""

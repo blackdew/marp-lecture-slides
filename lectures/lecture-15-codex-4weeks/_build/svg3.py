@@ -38,7 +38,7 @@ WILL = """
 
 # (b) 맥락 설명 vs 협업
 CTX = """
-<svg viewBox="0 0 960 310" role="img" aria-label="맥락을 길게 적어주면 조수는 그 범위 안에서만 생각하지만, 짧게 주고 질문을 받으면 내가 정하지 않은 것이 드러난다">
+<svg viewBox="0 0 960 310" role="img" aria-label="맥락을 길게 적어주면 에이전트는 그 범위 안에서만 생각하지만, 짧게 주고 질문을 받으면 내가 정하지 않은 것이 드러난다">
 """ + DEFS + """
 <text x="0" y="16" fill="currentColor" font-size="12" font-weight="600" opacity=".55" letter-spacing="2">맥락을 다 적어주기</text>
 <rect x="0" y="34" width="250" height="92" rx="8" stroke="currentColor" fill="none" stroke-width="1.5" opacity=".7"/>
@@ -62,13 +62,13 @@ CTX = """
 <path d="M300 244 L 180 244" """ + AC + """ stroke-width="1.5" marker-end="url(#ara)"/>
 <text x="240" y="262" text-anchor="middle" fill="currentColor" font-size="11.5" opacity=".7">질문 3개</text>
 <rect x="304" y="202" width="180" height="56" rx="8" """ + ACB + """ stroke-width="1.5"/>
-<text x="394" y="236" text-anchor="middle" font-size="13.5" font-weight="600" """ + ACF + """>조수</text>
+<text x="394" y="236" text-anchor="middle" font-size="13.5" font-weight="600" """ + ACF + """>에이전트</text>
 <text x="394" y="186" text-anchor="middle" fill="currentColor" font-size="11.5" opacity=".65">3~5회 주고받음</text>
 <line x1="484" y1="230" x2="546" y2="230" """ + AC + """ stroke-width="1.5" marker-end="url(#ara)"/>
 <rect x="550" y="202" width="410" height="56" rx="8" """ + ACB + """ stroke-width="1.5"/>
 <text x="755" y="226" text-anchor="middle" font-size="13.5" font-weight="600" """ + ACF + """>“아, 나 이걸 안 정했네”</text>
-<text x="755" y="247" text-anchor="middle" fill="currentColor" font-size="12" opacity=".7">조수가 하는 질문이 내가 안 정한 부분을 드러냅니다</text>
-<text x="0" y="300" fill="currentColor" font-size="12.5" opacity=".6">맥락을 전부 적어주려 하지 말고, 조수가 맥락으로 다가오게 만드세요.</text>
+<text x="755" y="247" text-anchor="middle" fill="currentColor" font-size="12" opacity=".7">에이전트가 하는 질문이 내가 안 정한 부분을 드러냅니다</text>
+<text x="0" y="300" fill="currentColor" font-size="12.5" opacity=".6">맥락을 전부 적어주려 하지 말고, 에이전트가 맥락으로 다가오게 만드세요.</text>
 </svg>"""
 
 # (c) 세 가지 대화 방식

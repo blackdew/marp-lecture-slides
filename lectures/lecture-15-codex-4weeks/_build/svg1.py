@@ -58,7 +58,7 @@ DAY = """
 
 <text x="0" y="150" fill="currentColor" font-size="13" font-weight="600" opacity=".6" letter-spacing="2">전환 후</text>
 <rect x="0" y="166" width="240" height="56" rx="6" stroke="currentColor" fill="none" stroke-width="1.5" opacity=".45" stroke-dasharray="5 4"/>
-<text x="120" y="200" text-anchor="middle" fill="currentColor" font-size="14" opacity=".6">처리 — 조수가 함</text>
+<text x="120" y="200" text-anchor="middle" fill="currentColor" font-size="14" opacity=".6">처리 — 에이전트가 함</text>
 <rect x="248" y="166" width="590" height="56" rx="6" """ + ACB + """ stroke-width="1.5"/>
 <text x="543" y="200" text-anchor="middle" font-size="15" font-weight="600" """ + ACF + """>결정 — 무엇을 할지 · 맡기기 · 결과 검증</text>
 <text x="852" y="200" fill="currentColor" font-size="12" opacity=".55">쌓인다</text>
@@ -81,7 +81,7 @@ _arrow(288, 138, 340, 138, "내가 직접") + """
 <text x="229" y="292" text-anchor="middle" fill="currentColor" font-size="13" font-weight="600" opacity=".55">결과 = 화면 위의 글</text>
 
 <text x="500" y="20" font-size="13" font-weight="600" letter-spacing="2" """ + ACF + """>에이전트 (코덱스)</text>
-""" + _box(500, 110, 96, 56, "나") + _box(650, 110, 128, 56, "조수", "내 컴퓨터 안", acc=True) + \
+""" + _box(500, 110, 96, 56, "나") + _box(650, 110, 128, 56, "에이전트", "내 컴퓨터 안", acc=True) + \
 _box(832, 110, 108, 56, "내 폴더", "파일 · 설정", acc=True) + \
 _arrow(596, 138, 648, 138, "목적", acc=True) + \
 _arrow(778, 124, 830, 124, "읽기 · 쓰기", acc=True) + \
@@ -97,7 +97,7 @@ _arrow(830, 152, 780, 152, "결과 확인", acc=True, above=False) + """
 SAFE = """
 <svg viewBox="0 0 960 300" role="img" aria-label="요청은 승인을 거치고 샌드박스 범위 안에서만 파일을 바꿀 수 있으며, 되돌리기 기록이 남는다">
 """ + DEFS + """
-""" + _box(10, 108, 104, 60, "조수", "하려는 일") + """
+""" + _box(10, 108, 104, 60, "에이전트", "하려는 일") + """
 <line x1="114" y1="138" x2="212" y2="138" stroke="currentColor" stroke-width="1.5" opacity=".8" marker-end="url(#ar)"/>
 <rect x="216" y="78" width="150" height="120" rx="8" """ + ACB + """ stroke-width="1.5"/>
 <text x="291" y="112" text-anchor="middle" font-size="12" font-weight="600" letter-spacing="1.5" """ + ACF + """>① 승인</text>

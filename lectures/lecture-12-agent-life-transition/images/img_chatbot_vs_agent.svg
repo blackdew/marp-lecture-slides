@@ -53,5 +53,5 @@
 
   <!-- 핵심 메시지 -->
   <rect x="100" y="660" width="400" height="60" rx="30" fill="#3498db" opacity="0.1"/>
-  <text x="300" y="698" text-anchor="middle" font-size="24" font-weight="bold" fill="#3498db" font-family="sans-serif">도구를 쓰는 AI 동료</text>
+  <text x="300" y="698" text-anchor="middle" font-size="24" font-weight="bold" fill="#3498db" font-family="sans-serif">도구로 실제 작업을 수행</text>
 </svg>

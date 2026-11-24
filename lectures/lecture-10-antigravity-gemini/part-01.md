@@ -18,12 +18,12 @@
 
 ### Agent = LLM + Memory + Planning + Tools
 
-| 요소 | 역할 | 비유 |
-|------|------|------|
-| **LLM (Brain)** | 추론 및 결정 | 똑똑한 두뇌 |
-| **Memory (Context)** | 기억 및 맥락 | 업무 수첩 |
-| **Planning (Strategy)** | 계획 수립 | 업무 매뉴얼 |
-| **Tools (Action)** | 실제 행동 | 손과 발 |
+| 요소 | 역할 |
+|------|------|
+| **LLM (Reasoning)** | 추론 및 결정 |
+| **Memory (Context)** | 기억 및 맥락 |
+| **Planning (Strategy)** | 계획 수립 |
+| **Tools (Action)** | 파일 조작, 명령 실행 등 실제 작업 수행 |
 
 > "이 인턴의 잠재력은 엄청납니다. 단, <strong>좋은 사수(여러분을)</strong>를 만났을 때만 그렇습니다."
 

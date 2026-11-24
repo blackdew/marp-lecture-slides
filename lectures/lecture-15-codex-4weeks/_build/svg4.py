@@ -3,7 +3,7 @@ from svg1 import DEFS, AC, ACF, ACB, _box
 
 # (a) 프롬프트 → 메모 → 스킬
 EVOLVE = """
-<svg viewBox="0 0 960 272" role="img" aria-label="매번 새로 쓰던 프롬프트가 메모에 저장되고 다시 스킬이 되면서, 기억하는 주체가 나에게서 조수로 넘어간다">
+<svg viewBox="0 0 960 272" role="img" aria-label="매번 새로 쓰던 프롬프트가 메모에 저장되고 다시 스킬이 되면서, 기억하는 주체가 나에게서 에이전트로 넘어간다">
 """ + DEFS + """
 <rect x="0" y="34" width="286" height="118" rx="10" stroke="currentColor" fill="none" stroke-width="1.5" opacity=".6"/>
 <text x="16" y="60" fill="currentColor" font-size="11.5" font-weight="600" letter-spacing="1.5" opacity=".6">1단계 · 1주차</text>
@@ -31,13 +31,13 @@ EVOLVE = """
 <text x="0" y="212" fill="currentColor" font-size="12" font-weight="600" opacity=".55" letter-spacing="2">누가 기억하는가</text>
 <text x="143" y="246" text-anchor="middle" fill="currentColor" font-size="14" opacity=".7">아무도</text>
 <text x="479" y="246" text-anchor="middle" fill="currentColor" font-size="14" opacity=".7">내가</text>
-<text x="816" y="246" text-anchor="middle" font-size="15" font-weight="600" """ + ACF + """>조수가</text>
+<text x="816" y="246" text-anchor="middle" font-size="15" font-weight="600" """ + ACF + """>에이전트가</text>
 <text x="479" y="270" text-anchor="middle" fill="currentColor" font-size="12" opacity=".55">2단계와 3단계의 차이는 이것 하나입니다</text>
 </svg>"""
 
 # (b) description 매칭
 MATCH = """
-<svg viewBox="0 0 960 290" role="img" aria-label="내가 쓰는 말이 description에 들어 있으면 스킬이 불리고, description이 막연하면 불리지 않아 조수가 자기 방식대로 한다">
+<svg viewBox="0 0 960 290" role="img" aria-label="내가 쓰는 말이 description에 들어 있으면 스킬이 불리고, description이 막연하면 불리지 않아 에이전트가 자기 방식대로 한다">
 """ + DEFS + """
 <text x="0" y="16" font-size="12" font-weight="600" letter-spacing="2" """ + ACF + """>불리는 경우</text>
 <rect x="0" y="32" width="208" height="54" rx="8" """ + ACB + """ stroke-width="1.5"/>
@@ -64,7 +64,7 @@ MATCH = """
 <line x1="666" y1="195" x2="720" y2="195" stroke="currentColor" stroke-width="1.5" opacity=".45" stroke-dasharray="5 4" marker-end="url(#ar)"/>
 <rect x="724" y="168" width="236" height="54" rx="8" stroke="currentColor" fill="none" stroke-width="1.5" opacity=".45" stroke-dasharray="5 4"/>
 <text x="842" y="200" text-anchor="middle" fill="currentColor" font-size="13.5" opacity=".6">그냥 자기 방식대로 씁니다</text>
-<text x="0" y="266" fill="currentColor" font-size="12.5" opacity=".7">조수는 본문을 읽고 판단하지 않습니다. <tspan font-weight="600">description만 보고</tspan> 꺼낼지 말지 정합니다.</text>
+<text x="0" y="266" fill="currentColor" font-size="12.5" opacity=".7">에이전트는 본문을 읽고 판단하지 않습니다. <tspan font-weight="600">description만 보고</tspan> 꺼낼지 말지 정합니다.</text>
 <text x="0" y="288" fill="currentColor" font-size="12.5" opacity=".6">그래서 내가 실제로 쓰는 말이 거기 그대로 들어 있어야 합니다.</text>
 </svg>"""
 

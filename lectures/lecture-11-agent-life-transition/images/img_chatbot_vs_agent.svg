@@ -30,7 +30,7 @@
 
   <!-- Chatbot metaphor -->
   <rect x="85" y="310" width="150" height="50" rx="8" fill="#fff3cd"/>
-  <text x="160" y="332" text-anchor="middle" font-size="11" fill="#856404" font-family="sans-serif">비유: 똑똑한 친구</text>
+  <text x="160" y="332" text-anchor="middle" font-size="11" fill="#856404" font-family="sans-serif">결과물: 텍스트뿐</text>
   <text x="160" y="350" text-anchor="middle" font-size="11" fill="#856404" font-family="sans-serif">"방법은 알려줄게!"</text>
 
   <!-- Arrow -->
@@ -58,7 +58,7 @@
 
   <!-- Agent metaphor -->
   <rect x="365" y="310" width="150" height="50" rx="8" fill="#d4edda"/>
-  <text x="440" y="332" text-anchor="middle" font-size="11" fill="#155724" font-family="sans-serif">비유: 도구 쓰는 동료</text>
+  <text x="440" y="332" text-anchor="middle" font-size="11" fill="#155724" font-family="sans-serif">결과물: 실제 파일</text>
   <text x="440" y="350" text-anchor="middle" font-size="11" fill="#155724" font-family="sans-serif">"내가 직접 해줄게!"</text>
 
   <!-- Comparison examples -->
@@ -82,5 +82,5 @@
 
   <!-- Bottom message -->
   <rect x="120" y="620" width="360" height="50" rx="25" fill="#3498db" opacity="0.1"/>
-  <text x="300" y="650" text-anchor="middle" font-size="15" font-weight="bold" fill="#3498db" font-family="sans-serif">Agent = 도구를 쓸 줄 아는 AI 동료</text>
+  <text x="300" y="650" text-anchor="middle" font-size="15" font-weight="bold" fill="#3498db" font-family="sans-serif">Agent = 도구로 실제 작업을 수행하는 AI</text>
 </svg>

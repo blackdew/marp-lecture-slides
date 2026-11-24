@@ -11,7 +11,7 @@
   <circle cx="300" cy="250" r="85" fill="#3498db" opacity="0.12"/>
   <circle cx="300" cy="250" r="65" fill="#3498db"/>
   <text x="300" y="240" text-anchor="middle" font-size="36" font-weight="bold" fill="white" font-family="sans-serif">LLM</text>
-  <text x="300" y="275" text-anchor="middle" font-size="22" fill="white" opacity="0.9" font-family="sans-serif">두뇌</text>
+  <text x="300" y="275" text-anchor="middle" font-size="22" fill="white" opacity="0.9" font-family="sans-serif">추론</text>
 
   <!-- Memory (왼쪽 위) -->
   <g transform="translate(105, 130)">

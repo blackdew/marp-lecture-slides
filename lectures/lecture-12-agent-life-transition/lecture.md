@@ -165,7 +165,7 @@ Agent가 잘 못하는 것처럼 느껴질 때, 그건 Agent의 한계가 아닙
 
 <div class="highlight">
 
-Agent = 도구를 쓸 줄 아는 AI 동료
+Agent = 도구를 사용해 실제 작업을 수행하는 AI
 
 </div>
 
