@@ -8,53 +8,66 @@
 
 ```text
 .
-├── generate-presentation.sh          # 메인 빌드 스크립트
-├── generate-lecture-pages.sh         # 강의 상세 페이지 + 포털 목록 생성 스크립트
-├── index.html                        # 강의 목록 포탈 (카드 목록은 위 스크립트가 생성)
-├── assets/css/                       # 공통 CSS (Giscus 댓글 테마 등)
-├── CLAUDE.md -> docs/AGENTS_CONTEXT.md   # Claude Code용 심볼릭 링크
-├── AGENTS.md -> docs/AGENTS_CONTEXT.md   # 범용 Agents용 심볼릭 링크
-├── GEMINI.md -> docs/AGENTS_CONTEXT.md   # Gemini용 심볼릭 링크
+├── generate-presentation.sh          # Marp 마크다운 → HTML
+├── generate-lecture-pages.sh         # 강의 상세 페이지 + 포털 카드 생성
+├── index.html                        # 강의 목록 포털 (카드는 위 스크립트가 생성)
+├── assets/css/                       # 공통 CSS (Giscus 댓글 테마)
+├── CLAUDE.md · AGENTS.md · GEMINI.md # 모두 docs/AGENTS_CONTEXT.md 심볼릭 링크
 ├── .claude/
-│   ├── agents/                        # 강의 제작 전문 에이전트
-│   │   ├── lecture-analyst.md         # Phase 1: 수강생/주제/참조 분석
-│   │   ├── instructional-designer.md  # Phase 2: 강의 설계
-│   │   ├── rubric-evaluator.md        # Phase 2.5/3.5: 루브릭 기반 정량 평가
-│   │   ├── slide-writer.md            # Phase 3: Marp 슬라이드 작성
-│   │   ├── visual-designer.md         # Phase 3: SVG 이미지 생성
-│   │   ├── lecture-reviewer.md        # Phase 4: 품질 검증
-│   │   └── retrospective-agent.md     # Phase 5: 회고 & 학습 추출
-│   ├── commands/                      # Claude Code 스킬 (slash commands)
-│   │   ├── create-lecture.md          # 강의 자동 생성 파이프라인
-│   │   ├── create-lecture-reflect.md  # 사용자 수정 피드백 캡처
-│   │   └── create-lecture-templates.md # CSS/SVG 템플릿 및 컨벤션 참조
-│   └── learnings/                     # 학습 메모리 (Git 추적)
-│       └── create-lecture.md          # 강의 제작 교훈 누적 파일
+│   ├── agents/                       # 강의 제작 에이전트 7개
+│   ├── commands/                     # 슬래시 커맨드 3개
+│   └── learnings/                    # 강의 제작 교훈 누적 (Git 추적)
 ├── docs/
-│   ├── AGENTS_CONTEXT.md              # 마스터 작업 컨텍스트 파일
-│   ├── 00-review-summary.md           # 강의 리뷰 종합 요약
-│   └── retrospectives/                # 작업 회고 및 학습 내용
-└── lectures/                          # 강의 자료 루트 디렉토리
-    └── lecture-XX-<주제명>/           # 개별 강의 폴더 (패턴)
-        ├── requirements.md            # 강의 요구사항 정의서
-        ├── outline.md                 # 강의 개요 및 타임라인
-        ├── lecture.md                 # 메인 프레젠테이션 파일
-        ├── part-XX.md                 # 모듈화된 콘텐츠 섹션
-        ├── images/                    # 시각 자료
-        │   └── img_*.svg              # SVG 이미지 파일
-        ├── .work/                     # 중간 산출물 (gitignore 대상)
-        └── lecture.html               # 생성된 결과물
+│   ├── AGENTS_CONTEXT.md             # 이 문서. 작업 규칙의 단일 출처
+│   ├── 00-review-summary.md          # 강의 리뷰 종합
+│   ├── review-lecture-09-agent-hackathon.md
+│   ├── cowork-project-instructions.md
+│   └── retrospectives/               # 작업 회고
+└── lectures/
+    ├── lecture-09-agent-hackathon/
+    ├── lecture-10-antigravity-gemini/
+    ├── lecture-11-agent-life-transition/
+    ├── lecture-12-agent-life-transition/
+    ├── lecture-15-codex-4weeks/      # Codex 4주 과정 1강
+    └── lecture-16-codex-week2/       # Codex 4주 과정 2강
 ```
 
-각 강의 폴더의 구성 패턴:
+### 강의 폴더 구성
 
-- `requirements.md` - 강의 요구사항 정의서 (대상, 시간, 목표 등)
-- `outline.md` - 강의 개요 및 분 단위 타임라인
-- `lecture.md` - 메인 프레젠테이션 파일 (또는 주제별 파일명)
-- `part-XX.md` - 초안/모듈화된 콘텐츠 파일 (선택사항)
-- `images/` - 시각 자료 디렉토리
-- `.work/` - 자동 파이프라인 중간 산출물 (gitignore 대상)
-- 생성된 출력 파일: `.html`, `.pdf`, `.pptx` (선택사항)
+강의 폴더는 두 형태입니다. 어느 쪽인지는 `_build/` 유무로 구분합니다.
+
+#### Marp 경로 (9·10·11·12강)
+
+```text
+lecture-XX-<주제명>/
+├── requirements.md    # 대상 · 시간 · 목표
+├── outline.md         # 분 단위 타임라인
+├── lecture.md         # 슬라이드 원본. 직접 편집
+├── part-XX.md         # 모듈 초안 (선택)
+├── images/img_*.svg   # 손으로 만든 SVG
+├── .work/             # 중간 산출물 (gitignore 대상)
+└── lecture.html       # 빌드 결과
+```
+
+#### 생성기 경로 (15·16강)
+
+```text
+lecture-XX-<주제명>/
+├── requirements.md
+├── _build/
+│   ├── wN.py          # 슬라이드 원본. 여기만 편집
+│   ├── svg*.py        # SVG 그림 정의
+│   ├── build.py       # → weekN.html
+│   ├── build_marp.py  # → lecture.md + images/
+│   └── outline.py     # → outline.md
+├── images/img_*.svg   # build_marp.py 가 생성
+├── outline.md         # 생성물
+├── lecture.md         # 생성물
+├── weekN.html         # 발표용 본 슬라이드
+└── lecture.html       # Marp 결과
+```
+
+생성기 경로에서 `lecture.md` 와 `outline.md` 는 생성물입니다. 직접 고치면 다음 빌드에서 사라집니다.
 
 ## 작업 흐름
 
@@ -122,23 +135,23 @@ learnings 파일은 Git 추적 대상으로, 팀원 간에 공유됩니다.
 
 ## 핵심 목표
 
-마크다운 파일을 사용하여 프레젠테이션 슬라이드(PPT/HTML/PDF)를 생성하고, 강의별 산출물을 일관된 구조로 보존하는 것이 핵심입니다.
+강의 슬라이드를 HTML·PDF·PPTX 로 생성하고, 강의별 산출물을 일관된 구조로 보존합니다. 원본은 강의마다 하나뿐이며, 나머지는 모두 생성물입니다.
 
-## 권장 도구: Marp
+## 빌드 경로 두 가지
 
-`Marp`는 마크다운으로 프레젠테이션을 제작할 때 사용하는 표준 도구입니다. 모든 프레젠테이션은 Marp (Markdown Presentation Ecosystem)를 사용하여 빌드됩니다.
+슬라이드 원본이 강의마다 다릅니다. 고치기 전에 어느 경로인지 확인하십시오.
 
-### 설치
+| 항목 | Marp 경로 | 생성기 경로 |
+|------|-----------|-------------|
+| 해당 강의 | 09 · 10 · 11 · 12 | 15 · 16 |
+| 원본 파일 | `lecture.md` | `_build/wN.py` |
+| 발표용 산출물 | `lecture.html` | `weekN.html` |
+| 빌드 명령 | `./generate-presentation.sh` | `python3 build.py N` |
+| 발표자 노트 | 없음 | 있음 (N 키) |
 
-Node.js와 npm이 설치되어 있어야 합니다:
+### Marp 경로
 
-```bash
-npm install -g @marp-team/marp-cli
-```
-
-### 기본 사용법
-
-슬라이드는 `---` 구분자로 나눕니다:
+마크다운을 직접 씁니다. 슬라이드는 `---` 로 나눕니다.
 
 ```markdown
 ---
@@ -148,7 +161,7 @@ size: 16:9
 
 # 1강: 시작하기
 
-이것은 첫 번째 슬라이드입니다.
+첫 번째 슬라이드입니다.
 
 ---
 
@@ -156,7 +169,22 @@ size: 16:9
 
 - 소개
 - 설치
-- 사용법
+```
+
+### 생성기 경로
+
+파이썬 자료구조 하나에서 두 형식을 뽑습니다.
+
+- `build.py` → `weekN.html` — 발표용. 발표자 노트 토글, 16:9 자동 맞춤, 휴대폰 문서 모드
+- `build_marp.py` → `lecture.md` — Marp 변환용. PDF·PPTX 출력과 포털 등재에 씁니다
+- 16강은 생성기를 복사하지 않고 15강 것을 `_build/_shared.py` 로 참조합니다
+
+### Marp 설치
+
+Node.js 와 npm 이 필요합니다. 두 경로 모두 Marp 산출물을 뽑을 때 씁니다.
+
+```bash
+npm install -g @marp-team/marp-cli
 ```
 
 ## 마크다운 작성 규칙
@@ -170,17 +198,25 @@ size: 16:9
 - **목록 주변 공백(Blanks around lists):** 목록 위아래에는 한 줄씩 비워둡니다. (MD032)
 - **중복 헤딩 금지(No duplicate headings):** 한 문서 내 동일 제목을 반복하지 않습니다. (MD024)
 - **레이아웃 규칙:** 모든 슬라이드는 Marp 프런트매터(`marp: true`, `size: 16:9`)를 포함하고 `---`로 슬라이드를 구분합니다.
-- **이름 규칙:** 디렉터리는 소문자 케밥 케이스(`lecture-xx-topic`), 이미지 파일은 `img_1_1_daily_losses.svg`처럼 snake_case와 순번 조합을 사용합니다.
+- **이름 규칙:** 디렉터리는 소문자 케밥 케이스(`lecture-xx-topic`), 이미지 파일은 `img_1_1_daily_losses.svg`처럼 snake_case와 순번 조합을 사용합니다. 주제어는 폴더만 보고 강의를 구분할 수 있어야 합니다. 같은 주제를 대상이나 시간만 바꿔 다시 할 때는 `codex-week2`처럼 구분자를 붙입니다.
 - **스크립트 스타일:** 셸 스크립트는 POSIX 호환 문법과 두 칸 들여쓰기를 유지하며, 필요한 경우에만 한글·영문 병기 주석을 추가합니다.
 
 ## 언어 및 작성 규칙
 
-- **Implementation Plan**: 모든 구현 계획(Implementation Plan)은 반드시 **한글**로 작성해야 합니다.
-- **문서화**: 프로젝트 관련 모든 문서(커밋 메시지, PR 설명 등)는 한글 작성을 원칙으로 합니다.
+- **한글 원칙**: 구현 계획, 저장소 문서, 커밋 메시지, PR 설명을 모두 한글로 씁니다.
+- **적용 범위**: 아래 문장 규칙과 용어 규칙은 슬라이드와 저장소 문서에 똑같이 적용합니다.
+
+### 문장: 한눈에 읽히는 길이로 쓴다
+
+- 한 문장에 한 가지만 담습니다.
+- 수식어를 겹치지 않습니다.
+- 목록 항목은 명사형으로 끝냅니다.
+- 설명이 길어지면 문장을 나누거나 표로 바꿉니다.
+- 같은 내용을 두 곳에 쓰지 않습니다. 한 곳에 두고 나머지는 링크합니다.
 
 ### 용어: 표준 기술 용어를 쓰고 비유로 덮지 않는다
 
-`LLM`, `Memory`, `Planning`, `Tools`, `컨텍스트`, `프롬프트` 같은 표준 용어를 그대로 쓰고, 필요하면 **기능 설명**을 덧붙입니다. 그 위에 비유를 한 겹 더 얹지 않습니다.
+`LLM`, `Memory`, `Planning`, `Tools`, `컨텍스트`, `프롬프트` 같은 표준 기술 용어를 그대로 씁니다. `학습 목표`, `타임라인`, `실습`, `수강생`, `루브릭` 같은 표준 교육 용어도 그대로 씁니다. 필요하면 **기능 설명**을 덧붙입니다. 그 위에 비유를 한 겹 더 얹지 않습니다.
 
 | 쓰지 않음 | 대신 |
 |-----------|------|
@@ -201,7 +237,7 @@ size: 16:9
 
 ### 이미지 생성 규칙
 
-외부 이미지를 다운로드하는 것은 불안정하고 실패할 확률이 높으므로, 강의 내용에 맞는 간단한 **SVG 형식의 이미지를 직접 생성**하는 것을 최우선으로 권장합니다.
+외부 이미지 다운로드는 실패하기 쉽습니다. 강의 내용에 맞는 **SVG 이미지를 직접 생성**하십시오.
 
 SVG 이미지 생성 시 다음 규칙을 반드시 준수해야 합니다.
 
@@ -280,7 +316,7 @@ section.lead {
 - 콘텐츠는 오른쪽 65% 영역에 표시됩니다
 ```
 
-**중요:** 40% 이상 사용 시 이미지가 슬라이드 가장자리에 닿아 잘려 보입니다. 35%가 최적값입니다.
+크기와 viewBox 규칙은 위 "배경 이미지 전용 가이드" 에 있습니다.
 
 ### 공간 절약 패턴
 
@@ -341,9 +377,27 @@ Marp CLI의 `--pdf` 옵션은 Puppeteer 오류로 실패할 수 있습니다. �
 - `images/` 폴더를 출력 위치로 복사
 - 소스 파일과 동일한 디렉토리에 출력
 
+### 생성기 경로 빌드
+
+15·16강은 `_build/` 안에서 실행합니다.
+
+```bash
+cd lectures/lecture-16-codex-week2/_build
+python3 build.py 2        # → ../week2.html  (발표용)
+python3 build_marp.py 2   # → ../lecture.md + ../images/
+python3 outline.py 2      # → ../outline.md
+python3 ../../lecture-15-codex-4weeks/_build/check.py ../week2.html   # 태그 검사
+```
+
+그다음 Marp 산출물을 뽑습니다.
+
+```bash
+./generate-presentation.sh lecture-16-codex-week2 lecture.md
+```
+
 ### 라이브 프리뷰
 
-편집 중 자동 새로고침:
+Marp 경로에서 편집 중 자동 새로고침:
 
 ```bash
 marp lectures/<폴더>/<파일.md> --watch
@@ -359,25 +413,28 @@ marp lectures/<폴더>/<파일.md> --pptx      # 직접 PPTX 생성
 
 ## 검수 및 테스트 절차
 
-콘텐츠 수정 후 다음 단계를 따릅니다:
+콘텐츠 수정 후 다음 순서로 확인합니다.
 
-1. `./generate-presentation.sh <폴더> <파일.md>`를 실행하여 HTML 재생성
-2. 브라우저에서 HTML 파일을 열어 다음 항목 확인:
-   - 줄바꿈 및 텍스트 흐름 (한국어 텍스트는 오버플로우되기 쉬움)
+1. 재빌드
+   - Marp 경로: `./generate-presentation.sh <폴더> <파일.md>`
+   - 생성기 경로: `_build/` 에서 `python3 build.py N` 실행 후 `check.py` 로 태그 검사
+2. 브라우저에서 결과물을 열어 확인
+   - 줄바꿈 및 텍스트 흐름 — 한국어는 오버플로우가 잦습니다
    - 폰트 렌더링
    - 이미지 경로 및 렌더링
-   - **배경 이미지 여백**: 이미지가 슬라이드 가장자리에 붙어있지 않은지 확인
-   - **콘텐츠 여백**: 텍스트가 슬라이드 상하좌우 끝에 닿지 않는지 확인
-   - **슬라이드 오버플로우**: 각 슬라이드 하단이 잘리지 않는지 확인
-3. `images/` 폴더가 HTML 출력물과 함께 올바르게 복사되었는지 확인
-4. 새 다이어그램이나 외부 자산 추가 시 `marp --watch`를 사용하여 깨진 링크를 조기에 발견
+   - 배경 이미지 여백 — 슬라이드 가장자리에 닿지 않는지
+   - 콘텐츠 여백 — 텍스트가 상하좌우 끝에 닿지 않는지
+   - 슬라이드 오버플로우 — 하단이 잘리지 않는지
+3. `images/` 폴더가 결과물과 함께 복사됐는지 확인
+4. 다이어그램이나 외부 자산을 추가하면 `marp --watch` 로 깨진 링크를 조기에 확인
+
+`check.py` 는 HTML 태그 중첩만 검사합니다. 레이아웃 깨짐은 잡지 못하므로 브라우저 확인을 건너뛰지 않습니다.
 
 ### 일반적인 디자인 문제 해결
 
 #### 문제: 배경 이미지가 슬라이드 끝에 붙어있음
 
-- 해결: 마크다운에서 `![bg left:40%]`를 `![bg left:35%]`로 변경
-- SVG viewBox 수정은 효과 없음
+- 해결: `![bg left:40%]` 를 `![bg left:35%]` 로 변경
 
 #### 문제: 텍스트가 슬라이드 끝에 붙어있음
 
@@ -437,10 +494,13 @@ PR 설명에 포함할 항목:
 
 ### 새 강의 만들기 (수동)
 
-1. 새 디렉토리 생성: `lectures/lecture-XX-주제명`
-2. `images/` 서브디렉토리 추가
-3. Marp 프런트매터가 포함된 초기 `lecture.md` 생성
-4. 빌드: `./generate-presentation.sh lecture-XX-주제명 lecture.md`
+1. 빌드 경로를 먼저 정합니다. 발표자 노트가 필요하면 생성기 경로, 아니면 Marp 경로입니다.
+2. 새 디렉토리 생성: `lectures/lecture-XX-주제명`
+3. `requirements.md` 에 대상·시간·목표를 적습니다.
+4. Marp 경로: `images/` 를 만들고 Marp 프런트매터가 들어간 `lecture.md` 를 작성한 뒤
+   `./generate-presentation.sh lecture-XX-주제명 lecture.md` 로 빌드합니다.
+5. 생성기 경로: `_build/` 에 `_shared.py` · `build.py` · `build_marp.py` · `outline.py` · `wN.py` 를 두고
+   `python3 build.py N` 으로 빌드합니다. 공용 생성기(`deck.py` 등)는 15강 `_build/` 를 참조합니다.
 
 ### 강의 등재 (포털 + 상세 페이지)
 

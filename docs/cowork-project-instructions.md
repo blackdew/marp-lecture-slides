@@ -23,9 +23,12 @@ Marp 마크다운으로 비개발자·일반인 대상 AI 에이전트 오픈 �
 ## 공통 규칙
 
 - 강의는 lectures/lecture-XX-주제명/ 폴더에 독립 보관.
-  진행 순서: requirements.md → outline.md → lecture.md → 빌드 → 검증.
-- 모든 lecture.md에 Marp 프런트매터(marp: true, size: 16:9, paginate: true)와
-  section { padding: 60px 80px; } CSS를 포함.
+  진행 순서: requirements.md → outline.md → 슬라이드 원본 → 빌드 → 검증.
+- 빌드 경로는 두 가지. 폴더에 _build/ 가 있으면 생성기 경로이고 원본은
+  _build/wN.py 다. 없으면 Marp 경로이고 원본은 lecture.md 다.
+  생성기 경로에서 lecture.md 와 outline.md 는 생성물이므로 직접 고치지 않는다.
+- Marp 경로의 lecture.md 에는 Marp 프런트매터(marp: true, size: 16:9,
+  paginate: true)와 section { padding: 60px 80px; } CSS를 포함.
 - 이미지는 강의 폴더 images/에 SVG로 직접 생성 — 콘텐츠는 viewBox 중앙 배치,
   배경 이미지는 35% 크기.
 - 한글은 슬라이드 오버플로우가 잦음: 슬라이드당 불릿 5개·테이블 5행 이내,
@@ -37,9 +40,10 @@ Marp 마크다운으로 비개발자·일반인 대상 AI 에이전트 오픈 �
   타임라인) → lecture.md 순으로 진행. /create-lecture 슬래시 커맨드는 Claude
   Code 전용이라 Cowork에서는 호출되지 않으므로, 단계를 수동으로 밟되
   .claude/agents/의 분석→설계→제작→검증→회고 흐름을 지침으로 삼는다.
-- 기존 강의 수정·개선: 변경 후 항상 ./generate-presentation.sh <폴더명>
-  <파일.md>로 HTML 재빌드(폴더명에 lectures/ 접두사 제외). 빌드 후 슬라이드
-  오버플로우·여백·한글 줄바꿈을 스크린샷으로 육안 검증.
+- 기존 강의 수정·개선: Marp 경로는 ./generate-presentation.sh <폴더명>
+  <파일.md>로 재빌드(폴더명에 lectures/ 접두사 제외). 생성기 경로는
+  _build/ 안에서 python3 build.py N 을 실행. 빌드 후 슬라이드 오버플로우·
+  여백·한글 줄바꿈을 스크린샷으로 육안 검증.
 - 리뷰·회고: 회고 문서는 docs/retrospectives/에, 재발방지 교훈은
   .claude/learnings/create-lecture.md(Git 추적)에 누적.
 
@@ -73,16 +77,11 @@ Cowork 환경(격리된 Linux 샌드박스 + 워크스페이스 마운트)에서
 - 이 설치는 세션마다 필요하지만 Claude가 빌드 시 자동으로 처리하므로,
   사용자가 직접 할 일은 없습니다(참고용).
 
-### 2.2 generate-presentation.sh의 stdin 대기 문제 (권장 개선)
+### 2.2 generate-presentation.sh의 stdin 대기 (해결됨)
 
-- Marp v4는 비대화형(헤드리스) 환경에서 stdin 입력을 기다리며 멈춥니다.
-  `generate-presentation.sh`의 marp 호출에는 `--no-stdin` 옵션이 없어,
-  Cowork 샌드박스에서 그대로 실행하면 빌드가 멈춥니다(사용자 Mac 터미널에서는
-  정상 동작).
-- 해결책 두 가지:
-  - 스크립트의 marp 호출에 `--no-stdin`을 추가(영구 해결, 1줄 수정).
-  - 또는 실행 시 `./generate-presentation.sh ... < /dev/null`로 stdin 차단.
-- 이 1줄 수정을 적용할지는 사용자 결정에 맡깁니다(터미널 동작에는 영향 없음).
+- Marp v4는 비대화형 환경에서 stdin 입력을 기다리며 멈춥니다.
+- `generate-presentation.sh`의 marp 호출에 `--no-stdin`이 적용되어 있습니다.
+  Cowork 샌드박스에서도 그대로 실행됩니다.
 
 ### 2.3 한글 폰트
 
