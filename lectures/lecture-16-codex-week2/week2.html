@@ -1,0 +1,1040 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>2강 무엇이고 어떻게 쓰는가</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@300;400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+*{box-sizing:border-box}
+:root{
+  --bg:#101318; --panel:#171B22; --panel2:#1E242D; --line:#2A313C; --line2:#374151;
+  --fg:#E9EBEF; --dim:#A6AEBA; --faint:#6E7784;
+  --acc:#5ECFAE; --accs:rgba(94,207,174,.13); --accl:rgba(94,207,174,.40);
+  --warn:#E3A75A; --warns:rgba(227,167,90,.12); --warnl:rgba(227,167,90,.38);
+  color-scheme:dark;
+}
+@media (prefers-color-scheme: light){:root:not([data-theme="dark"]){
+  --bg:#F6F5F2; --panel:#FFFFFF; --panel2:#F1EEE8; --line:#DEDAD1; --line2:#C8C3B8;
+  --fg:#1A1D22; --dim:#525B66; --faint:#88919C;
+  --acc:#13735F; --accs:rgba(19,115,95,.09); --accl:rgba(19,115,95,.32);
+  --warn:#8A5A14; --warns:rgba(138,90,20,.09); --warnl:rgba(138,90,20,.30);
+  color-scheme:light;
+}}
+:root[data-theme="light"]{
+  --bg:#F6F5F2; --panel:#FFFFFF; --panel2:#F1EEE8; --line:#DEDAD1; --line2:#C8C3B8;
+  --fg:#1A1D22; --dim:#525B66; --faint:#88919C;
+  --acc:#13735F; --accs:rgba(19,115,95,.09); --accl:rgba(19,115,95,.32);
+  --warn:#8A5A14; --warns:rgba(138,90,20,.09); --warnl:rgba(138,90,20,.30);
+  color-scheme:light;
+}
+body{
+  margin:0; background:var(--bg); color:var(--fg);
+  font-family:"IBM Plex Sans KR","Noto Sans KR",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+  font-weight:400; -webkit-font-smoothing:antialiased; word-break:keep-all; overflow-wrap:break-word;
+  padding-left:max(16px,env(safe-area-inset-left,0px));
+  padding-right:max(16px,env(safe-area-inset-right,0px));
+}
+.app{max-width:1500px;margin:0 auto;padding-block:14px 10px}
+.wrap{position:relative}
+.stage{
+  position:relative; container-type:inline-size; aspect-ratio:16/9;
+  background:var(--panel); border:1px solid var(--line); border-radius:16px; overflow:hidden;
+}
+
+/* ---------- slide frame ---------- */
+.s{position:absolute;inset:0;display:none;flex-direction:column;padding:4.2cqi 5cqi 3.4cqi;min-width:0}
+.s.on{display:flex}
+.eyebrow{display:flex;align-items:baseline;gap:1.4cqi;flex:0 0 auto;margin-bottom:2.2cqi}
+.eyebrow b{font-size:1.28cqi;font-weight:600;letter-spacing:.16em;color:var(--acc)}
+.eyebrow span{font-size:1.22cqi;letter-spacing:.14em;color:var(--faint)}
+.eyebrow i{margin-left:auto;font-style:normal;font-size:1.22cqi;letter-spacing:.08em;color:var(--faint);font-family:"IBM Plex Mono",monospace}
+h2.a{
+  font-size:3.45cqi; line-height:1.2; font-weight:600; letter-spacing:-.022em;
+  margin:0 0 2.4cqi; max-width:30ch; text-wrap:balance;
+}
+h2.a em{font-style:normal;color:var(--acc)}
+.sub{font-size:1.58cqi;line-height:1.5;color:var(--dim);margin:-1.2cqi 0 2.2cqi;max-width:62ch}
+.body{flex:1 1 auto;display:flex;flex-direction:column;gap:1.6cqi;min-height:0;min-width:0}
+.foot{flex:0 0 auto;margin-top:2cqi;font-size:1.36cqi;line-height:1.52;color:var(--dim);max-width:76ch}
+.foot b{color:var(--fg);font-weight:600}
+
+/* ---------- cover / section / statement / break ---------- */
+.s.cover,.s.sect,.s.stmt,.s.brk{justify-content:center;padding:6cqi 7cqi}
+.s.cover{background:
+  radial-gradient(120% 90% at 86% 8%, var(--accs), transparent 60%),
+  var(--panel);}
+.kicker{font-size:1.3cqi;font-weight:600;letter-spacing:.3em;color:var(--acc);margin-bottom:2.6cqi}
+h1{font-size:6.2cqi;line-height:1.2;font-weight:700;letter-spacing:-.015em;margin:0 0 3.2cqi;max-width:21ch;text-wrap:balance;word-break:keep-all}
+h1 em{font-style:normal;color:var(--acc)}
+.lede{font-size:1.86cqi;line-height:1.56;color:var(--dim);max-width:52ch;margin:0 0 3.4cqi}
+.chips{display:flex;flex-wrap:wrap;gap:.9cqi}
+.chip{font-size:1.24cqi;letter-spacing:.04em;color:var(--dim);border:1px solid var(--line2);border-radius:99px;padding:.7cqi 1.5cqi}
+.chip.on{border-color:var(--accl);color:var(--acc);background:var(--accs)}
+.s.sect{background:var(--panel2)}
+.s.sect .kicker{color:var(--faint)}
+.s.sect h1{font-size:5.6cqi;max-width:22ch}
+.s.stmt{align-items:flex-start;background:var(--panel2)}
+.s.stmt p{font-size:5cqi;line-height:1.24;font-weight:600;letter-spacing:-.03em;margin:0;max-width:26ch;text-wrap:balance}
+.s.stmt p em{font-style:normal;color:var(--acc)}
+.s.stmt .tag{margin-top:3.2cqi;font-size:1.3cqi;letter-spacing:.2em;color:var(--faint)}
+.s.brk{align-items:center;text-align:center}
+.s.brk h1{font-size:4.6cqi;max-width:24ch}
+.s.brk .lede{margin:0 auto;max-width:44ch}
+
+/* ---------- cards ---------- */
+.cards{display:grid;gap:1.0cqi;flex:1 1 auto;min-height:0}
+.cards.c2{grid-template-columns:1fr 1fr}
+.cards.c3{grid-template-columns:repeat(3,1fr)}
+.cards.c4{grid-template-columns:repeat(4,1fr)}
+.cards.tight{flex:0 0 auto}
+.body > .cards.tight:only-child{margin:auto 0}
+.card{
+  display:flex;flex-direction:column;gap:.7cqi;min-width:0;
+  background:var(--panel2);border:1px solid var(--line);border-radius:10px;padding:1.62cqi 1.7cqi;
+}
+.card.hi{border-color:var(--accl);background:var(--accs)}
+.card.wa{border-color:var(--warnl);background:var(--warns)}
+.card .lab{font-size:1.1cqi;font-weight:600;letter-spacing:.14em;color:var(--faint)}
+.card.hi .lab{color:var(--acc)}
+.card.wa .lab{color:var(--warn)}
+.card h3{font-size:1.86cqi;line-height:1.3;font-weight:600;letter-spacing:-.01em;margin:0}
+.card p{font-size:1.34cqi;line-height:1.47;color:var(--dim);margin:0}
+.card p b{color:var(--fg);font-weight:600}
+.card .num{font-size:3.6cqi;font-weight:700;letter-spacing:-.03em;color:var(--acc);line-height:1}
+
+/* ---------- steps ---------- */
+ol.steps,ul.steps{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:1.15cqi;counter-reset:st}
+ol.steps li{counter-increment:st;display:grid;grid-template-columns:auto 1fr;gap:1.4cqi;align-items:start}
+ol.steps li::before{
+  content:counter(st);font-family:"IBM Plex Mono",monospace;font-size:1.3cqi;font-weight:500;
+  width:2.5cqi;height:2.5cqi;display:grid;place-items:center;border-radius:99px;
+  border:1px solid var(--accl);color:var(--acc);background:var(--accs);margin-top:.15cqi;
+}
+ul.steps li{display:grid;grid-template-columns:auto 1fr;gap:1.4cqi;align-items:start}
+ul.steps li::before{content:"";width:.7cqi;height:.7cqi;border-radius:99px;background:var(--acc);margin-top:1.05cqi}
+.steps li b{display:block;font-size:1.74cqi;line-height:1.34;font-weight:600;margin-bottom:.3cqi}
+.steps li span{display:block;font-size:1.38cqi;line-height:1.5;color:var(--dim)}
+
+/* ---------- table ---------- */
+.tw{flex:1 1 auto;min-height:0;min-width:0;overflow:auto}
+table{width:100%;border-collapse:collapse;font-size:1.33cqi}
+th,td{text-align:left;padding:1.0cqi 1.2cqi;border-bottom:1px solid var(--line);vertical-align:top;line-height:1.46}
+thead th{font-size:1.18cqi;font-weight:600;letter-spacing:.1em;color:var(--faint);border-bottom:1px solid var(--line2);white-space:nowrap}
+tbody tr:last-child td{border-bottom:0}
+td:first-child{font-weight:600;color:var(--fg);white-space:nowrap}
+td.g{color:var(--dim)}
+td em{font-style:normal;color:var(--acc);font-weight:600}
+table.cmp{font-size:1.92cqi}
+table.cmp th,table.cmp td{padding:1.6cqi 1.4cqi;width:50%;word-break:keep-all}
+table.cmp thead th{font-size:1.3cqi}
+table.cmp thead th:last-child{color:var(--acc)}
+table.cmp td:first-child{color:var(--dim);font-weight:400;white-space:normal}
+table.cmp td:last-child{color:var(--fg);font-weight:600}
+table.sum4{font-size:1.95cqi}
+table.sum4 th,table.sum4 td{padding:1.3cqi 1.2cqi}
+table.sum4 thead th{font-size:1.28cqi}
+table.sum4 td:last-child{color:var(--acc);font-weight:600;white-space:nowrap}
+table.vs td:first-child{color:var(--dim);font-weight:400}
+table.vs th:nth-child(2),table.vs td:nth-child(2){color:var(--dim)}
+table.vs th:nth-child(3),table.vs td:nth-child(3){background:var(--accs)}
+table.vs td:nth-child(3){color:var(--fg);font-weight:500}
+
+/* ---------- terminal / prompt ---------- */
+.term{
+  background:#0C0F14;border:1px solid var(--line2);border-radius:10px;overflow:hidden;
+  display:flex;flex-direction:column;min-width:0;min-height:0;
+}
+:root[data-theme="light"] .term{background:#15181D}
+@media (prefers-color-scheme: light){:root:not([data-theme="dark"]) .term{background:#15181D}}
+.term .th{
+  display:flex;align-items:center;gap:1cqi;padding:.85cqi 1.3cqi;
+  border-bottom:1px solid rgba(255,255,255,.09);background:rgba(255,255,255,.035);
+}
+.term .th span{font-size:1.1cqi;letter-spacing:.1em;color:#8A93A0;font-weight:600}
+.term .th .dot{width:.75cqi;height:.75cqi;border-radius:99px;background:#5ECFAE;opacity:.8;flex:0 0 auto}
+.copy{
+  margin-left:auto;font:inherit;font-size:1.08cqi;font-weight:600;letter-spacing:.06em;cursor:pointer;
+  color:#9BE8D1;background:rgba(94,207,174,.14);border:1px solid rgba(94,207,174,.34);
+  border-radius:6px;padding:.4cqi 1cqi;
+}
+.copy:hover{background:rgba(94,207,174,.24)}
+.copy.ok{color:#0C0F14;background:#5ECFAE;border-color:#5ECFAE}
+.term pre{
+  margin:0;padding:1.5cqi 1.6cqi;overflow:auto;flex:1 1 auto;word-break:break-word;
+  font-family:"IBM Plex Mono",ui-monospace,monospace;font-size:1.3cqi;line-height:1.56;
+  color:#D7DCE4;white-space:pre-wrap;word-break:break-word;
+}
+.term pre .c{color:#7A8494}
+.term pre .p{color:#5ECFAE}
+.term pre .o{color:#E3A75A}
+/* 긴 프롬프트는 글자를 줄여서 스크롤 없이 한 화면에 들어오게 합니다 */
+.term.t2 pre{font-size:1.15cqi;line-height:1.52;padding:1.3cqi 1.4cqi}
+.term.t3 pre{font-size:1.0cqi;line-height:1.48;padding:1.1cqi 1.2cqi}
+
+/* ---------- 키워드 한 장 ---------- */
+.s.big .bigwrap{flex:1 1 auto;display:flex;flex-direction:column;justify-content:center;min-height:0;min-width:0}
+.s.big .bigwrap.row{flex-direction:row;align-items:center;gap:5cqi}
+.s.big .bigwrap.row .bigbody{border-left:1px solid var(--line);padding-left:5cqi}
+/* 번호 달린 목차 */
+.ag2{display:flex;flex-direction:column;list-style:none;margin:0;padding:0}
+.ag2 li{display:flex;align-items:baseline;gap:2.4cqi;padding:1.45cqi 0;border-bottom:1px solid var(--line)}
+.ag2 li:last-child{border-bottom:0}
+.ag2 u{text-decoration:none;font-family:"IBM Plex Mono",ui-monospace,monospace;font-size:1.25cqi;letter-spacing:.12em;color:var(--faint);flex:0 0 auto}
+.ag2 b{font-size:2.5cqi;font-weight:600;letter-spacing:-.015em;word-break:keep-all}
+.ag2 li.on b{color:var(--acc)}
+.ag2 li.on u{color:var(--acc);opacity:.75}
+.s.big .bigwrap.row .bigcol{flex:0 0 auto}
+.s.big .bigwrap.row .bigbody{flex:1 1 auto;min-width:0}
+.bigword{font-weight:700;color:var(--fg);word-break:keep-all;
+  font-size:11cqi;line-height:1.0;letter-spacing:-.03em}
+.bigword.b2{font-size:8.7cqi;line-height:1.1;letter-spacing:-.022em}
+.bigword.b3{font-size:6.9cqi;line-height:1.16;letter-spacing:-.015em}
+.bigword.b4{font-size:5.7cqi;line-height:1.22;letter-spacing:-.01em}
+.bigword em{font-style:normal;color:var(--acc)}
+.bigword small{font-size:.3em;font-weight:600;letter-spacing:-.02em;margin-left:.08em}
+.bigsub{font-size:1.85cqi;line-height:1.5;color:var(--dim);margin:2.6cqi 0 0;max-width:48ch}
+.bigsub b{color:var(--fg);font-weight:600}
+
+/* ---------- 위트 한 장 ---------- */
+.s.quip{align-items:center;justify-content:center;text-align:center;gap:3.2cqi}
+.quipart{width:19cqi;color:var(--acc);flex:0 0 auto}
+.s.quip.lg .quipart{width:26cqi}
+.s.quip.sm .quipart{width:13cqi}
+.quipart svg{display:block;width:100%;height:auto}
+.quipline{font-size:3.9cqi;line-height:1.42;font-weight:600;letter-spacing:-.008em;margin:0;max-width:26ch;text-wrap:balance;word-break:keep-all}
+.s.quip.lg .quipline{font-size:4.4cqi;max-width:21ch}
+.s.quip.sm .quipline{font-size:3.2cqi;max-width:34ch}
+.quipline em{font-style:normal;color:var(--acc)}
+.quipfoot{font-size:1.4cqi;color:var(--faint);margin:0}
+
+/* ---------- 캡처 한 장 ---------- */
+.s.shot{align-items:center;gap:2.4cqi}
+.shotimg{flex:1 1 auto;min-height:0;min-width:0;display:flex;align-items:center;justify-content:center;width:100%}
+.shotimg img{max-width:100%;max-height:100%;width:auto;height:auto;display:block;
+  border-radius:12px;border:1px solid var(--line2);box-shadow:0 6px 28px rgba(0,0,0,.28)}
+.shotline{flex:0 0 auto;font-size:2.9cqi;line-height:1.38;font-weight:600;letter-spacing:-.008em;word-break:keep-all;
+  margin:0;text-align:center;max-width:36ch;text-wrap:balance}
+.shotline em{font-style:normal;color:var(--acc)}
+
+/* ---------- 설명 목록 ---------- */
+.bl{margin:0;padding:0;list-style:none;display:flex;flex-direction:column;justify-content:center;gap:1.5cqi;flex:1 1 auto;min-width:0}
+.bl li{font-size:1.95cqi;line-height:1.5;color:var(--dim);padding-left:2cqi;position:relative;word-break:keep-all}
+.bl li::before{content:"";position:absolute;left:0;top:.66em;width:.62cqi;height:.62cqi;border-radius:99px;background:var(--acc);opacity:.7}
+.bl b{color:var(--fg);font-weight:600}
+
+/* ---------- 키워드 줄 ---------- */
+.lines{display:flex;flex-direction:column;justify-content:center;gap:1.9cqi;flex:1 1 auto;min-height:0}
+.lines.t{justify-content:flex-start;flex:0 0 auto}
+.lines > div{display:flex;flex-wrap:wrap;align-items:baseline;gap:.4cqi 1.8cqi;min-width:0}
+.lines b{font-size:2.9cqi;font-weight:600;letter-spacing:-.02em}
+.lines b em{font-style:normal;color:var(--acc)}
+.lines span{font-size:1.75cqi;line-height:1.5;color:var(--dim)}
+/* 따옴표가 내용인 줄 — 라벨과 비슷한 무게로 */
+.lines.q{gap:2.4cqi}
+.lines.q span{font-size:2.3cqi;line-height:1.4;color:var(--dim)}
+
+/* ---------- 도해 전면 ---------- */
+.figfull{flex:1 1 auto;display:flex;align-items:center;min-height:0;min-width:0}
+.figfull svg{display:block;width:100%;height:auto;max-width:100%;color:var(--fg)}
+.figfull svg text{word-break:normal}
+
+/* ---------- figure ---------- */
+figure{margin:0;flex:1 1 auto;display:flex;flex-direction:column;justify-content:center;gap:1.4cqi;min-height:0;min-width:0}
+figure svg{display:block;width:100%;height:auto;flex:0 1 auto;min-height:0;max-width:100%;color:var(--fg)}
+figure svg text{word-break:normal}
+figcaption{font-size:1.3cqi;line-height:1.5;color:var(--dim);flex:0 0 auto}
+figcaption b{color:var(--fg);font-weight:600}
+
+/* ---------- fill (instructor slot) ---------- */
+.fill{
+  border:1.5px dashed var(--warnl);border-radius:10px;background:var(--warns);
+  padding:1.8cqi;display:flex;flex-direction:column;gap:.7cqi;min-width:0;
+}
+.fill .lab{font-size:1.1cqi;font-weight:600;letter-spacing:.14em;color:var(--warn)}
+/* 강사 입력 칸이 혼자 있을 때는 장표를 채웁니다 */
+.body > .fill:only-child{flex:1 1 auto;display:flex;flex-direction:column;justify-content:center;gap:1cqi}
+.fill p{margin:0;font-size:1.4cqi;line-height:1.52;color:var(--dim)}
+.warn{
+  border-left:2px solid var(--warn);background:var(--warns);border-radius:0 8px 8px 0;
+  padding:1.2cqi 1.6cqi;font-size:1.32cqi;line-height:1.5;color:var(--dim);
+}
+.warn b{color:var(--warn);font-weight:600}
+.note-i{
+  border-left:2px solid var(--accl);background:var(--accs);border-radius:0 8px 8px 0;
+  padding:1.2cqi 1.6cqi;font-size:1.34cqi;line-height:1.52;color:var(--dim);
+}
+.note-i b{color:var(--fg);font-weight:600}
+
+/* ---------- misc layout ---------- */
+.split{display:grid;grid-template-columns:1fr 1fr;gap:1.6cqi;flex:1 1 auto;min-height:0;min-width:0}
+.split.w{grid-template-columns:1.15fr .85fr}
+.split.n{grid-template-columns:.85fr 1.15fr}
+.trio{display:grid;grid-template-columns:1fr 1.62fr 1fr;gap:2.6cqi;flex:1 1 auto;
+  min-height:0;min-width:0;align-items:stretch}
+.trio > *{min-width:0;min-height:0}
+.trio .bl{align-self:center;flex:0 0 auto;justify-content:center;gap:1.35cqi}
+.trio .bl li{font-size:1.72cqi;line-height:1.52}
+.pshot{display:flex;flex-direction:column;align-items:center;justify-content:center;
+  gap:1.2cqi;height:100%;min-width:0;min-height:0}
+.pshot .shotimg,.pshot .figfull{flex:1 1 auto;min-height:0}
+.pshot .figfull svg{max-height:100%}
+.lnk{display:inline-block;flex:0 0 auto;font-family:"IBM Plex Mono",ui-monospace,monospace;
+  font-size:1.18cqi;letter-spacing:.03em;color:var(--faint);text-decoration:none;
+  border-bottom:1px solid var(--line2);padding-bottom:.3cqi;word-break:break-all}
+.lnk:hover{color:var(--acc);border-color:var(--acc)}
+.lnkrow{margin:1.7cqi 0 0;flex:0 0 auto}
+.chat{display:flex;flex-direction:column;gap:1.7cqi;flex:1 1 auto;
+  justify-content:center;min-width:0;min-height:0}
+.chat .row{display:flex;flex-direction:column;gap:.6cqi;max-width:74%}
+.chat .row.me{align-self:flex-end;align-items:flex-end}
+.chat .who{font-size:1.18cqi;letter-spacing:.08em;color:var(--faint)}
+.chat .bub{background:var(--panel2);border:1px solid var(--line);border-radius:14px;
+  padding:1.5cqi 1.9cqi;font-size:1.9cqi;line-height:1.52;word-break:keep-all;color:var(--fg)}
+.chat .row.me .bub{background:var(--accs);border-color:var(--accl)}
+.chat .bub b{color:var(--acc);font-weight:600}
+.chat .bub ol{margin:.9cqi 0 0;padding-left:1.5em}
+.chat .bub li{margin-top:.4cqi}
+.ppl h2.a{max-width:none;margin:0 0 2.1cqi}
+.col{display:flex;flex-direction:column;gap:1.2cqi;min-width:0;min-height:0}
+.agenda{display:flex;flex-direction:column;gap:.44cqi;flex:1 1 auto;min-height:0}
+.agenda div{display:grid;grid-template-columns:7cqi 1fr auto;gap:1.4cqi;align-items:baseline;padding:.74cqi 0;border-bottom:1px solid var(--line)}
+.agenda div:last-child{border-bottom:0}
+.agenda time{font-family:"IBM Plex Mono",monospace;font-size:1.3cqi;color:var(--acc);font-weight:500}
+.agenda p{margin:0;font-size:1.5cqi;line-height:1.36}
+.agenda i{font-style:normal;font-size:1.2cqi;color:var(--faint);font-family:"IBM Plex Mono",monospace}
+.agenda div.hl p{font-weight:600}
+.agenda div.hl{background:var(--accs);margin:0 -1.2cqi;padding:.74cqi 1.2cqi;border-radius:6px;border-bottom:0}
+.quad{flex:1 1 auto;display:grid;grid-template-columns:auto 1fr 1fr;grid-template-rows:auto 1fr 1fr;gap:1cqi;min-height:0}
+.quad .ax{font-size:1.18cqi;font-weight:600;letter-spacing:.1em;color:var(--faint);display:grid;place-items:center;text-align:center}
+.quad .ax.v{writing-mode:vertical-rl;rotate:180deg}
+.quad .q{background:var(--panel2);border:1px solid var(--line);border-radius:10px;padding:1.5cqi;display:flex;flex-direction:column;gap:.55cqi;min-width:0}
+.quad .q.f{border-color:var(--accl);background:var(--accs)}
+.quad .q h4{margin:0;font-size:1.6cqi;font-weight:600;line-height:1.26}
+.quad .q.f h4{color:var(--acc)}
+.quad .q p{margin:0;font-size:1.22cqi;line-height:1.45;color:var(--dim)}
+.quad .q p.do{margin-top:auto;color:var(--fg);font-weight:600;font-size:1.22cqi}
+.kpi{display:grid;grid-template-columns:repeat(3,1fr);gap:1.4cqi;flex:1 1 auto;min-height:0}
+.kpi div{background:var(--panel2);border:1px solid var(--line);border-radius:10px;padding:1.9cqi;display:flex;flex-direction:column;gap:.8cqi;justify-content:center}
+.kpi b{font-size:4.6cqi;font-weight:700;letter-spacing:-.04em;color:var(--acc);line-height:1}
+.kpi span{font-size:1.32cqi;line-height:1.48;color:var(--dim)}
+.kpi u{text-decoration:none;display:block;margin-top:.5cqi;padding-top:.9cqi;
+  border-top:1px solid var(--line);font-size:1.18cqi;line-height:1.42;color:var(--faint)}
+.tbars{display:flex;flex-direction:column;gap:4cqi;flex:1 1 auto;justify-content:center;min-height:0}
+.tbar{display:flex;flex-direction:column;gap:1.2cqi;min-width:0}
+.tbh{display:flex;align-items:baseline;justify-content:space-between;gap:2cqi}
+.tbn{font-size:2.15cqi;font-weight:600;letter-spacing:-.012em;word-break:keep-all;color:var(--fg)}
+.tbv{font-size:2.15cqi;font-weight:700;letter-spacing:-.02em;white-space:nowrap}
+.tbt{height:3.6cqi;background:var(--panel2);border:1px solid var(--line);border-radius:7px;overflow:hidden}
+.tbt i{display:block;height:100%;border-radius:6px 0 0 6px}
+.tbar.agent .tbv{color:var(--dim)}
+.tbar.agent .tbt i{background:var(--dim);opacity:.38}
+.tbar.mine .tbv{color:var(--acc)}
+.tbar.mine .tbt i{background:var(--acc)}
+.tbscale{display:flex;justify-content:space-between;margin-top:-1.6cqi;
+  font-family:"IBM Plex Mono",ui-monospace,monospace;font-size:1.16cqi;
+  letter-spacing:.1em;color:var(--faint)}
+.tbline{margin:2.4cqi 0 0;font-size:2.75cqi;line-height:1.34;font-weight:600;
+  letter-spacing:-.016em;word-break:keep-all;text-align:center;color:var(--fg);
+  text-wrap:balance}
+.tbline b{color:var(--acc);font-weight:700}
+.rule{height:1px;background:var(--line);flex:0 0 auto}
+
+/* ---------- chrome ---------- */
+.bar{display:flex;align-items:center;gap:12px;padding:12px 4px 0;flex-wrap:wrap}
+.prog{flex:1 1 180px;height:3px;background:var(--line);border-radius:99px;overflow:hidden;min-width:120px}
+.prog i{display:block;height:100%;width:0;background:var(--acc);transition:width .22s ease}
+.meta{font-size:12px;letter-spacing:.1em;color:var(--faint);font-family:"IBM Plex Mono",monospace;white-space:nowrap}
+.meta b{color:var(--fg);font-weight:600}
+.btns{display:flex;gap:6px;flex-wrap:wrap}
+.btn{
+  font:inherit;font-size:12px;font-weight:500;letter-spacing:.04em;cursor:pointer;color:var(--dim);
+  background:transparent;border:1px solid var(--line2);border-radius:7px;padding:6px 11px;
+}
+.btn:hover{color:var(--fg);border-color:var(--fg)}
+.btn.on{color:var(--acc);border-color:var(--accl);background:var(--accs)}
+.hint{font-size:12px;color:var(--faint);line-height:1.5;padding:8px 4px 0}
+.hint kbd{
+  font-family:"IBM Plex Mono",monospace;font-size:11px;border:1px solid var(--line2);
+  border-radius:4px;padding:1px 5px;color:var(--dim);
+}
+
+/* notes panel */
+.np{
+  margin-top:12px;background:var(--panel);border:1px solid var(--line);border-radius:12px;
+  padding:16px 18px;font-size:14px;line-height:1.66;color:var(--dim);
+}
+.np h4{margin:0 0 10px;font-size:12px;letter-spacing:.16em;color:var(--acc);font-weight:600}
+.np b{color:var(--fg);font-weight:600}
+.np .cue{color:var(--acc);font-weight:600;font-family:"IBM Plex Mono",monospace;font-size:12px;letter-spacing:.06em}
+.np p{margin:0 0 9px}
+.np p:last-child{margin:0}
+.note{display:none}
+
+/* overview */
+.ov{
+  position:fixed;inset:0;z-index:50;background:var(--bg);overflow:auto;
+  padding:max(20px,env(safe-area-inset-top,0px)) max(16px,env(safe-area-inset-right,0px)) 28px max(16px,env(safe-area-inset-left,0px));
+}
+.ov h4{margin:4px 0 16px;font-size:12px;letter-spacing:.18em;color:var(--faint);font-weight:600}
+.ovg{display:grid;grid-template-columns:repeat(auto-fill,minmax(188px,1fr));gap:8px;max-width:1300px;margin:0 auto}
+.ovb{
+  font:inherit;text-align:left;cursor:pointer;background:var(--panel);color:var(--dim);
+  border:1px solid var(--line);border-radius:9px;padding:10px 12px;display:flex;gap:9px;align-items:baseline;
+}
+.ovb:hover{border-color:var(--acc);color:var(--fg)}
+.ovb u{text-decoration:none;font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--faint);flex:0 0 auto}
+.ovb span{font-size:13px;line-height:1.35}
+.ovb.cur{border-color:var(--acc);background:var(--accs);color:var(--fg)}
+.ovb.sec{background:var(--panel2);border-style:dashed}
+
+/* ---------- phone: reading document ---------- */
+@media (max-width:760px){
+  .app{padding-block:8px 24px}
+  .stage{aspect-ratio:auto;container-type:normal;background:transparent;border:0;border-radius:0;display:flex;flex-direction:column;gap:14px;overflow:visible}
+  .s{position:static;display:flex!important;padding:20px 18px;background:var(--panel);border:1px solid var(--line);border-radius:12px}
+  .s.cover,.s.sect,.s.stmt,.s.brk{padding:26px 18px}
+  .bar,.np,.hint{display:none}
+  .eyebrow{margin-bottom:12px;gap:10px}
+  .eyebrow b,.eyebrow span,.eyebrow i{font-size:10.5px;letter-spacing:.12em}
+  h1{font-size:30px;margin-bottom:16px}
+  .s.sect h1,.s.brk h1{font-size:25px}
+  .s.stmt p{font-size:24px}
+  .s.stmt .tag{margin-top:16px;font-size:11px}
+  .kicker{font-size:10.5px;margin-bottom:12px}
+  .lede{font-size:15px;margin-bottom:16px}
+  .chip{font-size:11px;padding:5px 11px}
+  h2.a{font-size:21px;margin-bottom:14px;max-width:none}
+  .sub{font-size:14.5px;margin:-6px 0 14px}
+  .body{gap:12px}
+  .foot{font-size:13.5px;margin-top:14px}
+  .cards,.cards.c2,.cards.c3,.cards.c4,.kpi,.split,.split.w,.split.n,.trio{grid-template-columns:1fr;display:grid;gap:10px}
+  .trio .bl li{font-size:15px}
+  .pshot{height:auto;gap:8px}
+  .lnk{font-size:12px}
+  .lnkrow{margin-top:10px}
+  .chat{gap:12px}
+  .chat .row{max-width:88%}
+  .chat .bub{font-size:15px;padding:11px 13px;border-radius:11px}
+  .chat .who{font-size:11px}
+  .card{padding:14px}
+  .card .lab{font-size:10px}
+  .card h3{font-size:16px}
+  .card p{font-size:13.5px}
+  .card .num{font-size:30px}
+  .kpi b{font-size:36px}
+  .kpi span{font-size:13px}
+  .steps li b{font-size:15.5px}
+  .steps li span{font-size:13.5px}
+  ol.steps li::before{width:21px;height:21px;font-size:11px}
+  ul.steps li::before{width:6px;height:6px;margin-top:8px}
+  .steps,ol.steps,ul.steps{gap:11px}
+  ol.steps li,ul.steps li{gap:11px}
+  table{font-size:13px}
+  th,td{padding:9px 10px}
+  thead th{font-size:10.5px}
+  td:first-child{white-space:normal}
+  .tw{overflow-x:auto}
+  table.cmp{font-size:15px}
+  table.cmp th,table.cmp td{padding:10px 8px}
+  table.sum4{font-size:15px}
+  table.sum4 th,table.sum4 td{padding:10px 8px}
+  .term pre,.term.t2 pre,.term.t3 pre{font-size:12px;line-height:1.62;padding:13px 14px}
+  .bigword{font-size:48px;line-height:1.06}
+  .bigword.b2{font-size:38px;line-height:1.12}
+  .bigword.b3{font-size:31px;line-height:1.2}
+  .bigword.b4{font-size:26px;line-height:1.26}
+  .s.big .bigwrap.row{flex-direction:column;align-items:flex-start;gap:18px}
+  .s.big .bigwrap.row .bigbody{border-left:0;padding-left:0}
+  .ag2 li{padding:11px 0;gap:14px}
+  .ag2 u{font-size:11px}
+  .ag2 b{font-size:17px}
+  .bigword small{font-size:22px}
+  .bigsub{font-size:15px;margin-top:14px;max-width:none}
+  .s.quip{text-align:left;align-items:flex-start;gap:16px}
+  .quipart,.s.quip.lg .quipart,.s.quip.sm .quipart{width:74px}
+  .quipline,.s.quip.lg .quipline,.s.quip.sm .quipline{font-size:23px;max-width:none}
+  .quipfoot{font-size:13px}
+  .lines{gap:15px}
+  .lines b{font-size:19px}
+  .lines span{font-size:15px}
+  .lines.q{gap:18px}
+  .lines.q span{font-size:16px}
+  .bl{gap:11px}
+  .bl li{font-size:15px;padding-left:16px}
+  .bl li::before{width:5px;height:5px}
+  .s.shot{gap:14px}
+  .shotimg img{max-height:none;width:100%}
+  .shotline{font-size:20px;max-width:none;text-align:left}
+  .term .th{padding:8px 11px}
+  .term .th span{font-size:10px}
+  .copy{font-size:10.5px;padding:4px 9px}
+  figcaption{font-size:13px}
+  .fill{padding:14px}
+  .fill .lab{font-size:10px}
+  .fill p{font-size:13.5px}
+  .warn,.note-i{font-size:13px;padding:11px 13px}
+  .kpi u{font-size:12px;padding-top:8px}
+  .tbars{gap:20px}
+  .tbn,.tbv{font-size:16px}
+  .tbt{height:22px}
+  .tbscale{font-size:11px;margin-top:-10px}
+  .tbline{font-size:19px;margin-top:16px;text-align:left}
+  .agenda div{grid-template-columns:52px 1fr;gap:10px;padding:8px 0}
+  .agenda div i{display:none}
+  .agenda time{font-size:12px}
+  .agenda p{font-size:14px}
+  .agenda div.hl{margin:0;padding:8px 10px}
+  .quad{grid-template-columns:1fr;grid-template-rows:none}
+  .quad .ax{display:none}
+  .quad .q{padding:14px}
+  .quad .q h4{font-size:15.5px}
+  .quad .q p,.quad .q p.do{font-size:13px}
+}
+/* 강사 노트는 화면에서 N 키로만 봅니다 — 공유 링크(폰 문서 모드)에는 노출하지 않습니다 */
+</style>
+<div class="app">
+  <div class="wrap"><div class="stage">
+<section class="s cover" data-title="표지" data-part="표지"><div class="kicker">WEEK 2 / 4 · 무엇이고, 어떻게 쓰는가</div><h1>지금까지 찾아낸<br><em>좋은 방법</em>이<br>있을 뿐입니다</h1><p class="lede">1강에서는 된다는 걸 봤습니다. 오늘은 <b>왜 되는지</b>, 그리고 왜 가끔 안 되는지를 알고 갑니다. 그걸 알면 다음부터 혼자 판단할 수 있습니다.</p><div class="chips"><span class="chip">120분 · 온라인</span><span class="chip on">실습 1건 · 세 가지 방식</span><span class="chip">준비물: 지난주 과제 결과</span></div><div class="note"><p><span class="cue">목표</span> 오늘의 결론 한 줄 — <b>“정답표는 없고, 내 결과물로 먼저 해봐야 안다.”</b> 모든 장표가 이 문장을 향합니다.</p><p><span class="cue">오늘의 성격</span> 1강은 설득이었고 오늘은 설명입니다. 설명이 길어지면 실습이 밀립니다. 앞 65분, 실습 30분, 마무리 15분을 지키세요.</p><p><span class="cue">첫 마디</span> “지난주에 한 번씩은 켜보셨을 겁니다. 안 된 것부터 듣겠습니다.”</p></div></section>
+<section class="s" data-title="오늘 2시간" data-part="2강 · 열기 · 00:00 – 00:12">
+<div class="eyebrow"><b>2강 · 열기</b><span>00:00 – 00:12</span><i>오늘 2시간</i></div>
+<h2 class="a">오늘은 <em>원리 셋</em>과 <em>사용법 셋</em>입니다</h2>
+<div class="body"><div class="agenda"><div><time>00:00</time><p>체크인 — 지난주에 안 된 것</p><i>12분</i></div><div><time>00:12</time><p>LLM이 문장을 만드는 원리</p><i>10분</i></div><div><time>00:22</time><p>만든 사람도 모르는 잠재력</p><i>12분</i></div><div><time>00:34</time><p>에이전트의 구조 — 추론 + 도구 + 반복</p><i>8분</i></div><div><time>00:42</time><p>잘 쓰는 법에 정답표가 없다</p><i>5분</i></div><div class="hl"><time>00:47</time><p>세 가지 사용법</p><i>18분</i></div><div><time>01:05</time><p>쉬는 시간</p><i>10분</i></div><div class="hl"><time>01:15</time><p>실습 — 같은 과제, 세 가지 방식</p><i>30분</i></div><div><time>01:45</time><p>내게 맞는 방식 찾기</p><i>10분</i></div><div><time>01:55</time><p>정리 · 과제 · 3강 예고</p><i>5분</i></div></div></div>
+<p class="foot">앞의 네 구간은 <b>왜 그런지</b>를, 뒤의 세 구간은 <b>그래서 어떻게 하는지</b>를 다룹니다.</p>
+<div class="note"><p><span class="cue">말할 것</span> 목차를 한 줄씩 읽지 마세요. 손으로 훑고 10초 안에 넘기세요.</p><p><span class="cue">구조</span> 원리를 먼저 하는 이유는 사용법을 외우지 않게 하기 위해서입니다. 원리를 알면 오늘 안 배운 방법도 스스로 만들어냅니다.</p><p><span class="cue">전환</span> “그 전에, 지난 7일 이야기부터 듣겠습니다.”</p></div>
+</section>
+<section class="s" data-title="체크인" data-part="2강 · 열기 · 00:00">
+<div class="eyebrow"><b>2강 · 열기</b><span>00:00</span><i>체크인</i></div>
+<h2 class="a">지난 7일에서 <em>안 된 것</em>부터 받겠습니다</h2>
+<div class="body"><div class="cards c3"><div class="card hi"><div class="lab">먼저 묻는 것</div><h3>안 된 것</h3><p>“시켰는데 안 됐던 일” 하나씩. <b>이게 오늘 수업에서 다룰 내용입니다.</b></p></div><div class="card"><div class="lab">두 번째</div><h3>의외로 된 것</h3><p>“안 될 거라 생각했는데 됐던 일.” 여기서 수강생들이 서로 배웁니다.</p></div><div class="card"><div class="lab">세 번째</div><h3>못 시킨 것</h3><p>“시키고 싶었는데 어떻게 말할지 몰라서 못 한 일.” 오늘 실습 과제로 씁니다.</p></div></div></div>
+<p class="foot"><b>강사 진행</b> — 공유 메모에 받아 적으면서 진행하세요. 세 번째 칸에서 나온 과제 하나를 오늘 실습의 공통 예제로 고르면 수업이 자기 문제로 바뀝니다.</p>
+<div class="note"><p><span class="cue">왜 안 된 것부터</span> 성공담부터 받으면 못 한 사람이 입을 닫습니다. 실패부터 받으면 “나만 그런 게 아니구나”가 되고 그때부터 말이 나옵니다.</p><p><span class="cue">진행</span> 12분. 세 명이면 충분합니다. 한 명당 4분을 넘기지 마세요.</p><p><span class="cue">전환</span> “신기하게도 처음에 막히는 지점은 거의 같습니다.”</p></div>
+</section>
+<section class="s" data-title="흔한 막힘 5" data-part="2강 · 열기 · 00:06">
+<div class="eyebrow"><b>2강 · 열기</b><span>00:06</span><i>흔한 막힘 5</i></div>
+<h2 class="a">막힘 다섯 중 <em>넷</em>은 에이전트의 한계가 아니라 <em>내가 말하지 않은 것</em>입니다</h2>
+<div class="body"><div class="tw"><table><thead><tr><th>안 되는 모습</th><th>진짜 원인</th><th>해결 방법</th></tr></thead><tbody><tr><td>파일을 못 찾는다</td><td><em>내가 어느 폴더인지 안 알려줬다</em></td><td class="g">작업할 폴더를 먼저 열어두고 시작한다</td></tr><tr><td>엉뚱한 걸 해놨다</td><td><em>내 머릿속 전제를 말 안 했다</em></td><td class="g">“하기 전에 뭘 할 건지 먼저 말해줘”를 붙인다</td></tr><tr><td>중간에 멈췄다</td><td class="g">승인 요청을 못 봤다</td><td class="g">화면을 끝까지 내려본다. 승인 버튼을 기다리는 중</td></tr><tr><td>그럴듯한데 틀렸다</td><td><em>검증을 안 시켰다</em></td><td class="g">“각 주장이 어느 파일 몇 쪽에서 나왔는지 적어줘”</td></tr><tr><td>너무 오래 걸린다</td><td><em>한 번에 너무 큰 일을 줬다</em></td><td class="g">먼저 계획만 받고, 단계별로 쪼개서 시킨다</td></tr></tbody></table></div></div>
+<p class="foot">기울임 표시한 네 줄이 <b>내 쪽 원인</b>입니다. 오늘 수업 전체가 거기에 대한 설명입니다.</p>
+<div class="note"><p><span class="cue">주장</span> 이 표 한 장이 오늘의 결론을 미리 증명합니다. 천천히 읽으세요.</p><p><span class="cue">진행</span> 체크인에서 받은 ‘안 된 것’이 이 표의 어느 줄인지 분류해보세요. 대부분 들어맞습니다. 그 순간 수업이 설득됩니다.</p><p><span class="cue">전환</span> “왜 이런 일이 생기는지 알려면, 안에서 무슨 일이 벌어지는지부터 봐야 합니다.”</p></div>
+</section>
+<section class="s sect" data-title="[섹션] 문장을 만드는 원리" data-part="PART 1 · 00:12 – 00:22"><div class="kicker">PART 1 · 00:12 – 00:22</div><h1>다음에 올 말을<br><em>확률로</em><br>고릅니다</h1><p class="lede">문장 전체를 미리 계획하고 쓰는 것이 아닙니다. 이 한 가지를 알면 오늘 나머지가 다 따라옵니다.</p><div class="note"><p><span class="cue">이 구간의 역할</span> 원리를 10분 안에 끝냅니다. 정확하게 말하려다 길어지면 뒤가 다 밀립니다. 그림 한 장과 시연 한 번으로 충분합니다.</p><p><span class="cue">쓰지 말 것</span> 토큰·파라미터·트랜스포머 같은 말을 꺼내지 마세요. <b>다음에 올 말을 확률로 고른다</b>, 이 한 문장이면 됩니다.</p></div></section>
+<section class="s" data-title="다음 단어 예측" data-part="2강 · 무엇인가 · 00:13">
+<div class="eyebrow"><b>2강 · 무엇인가</b><span>00:13</span><i>다음 단어 예측</i></div>
+<h2 class="a">앞에 놓인 말이 <em>다음 말의 확률</em>을 바꿉니다</h2>
+<div class="body"><div class="figfull">
+<svg viewBox="0 0 960 296" role="img" aria-label="지금까지의 말 뒤에 올 단어의 확률을 계산해 하나를 고르고 뒤에 붙이는 과정을 반복한다">
+<defs><marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="currentColor"/></marker><marker id="ara" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" style="fill:var(--acc)"/></marker></defs>
+<text x="0" y="14" fill="currentColor" font-size="12" font-weight="600" opacity=".55" letter-spacing="2">지금까지의 말</text>
+<rect x="0" y="30" width="86" height="38" rx="5" stroke="currentColor" fill="none" stroke-width="1.4" opacity=".7"/>
+<text x="43" y="55" text-anchor="middle" fill="currentColor" font-size="15">오늘</text>
+<rect x="92" y="30" width="86" height="38" rx="5" stroke="currentColor" fill="none" stroke-width="1.4" opacity=".7"/>
+<text x="135" y="55" text-anchor="middle" fill="currentColor" font-size="15">서울</text>
+<rect x="184" y="30" width="86" height="38" rx="5" stroke="currentColor" fill="none" stroke-width="1.4" opacity=".7"/>
+<text x="227" y="55" text-anchor="middle" fill="currentColor" font-size="15">날씨는</text>
+<rect x="276" y="30" width="62" height="38" rx="5" style="stroke:var(--acc);fill:var(--acc);fill-opacity:.1" stroke-width="1.6" stroke-dasharray="5 4"/>
+<text x="307" y="56" text-anchor="middle" font-size="17" font-weight="700" style="fill:var(--acc)">?</text>
+
+<path d="M307 68 L 307 100" style="stroke:var(--acc)" stroke-width="1.5" marker-end="url(#ara)"/>
+
+<rect x="90" y="106" width="434" height="142" rx="8" stroke="currentColor" fill="none" stroke-width="1.5" opacity=".75"/>
+<text x="110" y="130" fill="currentColor" font-size="12.5" font-weight="600" opacity=".7">다음에 올 말의 확률</text>
+<text x="110" y="162" fill="currentColor" font-size="14">맑습니다</text>
+<rect x="210" y="149" width="186" height="16" rx="3" style="stroke:var(--acc);fill:var(--acc);fill-opacity:.1" stroke-width="1.2"/>
+<text x="410" y="162" font-size="13" font-weight="600" style="fill:var(--acc)">62%</text>
+<text x="110" y="196" fill="currentColor" font-size="14" opacity=".8">흐립니다</text>
+<rect x="210" y="183" width="63" height="16" rx="3" stroke="currentColor" fill="none" stroke-width="1.2" opacity=".6"/>
+<text x="410" y="196" fill="currentColor" font-size="13" opacity=".65">21%</text>
+<text x="110" y="230" fill="currentColor" font-size="14" opacity=".8">춥습니다</text>
+<rect x="210" y="217" width="27" height="16" rx="3" stroke="currentColor" fill="none" stroke-width="1.2" opacity=".6"/>
+<text x="410" y="230" fill="currentColor" font-size="13" opacity=".65">9%</text>
+
+<line x1="524" y1="177" x2="586" y2="177" style="stroke:var(--acc)" stroke-width="1.5" marker-end="url(#ara)"/>
+<text x="555" y="167" text-anchor="middle" fill="currentColor" font-size="11.5" opacity=".7">하나를 고름</text>
+<rect x="590" y="149" width="170" height="56" rx="8" style="stroke:var(--acc);fill:var(--acc);fill-opacity:.1" stroke-width="1.5"/>
+<text x="675" y="183" text-anchor="middle" font-size="15" font-weight="600" style="fill:var(--acc)">맑습니다</text>
+<path d="M760 160 C 860 110, 880 60, 360 49" fill="none" style="stroke:var(--acc)" stroke-width="1.5" opacity=".75" stroke-dasharray="6 5" marker-end="url(#ara)"/>
+<text x="810" y="108" text-anchor="middle" fill="currentColor" font-size="11.5" opacity=".7">뒤에 붙이고 다시</text>
+
+<text x="0" y="286" fill="currentColor" font-size="12.5" opacity=".62">문장 전체를 미리 계획하고 쓰는 것이 아닙니다. 한 조각을 고르고, 그 조각까지 포함해 다음을 다시 고릅니다.</text>
+</svg></div></div>
+<div class="note"><p><span class="cue">말할 것</span> “오늘 서울 날씨는” 까지 읽고 다음에 올 말을 맞혀보라고 수강생에게 먼저 물으세요. 사람도 똑같이 합니다. 그 경험이 설명을 대신합니다.</p><p><span class="cue">핵심</span> 확률이 가장 높은 것만 고르는 게 아니라 <b>확률에 따라</b> 고릅니다. 그래서 같은 질문에 답이 매번 조금씩 다릅니다.</p><p><span class="cue">이어지는 결론</span> 내가 앞에 무슨 말을 놓느냐가 다음 말의 확률을 바꿉니다. 프롬프트가 효과 있는 이유가 바로 이것이고, 오늘 세 가지 사용법이 모두 여기서 나옵니다.</p></div>
+</section>
+<section class="s" data-title="같은 질문, 다른 답" data-part="2강 · 무엇인가 · 00:17">
+<div class="eyebrow"><b>2강 · 무엇인가</b><span>00:17</span><i>같은 질문, 다른 답</i></div>
+<h2 class="a">같은 문서에 같은 질문인데 <em>답의 모양이 다릅니다</em></h2>
+<div class="body"><div class="chat"><div class="row me"><span class="who">나</span><div class="bub">이 보고서 요약해줘</div></div><div class="row"><span class="who">1회</span><div class="bub">핵심을 세 가지로 정리했습니다 — 매출, 비용, 인력 …</div></div><div class="row me"><span class="who">나</span><div class="bub">(새 채팅에서) 이 보고서 요약해줘</div></div><div class="row"><span class="who">2회</span><div class="bub">문서 구조를 따라 장별로 정리했습니다 — 1장 배경 …</div></div></div></div>
+<p class="foot">둘 다 틀리지 않았습니다. <b>어떤 모양을 원하는지 내가 말하지 않았을 뿐입니다.</b></p>
+<div class="note"><p><span class="cue">라이브 시연</span> 실제로 두 번 시켜서 보여주세요. 같은 결과가 나오면 세 번째를 하세요. 미리 캡처를 준비해두면 안전합니다.</p><p><span class="cue">연결</span> 앞의 ‘흔한 막힘 5’에서 <b>엉뚱한 걸 해놨다</b> 줄이 이 장에서 설명됩니다.</p><p><span class="cue">전환</span> “그런데 더 이상한 건, 이걸 만든 사람도 이게 무엇까지 할 수 있는지 다 모른다는 겁니다.”</p></div>
+</section>
+<section class="s sect" data-title="[섹션] 잠재력" data-part="PART 2 · 00:22 – 00:34"><div class="kicker">PART 2 · 00:22 – 00:34</div><h1>만든 사람도<br>무엇까지 되는지<br><em>다 모릅니다</em></h1><p class="lede">이상한 말처럼 들리지만, 세 가지 이유가 있습니다. 그리고 이 사실이 오늘 수업의 태도를 정합니다.</p><div class="note"><p><span class="cue">왜 이 구간이 중요한가</span> “정답을 아는 사람이 어딘가 있고 나는 모른다”는 생각을 깨는 자리입니다. 아무도 전부 알지 못합니다. 그래서 <b>직접 해본 사람</b>이 앞서갑니다.</p><p><span class="cue">주의</span> “AI는 신비롭다”로 끌고 가지 마세요. 세 가지 이유를 또박또박 설명하면 신비가 아니라 <b>구조적인 이유</b>로 들립니다.</p></div></section>
+<section class="s" data-title="아직 못 찾은 것" data-part="2강 · 잠재력 · 00:23">
+<div class="eyebrow"><b>2강 · 잠재력</b><span>00:23</span><i>아직 못 찾은 것</i></div>
+<h2 class="a">능력이 있어도 <em>꺼내는 말</em>을 못 찾으면 안 나옵니다</h2>
+<div class="body"><div class="figfull">
+<svg viewBox="0 0 960 288" role="img" aria-label="모델 안에 있는 능력 가운데 지금까지 프롬프트로 찾아낸 부분은 일부이고, 나머지는 아직 꺼내는 말을 찾지 못한 상태다">
+<defs><marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="currentColor"/></marker><marker id="ara" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" style="fill:var(--acc)"/></marker></defs>
+<text x="0" y="14" fill="currentColor" font-size="12" font-weight="600" opacity=".55" letter-spacing="2">학습으로 생긴 능력</text>
+<rect x="0" y="28" width="560" height="208" rx="10" stroke="currentColor" fill="none" stroke-width="1.5" opacity=".55" stroke-dasharray="6 5"/>
+
+<rect x="28" y="120" width="196" height="92" rx="8" style="stroke:var(--acc);fill:var(--acc);fill-opacity:.1" stroke-width="1.6"/>
+<text x="126" y="156" text-anchor="middle" font-size="14" font-weight="600" style="fill:var(--acc)">찾아낸 사용법</text>
+<text x="126" y="180" text-anchor="middle" fill="currentColor" font-size="12" opacity=".65">단계적으로 생각하게 하기</text>
+<text x="126" y="198" text-anchor="middle" fill="currentColor" font-size="12" opacity=".65">예시 보여주기 · 역할 주기</text>
+
+<rect x="252" y="54" width="84" height="56" rx="6" stroke="currentColor" fill="none" stroke-width="1.2" opacity=".32" stroke-dasharray="4 4"/>
+<text x="294" y="89" text-anchor="middle" fill="currentColor" font-size="17" opacity=".3">?</text>
+<rect x="352" y="54" width="84" height="56" rx="6" stroke="currentColor" fill="none" stroke-width="1.2" opacity=".32" stroke-dasharray="4 4"/>
+<text x="394" y="89" text-anchor="middle" fill="currentColor" font-size="17" opacity=".3">?</text>
+<rect x="452" y="54" width="84" height="56" rx="6" stroke="currentColor" fill="none" stroke-width="1.2" opacity=".32" stroke-dasharray="4 4"/>
+<text x="494" y="89" text-anchor="middle" fill="currentColor" font-size="17" opacity=".3">?</text>
+<rect x="252" y="126" width="84" height="56" rx="6" stroke="currentColor" fill="none" stroke-width="1.2" opacity=".32" stroke-dasharray="4 4"/>
+<text x="294" y="161" text-anchor="middle" fill="currentColor" font-size="17" opacity=".3">?</text>
+<rect x="352" y="126" width="184" height="56" rx="6" stroke="currentColor" fill="none" stroke-width="1.2" opacity=".32" stroke-dasharray="4 4"/>
+<text x="444" y="161" text-anchor="middle" fill="currentColor" font-size="12.5" opacity=".42">아직 꺼내는 말을 못 찾은 것</text>
+
+<line x1="560" y1="132" x2="622" y2="132" stroke="currentColor" stroke-width="1.5" opacity=".8" marker-end="url(#ar)"/>
+<text x="591" y="122" text-anchor="middle" fill="currentColor" font-size="11.5" opacity=".7">왜</text>
+
+<text x="640" y="62" fill="currentColor" font-size="13.5" font-weight="600">가르친 게 아니라 생겼습니다</text>
+<text x="640" y="84" fill="currentColor" font-size="12" opacity=".62">다음 단어를 맞히게 학습시켰더니 생긴 능력</text>
+<text x="640" y="130" fill="currentColor" font-size="13.5" font-weight="600">꺼내는 말을 찾아야 나옵니다</text>
+<text x="640" y="152" fill="currentColor" font-size="12" opacity=".62">같은 모델이 프롬프트에 따라 전혀 다른 결과</text>
+<text x="640" y="198" fill="currentColor" font-size="13.5" font-weight="600">조합을 전수 조사할 수 없습니다</text>
+<text x="640" y="220" fill="currentColor" font-size="12" opacity=".62">그래서 출시 뒤에도 계속 발견됩니다</text>
+
+<text x="0" y="278" fill="currentColor" font-size="12.5" opacity=".62">만든 사람도 자기 모델이 무엇까지 할 수 있는지 다 모릅니다. 시켜봐야 알게 됩니다.</text>
+</svg></div></div>
+<div class="note"><p><span class="cue">세 가지 이유</span> ① 가르친 게 아니라 생겼다 — 특정 업무를 하라고 학습시킨 것이 아니라 방대한 글에서 다음 말을 맞히게 했고, 그 과정에서 생긴 능력은 시켜봐야 확인됩니다. ② 꺼내는 말을 찾아야 나온다 — 같은 모델이 프롬프트에 따라 전혀 다른 결과를 냅니다. ③ 조합을 전수 조사할 수 없다 — 시킬 수 있는 일의 조합이 사실상 무한합니다.</p><p><span class="cue">비유를 쓰지 않기</span> “잠자는 능력”, “숨겨진 보물” 같은 표현을 쓰지 마세요. <b>프롬프트를 찾으면 나오고, 못 찾으면 안 나온다</b>로 말하면 그대로 전달됩니다.</p><p><span class="cue">전환</span> “실제로 그런 발견이 있었습니다. 유명한 예를 하나 보여드리겠습니다.”</p></div>
+</section>
+<section class="s" data-title="출시 뒤에 발견됨" data-part="2강 · 잠재력 · 00:28">
+<div class="eyebrow"><b>2강 · 잠재력</b><span>00:28</span><i>출시 뒤에 발견됨</i></div>
+<h2 class="a"><em>한 줄</em>을 덧붙이자 수학 정답률이 올라갔습니다 — 모델을 만든 <em>뒤에</em> 발견된 일입니다</h2>
+<div class="body"><div class="cards c2"><div class="card hi"><div class="lab">2022년 1월</div><h3>“단계적으로 풀어줘”</h3><p>답만 내놓게 하지 않고 <b>중간 과정을 쓰게</b> 하자 수학 문제 정답률이 크게 올랐습니다. 모델을 바꾼 것이 아니라 <b>말을 바꾼 것</b>입니다.</p></div><div class="card"><div class="lab">같은 해 6월</div><h3>크기를 키우니 없던 능력이 생김</h3><p>작은 모델에는 없고 큰 모델에만 나타나는 능력이 보고됐습니다. 작은 모델의 추세를 늘려서는 <b>예측할 수 없었습니다</b>.</p></div></div><p class="lnkrow"><a class="lnk" href="https://arxiv.org/abs/2201.11903" target="_blank" rel="noopener">arxiv.org/abs/2201.11903 — Chain-of-Thought Prompting</a></p><p class="lnkrow"><a class="lnk" href="https://arxiv.org/abs/2206.07682" target="_blank" rel="noopener">arxiv.org/abs/2206.07682 — Emergent Abilities</a></p></div>
+<p class="foot">오늘 여러분이 배울 방법도 <b>누군가 해보고 찾아낸 것</b>입니다. 외워서 끝나는 지식이 아닙니다.</p>
+<div class="note"><p><span class="cue">출처</span> 두 논문 모두 공개되어 있습니다. 두 번째 논문은 ‘작은 모델의 성능 추세를 늘려서는 예측할 수 없다’고 명시합니다.</p><p><span class="cue">말할 것</span> “논문 제목을 외우실 필요 없습니다. 중요한 건 <b>순서</b>입니다 — 모델이 먼저 나왔고, 쓰는 방법은 나중에 발견됐습니다.”</p><p><span class="cue">전환</span> “그러면 우리가 쓰는 에이전트는 이 예측기와 무엇이 다른지 정리하겠습니다.”</p></div>
+</section>
+<section class="s sect" data-title="[섹션] 구조" data-part="PART 3 · 00:34 – 00:42"><div class="kicker">PART 3 · 00:34 – 00:42</div><h1>추론 + 도구 +<br><em>반복</em></h1><p class="lede">1강에서 챗봇과 에이전트를 한 장으로 구분했습니다. 오늘은 그 안에 무엇이 붙어 있는지 봅니다.</p><div class="note"><p><span class="cue">이 구간의 역할</span> 원리(PART 1)와 사용법(PART 5) 사이를 잇습니다. 도구와 반복이 붙어 있다는 걸 알면, 왜 ‘확인해줘’가 통하는지 이해됩니다.</p></div></section>
+<section class="s" data-title="에이전트의 구조" data-part="2강 · 구조 · 00:35">
+<div class="eyebrow"><b>2강 · 구조</b><span>00:35</span><i>에이전트의 구조</i></div>
+<h2 class="a">예측기 하나에 <em>도구</em>와 <em>반복</em>이 붙은 것입니다</h2>
+<div class="body"><div class="figfull">
+<svg viewBox="0 0 960 250" role="img" aria-label="컨텍스트를 받아 추론하고 도구로 실제 작업을 하고 결과를 확인해 안 됐으면 다시 반복하는 구조">
+<defs><marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="currentColor"/></marker><marker id="ara" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" style="fill:var(--acc)"/></marker></defs>
+<rect x="0" y="54" width="152" height="62" rx="8" stroke="currentColor" fill="none" stroke-width="1.5" opacity=".75"/><text x="76" y="83" text-anchor="middle" fill="currentColor" font-size="15" font-weight="600">컨텍스트</text><text x="76" y="101" text-anchor="middle" fill="currentColor" font-size="12" opacity=".6">내가 준 말 + 읽은 파일</text>
+<line x1="152" y1="85" x2="206" y2="85" stroke="currentColor" stroke-width="1.5" opacity=".8" marker-end="url(#ar)"/>
+<rect x="210" y="54" width="142" height="62" rx="8" style="stroke:var(--acc);fill:var(--acc);fill-opacity:.1" stroke-width="1.5" opacity="1"/><text x="281" y="83" text-anchor="middle" fill="currentColor" font-size="15" font-weight="600">추론</text><text x="281" y="101" text-anchor="middle" fill="currentColor" font-size="12" opacity=".6">다음 말을 고름</text>
+<line x1="352" y1="85" x2="406" y2="85" style="stroke:var(--acc)" stroke-width="1.5" opacity=".8" marker-end="url(#ara)"/>
+<rect x="410" y="54" width="168" height="62" rx="8" style="stroke:var(--acc);fill:var(--acc);fill-opacity:.1" stroke-width="1.5" opacity="1"/><text x="494" y="83" text-anchor="middle" fill="currentColor" font-size="15" font-weight="600">도구</text><text x="494" y="101" text-anchor="middle" fill="currentColor" font-size="12" opacity=".6">파일 읽기·쓰기·실행</text>
+<line x1="578" y1="85" x2="632" y2="85" style="stroke:var(--acc)" stroke-width="1.5" opacity=".8" marker-end="url(#ara)"/>
+<rect x="636" y="54" width="152" height="62" rx="8" stroke="currentColor" fill="none" stroke-width="1.5" opacity=".75"/><text x="712" y="90" text-anchor="middle" fill="currentColor" font-size="15" font-weight="600">결과 확인</text>
+<line x1="788" y1="85" x2="842" y2="85" stroke="currentColor" stroke-width="1.5" opacity=".8" marker-end="url(#ar)"/>
+<rect x="846" y="54" width="114" height="62" rx="8" style="stroke:var(--acc);fill:var(--acc);fill-opacity:.1" stroke-width="1.5"/>
+<text x="903" y="92" text-anchor="middle" font-size="15" font-weight="600" style="fill:var(--acc)">끝</text>
+<path d="M712 116 C 712 186, 76 196, 76 122" fill="none" stroke="currentColor" stroke-width="1.5" opacity=".45" stroke-dasharray="6 5" marker-end="url(#ar)"/>
+<text x="394" y="192" text-anchor="middle" fill="currentColor" font-size="12.5" opacity=".7">안 됐으면 스스로 다시 — 1강에서 화면으로 본 그 반복</text>
+<text x="0" y="22" fill="currentColor" font-size="12" font-weight="600" opacity=".55" letter-spacing="2">에이전트 = 추론 + 도구 + 반복</text>
+<text x="0" y="240" fill="currentColor" font-size="12.5" opacity=".62">챗봇은 가운데 칸까지입니다. 도구와 반복이 붙으면 말이 아니라 결과물이 남습니다.</text>
+</svg></div></div>
+<div class="note"><p><span class="cue">말할 것</span> 가운데 ‘추론’ 칸이 PART 1에서 본 그 예측기입니다. 거기에 파일을 읽고 쓰고 명령을 실행하는 도구가 붙고, 결과를 확인해서 안 됐으면 스스로 다시 하는 반복이 붙습니다.</p><p><span class="cue">1강과의 연결</span> 1강에서 화면에 뭐가 지나가는 걸 보셨을 겁니다. 그게 이 네 칸을 돌고 있는 모습입니다.</p><p><span class="cue">전환</span> “그런데 이 구조에는 한 가지 빈 칸이 있습니다.”</p></div>
+</section>
+<section class="s" data-title="무엇을 모르는가" data-part="2강 · 구조 · 00:38">
+<div class="eyebrow"><b>2강 · 구조</b><span>00:38</span><i>무엇을 모르는가</i></div>
+<h2 class="a">분야 지식은 거의 전부 있고, <em>내 맥락</em>은 하나도 없습니다</h2>
+<div class="body"><div class="figfull">
+<svg viewBox="0 0 960 268" role="img" aria-label="에이전트는 분야 지식이 많고 내 맥락은 전혀 모르며, 나는 지식은 적지만 내 맥락을 전부 안다">
+<defs><marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="currentColor"/></marker><marker id="ara" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" style="fill:var(--acc)"/></marker></defs>
+<text x="0" y="16" fill="currentColor" font-size="12" font-weight="600" opacity=".55" letter-spacing="2">에이전트</text>
+<text x="150" y="52" text-anchor="end" fill="currentColor" font-size="13" opacity=".7">분야 지식</text>
+<rect x="166" y="32" width="700" height="30" rx="4" style="stroke:var(--acc);fill:var(--acc);fill-opacity:.1" stroke-width="1.5"/>
+<text x="878" y="52" font-size="12.5" font-weight="600" style="fill:var(--acc)">거의 전부</text>
+<text x="150" y="94" text-anchor="end" fill="currentColor" font-size="13" opacity=".7">내 맥락</text>
+<rect x="166" y="74" width="700" height="30" rx="4" stroke="currentColor" fill="none" stroke-width="1.5" opacity=".35" stroke-dasharray="5 4"/>
+<text x="176" y="94" fill="currentColor" font-size="12" opacity=".55">내 회사 · 내 상사 · 내가 진짜 원하는 것 — 아무것도 모릅니다</text>
+
+<line x1="0" y1="126" x2="960" y2="126" stroke="currentColor" opacity=".18"/>
+
+<text x="0" y="158" fill="currentColor" font-size="12" font-weight="600" opacity=".55" letter-spacing="2">나</text>
+<text x="150" y="194" text-anchor="end" fill="currentColor" font-size="13" opacity=".7">분야 지식</text>
+<rect x="166" y="174" width="150" height="30" rx="4" stroke="currentColor" fill="none" stroke-width="1.5" opacity=".6"/>
+<text x="328" y="194" fill="currentColor" font-size="12" opacity=".6">그래서 배우러 왔습니다</text>
+<text x="150" y="236" text-anchor="end" fill="currentColor" font-size="13" opacity=".7">내 맥락</text>
+<rect x="166" y="216" width="700" height="30" rx="4" style="stroke:var(--acc);fill:var(--acc);fill-opacity:.1" stroke-width="1.5"/>
+<text x="878" y="236" font-size="12.5" font-weight="600" style="fill:var(--acc)">나만 압니다</text>
+<text x="176" y="236" fill="currentColor" font-size="12" opacity=".65">왜 하는지 · 누가 읽는지 · 무엇이 성공인지</text>
+<text x="0" y="266" fill="currentColor" font-size="12.5" font-weight="600" opacity=".75">그래서 관계가 이렇게 됩니다 — 지식은 저쪽이 많고, 판단은 이쪽이 합니다.</text>
+</svg></div></div>
+<div class="note"><p><span class="cue">핵심</span> 에이전트가 모르는 것은 전문 지식이 아니라 <b>내 상황</b>입니다. 내 회사, 내가 쓰는 양식, 내가 진짜 원하는 결과물 — 아무것도 모릅니다.</p><p><span class="cue">연결</span> ‘흔한 막힘 5’의 네 줄이 전부 이 빈 칸에서 나옵니다. 그래서 해결책도 전부 <b>내 맥락을 주는 방법</b>입니다.</p><p><span class="cue">전환</span> “그러면 내 맥락을 어떻게 줘야 하는가 — 여기서 정답표가 없다는 이야기가 나옵니다.”</p></div>
+</section>
+<section class="s sect" data-title="[섹션] 정답표" data-part="PART 4 · 00:42 – 00:47"><div class="kicker">PART 4 · 00:42 – 00:47</div><h1>교과서가 아니라<br><em>해본 기록</em>이<br>쌓이는 중입니다</h1><p class="lede">지금 쓰이는 방법은 대부분 사용자가 해보고 찾아내 공유한 것입니다. 더 좋은 방법이 없다는 보장은 없습니다.</p><div class="note"><p><span class="cue">이 구간의 역할</span> 수강생이 ‘정답을 배우러 왔다’는 기대를 내려놓는 자리입니다. 내려놓는 순간 실습 태도가 바뀝니다.</p></div></section>
+<section class="s" data-title="누가 찾아냈나" data-part="2강 · 정답표 · 00:43">
+<div class="eyebrow"><b>2강 · 정답표</b><span>00:43</span><i>누가 찾아냈나</i></div>
+<h2 class="a">지금 쓰는 방법은 <em>논문보다 먼저</em> 쓰는 사람들 사이에서 돌았습니다</h2>
+<div class="body"><div class="tw"><table><thead><tr><th>나오는 곳</th><th>어떻게 퍼지나</th><th>예</th></tr></thead><tbody><tr><td>쓰는 사람의 기록</td><td class="g">블로그 · 커뮤니티 글 · 영상</td><td class="g">“계획만 먼저 받기”, “파일로 저장시키기”</td></tr><tr><td>도구 만드는 쪽의 안내</td><td class="g">공식 문서 · 사용 가이드</td><td class="g">프롬프트 작성 도구, 권장 작성법</td></tr><tr><td>연구</td><td class="g">논문 · 기술 보고서</td><td class="g">단계적으로 풀게 하기, 예시 보여주기</td></tr></tbody></table></div></div>
+<p class="foot">순서가 거꾸로인 분야입니다. <b>해본 사람이 먼저 알고</b>, 정리는 나중에 됩니다.</p>
+<div class="note"><p><span class="cue">말할 것</span> “여러분이 지난주에 찾은 방법도 이 첫 줄에 들어갑니다. 기록해두면 그게 자료가 됩니다.”</p><p><span class="cue">주의</span> 특정 커뮤니티나 유료 강의를 추천하지 마세요. 이 수업에서는 <b>직접 해보고 기록하는 것</b>만 권합니다.</p></div>
+</section>
+<section class="s stmt" data-title="오늘의 전제" data-part="2강 · 정답표 · 00:46"><p>지금까지 찾아낸<br>좋은 방법이 있을 뿐,<br><em>더 좋은 방법이 없다는 보장은 없습니다.</em></p><div class="tag">2강의 전제</div><div class="note"><p><span class="cue">말할 것</span> “그래서 오늘 세 가지를 배우지만, 이게 전부라고 말하지 않겠습니다. 세 가지를 해보고 <b>내게 맞는 하나</b>를 고르는 것이 오늘의 목표입니다.”</p><p><span class="cue">전환</span> “그럼 지금까지 찾아낸 것 중에 가장 많이 쓰이는 세 가지를 보겠습니다.”</p></div></section>
+<section class="s sect" data-title="[섹션] 세 가지 사용법" data-part="PART 5 · 00:47 – 01:05"><div class="kicker">PART 5 · 00:47 – 01:05</div><h1>프롬프트를<br><em>누가 쓰는가</em>로<br>갈립니다</h1><p class="lede">프롬프트 엔지니어링 · 협력적 프롬프팅 · 메타프롬프트. 세 가지를 같은 과제로 비교합니다.</p><div class="note"><p><span class="cue">구분 기준</span> 세 가지의 차이는 난이도가 아니라 <b>프롬프트를 누가 쓰는가</b>입니다 — 내가 다 쓰거나, 주고받으며 같이 쓰거나, 에이전트가 먼저 써주거나.</p><p><span class="cue">진행</span> 16분. 각 방식 5분씩입니다. 설명마다 실제 프롬프트를 화면에 띄우고 수강생이 그대로 적게 하세요. 실습에서 바로 씁니다.</p></div></section>
+<section class="s" data-title="세 가지 한눈에" data-part="2강 · 사용법 · 00:48">
+<div class="eyebrow"><b>2강 · 사용법</b><span>00:48</span><i>세 가지 한눈에</i></div>
+<h2 class="a">세 방식의 차이는 <em>주고받는 모양</em>에서 드러납니다</h2>
+<div class="body"><div class="figfull">
+<svg viewBox="0 0 960 236" role="img" aria-label="프롬프트 엔지니어링은 내가 다 적고, 협력적 프롬프팅은 주고받으며 채우고, 메타프롬프트는 에이전트가 프롬프트를 써준다">
+<defs><marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="currentColor"/></marker><marker id="ara" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" style="fill:var(--acc)"/></marker></defs>
+<text x="0" y="14" font-size="12" font-weight="600" letter-spacing="2" fill="currentColor" opacity=".55">① 프롬프트 엔지니어링</text>
+<rect x="0" y="30" width="78" height="86" rx="6" stroke="currentColor" fill="none" stroke-width="1.4" opacity=".75"/>
+<text x="39" y="78" text-anchor="middle" fill="currentColor" font-size="13.5" font-weight="600">나</text>
+<line x1="78" y1="73" x2="206" y2="73" stroke="currentColor" stroke-width="1.5" opacity=".8" marker-end="url(#ar)"/>
+<text x="142" y="63" text-anchor="middle" fill="currentColor" font-size="11.5" opacity=".7">긴 프롬프트 1회</text>
+<rect x="210" y="44" width="80" height="58" rx="6" stroke="currentColor" fill="none" stroke-width="1.4" opacity=".75"/>
+<text x="250" y="78" text-anchor="middle" fill="currentColor" font-size="12.5">에이전트</text>
+<text x="0" y="142" fill="currentColor" font-size="12.5" opacity=".72">목적 · 조건 · 형식 · 검증을 내가 적습니다</text>
+<text x="0" y="164" fill="currentColor" font-size="12" opacity=".55">익숙한 일에 빠릅니다. 안 적은 전제는 반영되지 않습니다</text>
+
+<line x1="320" y1="20" x2="320" y2="200" stroke="currentColor" opacity=".16"/>
+
+<text x="348" y="14" font-size="12" font-weight="600" letter-spacing="2" fill="currentColor" opacity=".55">② 협력적 프롬프팅</text>
+<rect x="348" y="30" width="78" height="86" rx="6" stroke="currentColor" fill="none" stroke-width="1.4" opacity=".75"/>
+<text x="387" y="78" text-anchor="middle" fill="currentColor" font-size="13.5" font-weight="600">나</text>
+<line x1="426" y1="52" x2="550" y2="52" stroke="currentColor" stroke-width="1.4" opacity=".8" marker-end="url(#ar)"/>
+<line x1="550" y1="76" x2="428" y2="76" stroke="currentColor" stroke-width="1.4" opacity=".8" marker-end="url(#ar)"/>
+<line x1="426" y1="100" x2="550" y2="100" stroke="currentColor" stroke-width="1.4" opacity=".8" marker-end="url(#ar)"/>
+<text x="488" y="42" text-anchor="middle" fill="currentColor" font-size="11.5" opacity=".7">한두 줄</text>
+<text x="488" y="94" text-anchor="middle" fill="currentColor" font-size="11.5" opacity=".7">질문 3개</text>
+<rect x="554" y="44" width="80" height="58" rx="6" stroke="currentColor" fill="none" stroke-width="1.4" opacity=".75"/>
+<text x="594" y="78" text-anchor="middle" fill="currentColor" font-size="12.5">에이전트</text>
+<text x="348" y="142" fill="currentColor" font-size="12.5" opacity=".72">짧게 주고, 되묻게 만들어 답하면서 채웁니다</text>
+<text x="348" y="164" fill="currentColor" font-size="12" opacity=".55">내가 안 정했던 것이 질문으로 드러납니다</text>
+
+<line x1="664" y1="20" x2="664" y2="200" stroke="currentColor" opacity=".16"/>
+
+<text x="692" y="14" font-size="12" font-weight="600" letter-spacing="2" style="fill:var(--acc)">③ 메타프롬프트</text>
+<rect x="692" y="30" width="78" height="86" rx="6" style="stroke:var(--acc);fill:var(--acc);fill-opacity:.1" stroke-width="1.5"/>
+<text x="731" y="78" text-anchor="middle" font-size="13.5" font-weight="600" style="fill:var(--acc)">나</text>
+<line x1="770" y1="48" x2="876" y2="48" style="stroke:var(--acc)" stroke-width="1.4" marker-end="url(#ara)"/>
+<text x="823" y="38" text-anchor="middle" fill="currentColor" font-size="11.5" opacity=".7">무엇을 하려는지</text>
+<line x1="876" y1="100" x2="772" y2="100" style="stroke:var(--acc)" stroke-width="1.4" marker-end="url(#ara)"/>
+<text x="823" y="118" text-anchor="middle" font-size="11.5" font-weight="600" style="fill:var(--acc)">프롬프트</text>
+<rect x="880" y="44" width="80" height="58" rx="6" style="stroke:var(--acc);fill:var(--acc);fill-opacity:.1" stroke-width="1.5"/>
+<text x="920" y="78" text-anchor="middle" font-size="12.5" font-weight="600" style="fill:var(--acc)">에이전트</text>
+<text x="692" y="142" fill="currentColor" font-size="12.5" opacity=".72">프롬프트를 써달라고 먼저 시킵니다</text>
+<text x="692" y="164" fill="currentColor" font-size="12" opacity=".55">받은 것을 읽어보고 고쳐서 실행합니다</text>
+
+<text x="0" y="214" fill="currentColor" font-size="12.5" opacity=".62">우열이 아닙니다. 일의 성격과 사람에 따라 맞는 것이 다릅니다 — 오늘 세 번 다 해보고 고르세요.</text>
+</svg></div></div>
+<div class="note"><p><span class="cue">말할 것</span> 왼쪽부터 오른쪽으로 갈수록 내가 쓰는 글자 수가 줄고, 주고받는 횟수가 늡니다. 셋 다 결과물은 나옵니다.</p><p><span class="cue">전환</span> “하나씩 실제 프롬프트로 보겠습니다. 오늘은 같은 과제를 세 번 씁니다 — 회의록 세 개로 한 장 요약 만들기.”</p></div>
+</section>
+<section class="s" data-title="① 프롬프트 엔지니어링" data-part="2강 · 사용법 · 00:51">
+<div class="eyebrow"><b>2강 · 사용법</b><span>00:51</span><i>① 프롬프트 엔지니어링</i></div>
+<h2 class="a">① 목적 · 조건 · 형식 · 검증을 <em>내가 적습니다</em></h2>
+<div class="body"><div class="term"><div class="th"><span class="dot"></span><span>한 번에 적어서 보내는 프롬프트</span><button class="copy">복사</button></div><pre>바탕화면 2강 폴더에 있는 회의록 3개를 읽고
+한 장짜리 요약을 만들어줘.
+
+- 형식: 제목 / 결정된 것 / 할 일(담당자 포함) / 미결
+- 길이: A4 한 장
+- 결과는 요약.md 파일로 저장
+- 각 항목 끝에 어느 회의록에서 나온 내용인지 적어줘</pre></div></div>
+<p class="foot">네 줄의 조건이 각각 <b>맥락의 빈 칸</b>을 메웁니다. 안 적은 것은 반영되지 않습니다.</p>
+<div class="note"><p><span class="cue">가르칠 것</span> 조건 네 개의 역할을 짚으세요 — 형식은 모양, 길이는 분량, 저장은 결과물, 마지막 줄은 <b>검증</b>입니다. 검증 줄이 가장 자주 빠집니다.</p><p><span class="cue">언제 쓰나</span> 익숙한 일, 반복되는 일. 한 번 써두면 다음에 복사해서 씁니다.</p><p><span class="cue">한계</span> 처음 하는 일에는 쓰기 어렵습니다. 무엇을 조건으로 적어야 할지 모르기 때문입니다.</p></div>
+</section>
+<section class="s" data-title="② 협력적 프롬프팅" data-part="2강 · 사용법 · 00:55">
+<div class="eyebrow"><b>2강 · 사용법</b><span>00:55</span><i>② 협력적 프롬프팅</i></div>
+<h2 class="a">② 짧게 던지고, <em>되묻게</em> 만듭니다</h2>
+<div class="body"><div class="split"><div class="col"><div class="term"><div class="th"><span class="dot"></span><span>두 줄로 시작하는 프롬프트</span><button class="copy">복사</button></div><pre>회의록 3개로 한 장 요약을 만들려고 해.
+시작하기 전에, 내가 정해줘야 할 것
+3가지만 물어봐.</pre></div></div><div class="col"><div class="lines t"><div><b>질문 개수를 정함</b><span>“3가지만” — 안 정하면 끝없이 물어봅니다</span></div><div><b>“아무거나”는 금지</b><span>그 순간 이 방식이 무너집니다</span></div><div><b>질문이 알려주는 것</b><span>내가 안 정했던 부분</span></div></div></div></div></div>
+<p class="foot">에이전트의 질문이 <b>내가 안 정한 것</b>을 드러냅니다. ①에서 못 적던 조건이 여기서 나옵니다.</p>
+<div class="note"><p><span class="cue">가르칠 것</span> 질문에 성실히 답하는 것이 핵심입니다. “아무거나 해줘”라고 답하면 ①보다 나쁜 결과가 나옵니다.</p><p><span class="cue">언제 쓰나</span> 처음 하는 중요한 일. 주고받기 3~5회면 끝납니다.</p><p><span class="cue">한계</span> 급할 때는 느립니다.</p></div>
+</section>
+<section class="s" data-title="협력적 프롬프팅의 모양" data-part="2강 · 사용법 · 00:58">
+<div class="eyebrow"><b>2강 · 사용법</b><span>00:58</span><i>협력적 프롬프팅의 모양</i></div>
+<h2 class="a">맥락을 <em>다 적어주지 않고</em> 다가오게 만듭니다</h2>
+<div class="body"><div class="figfull">
+<svg viewBox="0 0 960 310" role="img" aria-label="맥락을 길게 적어주면 에이전트는 그 범위 안에서만 생각하지만, 짧게 주고 질문을 받으면 내가 정하지 않은 것이 드러난다">
+<defs><marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="currentColor"/></marker><marker id="ara" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" style="fill:var(--acc)"/></marker></defs>
+<text x="0" y="16" fill="currentColor" font-size="12" font-weight="600" opacity=".55" letter-spacing="2">맥락을 다 적어주기</text>
+<rect x="0" y="34" width="250" height="92" rx="8" stroke="currentColor" fill="none" stroke-width="1.5" opacity=".7"/>
+<text x="125" y="62" text-anchor="middle" fill="currentColor" font-size="13.5" font-weight="600">내가 아는 것 전부</text>
+<text x="125" y="84" text-anchor="middle" fill="currentColor" font-size="12" opacity=".6">배경 · 형식 · 참고 · 금지</text>
+<text x="125" y="106" text-anchor="middle" fill="currentColor" font-size="12" opacity=".6">적다가 지칩니다</text>
+<line x1="250" y1="80" x2="312" y2="80" stroke="currentColor" stroke-width="1.5" opacity=".8" marker-end="url(#ar)"/>
+<rect x="316" y="34" width="250" height="92" rx="8" stroke="currentColor" fill="none" stroke-width="1.5" opacity=".7" stroke-dasharray="5 4"/>
+<text x="441" y="70" text-anchor="middle" fill="currentColor" font-size="13.5">적어준 범위 안에서만</text>
+<text x="441" y="94" text-anchor="middle" fill="currentColor" font-size="13.5">생각합니다</text>
+<text x="590" y="66" fill="currentColor" font-size="12.5" opacity=".65">더 좋은 방법을 제안하지 않습니다</text>
+<text x="590" y="94" fill="currentColor" font-size="12.5" opacity=".65">안 적은 전제가 사고를 냅니다</text>
+
+<line x1="0" y1="152" x2="960" y2="152" stroke="currentColor" opacity=".18"/>
+
+<text x="0" y="184" font-size="12" font-weight="600" letter-spacing="2" style="fill:var(--acc)">짧게 주고 질문 받기</text>
+<rect x="0" y="202" width="180" height="56" rx="8" style="stroke:var(--acc);fill:var(--acc);fill-opacity:.1" stroke-width="1.5"/>
+<text x="90" y="236" text-anchor="middle" font-size="13.5" font-weight="600" style="fill:var(--acc)">한 줄 + 질문권</text>
+<path d="M180 218 L 300 218" style="stroke:var(--acc)" stroke-width="1.5" marker-end="url(#ara)"/>
+<text x="240" y="210" text-anchor="middle" fill="currentColor" font-size="11.5" opacity=".7">무엇을 하려는지</text>
+<path d="M300 244 L 180 244" style="stroke:var(--acc)" stroke-width="1.5" marker-end="url(#ara)"/>
+<text x="240" y="262" text-anchor="middle" fill="currentColor" font-size="11.5" opacity=".7">질문 3개</text>
+<rect x="304" y="202" width="180" height="56" rx="8" style="stroke:var(--acc);fill:var(--acc);fill-opacity:.1" stroke-width="1.5"/>
+<text x="394" y="236" text-anchor="middle" font-size="13.5" font-weight="600" style="fill:var(--acc)">에이전트</text>
+<text x="394" y="186" text-anchor="middle" fill="currentColor" font-size="11.5" opacity=".65">3~5회 주고받음</text>
+<line x1="484" y1="230" x2="546" y2="230" style="stroke:var(--acc)" stroke-width="1.5" marker-end="url(#ara)"/>
+<rect x="550" y="202" width="410" height="56" rx="8" style="stroke:var(--acc);fill:var(--acc);fill-opacity:.1" stroke-width="1.5"/>
+<text x="755" y="226" text-anchor="middle" font-size="13.5" font-weight="600" style="fill:var(--acc)">“아, 나 이걸 안 정했네”</text>
+<text x="755" y="247" text-anchor="middle" fill="currentColor" font-size="12" opacity=".7">에이전트가 하는 질문이 내가 안 정한 부분을 드러냅니다</text>
+<text x="0" y="300" fill="currentColor" font-size="12.5" opacity=".6">맥락을 전부 적어주려 하지 말고, 에이전트가 맥락으로 다가오게 만드세요.</text>
+</svg></div></div>
+<div class="note"><p><span class="cue">말할 것</span> 위쪽이 ①에 가깝고 아래쪽이 ②입니다. ①은 적어준 범위 안에서만 생각하고, ②는 안 적은 것을 질문으로 끌어냅니다.</p><p><span class="cue">진행</span> 이 장은 1분입니다. 그림만 보여주고 넘기세요.</p></div>
+</section>
+<section class="s" data-title="③ 메타프롬프트" data-part="2강 · 사용법 · 00:59">
+<div class="eyebrow"><b>2강 · 사용법</b><span>00:59</span><i>③ 메타프롬프트</i></div>
+<h2 class="a">③ 프롬프트를 <em>써달라고</em> 먼저 시킵니다</h2>
+<div class="body"><div class="split"><div class="col"><div class="term"><div class="th"><span class="dot"></span><span>프롬프트를 요청하는 프롬프트</span><button class="copy">복사</button></div><pre>회의록 3개로 한 장 요약을 만들려고 해.
+이 일을 너에게 가장 잘 시키는
+프롬프트를 먼저 써줘.
+실행은 아직 하지 마.</pre></div></div><div class="col"><div class="lines t"><div><b>받은 다음</b><span>읽어보고 틀린 전제를 고침</span></div><div><b>그다음</b><span>고친 프롬프트를 그대로 실행</span></div><div><b>남는 것</b><span>다음에 또 쓸 프롬프트 하나</span></div></div></div></div></div>
+<p class="foot">“실행은 아직 하지 마”가 중요합니다. 이 줄이 없으면 바로 해버립니다.</p>
+<div class="note"><p><span class="cue">왜 되는가</span> PART 1의 결론 그대로입니다 — 앞에 놓인 말이 다음 말의 확률을 바꿉니다. 프롬프트를 쓰는 일 자체도 글쓰기여서 에이전트가 할 수 있습니다.</p><p><span class="cue">근거</span> 이 방식은 도구로도 만들어져 있습니다 — Anthropic Console 의 프롬프트 생성기(2024-05). 비전공자가 처음 쓸 때 가장 막막함이 적은 방식입니다.</p><p><span class="cue">언제 쓰나</span> 뭐라고 말해야 할지 모를 때. 체크인의 ‘못 시킨 것’이 바로 이 경우입니다.</p></div>
+</section>
+<section class="s" data-title="언제 무엇을" data-part="2강 · 사용법 · 01:03">
+<div class="eyebrow"><b>2강 · 사용법</b><span>01:03</span><i>언제 무엇을</i></div>
+<h2 class="a">우열이 아니라 <em>상황</em>입니다 — 익숙한 것부터 쓰세요</h2>
+<div class="body"><div class="tw"><table><thead><tr><th>방식</th><th>잘 맞는 상황</th><th>안 맞는 상황</th></tr></thead><tbody><tr><td>① 프롬프트 엔지니어링</td><td class="g">익숙한 일 · 반복되는 일</td><td class="g">처음 하는 일</td></tr><tr><td>② 협력적 프롬프팅</td><td class="g">처음 하는 중요한 일</td><td class="g">급할 때</td></tr><tr><td>③ 메타프롬프트</td><td><em>뭐라고 말할지 모를 때</em></td><td class="g">이미 말할 줄 아는 일</td></tr></tbody></table></div></div>
+<p class="foot">방법이 워낙 많습니다. 전부 익히려 하지 말고 <b>자기에게 익숙한 하나</b>를 먼저 만드세요.</p>
+<div class="note"><p><span class="cue">주장</span> “세 개를 다 잘하게 되는 게 목표가 아닙니다. 하나를 몸에 붙이는 게 목표입니다.”</p><p><span class="cue">전환</span> “쉬고 와서, 각자 과제 하나로 세 번 다 해보겠습니다.”</p></div>
+</section>
+<section class="s brk" data-title="쉬는 시간" data-part="BREAK · 01:05 – 01:15"><div class="kicker">BREAK</div><h1>쉬는 시간 10분</h1><p class="lede">돌아오면 바로 실습입니다. <b>바탕화면에 ‘2강’ 폴더</b>를 만들어두고, 쓸 파일을 그 안에 넣어두세요.</p><div class="note"><p><span class="cue">진행</span> 쉬는 시간에 폴더를 못 만든 분이 반드시 있습니다. 돌아와서 2분을 더 쓰세요. 실습에서 제외되면 그날로 이탈합니다.</p><p><span class="cue">준비</span> 쓸 파일이 없다고 하는 분을 위해 공개 보고서 PDF 두세 개를 미리 준비해 채팅으로 링크를 주세요.</p></div></section>
+<section class="s sect" data-title="[섹션] 실습" data-part="PART 6 · 01:15 – 01:45"><div class="kicker">PART 6 · 01:15 – 01:45</div><h1>같은 과제,<br><em>세 가지 방식</em></h1><p class="lede">제가 어느 것이 좋다고 말하지 않겠습니다. 세 번 해보고 각자 결론을 내세요.</p><div class="note"><p><span class="cue">이 구간이 오늘의 중심</span> 앞 65분의 설명을 믿으라고 하지 않습니다. 같은 과제를 세 번 시켜보면 각자 결론이 생깁니다. <b>여기서 설득이 끝납니다</b> — 시간을 절대 줄이지 마세요.</p><p><span class="cue">시간</span> 8분 · 8분 · 8분 · 비교 6분. 타이머를 화면에 띄우세요.</p><p><span class="cue">원칙</span> 결과물의 품질을 평가하지 않습니다. <b>어느 방식이 내게 편했는지</b>만 봅니다.</p></div></section>
+<section class="s" data-title="과제 고르기" data-part="2강 · 실습 · 01:15">
+<div class="eyebrow"><b>2강 · 실습</b><span>01:15</span><i>과제 고르기</i></div>
+<h2 class="a"><em>결과물이 눈에 보이는</em> 일 하나를 고르세요</h2>
+<div class="body"><div class="split"><div class="col"><div class="cards c1 tight"><div class="card hi"><div class="lab">조건</div><h3>세 가지</h3><p>① 파일로 남는 결과물 · ② 15분 안에 될 크기 · ③ 내가 미루고 있던 일</p></div><div class="card"><div class="lab">예</div><h3>이런 것들</h3><p>문서 몇 개로 한 장 요약 · 받은 자료를 표로 정리 · 안내문 초안 · 일정표 만들기</p></div></div></div><div class="col"><div class="warn">회사 기밀이나 개인정보가 담긴 파일은 쓰지 마세요. 오늘은 <b>연습용 자료</b>로 합니다.</div></div></div></div>
+<p class="foot">고른 과제를 메모에 한 줄로 적어두세요. <b>세 번 다 같은 과제</b>로 합니다.</p>
+<div class="note"><p><span class="cue">진행</span> 2분. 못 고르는 분에게는 ‘회의록·자료 3개로 한 장 요약’을 그대로 주세요. 고민으로 8분을 쓰는 것이 가장 흔한 실패입니다.</p><p><span class="cue">강조</span> 과제를 바꾸면 비교가 안 됩니다. 같은 과제여야 세 방식의 차이가 보입니다.</p></div>
+</section>
+<section class="s" data-title="실습 ① 프롬프트 엔지니어링" data-part="2강 · 실습 · 01:17">
+<div class="eyebrow"><b>2강 · 실습</b><span>01:17</span><i>실습 ① 프롬프트 엔지니어링</i></div>
+<h2 class="a">① 조건을 <em>다 적어서</em> 한 번에 — 8분</h2>
+<div class="body"><div class="term"><div class="th"><span class="dot"></span><span>빈 칸을 채워서 그대로 보내세요</span><button class="copy">복사</button></div><pre>바탕화면 2강 폴더에 있는 [내 파일들]을 읽고
+[만들고 싶은 결과물]을 만들어줘.
+
+- 형식: [항목1 / 항목2 / 항목3]
+- 길이: [A4 한 장]
+- 결과는 [파일이름]으로 저장
+- 각 항목이 어느 파일에서 나왔는지 적어줘</pre></div></div>
+<p class="foot">마지막 줄을 빼지 마세요. 그 줄이 <b>검증</b>입니다.</p>
+<div class="note"><p><span class="cue">진행</span> 8분. 5분이 지나면 “결과가 나온 분 손 들어주세요”로 분위기를 만드세요.</p><p><span class="cue">자주 막히는 것</span> 폴더 이름이 다른 분, 파일을 폴더에 안 넣은 분. 이 두 가지가 전체 질문의 대부분입니다.</p><p><span class="cue">적어둘 것</span> 끝나면 결과가 원한 것에 얼마나 가까운지 <b>10점 중 몇 점</b>인지 메모하게 하세요.</p></div>
+</section>
+<section class="s" data-title="실습 ② 협력적 프롬프팅" data-part="2강 · 실습 · 01:25">
+<div class="eyebrow"><b>2강 · 실습</b><span>01:25</span><i>실습 ② 협력적 프롬프팅</i></div>
+<h2 class="a">② 짧게 던지고 <em>질문에 답하면서</em> — 8분</h2>
+<div class="body"><div class="split"><div class="col"><div class="term"><div class="th"><span class="dot"></span><span>새 채팅에서 시작하세요</span><button class="copy">복사</button></div><pre>[고른 과제]를 하려고 해.
+시작하기 전에, 내가 정해줘야 할 것
+3가지만 물어봐.</pre></div></div><div class="col"><div class="lines t"><div><b>반드시 새 채팅</b><span>①의 대화가 남아 있으면 비교가 안 됩니다</span></div><div><b>성실히 답하기</b><span>“아무거나”라고 답하면 이 방식은 무너집니다</span></div><div><b>3~5회</b><span>주고받고 나서 “그럼 그대로 해줘”</span></div></div></div></div></div>
+<p class="foot">에이전트가 물어본 것 중에 <b>①에서 내가 안 적었던 것</b>이 있는지 보세요.</p>
+<div class="note"><p><span class="cue">진행</span> 8분. 질문을 받고 당황하는 분이 많습니다. “모르면 ‘네가 추천해줘’라고 답해도 됩니다”라고 미리 알려주세요.</p><p><span class="cue">관찰 포인트</span> ①에서 안 적었던 조건이 질문으로 나오는 순간이 이 실습의 핵심입니다. 그 경험을 한 사람은 다음 주에도 씁니다.</p><p><span class="cue">적어둘 것</span> 10점 중 몇 점 + <b>내가 쓴 시간</b>.</p></div>
+</section>
+<section class="s" data-title="실습 ③ 메타프롬프트" data-part="2강 · 실습 · 01:33">
+<div class="eyebrow"><b>2강 · 실습</b><span>01:33</span><i>실습 ③ 메타프롬프트</i></div>
+<h2 class="a">③ 프롬프트를 <em>써달라고</em> 먼저 — 8분</h2>
+<div class="body"><div class="split"><div class="col"><div class="term"><div class="th"><span class="dot"></span><span>또 새 채팅에서</span><button class="copy">복사</button></div><pre>[고른 과제]를 하려고 해.
+이 일을 너에게 가장 잘 시키는
+프롬프트를 먼저 써줘.
+실행은 아직 하지 마.</pre></div></div><div class="col"><div class="lines t"><div><b>받으면</b><span>읽고, 틀린 전제가 있으면 고침</span></div><div><b>그다음</b><span>“이제 그대로 해줘”</span></div><div><b>남는 것</b><span>다음에 또 쓸 프롬프트 하나</span></div></div></div></div></div>
+<p class="foot">받은 프롬프트를 <b>메모에 저장</b>하세요. 오늘 실습에서 남는 가장 쓸모 있는 결과물입니다.</p>
+<div class="note"><p><span class="cue">진행</span> 8분. 받은 프롬프트가 길어서 놀라는 분이 많습니다. “이걸 직접 쓰려면 오래 걸리죠”라고 짚어주세요.</p><p><span class="cue">관찰 포인트</span> 에이전트가 쓴 프롬프트에 내가 생각 못 한 조건이 들어 있는지 보게 하세요.</p><p><span class="cue">적어둘 것</span> 10점 중 몇 점 + 내가 쓴 시간.</p></div>
+</section>
+<section class="s" data-title="비교 기록" data-part="2강 · 실습 · 01:41">
+<div class="eyebrow"><b>2강 · 실습</b><span>01:41</span><i>비교 기록</i></div>
+<h2 class="a">세 결과를 <em>표 한 칸씩</em> 채우세요 — 6분</h2>
+<div class="body"><div class="tw"><table><thead><tr><th></th><th>① 다 적기</th><th>② 되묻게</th><th>③ 써달라고</th></tr></thead><tbody><tr><td>원한 것에 가까움 (10점)</td><td class="g">·</td><td class="g">·</td><td class="g">·</td></tr><tr><td>내가 쓴 시간</td><td class="g">·</td><td class="g">·</td><td class="g">·</td></tr><tr><td>다음에 또 쓸 수 있나</td><td class="g">·</td><td class="g">·</td><td class="g">·</td></tr><tr><td><em>내가 편했나</em></td><td class="g">·</td><td class="g">·</td><td class="g">·</td></tr></tbody></table></div></div>
+<p class="foot">마지막 줄이 오늘 가장 중요한 칸입니다. <b>품질이 아니라 내가 편했는지</b>를 적으세요.</p>
+<div class="note"><p><span class="cue">진행</span> 6분. 적는 것으로 끝내지 말고 두세 명에게 소리 내어 말하게 하세요 — “저는 ②가 편했습니다”까지 말하면 남습니다.</p><p><span class="cue">강사가 하지 말 것</span> “보통 ③이 제일 좋습니다” 같은 말을 하지 마세요. 그 한마디로 이 실습이 무의미해집니다.</p><p><span class="cue">전환</span> “결론을 하나 말씀드리겠습니다. ③이 최고라는 결론이 아닙니다.”</p></div>
+</section>
+<section class="s sect" data-title="[섹션] 내 방식" data-part="PART 7 · 01:45 – 01:55"><div class="kicker">PART 7 · 01:45 – 01:55</div><h1>내 결과물로<br>먼저 해보고,<br><em>그다음</em> 찾아보세요</h1><p class="lede">순서가 중요합니다. 남의 방법을 먼저 보면 그게 내게 맞는지 판단할 기준이 없습니다.</p><div class="note"><p><span class="cue">이 구간의 역할</span> 오늘 배운 세 가지로 끝나지 않게 만드는 자리입니다. 방법은 계속 나오고, 그걸 고를 기준은 <b>자기 경험</b>밖에 없습니다.</p></div></section>
+<section class="s" data-title="결론은 하나가 아님" data-part="2강 · 내 방식 · 01:45">
+<div class="eyebrow"><b>2강 · 내 방식</b><span>01:45</span><i>결론은 하나가 아님</i></div>
+<h2 class="a">결론은 <em>“③이 최고”가 아닙니다</em></h2>
+<div class="body"><div class="cards c3"><div class="card"><div class="lab">잘못된 결론</div><h3>③이 제일 좋다</h3><p>오늘 ③이 편했던 분도 익숙한 일에서는 ①이 빠릅니다.</p></div><div class="card"><div class="lab">잘못된 결론</div><h3>세 개를 다 잘해야 한다</h3><p>셋 다 쓰는 사람은 드뭅니다. <b>하나가 몸에 붙으면</b> 충분합니다.</p></div><div class="card hi"><div class="lab">맞는 결론</div><h3>나는 ○○가 편했다</h3><p>그 하나를 반복해서 익숙하게 만드는 것이 다음 한 달의 일입니다.</p></div></div></div>
+<p class="foot">지금 고른 하나를 <b>한 달 동안</b> 쓰세요. 그다음에 다른 방식이 필요해집니다.</p>
+<div class="note"><p><span class="cue">말할 것</span> “오늘 세 개를 보여드린 이유는 하나를 고르게 하기 위해서입니다.”</p><p><span class="cue">경험상</span> 비전공자가 가장 오래 쓰는 것은 ②와 ③입니다. 다만 이걸 미리 말하지 마세요. 각자 고른 뒤에 참고로만 말하세요.</p></div>
+</section>
+<section class="s" data-title="찾아보는 순서" data-part="2강 · 내 방식 · 01:49">
+<div class="eyebrow"><b>2강 · 내 방식</b><span>01:49</span><i>찾아보는 순서</i></div>
+<h2 class="a">남의 방법은 <em>내 경험 다음</em>입니다</h2>
+<div class="body"><ol class="steps"><li><div><b>내 결과물로 직접 해본다</b><span>오늘 한 것. 어느 방식이 내게 편했는지 기록이 남습니다</span></div></li><li><div><b>같은 결과물을 남들은 어떻게 얻었는지 찾아본다</b><span>“○○ 만들기 프롬프트”로 검색. 내가 해봤기 때문에 읽을 때 걸러집니다</span></div></li><li><div><b>더 좋은 방법이 있으면 내 방식에 넣는다</b><span>한 번에 다 바꾸지 않고 <b>한 가지씩</b> 비교</span></div></li><li><div><b>안 맞으면 되돌린다</b><span>남이 좋다고 한 방법이 내 일에 안 맞을 수 있습니다</span></div></li></ol></div>
+<p class="foot">순서를 거꾸로 하면 <b>읽기만 많이 하고 안 하게</b> 됩니다.</p>
+<div class="note"><p><span class="cue">왜 이 순서인가</span> 해본 경험이 없으면 남의 방법을 평가할 기준이 없습니다. 좋아 보이는 것을 다 따라 하다가 아무것도 몸에 붙지 않습니다.</p><p><span class="cue">말할 것</span> “강의를 더 찾아 듣는 것보다, 오늘 고른 하나를 이번 주에 세 번 쓰는 게 낫습니다.”</p></div>
+</section>
+<section class="s stmt" data-title="오늘의 한 문장" data-part="2강 · 마무리 · 01:53"><p>정답표는 없습니다.<br><em>내 결과물로 먼저 해보고,</em><br>그다음 찾아보세요.</p><div class="tag">2강의 한 문장</div><div class="note"><p><span class="cue">말할 것</span> 표지의 문장과 이어집니다 — 지금까지 찾아낸 좋은 방법이 있을 뿐입니다.</p></div></section>
+<section class="s" data-title="이번 주" data-part="2강 · 마무리 · 01:55">
+<div class="eyebrow"><b>2강 · 마무리</b><span>01:55</span><i>이번 주</i></div>
+<h2 class="a">이번 주에는 <em>고른 하나</em>를 세 번 쓰세요</h2>
+<div class="body"><div class="split"><div class="col"><div class="cards c1 tight"><div class="card hi"><div class="lab">과제 1</div><h3>같은 방식으로 세 번</h3><p>오늘 고른 방식으로 <b>다른 일</b> 세 가지를 시켜보세요. 같은 일을 세 번이 아닙니다.</p></div><div class="card"><div class="lab">과제 2</div><h3>메타프롬프트 저장</h3><p>실습 ③에서 받은 프롬프트를 메모에 저장해두고, 한 번 더 써보세요.</p></div></div></div><div class="col"><div class="lines t"><div><b>가져올 것</b><span>“안 된 것” 하나 — 3강 체크인에서 씁니다</span></div><div><b>적어둘 것</b><span>어느 방식이 편했는지 한 문장</span></div><div><b>하지 않을 것</b><span>강의를 더 찾아 듣기</span></div></div></div></div></div>
+<p class="foot"><b>매일 한 번 켜는 것</b>이 이번 주의 목표입니다. 잘 쓰는 건 그다음입니다.</p>
+<div class="note"><p><span class="cue">진행</span> 과제를 말로만 주지 말고 채팅창에 텍스트로 붙여주세요. 1강에서 과제를 못 적어간 분이 있었습니다.</p></div>
+</section>
+<section class="s" data-title="3강 예고" data-part="2강 · 마무리 · 01:57">
+<div class="eyebrow"><b>2강 · 마무리</b><span>01:57</span><i>3강 예고</i></div>
+<h2 class="a">다음 주는 <em>어디까지 맡기고 어떻게 믿는가</em>입니다</h2>
+<div class="body"><div class="lines"><div><b>맡기는 범위</b><span>내 능력 밖의 일을 시키는 세 가지 조건</span></div><div><b>검증</b><span>그럴듯한데 틀린 결과를 걸러내는 방법</span></div><div><b>능력표</b><span>되는 일과 안 되는 일을 직접 표로 정리</span></div></div></div>
+<p class="foot">오늘은 <b>어떻게 말하는가</b>였고, 다음 주는 <b>무엇을 맡기는가</b>입니다.</p>
+<div class="note"><p><span class="cue">전환</span> “오늘 고른 방식으로 다음 주에 더 큰 일을 맡겨봅니다.”</p></div>
+</section>
+<section class="s cover" data-title="끝" data-part="표지"><div class="kicker">WEEK 2 / 4 · 끝</div><h1>하나를<br><em>몸에 붙이는</em><br>한 주</h1><p class="lede">세 가지를 다 익히려 하지 마세요. 오늘 편했던 하나를 이번 주에 세 번 쓰시면 됩니다.</p><div class="chips"><span class="chip">다음 주 같은 시간</span><span class="chip on">가져올 것: 안 된 것 하나</span></div><div class="note"><p><span class="cue">마지막 마디</span> “오늘 설명을 다 잊어도 괜찮습니다. 고른 방식 하나만 기억하세요.”</p></div></section>
+  </div></div>
+  <div class="bar">
+    <div class="btns"><button class="btn" id="pv">←</button><button class="btn" id="nx">→</button></div>
+    <span class="meta" id="cnt"></span>
+    <span class="meta" id="part"></span>
+    <div class="prog"><i></i></div>
+    <div class="btns"><button class="btn" id="bN">노트 N</button><button class="btn" id="bO">목차 O</button><button class="btn" id="bF">전체화면 F</button><button class="btn" id="bT">테마</button></div>
+  </div>
+  <div class="np" id="np" hidden><h4>발표자 노트</h4><div id="npBody"></div></div>
+  <p class="hint"><kbd>→</kbd> <kbd>Space</kbd> 다음 · <kbd>←</kbd> 이전 · <kbd>N</kbd> 발표자 노트 · <kbd>O</kbd> 목차 · <kbd>F</kbd> 전체화면 · 폰에서는 전체가 세로로 펼쳐져 복습용 문서가 됩니다.</p>
+</div>
+<div class="ov" id="ov" hidden><h4>목차 — 클릭하면 이동합니다 <button class="btn" id="ovc" style="margin-left:10px">닫기 Esc</button></h4><div class="ovg" id="ovg"></div></div>
+<script>
+(function(){
+  var FIT = null;
+  var slides = Array.prototype.slice.call(document.querySelectorAll('.s'));
+  var N = slides.length, i = 0;
+  var fill = document.querySelector('.prog i');
+  var cnt  = document.getElementById('cnt');
+  var part = document.getElementById('part');
+  var np   = document.getElementById('np');
+  var npb  = document.getElementById('npBody');
+  var ov   = document.getElementById('ov');
+  var ovg  = document.getElementById('ovg');
+  var bN   = document.getElementById('bN');
+  var bO   = document.getElementById('bO');
+
+  function phone(){ return window.matchMedia('(max-width:760px)').matches; }
+
+  function fromHash(){
+    var m = /^#s(\d+)$/.exec(location.hash || '');
+    if(!m) return 0;
+    var n = parseInt(m[1],10) - 1;
+    return (n >= 0 && n < N) ? n : 0;
+  }
+
+  function show(n){
+    i = Math.max(0, Math.min(N-1, n));
+    slides.forEach(function(s,k){ s.classList.toggle('on', k===i); });
+    if(fill) fill.style.width = ((i+1)/N*100) + '%';
+    if(cnt)  cnt.innerHTML = '<b>' + (i+1) + '</b> / ' + N;
+    var s = slides[i];
+    if(part) part.textContent = s.getAttribute('data-part') || '';
+    var note = s.querySelector('.note');
+    if(npb) npb.innerHTML = note ? note.innerHTML : '<p>이 슬라이드에는 노트가 없습니다.</p>';
+    Array.prototype.forEach.call(ovg ? ovg.children : [], function(b,k){
+      b.classList.toggle('cur', k===i);
+    });
+    if(history.replaceState) history.replaceState(null,'','#s'+(i+1));
+    if(FIT) FIT();
+  }
+
+  // overview
+  slides.forEach(function(s,k){
+    var b = document.createElement('button');
+    b.className = 'ovb' + (s.classList.contains('sect') ? ' sec' : '');
+    b.innerHTML = '<u>' + (k+1) + '</u><span>' +
+      (s.getAttribute('data-title') || '').replace(/&/g,'&amp;').replace(/</g,'&lt;') + '</span>';
+    b.addEventListener('click', function(){ closeOv(); show(k); });
+    if(ovg) ovg.appendChild(b);
+  });
+
+  function openOv(){ if(!ov) return; ov.hidden = false; if(bO) bO.classList.add('on'); }
+  function closeOv(){ if(!ov) return; ov.hidden = true; if(bO) bO.classList.remove('on'); }
+  function toggleOv(){ if(!ov) return; ov.hidden ? openOv() : closeOv(); }
+  function toggleNp(){
+    if(!np) return;
+    np.hidden = !np.hidden;
+    if(bN) bN.classList.toggle('on', !np.hidden);
+  }
+
+  document.addEventListener('keydown', function(e){
+    if(e.metaKey || e.ctrlKey || e.altKey) return;
+    var t = e.target;
+    if(t && (t.tagName === 'INPUT' || t.tagName === 'TEXTAREA')) return;
+    var k = e.key;
+    if(k === 'Escape'){ closeOv(); return; }
+    if(phone()) return;
+    if(k === 'ArrowRight' || k === 'PageDown' || k === ' '){ e.preventDefault(); show(i+1); }
+    else if(k === 'ArrowLeft' || k === 'PageUp'){ e.preventDefault(); show(i-1); }
+    else if(k === 'Home'){ e.preventDefault(); show(0); }
+    else if(k === 'End'){ e.preventDefault(); show(N-1); }
+    else if(k === 'n' || k === 'N'){ toggleNp(); }
+    else if(k === 'o' || k === 'O'){ toggleOv(); }
+    else if(k === 'f' || k === 'F'){ fs(); }
+  });
+
+  function fs(){
+    var el = document.documentElement;
+    if(document.fullscreenElement){ if(document.exitFullscreen) document.exitFullscreen(); }
+    else if(el.requestFullscreen){ el.requestFullscreen().catch(function(){}); }
+  }
+
+  var pv = document.getElementById('pv'), nx = document.getElementById('nx');
+  if(pv) pv.addEventListener('click', function(){ show(i-1); });
+  if(nx) nx.addEventListener('click', function(){ show(i+1); });
+  if(bN) bN.addEventListener('click', toggleNp);
+  if(bO) bO.addEventListener('click', toggleOv);
+  var bF = document.getElementById('bF'); if(bF) bF.addEventListener('click', fs);
+  var ovc = document.getElementById('ovc'); if(ovc) ovc.addEventListener('click', closeOv);
+
+  // theme toggle: flip away from whatever is currently rendered
+  var bT = document.getElementById('bT');
+  if(bT) bT.addEventListener('click', function(){
+    var cur = document.documentElement.getAttribute('data-theme');
+    if(!cur) cur = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+    document.documentElement.setAttribute('data-theme', cur === 'dark' ? 'light' : 'dark');
+  });
+
+  // copy buttons
+  function selectPre(pre){
+    try{
+      var r = document.createRange(); r.selectNodeContents(pre);
+      var sel = window.getSelection(); sel.removeAllRanges(); sel.addRange(r);
+    }catch(err){}
+  }
+  document.addEventListener('click', function(e){
+    var b = e.target.closest ? e.target.closest('.copy') : null;
+    if(!b) return;
+    var pre = b.closest('.term').querySelector('pre');
+    if(!pre) return;
+    var txt = pre.innerText;
+    function ok(){ b.classList.add('ok'); var o = b.textContent; b.textContent = '복사됨';
+      setTimeout(function(){ b.classList.remove('ok'); b.textContent = o; }, 1400); }
+    if(navigator.clipboard && navigator.clipboard.writeText){
+      navigator.clipboard.writeText(txt).then(ok, function(){ selectPre(pre); b.textContent = '직접 복사'; });
+    } else { selectPre(pre); b.textContent = '직접 복사'; }
+  });
+
+  window.addEventListener('hashchange', function(){ if(!phone()) show(fromHash()); });
+
+  // 긴 프롬프트는 글자를 줄여 스크롤 없이 한 화면에 들어오게 합니다
+  function fitPre(pre){
+    pre.style.fontSize = '';
+    var base = parseFloat(window.getComputedStyle(pre).fontSize);
+    if(!base || !pre.clientHeight) return;
+    var sz = base, min = base * 0.76, step = base * 0.02, g = 0;
+    while(pre.scrollHeight > pre.clientHeight + 1 && sz > min && g++ < 40){
+      sz -= step; pre.style.fontSize = sz + 'px';
+    }
+  }
+  function fitAll(){
+    var list;
+    if(phone()){
+      list = document.querySelectorAll('.term pre');
+      Array.prototype.forEach.call(list, function(p){ p.style.fontSize = ''; });
+      return;
+    }
+    var s = slides[i]; if(!s) return;
+    Array.prototype.forEach.call(s.querySelectorAll('.term pre'), fitPre);
+  }
+  FIT = fitAll;
+  var rt;
+  window.addEventListener('resize', function(){ clearTimeout(rt); rt = setTimeout(fitAll, 120); });
+  document.addEventListener('fullscreenchange', function(){ setTimeout(fitAll, 60); });
+
+  show(fromHash());
+})();
+</script>

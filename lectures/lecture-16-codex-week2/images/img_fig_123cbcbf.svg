@@ -1,0 +1,44 @@
+
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 236" role="img" aria-label="프롬프트 엔지니어링은 내가 다 적고, 협력적 프롬프팅은 주고받으며 채우고, 메타프롬프트는 에이전트가 프롬프트를 써준다">
+<defs><marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#13735F"/></marker><marker id="ara" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" style="fill:var(--acc)"/></marker></defs>
+<text x="0" y="14" font-size="12" font-weight="600" letter-spacing="2" fill="#13735F" opacity=".55">① 프롬프트 엔지니어링</text>
+<rect x="0" y="30" width="78" height="86" rx="6" stroke="#13735F" fill="none" stroke-width="1.4" opacity=".75"/>
+<text x="39" y="78" text-anchor="middle" fill="#13735F" font-size="13.5" font-weight="600">나</text>
+<line x1="78" y1="73" x2="206" y2="73" stroke="#13735F" stroke-width="1.5" opacity=".8" marker-end="url(#ar)"/>
+<text x="142" y="63" text-anchor="middle" fill="#13735F" font-size="11.5" opacity=".7">긴 프롬프트 1회</text>
+<rect x="210" y="44" width="80" height="58" rx="6" stroke="#13735F" fill="none" stroke-width="1.4" opacity=".75"/>
+<text x="250" y="78" text-anchor="middle" fill="#13735F" font-size="12.5">에이전트</text>
+<text x="0" y="142" fill="#13735F" font-size="12.5" opacity=".72">목적 · 조건 · 형식 · 검증을 내가 적습니다</text>
+<text x="0" y="164" fill="#13735F" font-size="12" opacity=".55">익숙한 일에 빠릅니다. 안 적은 전제는 반영되지 않습니다</text>
+
+<line x1="320" y1="20" x2="320" y2="200" stroke="#13735F" opacity=".16"/>
+
+<text x="348" y="14" font-size="12" font-weight="600" letter-spacing="2" fill="#13735F" opacity=".55">② 협력적 프롬프팅</text>
+<rect x="348" y="30" width="78" height="86" rx="6" stroke="#13735F" fill="none" stroke-width="1.4" opacity=".75"/>
+<text x="387" y="78" text-anchor="middle" fill="#13735F" font-size="13.5" font-weight="600">나</text>
+<line x1="426" y1="52" x2="550" y2="52" stroke="#13735F" stroke-width="1.4" opacity=".8" marker-end="url(#ar)"/>
+<line x1="550" y1="76" x2="428" y2="76" stroke="#13735F" stroke-width="1.4" opacity=".8" marker-end="url(#ar)"/>
+<line x1="426" y1="100" x2="550" y2="100" stroke="#13735F" stroke-width="1.4" opacity=".8" marker-end="url(#ar)"/>
+<text x="488" y="42" text-anchor="middle" fill="#13735F" font-size="11.5" opacity=".7">한두 줄</text>
+<text x="488" y="94" text-anchor="middle" fill="#13735F" font-size="11.5" opacity=".7">질문 3개</text>
+<rect x="554" y="44" width="80" height="58" rx="6" stroke="#13735F" fill="none" stroke-width="1.4" opacity=".75"/>
+<text x="594" y="78" text-anchor="middle" fill="#13735F" font-size="12.5">에이전트</text>
+<text x="348" y="142" fill="#13735F" font-size="12.5" opacity=".72">짧게 주고, 되묻게 만들어 답하면서 채웁니다</text>
+<text x="348" y="164" fill="#13735F" font-size="12" opacity=".55">내가 안 정했던 것이 질문으로 드러납니다</text>
+
+<line x1="664" y1="20" x2="664" y2="200" stroke="#13735F" opacity=".16"/>
+
+<text x="692" y="14" font-size="12" font-weight="600" letter-spacing="2" style="fill:var(--acc)">③ 메타프롬프트</text>
+<rect x="692" y="30" width="78" height="86" rx="6" style="stroke:var(--acc);fill:var(--acc);fill-opacity:.1" stroke-width="1.5"/>
+<text x="731" y="78" text-anchor="middle" font-size="13.5" font-weight="600" style="fill:var(--acc)">나</text>
+<line x1="770" y1="48" x2="876" y2="48" style="stroke:var(--acc)" stroke-width="1.4" marker-end="url(#ara)"/>
+<text x="823" y="38" text-anchor="middle" fill="#13735F" font-size="11.5" opacity=".7">무엇을 하려는지</text>
+<line x1="876" y1="100" x2="772" y2="100" style="stroke:var(--acc)" stroke-width="1.4" marker-end="url(#ara)"/>
+<text x="823" y="118" text-anchor="middle" font-size="11.5" font-weight="600" style="fill:var(--acc)">프롬프트</text>
+<rect x="880" y="44" width="80" height="58" rx="6" style="stroke:var(--acc);fill:var(--acc);fill-opacity:.1" stroke-width="1.5"/>
+<text x="920" y="78" text-anchor="middle" font-size="12.5" font-weight="600" style="fill:var(--acc)">에이전트</text>
+<text x="692" y="142" fill="#13735F" font-size="12.5" opacity=".72">프롬프트를 써달라고 먼저 시킵니다</text>
+<text x="692" y="164" fill="#13735F" font-size="12" opacity=".55">받은 것을 읽어보고 고쳐서 실행합니다</text>
+
+<text x="0" y="214" fill="#13735F" font-size="12.5" opacity=".62">우열이 아닙니다. 일의 성격과 사람에 따라 맞는 것이 다릅니다 — 오늘 세 번 다 해보고 고르세요.</text>
+</svg>
