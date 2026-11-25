@@ -14,7 +14,7 @@ WILL = """
 <rect x="336" y="18" width="250" height="40" rx="8" stroke="currentColor" fill="none" stroke-width="1.5" opacity=".7"/>
 <text x="461" y="43" text-anchor="middle" fill="currentColor" font-size="13.5" font-weight="600">“역시 아직은 안 되네”</text>
 <rect x="336" y="78" width="250" height="40" rx="8" stroke="currentColor" fill="none" stroke-width="1.5" opacity=".3" stroke-dasharray="5 4"/>
-<text x="461" y="103" text-anchor="middle" fill="currentColor" font-size="13" opacity=".5">다시 해본다 — 잘 선택되지 않음</text>
+<text x="461" y="103" text-anchor="middle" fill="currentColor" font-size="13" opacity=".5">다시 해본다: 잘 선택되지 않음</text>
 <text x="606" y="43" fill="currentColor" font-size="12.5" opacity=".65">→ 판단이 틀렸는지 확인할 동기가 없습니다</text>
 <text x="606" y="103" fill="currentColor" font-size="12.5" opacity=".5">→ 다음에도 시도하지 않습니다</text>
 
@@ -33,7 +33,7 @@ WILL = """
 <text x="712" y="232" text-anchor="middle" font-size="14" font-weight="600" """ + ACF + """>보통 세 번째</text>
 <text x="790" y="232" fill="currentColor" font-size="12.5" opacity=".7">에 됩니다</text>
 <path d="M712 250 C 712 286, 60 290, 56 256" fill="none" """ + AC + """ stroke-width="1.5" opacity=".45" stroke-dasharray="6 5" marker-end="url(#ara)"/>
-<text x="0" y="296" fill="currentColor" font-size="12" opacity=".6">포기라는 선택지를 미리 뺐기 때문에 계속 방법을 찾습니다 — 능력이 아니라 남은 선택지의 수가 다릅니다.</text>
+<text x="0" y="296" fill="currentColor" font-size="12" opacity=".6">포기라는 선택지를 미리 뺐기 때문에 계속 방법을 찾습니다. 능력이 아니라 남은 선택지의 수가 다릅니다.</text>
 </svg>"""
 
 # (b) 맥락 설명 vs 협업
@@ -50,13 +50,13 @@ CTX = """
 <text x="441" y="70" text-anchor="middle" fill="currentColor" font-size="13.5">적어준 범위 안에서만</text>
 <text x="441" y="94" text-anchor="middle" fill="currentColor" font-size="13.5">생각합니다</text>
 <text x="590" y="66" fill="currentColor" font-size="12.5" opacity=".65">더 좋은 방법을 제안하지 않습니다</text>
-<text x="590" y="94" fill="currentColor" font-size="12.5" opacity=".65">안 적은 전제가 사고를 냅니다</text>
+<text x="590" y="94" fill="currentColor" font-size="12.5" opacity=".65">안 적은 전제가 잘못된 결과를 만듭니다</text>
 
 <line x1="0" y1="152" x2="960" y2="152" stroke="currentColor" opacity=".18"/>
 
 <text x="0" y="184" font-size="12" font-weight="600" letter-spacing="2" """ + ACF + """>짧게 주고 질문 받기</text>
 <rect x="0" y="202" width="180" height="56" rx="8" """ + ACB + """ stroke-width="1.5"/>
-<text x="90" y="236" text-anchor="middle" font-size="13.5" font-weight="600" """ + ACF + """>한 줄 + 질문권</text>
+<text x="90" y="236" text-anchor="middle" font-size="13.5" font-weight="600" """ + ACF + """>한 줄 + 질문 요청</text>
 <path d="M180 218 L 300 218" """ + AC + """ stroke-width="1.5" marker-end="url(#ara)"/>
 <text x="240" y="210" text-anchor="middle" fill="currentColor" font-size="11.5" opacity=".7">무엇을 하려는지</text>
 <path d="M300 244 L 180 244" """ + AC + """ stroke-width="1.5" marker-end="url(#ara)"/>
@@ -68,7 +68,7 @@ CTX = """
 <rect x="550" y="202" width="410" height="56" rx="8" """ + ACB + """ stroke-width="1.5"/>
 <text x="755" y="226" text-anchor="middle" font-size="13.5" font-weight="600" """ + ACF + """>“아, 나 이걸 안 정했네”</text>
 <text x="755" y="247" text-anchor="middle" fill="currentColor" font-size="12" opacity=".7">에이전트가 하는 질문이 내가 안 정한 부분을 드러냅니다</text>
-<text x="0" y="300" fill="currentColor" font-size="12.5" opacity=".6">맥락을 전부 적어주려 하지 말고, 에이전트가 맥락으로 다가오게 만드세요.</text>
+<text x="0" y="300" fill="currentColor" font-size="12.5" opacity=".6">맥락을 전부 적어주려 하지 말고, 에이전트가 먼저 묻게 만드세요.</text>
 </svg>"""
 
 # (c) 세 가지 대화 방식

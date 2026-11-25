@@ -37,12 +37,12 @@ PRED = """
 <path d="M760 160 C 860 110, 880 60, 360 49" fill="none" """ + AC + """ stroke-width="1.5" opacity=".75" stroke-dasharray="6 5" marker-end="url(#ara)"/>
 <text x="810" y="108" text-anchor="middle" fill="currentColor" font-size="11.5" opacity=".7">뒤에 붙이고 다시</text>
 
-<text x="0" y="286" fill="currentColor" font-size="12.5" opacity=".62">문장 전체를 미리 계획하고 쓰는 것이 아닙니다. 한 조각을 고르고, 그 조각까지 포함해 다음을 다시 고릅니다.</text>
+<text x="0" y="286" fill="currentColor" font-size="12.5" opacity=".62">문장 전체를 미리 계획하고 쓰는 것이 아닙니다. 낱말 하나를 고르고, 그 낱말까지 포함해 다음을 다시 고릅니다.</text>
 </svg>"""
 
 # ─────────────────────────────────────────── (b) 아직 모르는 잠재력
 UNKNOWN = """
-<svg viewBox="0 0 960 288" role="img" aria-label="모델 안에 있는 능력 가운데 지금까지 프롬프트로 찾아낸 부분은 일부이고, 나머지는 아직 꺼내는 말을 찾지 못한 상태다">
+<svg viewBox="0 0 960 288" role="img" aria-label="모델 안에 있는 능력 가운데 지금까지 프롬프트로 찾아낸 부분은 일부이고, 나머지는 아직 맞는 프롬프트를 찾지 못한 상태다">
 """ + DEFS + """
 <text x="0" y="14" fill="currentColor" font-size="12" font-weight="600" opacity=".55" letter-spacing="2">학습으로 생긴 능력</text>
 <rect x="0" y="28" width="560" height="208" rx="10" stroke="currentColor" fill="none" stroke-width="1.5" opacity=".55" stroke-dasharray="6 5"/>
@@ -61,14 +61,14 @@ UNKNOWN = """
 <rect x="252" y="126" width="84" height="56" rx="6" stroke="currentColor" fill="none" stroke-width="1.2" opacity=".32" stroke-dasharray="4 4"/>
 <text x="294" y="161" text-anchor="middle" fill="currentColor" font-size="17" opacity=".3">?</text>
 <rect x="352" y="126" width="184" height="56" rx="6" stroke="currentColor" fill="none" stroke-width="1.2" opacity=".32" stroke-dasharray="4 4"/>
-<text x="444" y="161" text-anchor="middle" fill="currentColor" font-size="12.5" opacity=".42">아직 꺼내는 말을 못 찾은 것</text>
+<text x="444" y="161" text-anchor="middle" fill="currentColor" font-size="12.5" opacity=".42">아직 맞는 프롬프트를 못 찾은 것</text>
 
 <line x1="560" y1="132" x2="622" y2="132" stroke="currentColor" stroke-width="1.5" opacity=".8" marker-end="url(#ar)"/>
 <text x="591" y="122" text-anchor="middle" fill="currentColor" font-size="11.5" opacity=".7">왜</text>
 
 <text x="640" y="62" fill="currentColor" font-size="13.5" font-weight="600">가르친 게 아니라 생겼습니다</text>
 <text x="640" y="84" fill="currentColor" font-size="12" opacity=".62">다음 단어를 맞히게 학습시켰더니 생긴 능력</text>
-<text x="640" y="130" fill="currentColor" font-size="13.5" font-weight="600">꺼내는 말을 찾아야 나옵니다</text>
+<text x="640" y="130" fill="currentColor" font-size="13.5" font-weight="600">맞는 프롬프트를 찾아야 나옵니다</text>
 <text x="640" y="152" fill="currentColor" font-size="12" opacity=".62">같은 모델이 프롬프트에 따라 전혀 다른 결과</text>
 <text x="640" y="198" fill="currentColor" font-size="13.5" font-weight="600">조합을 전수 조사할 수 없습니다</text>
 <text x="640" y="220" fill="currentColor" font-size="12" opacity=".62">그래서 출시 뒤에도 계속 발견됩니다</text>
@@ -91,7 +91,7 @@ LOOP = """
 <rect x="846" y="54" width="114" height="62" rx="8" """ + ACB + """ stroke-width="1.5"/>
 <text x="903" y="92" text-anchor="middle" font-size="15" font-weight="600" """ + ACF + """>끝</text>
 <path d="M712 116 C 712 186, 76 196, 76 122" fill="none" stroke="currentColor" stroke-width="1.5" opacity=".45" stroke-dasharray="6 5" marker-end="url(#ar)"/>
-<text x="394" y="192" text-anchor="middle" fill="currentColor" font-size="12.5" opacity=".7">안 됐으면 스스로 다시 — 1강에서 화면으로 본 그 반복</text>
+<text x="394" y="192" text-anchor="middle" fill="currentColor" font-size="12.5" opacity=".7">안 됐으면 스스로 다시: 1강에서 화면으로 본 그 반복</text>
 <text x="0" y="22" fill="currentColor" font-size="12" font-weight="600" opacity=".55" letter-spacing="2">에이전트 = 추론 + 도구 + 반복</text>
 <text x="0" y="240" fill="currentColor" font-size="12.5" opacity=".62">챗봇은 가운데 칸까지입니다. 도구와 반복이 붙으면 말이 아니라 결과물이 남습니다.</text>
 </svg>"""
@@ -139,5 +139,5 @@ WAYS = """
 <text x="692" y="142" fill="currentColor" font-size="12.5" opacity=".72">프롬프트를 써달라고 먼저 시킵니다</text>
 <text x="692" y="164" fill="currentColor" font-size="12" opacity=".55">받은 것을 읽어보고 고쳐서 실행합니다</text>
 
-<text x="0" y="214" fill="currentColor" font-size="12.5" opacity=".62">우열이 아닙니다. 일의 성격과 사람에 따라 맞는 것이 다릅니다 — 오늘 세 번 다 해보고 고르세요.</text>
+<text x="0" y="214" fill="currentColor" font-size="12.5" opacity=".62">우열이 아닙니다. 일의 성격과 사람에 따라 맞는 것이 다릅니다. 오늘 세 번 다 해보고 고르세요.</text>
 </svg>"""

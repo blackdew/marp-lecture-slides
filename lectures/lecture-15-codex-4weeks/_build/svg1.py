@@ -51,16 +51,16 @@ DAY = """
 """ + DEFS + """
 <text x="0" y="22" fill="currentColor" font-size="13" font-weight="600" opacity=".6" letter-spacing="2">전환 전</text>
 <rect x="0" y="40" width="700" height="56" rx="6" stroke="currentColor" fill="none" stroke-width="1.5" opacity=".7"/>
-<text x="350" y="74" text-anchor="middle" fill="currentColor" font-size="15" font-weight="600">처리 — 찾기 · 읽기 · 옮기기 · 양식 맞추기</text>
+<text x="350" y="74" text-anchor="middle" fill="currentColor" font-size="15" font-weight="600">처리: 찾기 · 읽기 · 옮기기 · 양식 맞추기</text>
 <rect x="708" y="40" width="130" height="56" rx="6" """ + AC + """ fill="none" stroke-width="1.5"/>
 <text x="773" y="74" text-anchor="middle" font-size="14" font-weight="600" """ + ACF + """>결정</text>
 <text x="852" y="74" fill="currentColor" font-size="12" opacity=".55">남는 게 없다</text>
 
 <text x="0" y="150" fill="currentColor" font-size="13" font-weight="600" opacity=".6" letter-spacing="2">전환 후</text>
 <rect x="0" y="166" width="240" height="56" rx="6" stroke="currentColor" fill="none" stroke-width="1.5" opacity=".45" stroke-dasharray="5 4"/>
-<text x="120" y="200" text-anchor="middle" fill="currentColor" font-size="14" opacity=".6">처리 — 에이전트가 함</text>
+<text x="120" y="200" text-anchor="middle" fill="currentColor" font-size="14" opacity=".6">처리: 에이전트가 함</text>
 <rect x="248" y="166" width="590" height="56" rx="6" """ + ACB + """ stroke-width="1.5"/>
-<text x="543" y="200" text-anchor="middle" font-size="15" font-weight="600" """ + ACF + """>결정 — 무엇을 할지 · 맡기기 · 결과 검증</text>
+<text x="543" y="200" text-anchor="middle" font-size="15" font-weight="600" """ + ACF + """>결정: 무엇을 할지 · 맡기기 · 결과 검증</text>
 <text x="852" y="200" fill="currentColor" font-size="12" opacity=".55">쌓인다</text>
 <line x1="0" y1="118" x2="960" y2="118" stroke="currentColor" opacity=".18"/>
 </svg>"""
@@ -116,7 +116,7 @@ SAFE = """
 """ + _box(720, 108, 110, 60, "내 파일") + """
 <text x="775" y="196" text-anchor="middle" fill="currentColor" font-size="12" opacity=".55">여기까지 와야 바뀐다</text>
 <path d="M830 138 C 900 138, 900 250, 500 250" fill="none" """ + AC + """ stroke-width="1.5" stroke-dasharray="6 5" opacity=".85" marker-end="url(#ara)"/>
-<text x="700" y="272" text-anchor="middle" fill="currentColor" font-size="12.5" opacity=".75">③ 되돌리기 — 옮긴 내역을 파일로 남겨 되돌릴 수 있게 한다</text>
+<text x="700" y="272" text-anchor="middle" fill="currentColor" font-size="12.5" opacity=".75">③ 되돌리기: 옮긴 내역을 파일로 남겨 되돌릴 수 있게 한다</text>
 <rect x="10" y="222" width="170" height="54" rx="8" stroke="currentColor" fill="none" stroke-width="1.5" opacity=".45" stroke-dasharray="5 4"/>
 <text x="95" y="246" text-anchor="middle" fill="currentColor" font-size="12.5" font-weight="600" opacity=".7">삭제 · 전송 · 결제</text>
 <text x="95" y="265" text-anchor="middle" fill="currentColor" font-size="11.5" opacity=".6">끝까지 사람이 한다</text>
@@ -135,8 +135,8 @@ PERM = """
 <rect x="326" y="120" width="300" height="150" rx="8" """ + ACB + """ stroke-width="1.5"/>
 <text x="342" y="146" font-size="11.5" font-weight="600" letter-spacing="1.5" """ + ACF + """>2단계 · 실습 1에서</text>
 <text x="342" y="170" fill="currentColor" font-size="16" font-weight="600">자동 (물어봄)</text>
-<text x="342" y="192" fill="currentColor" font-size="12" opacity=".65">정한 폴더 안 — 알아서 한다</text>
-<text x="342" y="212" fill="currentColor" font-size="12" opacity=".65">폴더 밖 · 위험한 일 — 묻는다</text>
+<text x="342" y="192" fill="currentColor" font-size="12" opacity=".65">정한 폴더 안: 알아서 한다</text>
+<text x="342" y="212" fill="currentColor" font-size="12" opacity=".65">폴더 밖 · 위험한 일: 묻는다</text>
 <text x="342" y="238" fill="currentColor" font-size="12" font-weight="600" opacity=".8">평소 쓰는 모드</text>
 <text x="342" y="258" fill="currentColor" font-size="12" opacity=".65">읽기 전용이 하는 일 전부 포함</text>
 

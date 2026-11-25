@@ -11,7 +11,7 @@ ASYM = """
 <text x="878" y="52" font-size="12.5" font-weight="600" """ + ACF + """>거의 전부</text>
 <text x="150" y="94" text-anchor="end" fill="currentColor" font-size="13" opacity=".7">내 맥락</text>
 <rect x="166" y="74" width="700" height="30" rx="4" stroke="currentColor" fill="none" stroke-width="1.5" opacity=".35" stroke-dasharray="5 4"/>
-<text x="176" y="94" fill="currentColor" font-size="12" opacity=".55">내 회사 · 내 상사 · 내가 진짜 원하는 것 — 아무것도 모릅니다</text>
+<text x="176" y="94" fill="currentColor" font-size="12" opacity=".55">내 회사 · 내 상사 · 내가 진짜 원하는 것: 아무것도 모릅니다</text>
 
 <line x1="0" y1="126" x2="960" y2="126" stroke="currentColor" opacity=".18"/>
 
@@ -23,7 +23,7 @@ ASYM = """
 <rect x="166" y="216" width="700" height="30" rx="4" """ + ACB + """ stroke-width="1.5"/>
 <text x="878" y="236" font-size="12.5" font-weight="600" """ + ACF + """>나만 압니다</text>
 <text x="176" y="236" fill="currentColor" font-size="12" opacity=".65">왜 하는지 · 누가 읽는지 · 무엇이 성공인지</text>
-<text x="0" y="266" fill="currentColor" font-size="12.5" font-weight="600" opacity=".75">그래서 관계가 이렇게 됩니다 — 지식은 저쪽이 많고, 판단은 이쪽이 합니다.</text>
+<text x="0" y="266" fill="currentColor" font-size="12.5" font-weight="600" opacity=".75">그래서 관계가 이렇게 됩니다. 지식은 저쪽이 많고, 판단은 이쪽이 합니다.</text>
 </svg>"""
 
 # (b) 질문 비용
@@ -81,7 +81,7 @@ PATH = """
 """ + _box(200, 86, 140, 56, "안 된다") + """
 <path d="M270 142 L 270 196" stroke="currentColor" stroke-width="1.5" opacity=".5" stroke-dasharray="5 4" marker-end="url(#ar)"/>
 <rect x="160" y="200" width="220" height="42" rx="8" stroke="currentColor" fill="none" stroke-width="1.5" opacity=".4" stroke-dasharray="5 4"/>
-<text x="270" y="226" text-anchor="middle" fill="currentColor" font-size="12.5" opacity=".6">“역시 안 되네” — 대부분 여기서 멈춤</text>
+<text x="270" y="226" text-anchor="middle" fill="currentColor" font-size="12.5" opacity=".6">“역시 안 되네”: 대부분 여기서 멈춤</text>
 <line x1="340" y1="114" x2="396" y2="114" """ + AC + """ stroke-width="1.5" marker-end="url(#ara)"/>
 <text x="368" y="104" text-anchor="middle" font-size="11.5" font-weight="600" """ + ACF + """>여기서 갈린다</text>
 """ + _box(400, 86, 190, 56, "왜 안 됐는지 묻는다", acc=True) + """

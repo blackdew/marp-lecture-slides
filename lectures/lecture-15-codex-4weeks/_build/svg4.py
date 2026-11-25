@@ -60,7 +60,7 @@ MATCH = """
 <line x1="208" y1="195" x2="262" y2="195" stroke="currentColor" stroke-width="1.5" opacity=".6" marker-end="url(#ar)"/>
 <rect x="266" y="168" width="400" height="54" rx="8" stroke="currentColor" fill="none" stroke-width="1.5" opacity=".45" stroke-dasharray="5 4"/>
 <text x="282" y="188" fill="currentColor" font-size="11.5" opacity=".5">description</text>
-<text x="282" y="210" fill="currentColor" font-size="13" opacity=".6">“보고서 작성”  — 언제 꺼내야 하는지 알 수 없습니다</text>
+<text x="282" y="210" fill="currentColor" font-size="13" opacity=".6">“보고서 작성”: 언제 꺼내야 하는지 알 수 없습니다</text>
 <line x1="666" y1="195" x2="720" y2="195" stroke="currentColor" stroke-width="1.5" opacity=".45" stroke-dasharray="5 4" marker-end="url(#ar)"/>
 <rect x="724" y="168" width="236" height="54" rx="8" stroke="currentColor" fill="none" stroke-width="1.5" opacity=".45" stroke-dasharray="5 4"/>
 <text x="842" y="200" text-anchor="middle" fill="currentColor" font-size="13.5" opacity=".6">그냥 자기 방식대로 씁니다</text>
@@ -83,7 +83,7 @@ LOOP = """
 <text x="855" y="66" text-anchor="middle" font-size="13.5" font-weight="600" """ + ACF + """>다음 주가</text>
 <text x="855" y="86" text-anchor="middle" font-size="13.5" font-weight="600" """ + ACF + """>더 빨라진다</text>
 <path d="M855 96 C 855 170, 115 180, 115 104" fill="none" """ + AC + """ stroke-width="1.5" opacity=".5" stroke-dasharray="6 5" marker-end="url(#ara)"/>
-<text x="485" y="186" text-anchor="middle" fill="currentColor" font-size="12.5" opacity=".7">빨라진 자리에 새로운 반복이 보입니다 — 그게 다음 주의 스킬입니다</text>
+<text x="485" y="186" text-anchor="middle" fill="currentColor" font-size="12.5" opacity=".7">빨라진 자리에 새로운 반복이 보입니다. 그게 다음 주의 스킬입니다</text>
 <line x1="0" y1="208" x2="960" y2="208" stroke="currentColor" opacity=".18"/>
 <text x="0" y="234" fill="currentColor" font-size="12.5" opacity=".7">매주 금요일 30분이면 충분합니다. <tspan font-weight="600">반년이면 스킬 20개.</tspan> 이 강의가 끝나도 혼자 이어갈 수 있습니다.</text>
 </svg>"""

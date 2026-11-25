@@ -184,7 +184,7 @@ def page(title, slides):
         '<kbd>N</kbd> 발표자 노트 · <kbd>O</kbd> 목차 · <kbd>F</kbd> 전체화면 · '
         '폰에서는 전체가 세로로 펼쳐져 복습용 문서가 됩니다.</p>\n'
         '</div>\n'
-        '<div class="ov" id="ov" hidden><h4>목차 — 클릭하면 이동합니다 '
+        '<div class="ov" id="ov" hidden><h4>목차: 클릭하면 이동합니다 '
         '<button class="btn" id="ovc" style="margin-left:10px">닫기 Esc</button></h4>'
         '<div class="ovg" id="ovg"></div></div>\n'
         '<script>' + JS + '</script>\n'

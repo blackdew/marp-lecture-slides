@@ -12,7 +12,7 @@
 <rect x="846" y="54" width="114" height="62" rx="8" style="stroke:var(--acc);fill:var(--acc);fill-opacity:.1" stroke-width="1.5"/>
 <text x="903" y="92" text-anchor="middle" font-size="15" font-weight="600" style="fill:var(--acc)">끝</text>
 <path d="M712 116 C 712 186, 76 196, 76 122" fill="none" stroke="#13735F" stroke-width="1.5" opacity=".45" stroke-dasharray="6 5" marker-end="url(#ar)"/>
-<text x="394" y="192" text-anchor="middle" fill="#13735F" font-size="12.5" opacity=".7">안 됐으면 스스로 다시 — 1강에서 화면으로 본 그 반복</text>
+<text x="394" y="192" text-anchor="middle" fill="#13735F" font-size="12.5" opacity=".7">안 됐으면 스스로 다시: 1강에서 화면으로 본 그 반복</text>
 <text x="0" y="22" fill="#13735F" font-size="12" font-weight="600" opacity=".55" letter-spacing="2">에이전트 = 추론 + 도구 + 반복</text>
 <text x="0" y="240" fill="#13735F" font-size="12.5" opacity=".62">챗봇은 가운데 칸까지입니다. 도구와 반복이 붙으면 말이 아니라 결과물이 남습니다.</text>
 </svg>

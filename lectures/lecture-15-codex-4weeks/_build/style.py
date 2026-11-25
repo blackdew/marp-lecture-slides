@@ -224,7 +224,7 @@ table.vs td:nth-child(3){color:var(--fg);font-weight:500}
 .lines b{font-size:2.9cqi;font-weight:600;letter-spacing:-.02em}
 .lines b em{font-style:normal;color:var(--acc)}
 .lines span{font-size:1.75cqi;line-height:1.5;color:var(--dim)}
-/* 따옴표가 내용인 줄 — 라벨과 비슷한 무게로 */
+/* 따옴표가 내용인 줄: 라벨과 비슷한 무게로 */
 .lines.q{gap:2.4cqi}
 .lines.q span{font-size:2.3cqi;line-height:1.4;color:var(--dim)}
 
@@ -485,5 +485,5 @@ figcaption b{color:var(--fg);font-weight:600}
   .quad .q h4{font-size:15.5px}
   .quad .q p,.quad .q p.do{font-size:13px}
 }
-/* 강사 노트는 화면에서 N 키로만 봅니다 — 공유 링크(폰 문서 모드)에는 노출하지 않습니다 */
+/* 강사 노트는 화면에서 N 키로만 봅니다: 공유 링크(폰 문서 모드)에는 노출하지 않습니다 */
 """

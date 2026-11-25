@@ -1,5 +1,5 @@
 
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 288" role="img" aria-label="모델 안에 있는 능력 가운데 지금까지 프롬프트로 찾아낸 부분은 일부이고, 나머지는 아직 꺼내는 말을 찾지 못한 상태다">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 288" role="img" aria-label="모델 안에 있는 능력 가운데 지금까지 프롬프트로 찾아낸 부분은 일부이고, 나머지는 아직 맞는 프롬프트를 찾지 못한 상태다">
 <defs><marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#13735F"/></marker><marker id="ara" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" style="fill:var(--acc)"/></marker></defs>
 <text x="0" y="14" fill="#13735F" font-size="12" font-weight="600" opacity=".55" letter-spacing="2">학습으로 생긴 능력</text>
 <rect x="0" y="28" width="560" height="208" rx="10" stroke="#13735F" fill="none" stroke-width="1.5" opacity=".55" stroke-dasharray="6 5"/>
@@ -18,14 +18,14 @@
 <rect x="252" y="126" width="84" height="56" rx="6" stroke="#13735F" fill="none" stroke-width="1.2" opacity=".32" stroke-dasharray="4 4"/>
 <text x="294" y="161" text-anchor="middle" fill="#13735F" font-size="17" opacity=".3">?</text>
 <rect x="352" y="126" width="184" height="56" rx="6" stroke="#13735F" fill="none" stroke-width="1.2" opacity=".32" stroke-dasharray="4 4"/>
-<text x="444" y="161" text-anchor="middle" fill="#13735F" font-size="12.5" opacity=".42">아직 꺼내는 말을 못 찾은 것</text>
+<text x="444" y="161" text-anchor="middle" fill="#13735F" font-size="12.5" opacity=".42">아직 맞는 프롬프트를 못 찾은 것</text>
 
 <line x1="560" y1="132" x2="622" y2="132" stroke="#13735F" stroke-width="1.5" opacity=".8" marker-end="url(#ar)"/>
 <text x="591" y="122" text-anchor="middle" fill="#13735F" font-size="11.5" opacity=".7">왜</text>
 
 <text x="640" y="62" fill="#13735F" font-size="13.5" font-weight="600">가르친 게 아니라 생겼습니다</text>
 <text x="640" y="84" fill="#13735F" font-size="12" opacity=".62">다음 단어를 맞히게 학습시켰더니 생긴 능력</text>
-<text x="640" y="130" fill="#13735F" font-size="13.5" font-weight="600">꺼내는 말을 찾아야 나옵니다</text>
+<text x="640" y="130" fill="#13735F" font-size="13.5" font-weight="600">맞는 프롬프트를 찾아야 나옵니다</text>
 <text x="640" y="152" fill="#13735F" font-size="12" opacity=".62">같은 모델이 프롬프트에 따라 전혀 다른 결과</text>
 <text x="640" y="198" fill="#13735F" font-size="13.5" font-weight="600">조합을 전수 조사할 수 없습니다</text>
 <text x="640" y="220" fill="#13735F" font-size="12" opacity=".62">그래서 출시 뒤에도 계속 발견됩니다</text>

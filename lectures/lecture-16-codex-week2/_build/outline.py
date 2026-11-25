@@ -25,7 +25,7 @@ for html in m.S:
         seg, tm = p, '·'
     rows.append((tm, seg, t))
 
-lines = ['# 강의 개요 — %s' % m.TITLE, '',
+lines = ['# 강의 개요: %s' % m.TITLE, '',
          '원본은 `_build/w%s.py` 하나입니다. 이 문서는 거기서 뽑은 목록이라 손으로 고치지 마세요.' % n,
          '슬라이드를 바꾸면 `python3 _build/outline.py %s` 로 이 파일도 다시 만드세요.' % n, '',
          '## 타임라인', '', '| # | 시각 | 구간 | 장표 |', '|---|---|---|---|']

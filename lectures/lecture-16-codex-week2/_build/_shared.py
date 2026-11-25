@@ -13,7 +13,7 @@ SHARED = HERE.parent.parent / 'lecture-15-codex-4weeks' / '_build'
 if not SHARED.is_dir():
     raise SystemExit('공용 생성기를 찾지 못했습니다: %s' % SHARED)
 
-for p in (str(HERE), str(SHARED)):      # 이 폴더가 먼저 — 같은 이름이면 여기 것이 이깁니다
+for p in (str(HERE), str(SHARED)):      # 이 폴더가 먼저. 같은 이름이면 여기 것이 이깁니다
     if p in sys.path:
         sys.path.remove(p)
 sys.path.insert(0, str(SHARED))

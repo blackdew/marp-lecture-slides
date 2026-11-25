@@ -66,7 +66,7 @@ def bullets(items):
 
 
 def lines(items, tight=False, quote=False):
-    return '\n'.join('- **%s** — %s' % (_inline(a), _inline(b)) for a, b in items)
+    return '\n'.join('- **%s**: %s' % (_inline(a), _inline(b)) for a, b in items)
 
 
 def ag2(items):
@@ -99,7 +99,7 @@ def kpi(items):
     for it in items:
         big_, small = _inline(it[0]), _inline(it[1])
         ref = _inline(it[2]) if len(it) > 2 else ''
-        out.append('- **%s** — %s%s' % (big_, small, (' (%s)' % ref if ref else '')))
+        out.append('- **%s**: %s%s' % (big_, small, (' (%s)' % ref if ref else '')))
     return '\n'.join(out)
 
 
@@ -143,7 +143,7 @@ def cards(items, cols=3, tight=False):
         if body:
             seg.append(body)
         if seg:
-            out.append('- ' + ' — '.join(seg))
+            out.append('- ' + ': '.join(seg))
     return '\n'.join(out)
 
 
@@ -153,7 +153,7 @@ def steps(items, ordered=True):
     for i, (b, s) in enumerate(items, 1):
         head, tail = _inline(b), _inline(s)
         mark = '%d.' % i if ordered else '-'
-        out.append('%s **%s** — %s' % (mark, head, tail) if tail
+        out.append('%s **%s**: %s' % (mark, head, tail) if tail
                    else '%s %s' % (mark, head))
     return '\n'.join(out)
 
@@ -179,7 +179,7 @@ def inote(t):
 
 
 def agenda(rows):
-    return '\n'.join('- `%s` **%s** — %s' % (_inline(t), _inline(p), _inline(d))
+    return '\n'.join('- `%s` **%s**: %s' % (_inline(t), _inline(p), _inline(d))
                      for t, p, d, hl in rows)
 
 

@@ -29,7 +29,7 @@ Marp 마크다운으로 비개발자·일반인 대상 AI 에이전트 오픈 �
   생성기 경로에서 lecture.md 와 outline.md 는 생성물이므로 직접 고치지 않는다.
 - Marp 경로의 lecture.md 에는 Marp 프런트매터(marp: true, size: 16:9,
   paginate: true)와 section { padding: 60px 80px; } CSS를 포함.
-- 이미지는 강의 폴더 images/에 SVG로 직접 생성 — 콘텐츠는 viewBox 중앙 배치,
+- 이미지는 강의 폴더 images/에 SVG로 직접 생성: 콘텐츠는 viewBox 중앙 배치,
   배경 이미지는 35% 크기.
 - 한글은 슬라이드 오버플로우가 잦음: 슬라이드당 불릿 5개·테이블 5행 이내,
   볼드 강조 최소화, 긴 문장은 분할.

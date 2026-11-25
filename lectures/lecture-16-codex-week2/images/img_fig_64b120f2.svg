@@ -11,13 +11,13 @@
 <text x="441" y="70" text-anchor="middle" fill="#13735F" font-size="13.5">적어준 범위 안에서만</text>
 <text x="441" y="94" text-anchor="middle" fill="#13735F" font-size="13.5">생각합니다</text>
 <text x="590" y="66" fill="#13735F" font-size="12.5" opacity=".65">더 좋은 방법을 제안하지 않습니다</text>
-<text x="590" y="94" fill="#13735F" font-size="12.5" opacity=".65">안 적은 전제가 사고를 냅니다</text>
+<text x="590" y="94" fill="#13735F" font-size="12.5" opacity=".65">안 적은 전제가 잘못된 결과를 만듭니다</text>
 
 <line x1="0" y1="152" x2="960" y2="152" stroke="#13735F" opacity=".18"/>
 
 <text x="0" y="184" font-size="12" font-weight="600" letter-spacing="2" style="fill:var(--acc)">짧게 주고 질문 받기</text>
 <rect x="0" y="202" width="180" height="56" rx="8" style="stroke:var(--acc);fill:var(--acc);fill-opacity:.1" stroke-width="1.5"/>
-<text x="90" y="236" text-anchor="middle" font-size="13.5" font-weight="600" style="fill:var(--acc)">한 줄 + 질문권</text>
+<text x="90" y="236" text-anchor="middle" font-size="13.5" font-weight="600" style="fill:var(--acc)">한 줄 + 질문 요청</text>
 <path d="M180 218 L 300 218" style="stroke:var(--acc)" stroke-width="1.5" marker-end="url(#ara)"/>
 <text x="240" y="210" text-anchor="middle" fill="#13735F" font-size="11.5" opacity=".7">무엇을 하려는지</text>
 <path d="M300 244 L 180 244" style="stroke:var(--acc)" stroke-width="1.5" marker-end="url(#ara)"/>
@@ -29,5 +29,5 @@
 <rect x="550" y="202" width="410" height="56" rx="8" style="stroke:var(--acc);fill:var(--acc);fill-opacity:.1" stroke-width="1.5"/>
 <text x="755" y="226" text-anchor="middle" font-size="13.5" font-weight="600" style="fill:var(--acc)">“아, 나 이걸 안 정했네”</text>
 <text x="755" y="247" text-anchor="middle" fill="#13735F" font-size="12" opacity=".7">에이전트가 하는 질문이 내가 안 정한 부분을 드러냅니다</text>
-<text x="0" y="300" fill="#13735F" font-size="12.5" opacity=".6">맥락을 전부 적어주려 하지 말고, 에이전트가 맥락으로 다가오게 만드세요.</text>
+<text x="0" y="300" fill="#13735F" font-size="12.5" opacity=".6">맥락을 전부 적어주려 하지 말고, 에이전트가 먼저 묻게 만드세요.</text>
 </svg>

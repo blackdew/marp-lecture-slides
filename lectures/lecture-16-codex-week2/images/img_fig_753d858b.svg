@@ -7,7 +7,7 @@
 <text x="878" y="52" font-size="12.5" font-weight="600" style="fill:var(--acc)">거의 전부</text>
 <text x="150" y="94" text-anchor="end" fill="#13735F" font-size="13" opacity=".7">내 맥락</text>
 <rect x="166" y="74" width="700" height="30" rx="4" stroke="#13735F" fill="none" stroke-width="1.5" opacity=".35" stroke-dasharray="5 4"/>
-<text x="176" y="94" fill="#13735F" font-size="12" opacity=".55">내 회사 · 내 상사 · 내가 진짜 원하는 것 — 아무것도 모릅니다</text>
+<text x="176" y="94" fill="#13735F" font-size="12" opacity=".55">내 회사 · 내 상사 · 내가 진짜 원하는 것: 아무것도 모릅니다</text>
 
 <line x1="0" y1="126" x2="960" y2="126" stroke="#13735F" opacity=".18"/>
 
@@ -19,5 +19,5 @@
 <rect x="166" y="216" width="700" height="30" rx="4" style="stroke:var(--acc);fill:var(--acc);fill-opacity:.1" stroke-width="1.5"/>
 <text x="878" y="236" font-size="12.5" font-weight="600" style="fill:var(--acc)">나만 압니다</text>
 <text x="176" y="236" fill="#13735F" font-size="12" opacity=".65">왜 하는지 · 누가 읽는지 · 무엇이 성공인지</text>
-<text x="0" y="266" fill="#13735F" font-size="12.5" font-weight="600" opacity=".75">그래서 관계가 이렇게 됩니다 — 지식은 저쪽이 많고, 판단은 이쪽이 합니다.</text>
+<text x="0" y="266" fill="#13735F" font-size="12.5" font-weight="600" opacity=".75">그래서 관계가 이렇게 됩니다. 지식은 저쪽이 많고, 판단은 이쪽이 합니다.</text>
 </svg>
