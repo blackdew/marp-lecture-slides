@@ -281,4 +281,6 @@ h1 { color: #16past; }
 
 
 def page(title, slides):
-    return FRONT + '\n' + '\n\n---\n\n'.join(slides) + '\n'
+    # title 을 적지 않으면 Marp 가 첫 제목의 첫 줄만 문서 제목으로 씁니다.
+    front = FRONT.replace('marp: true\n', 'marp: true\ntitle: "%s"\n' % title.replace('"', "'"), 1)
+    return front + '\n' + '\n\n---\n\n'.join(slides) + '\n'

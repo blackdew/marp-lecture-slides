@@ -1,5 +1,6 @@
 ---
 marp: true
+title: "1주차 오늘 당장 시작하자"
 theme: default
 size: 16:9
 paginate: true
