@@ -1,7 +1,32 @@
 # -*- coding: utf-8 -*-
 """Deck shell + slide components. One idea per slide, assertion headings."""
+import base64 as _b64
+import hashlib as _hl
 import html as _h
+import pathlib as _pl
 from style import CSS
+
+# 그림 파일을 저장하는 폴더. 다른 강의 폴더에서 빌드할 때는 build.py 가 바꿉니다
+IMG = _pl.Path(__file__).resolve().parent.parent / 'images'
+_seen = {}
+
+
+def _img(payload, stem):
+    """data URI 를 images/ 파일로 저장하고 경로를 돌려줍니다.
+
+    파일 이름은 marpdeck._asset 과 같은 규칙이라, 두 덱이 같은 파일을 불러옵니다.
+    """
+    if not payload.startswith('data:'):
+        return payload
+    key = _hl.md5(payload[:4000].encode()).hexdigest()[:8]
+    if key not in _seen:
+        head, b64 = payload.split(',', 1)
+        ext = 'jpg' if 'jpeg' in head else ('png' if 'png' in head else 'bin')
+        name = 'img_%s_%s.%s' % (stem, key, ext)
+        IMG.mkdir(parents=True, exist_ok=True)
+        (IMG / name).write_bytes(_b64.b64decode(b64))
+        _seen[key] = 'images/' + name
+    return _seen[key]
 
 JS = """
 (function(){
@@ -39,7 +64,8 @@ JS = """
     Array.prototype.forEach.call(ovg ? ovg.children : [], function(b,k){
       b.classList.toggle('cur', k===i);
     });
-    if(history.replaceState) history.replaceState(null,'','#s'+(i+1));
+    // 미리보기 틀(about:srcdoc) 안에서는 주소를 바꿀 수 없어 예외가 납니다
+    try{ if(history.replaceState) history.replaceState(null,'','#s'+(i+1)); }catch(e){}
     if(FIT) FIT();
   }
 
@@ -290,7 +316,7 @@ def shot(title, part, time, img, line, alt="", nt=None):
     o = ['<section class="s shot" data-title="' + _h.escape(title, quote=True) +
          '" data-part="' + _h.escape(part + ' · ' + time, quote=True) + '">']
     o.append('<div class="eyebrow"><b>' + part + '</b><span>' + time + '</span><i>' + title + '</i></div>')
-    o.append('<div class="shotimg"><img src="' + img + '" alt="' + _h.escape(alt or title, quote=True) + '"></div>')
+    o.append('<div class="shotimg"><img src="' + _img(img, 'shot') + '" alt="' + _h.escape(alt or title, quote=True) + '"></div>')
     o.append('<p class="shotline">' + line + '</p>')
     if nt:
         o.append(nt)
@@ -305,7 +331,7 @@ def person(title, part, time, head, left, right, img=None, alt="", svg=None,
          '" data-part="' + _h.escape(part + ' \u00b7 ' + time, quote=True) + '">']
     o.append('<div class="eyebrow"><b>' + part + '</b><span>' + time + '</span><i>' + title + '</i></div>')
     o.append('<h2 class="a">' + head + '</h2>')
-    mid = ('<div class="shotimg"><img src="' + img + '" alt="' +
+    mid = ('<div class="shotimg"><img src="' + _img(img, 'person') + '" alt="' +
            _h.escape(alt or title, quote=True) + '"></div>') if img else \
           ('<div class="figfull">' + svg + '</div>' if svg else '')
     if link:
@@ -332,7 +358,7 @@ def lines(items, tight=False, quote=False):
 
 def pic(img, alt=""):
     """이미지 한 칸. split 안에 넣어 씁니다."""
-    return '<div class="shotimg"><img src="' + img + '" alt="' + _h.escape(alt, quote=True) + '"></div>'
+    return '<div class="shotimg"><img src="' + _img(img, 'pic') + '" alt="' + _h.escape(alt, quote=True) + '"></div>'
 
 
 def bullets(items):

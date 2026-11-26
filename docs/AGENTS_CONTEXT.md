@@ -60,7 +60,7 @@ lecture-XX-<주제명>/
 │   ├── build.py       # → weekN.html
 │   ├── build_marp.py  # → lecture.md + images/
 │   └── outline.py     # → outline.md
-├── images/img_*.svg   # build_marp.py 가 생성
+├── images/            # 생성물. 그림 파일. build.py 와 build_marp.py 가 저장
 ├── outline.md         # 생성물
 ├── lecture.md         # 생성물
 ├── weekN.html         # 발표용 본 슬라이드
@@ -176,6 +176,7 @@ size: 16:9
 파이썬 자료구조 하나에서 두 형식을 뽑습니다.
 
 - `build.py` → `weekN.html`: 발표용. 발표자 노트 토글, 16:9 자동 맞춤, 휴대폰 문서 모드
+- `weekN.html` 은 캡처 그림을 `images/` 의 파일로 불러옵니다. 옮길 때는 `images/` 폴더를 함께 옮깁니다
 - `build_marp.py` → `lecture.md`: Marp 변환용. PDF·PPTX 출력과 포털 등재에 씁니다
 - 16강은 생성기를 복사하지 않고 15강 것을 `_build/_shared.py` 로 참조합니다
 
@@ -388,7 +389,7 @@ Marp CLI의 `--pdf` 옵션은 Puppeteer 오류로 실패할 수 있습니다. �
 
 ```bash
 cd lectures/lecture-16-codex-week2/_build
-python3 build.py 2        # → ../week2.html  (발표용)
+python3 build.py 2        # → ../week2.html + ../images/*.jpg  (발표용)
 python3 build_marp.py 2   # → ../lecture.md + ../images/
 python3 outline.py 2      # → ../outline.md
 python3 handouts.py 2     # → ../worksheet.html, ../runsheet.html  (실습 자료)

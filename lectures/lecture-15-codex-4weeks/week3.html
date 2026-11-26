@@ -818,7 +818,8 @@ figcaption b{color:var(--fg);font-weight:600}
     Array.prototype.forEach.call(ovg ? ovg.children : [], function(b,k){
       b.classList.toggle('cur', k===i);
     });
-    if(history.replaceState) history.replaceState(null,'','#s'+(i+1));
+    // 미리보기 틀(about:srcdoc) 안에서는 주소를 바꿀 수 없어 예외가 납니다
+    try{ if(history.replaceState) history.replaceState(null,'','#s'+(i+1)); }catch(e){}
     if(FIT) FIT();
   }
 
