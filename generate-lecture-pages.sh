@@ -17,7 +17,7 @@ declare -a LECTURES=(
     "lecture-11-agent-life-transition|Lecture 11: Just Plan It!!|AI Agent로 일과 삶의 전환|대학생/교직원|120분|5개 Part|미평가|동명대학교 특강. AI Agent 체험부터 업무 자동화, 팀 해커톤까지.||Just Plan It!! AI Agent로 일과 삶의 전환|동명대학교 특강 — Agent 체험부터 팀 해커톤까지|AI Agent,2시간,초급~중급|"
     "lecture-12-agent-life-transition|Lecture 12: AI Agent 활용|생활/업무 전환|대학생/교직원|120분|4개 Act|미평가|동명대학교 특강. Agent 개념 이해부터 역할별 실습, 삶의 전환 로드맵까지.||AI Agent 활용 생활/업무 전환|동명대학교 특강 — 시연 + 직접 실습 중심|AI Agent,2시간,초급~중급|"
     "lecture-15-codex-4weeks|Lecture 15: 에이전트와 함께하는 삶의 전환|Codex 4주 과정 (1주차)|비전공자 30~60대|120분×4주|4개 주차|미평가|비전공자 대상 4주 연속 과정. 1주차는 동기부여와 생각의 전환. 터미널 없이 ChatGPT 데스크탑의 Codex만 사용.|week1.html|에이전트와 함께하는 삶의 전환|비전공자 4주 과정 — ChatGPT 데스크탑의 Codex만 사용|Codex,2시간 × 4주,비전공자|"
-    "lecture-16-codex-week2|Lecture 16: 에이전트 잘 쓰는 방법|Codex 4주 과정 (2주차)|비전공자 30~60대|120분|3개 구간|미평가|Codex 4주 과정의 2주차. LLM의 원리와 세 가지 방식을 자기 결과물로 직접 해보고, 자신에게 맞는 방식 한 가지를 고릅니다.|week2.html|에이전트 잘 쓰는 방법|Codex 4주 과정 2주차: 세 가지 방식 실습과 내 방식 찾기|Codex,2시간,비전공자|NEW"
+    "lecture-16-codex-week2|Lecture 16: 에이전트 잘 쓰는 방법|Codex 4주 과정 (2주차)|비전공자 30~60대|120분|3개 구간|미평가|Codex 4주 과정의 2주차. LLM의 원리를 배우고, 인사 카드를 세 가지 방식으로 만들어 보면서 자신에게 맞는 방식 한 가지를 고릅니다.|week2.html|에이전트 잘 쓰는 방법|Codex 4주 과정 2주차: 세 가지 방식 실습과 내 방식 찾기|Codex,2시간,비전공자|NEW"
 )
 
 # 함수: index.html 생성
@@ -55,6 +55,13 @@ generate_index_html() {
       actions_html="${actions_html}
                 <a href=\"../../docs/review-${folder}.md\" class=\"btn btn-secondary\">
                     강의 리뷰 보기
+                </a>"
+    fi
+    # 수강생용 실습지가 있는 강의에만 링크를 넣습니다
+    if [ -f "lectures/${folder}/worksheet.html" ]; then
+      actions_html="${actions_html}
+                <a href=\"worksheet.html\" target=\"_blank\" class=\"btn btn-secondary\">
+                    실습지 보기
                 </a>"
     fi
     actions_html="${actions_html}

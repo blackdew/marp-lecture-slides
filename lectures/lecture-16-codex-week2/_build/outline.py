@@ -37,6 +37,7 @@ lines += ['', '## 빌드', '', '```bash', 'cd _build',
           'python3 ../../lecture-15-codex-4weeks/_build/check.py ../week%s.html' % n,
           'python3 build_marp.py %s   # → ../lecture.md  (Marp)' % n,
           'python3 outline.py %s      # → ../outline.md' % n,
+          'python3 handouts.py %s     # → ../worksheet.html, ../runsheet.html  (실습 자료)' % n,
           'cd ../../.. && ./generate-presentation.sh lecture-16-codex-week2 lecture.md',
           '```', '']
 (out / 'outline.md').write_text('\n'.join(lines), encoding='utf-8')

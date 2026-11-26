@@ -391,6 +391,7 @@ cd lectures/lecture-16-codex-week2/_build
 python3 build.py 2        # → ../week2.html  (발표용)
 python3 build_marp.py 2   # → ../lecture.md + ../images/
 python3 outline.py 2      # → ../outline.md
+python3 handouts.py 2     # → ../worksheet.html, ../runsheet.html  (실습 자료)
 python3 ../../lecture-15-codex-4weeks/_build/check.py ../week2.html   # 태그 검사
 ```
 

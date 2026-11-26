@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#101f36">
+  <meta name="description" content="30년 친구 영희에게 전하는 고마운 연말 인사">
+  <title>영희에게, 올해도 고마웠어</title>
+  <style>
+    :root { color-scheme: dark; font-family: "Apple SD Gothic Neo", "Malgun Gothic", sans-serif; background: #091324; color: #fffaf0; }
+    * { box-sizing: border-box; }
+    body { margin: 0; }
+    .card { position: relative; isolation: isolate; min-height: 100svh; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: max(44px, env(safe-area-inset-top)) 22px max(60px, env(safe-area-inset-bottom)); overflow: hidden; background: radial-gradient(ellipse at 50% 12%, #243e59 0, #101f36 53%, #0b1729 100%); }
+    .letter { position: relative; z-index: 2; width: 100%; max-width: 520px; text-align: center; }
+    .ornament { display: block; margin: 0 auto 26px; width: 31px; height: 31px; color: #d7c5a4; }
+    h1 { font-family: "AppleMyungjo", "Batang", serif; font-size: clamp(2.7rem, 10vw, 3.7rem); font-weight: 400; letter-spacing: -.055em; line-height: 1.35; margin: 0 0 30px; }
+    p { font-size: clamp(1.35rem, 5.5vw, 1.8rem); line-height: 1.7; letter-spacing: -.045em; margin: 0; word-break: keep-all; }
+    .memory { margin-bottom: 25px; color: #eef2f5; }
+    .closing { color: #eee0c6; }
+    .rule { width: 28px; height: 1px; margin: 27px auto; background: #d7c5a477; }
+    .mountains { position: absolute; bottom: -1px; left: 0; width: 100%; height: 19%; z-index: 0; opacity: .55; pointer-events: none; }
+    .snow { position: absolute; inset: 0; pointer-events: none; z-index: 1; overflow: hidden; }
+    .flake { position: absolute; top: -15px; width: var(--size); height: var(--size); border-radius: 50%; background: white; opacity: var(--opacity); animation: snowfall var(--duration) var(--delay) linear infinite; }
+    @keyframes snowfall { to { transform: translate3d(var(--drift), calc(100svh + 30px), 0); } }
+    .toggle { position: absolute; z-index: 3; bottom: max(16px, env(safe-area-inset-bottom)); right: 18px; min-height: 44px; padding: 8px 12px; border: 1px solid #ffffff30; border-radius: 24px; background: #101f36b3; color: #d7e0e9; font: inherit; font-size: .875rem; cursor: pointer; }
+    .toggle:focus-visible { outline: 2px solid #eee0c6; outline-offset: 4px; }
+    .paused .flake { animation-play-state: paused; }
+    @media (min-width: 640px) { .card { max-width: 580px; margin: 0 auto; box-shadow: 0 0 100px #0005; } }
+    @media (max-height: 700px) { .card { padding-top: 24px; padding-bottom: 64px; } .ornament { margin-bottom: 18px; width: 25px; height: 25px; } h1 { font-size: clamp(2.3rem, 9vw, 3rem); margin-bottom: 20px; } p { font-size: clamp(1.25rem, 5vw, 1.6rem); line-height: 1.6; } .memory { margin-bottom: 18px; } .rule { margin: 19px auto; } }
+    @media (prefers-reduced-motion: reduce) { .flake { animation: none; top: var(--still-top); } }
+  </style>
+</head>
+<body>
+  <main class="card">
+    <div class="snow" aria-hidden="true"></div>
+    <article class="letter" aria-label="영희에게 보내는 연말 카드">
+      <svg class="ornament" viewBox="0 0 32 32" fill="none" aria-hidden="true"><path d="M16 1v30M3 8.5l26 15M3 23.5l26-15M12 4l4 4 4-4M12 28l4-4 4 4M4 13l5-1-1-5M24 25l-1-5 5-1M4 19l5 1-1 5M24 7l-1 5 5 1" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      <h1>영희야,<br>올해도 고마웠어.</h1>
+      <p class="memory">봄에 함께 다녀온 지리산,<br>함께여서 참 좋았어.</p>
+      <div class="rule" aria-hidden="true"></div>
+      <p>30년 친구인 네가 있어 고마워.</p>
+      <p class="closing">따뜻한 연말 보내.</p>
+    </article>
+    <svg class="mountains" viewBox="0 0 600 160" preserveAspectRatio="none" aria-hidden="true"><path d="M0 100 70 62 116 81 208 15 270 68 319 39 390 99 465 50 540 89 600 65V160H0Z" fill="#334a60"/><path d="m177 38 31-23 31 27-26-12-12 8-8-4Z" fill="#a7b7c4" opacity=".45"/><path d="M0 123 99 93 180 120 270 77 354 129 440 102 513 124 600 96V160H0Z" fill="#162a40"/></svg>
+    <button class="toggle" type="button" aria-pressed="false">눈 멈추기</button>
+  </main>
+  <script>
+    const card = document.querySelector('.card');
+    const snow = document.querySelector('.snow');
+    const toggle = document.querySelector('.toggle');
+    const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+    for (let i = 0; i < 42; i++) {
+      const flake = document.createElement('span');
+      flake.className = 'flake';
+      flake.style.cssText = `left:${Math.random() * 100}%;--size:${2 + Math.random() * 3}px;--opacity:${.18 + Math.random() * .45};--duration:${12 + Math.random() * 16}s;--delay:${-Math.random() * 28}s;--drift:${Math.random() * 70 - 35}px;--still-top:${Math.random() * 100}%`;
+      snow.appendChild(flake);
+    }
+    function updateMotionPreference() { toggle.hidden = reducedMotion.matches; }
+    updateMotionPreference();
+    reducedMotion.addEventListener('change', updateMotionPreference);
+    toggle.addEventListener('click', () => {
+      const paused = card.classList.toggle('paused');
+      toggle.setAttribute('aria-pressed', String(paused));
+      toggle.textContent = paused ? '눈 내리기' : '눈 멈추기';
+    });
+  </script>
+</body>
+</html>
