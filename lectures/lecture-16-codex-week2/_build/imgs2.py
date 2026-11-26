@@ -15,5 +15,5 @@ def _uri(name):
 
 
 # 2026-11-26, ChatGPT 데스크탑 앱의 Codex 에 실제로 요청해서 받은 카드
-CARD_ONE_LINE = _uri('card-one-line.jpg')              # “연말 인사 카드를 웹페이지로 만들어줘”
-CARD_FIVE_SENTENCES = _uri('card-five-sentences.jpg')  # 실습 1 의 다섯 문장
+CARD_REQUEST_ONLY = _uri('card-request-only.jpg')   # 요청만 적음: “연말 인사 카드를 웹페이지로 만들어줘”
+CARD_WITH_CONTEXT = _uri('card-with-context.jpg')   # 내 상황과 확인 방법을 더함: 실습 1 의 요청 전체

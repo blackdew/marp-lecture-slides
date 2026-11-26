@@ -26,17 +26,30 @@ ul,ol{margin:6px 0;padding-left:22px}
 li{margin:3px 0}
 .q{display:block;background:var(--accs);border-left:3px solid var(--acc);border-radius:6px;
   padding:9px 12px;margin:8px 0;font-weight:600}
-.say{font-weight:600;color:var(--acc);white-space:nowrap}
+.say{font-weight:600;color:var(--acc)}
+td .say{white-space:nowrap}
 .tw{overflow-x:auto}
 table{border-collapse:collapse;width:100%;font-size:15px}
 th,td{border:1px solid var(--line);padding:8px 10px;text-align:left;vertical-align:top}
 th{background:#F1EEE8;font-weight:600;white-space:nowrap}
-td.w{height:44px;min-width:180px}
-.blank{display:block;border-bottom:1.5px solid var(--line);height:34px;margin:4px 0 10px}
+td.w{min-width:180px;padding:4px 6px}
+textarea.f{display:block;width:100%;min-height:36px;border:0;border-bottom:1.5px solid var(--line);border-radius:0;
+  background:transparent;color:inherit;font:inherit;font-size:16px;line-height:1.5;padding:5px 2px;
+  resize:none;overflow:hidden}
+td.w textarea.f{border-bottom:0}
+textarea.f::placeholder{color:var(--faint);opacity:.7}
+textarea.f:focus-visible{outline:2px solid var(--acc);outline-offset:1px}
+.blank{margin:4px 0 10px}
 .pick{display:flex;flex-wrap:wrap;gap:8px 18px;margin:8px 0;padding:0;list-style:none}
 .pick li{margin:0}
-.pick li::before{content:"";display:inline-block;width:15px;height:15px;border:1.5px solid var(--dim);
-  border-radius:3px;margin-right:7px;vertical-align:-2px}
+.pick label{display:inline-flex;align-items:center;gap:7px;cursor:pointer}
+.pick input{width:17px;height:17px;margin:0;accent-color:var(--acc)}
+.store{display:flex;flex-wrap:wrap;align-items:center;gap:6px 12px;margin:12px 0 0;font-size:14px;color:var(--dim)}
+.store button{font:inherit;font-size:13px;color:var(--dim);background:var(--panel);border:1px solid var(--line);
+  border-radius:8px;padding:5px 11px;cursor:pointer}
+.store button:focus-visible{outline:2px solid var(--acc);outline-offset:1px}
+.store button.arm{color:#fff;background:#B3261E;border-color:#B3261E}
+#save-status{color:var(--acc);font-weight:600}
 .tag{display:inline-block;font-size:12px;font-weight:600;color:var(--acc);background:var(--accs);
   border-radius:99px;padding:1px 9px;margin-left:6px;white-space:nowrap}
 .note{font-size:14px;color:var(--dim)}
@@ -51,23 +64,88 @@ footer{font-size:13px;color:var(--faint);margin-top:18px}
   section{border-color:#bbb;margin:9px 0;padding:12px 14px}
   .q,tr.do td,th,.tag{-webkit-print-color-adjust:exact;print-color-adjust:exact}
   a{color:inherit;text-decoration:none}
+  .store{display:none}
+  textarea.f{border-bottom-color:#999}
+  textarea.f::placeholder{color:transparent}
 }
 </style>
 </head>
 <body>
 <main>
-<header><div class="kicker">WEEK 2 / 4 · 수강생용</div><h1>2주차 실습지</h1><p class="lede">에이전트 잘 쓰는 방법 · 직접 적으면서 따라 하는 자료</p></header>
+<header><div class="kicker">WEEK 2 / 4 · 수강생용</div><h1>2주차 실습지</h1><p class="lede">에이전트 잘 쓰는 방법 · 직접 적으면서 따라 하는 자료</p><p class="store"><span>적은 내용은 이 기기의 브라우저에 저장됩니다. 다른 기기나 다른 브라우저에서는 보이지 않습니다.</span><button type="button" id="clear-all">적은 내용 모두 지우기</button><span id="save-status" role="status" aria-live="polite"></span></p></header>
 <section><h2>시작하기 전에</h2><ul><li>바탕화면에 <b>2주차</b>라는 빈 폴더 만들기</li><li>Codex의 새 채팅에서 <b>2주차</b> 폴더 고르기. ‘이 폴더를 신뢰할까요?’ 창이 뜨면 ‘폴더 신뢰’ 누르기</li><li>전화번호와 주소는 적지 않기. 화면에 보여도 괜찮은 이야기만 적기</li><li>엔터를 누르면 바로 전송. 여러 문장은 줄을 바꾸지 않고 이어서 적은 뒤 한 번에 전송</li></ul></section>
-<section><h2>인사 카드를 받을 세 사람</h2><p>고마운 사람에게 보내는 인사 카드를 웹페이지로 만듭니다. 세 가지 방식으로 세 장을 만들고, 받는 사람은 실습마다 바꿉니다.</p><div class="tw"><table><thead><tr><th>실습</th><th>받는 사람</th><th>함께한 일 한 가지</th></tr></thead><tbody><tr><td>첫 번째</td><td class="w"></td><td class="w"></td></tr><tr><td>두 번째</td><td class="w"></td><td class="w"></td></tr><tr><td>세 번째</td><td class="w"></td><td class="w"></td></tr></tbody></table></div><h3>적는 방법의 예시</h3><p class="note">아래 내용은 실습을 위해 지어낸 예시입니다.</p><div class="tw"><table><thead><tr><th>받는 사람</th><th>함께한 일 한 가지</th></tr></thead><tbody><tr><td>30년 친구 영희</td><td>봄에 같이 지리산에 다녀옴</td></tr><tr><td>고등학교 때 담임이신 김 선생님</td><td>졸업식 날 손편지를 받음</td></tr><tr><td>어머니</td><td>여름에 같이 김치를 담금</td></tr></tbody></table></div><p class="note">세 사람이 떠오르지 않으면 한 사람에게 세 장을 만들어도 됩니다. 전화번호, 주소, 주민등록번호는 적지 않습니다.</p></section>
-<section><h2>다섯 문장 적기<small>00:37</small></h2><p>화면의 예시를 보고, 첫 번째 카드에 맞는 문장을 오른쪽 칸에 적습니다. 첫 줄과 마지막 줄은 예시를 그대로 적습니다.</p><div class="tw"><table><thead><tr><th>줄</th><th>예시</th><th>내 문장</th></tr></thead><tbody><tr><td><b>요청</b></td><td>“연말 인사 카드를 웹페이지로 만들어줘”</td><td class="w"></td></tr><tr><td><b>목적</b></td><td>“올해 고마웠다는 마음을 전하려는 거야”</td><td class="w"></td></tr><tr><td><b>읽는 사람</b></td><td>“받는 사람은 30년 친구 영희야. 봄에 같이 지리산에 다녀왔어”</td><td class="w"></td></tr><tr><td><b>형식</b></td><td>“형식은 휴대폰 한 화면이야. 눈이 내리고 글씨는 크게 해줘”</td><td class="w"></td></tr><tr><td><b>확인</b></td><td>“내가 말하지 않은 추억은 지어내지 마”</td><td class="w"></td></tr></tbody></table></div></section>
-<section><h2>첫 번째, 내가 다 적어서 요청<small>00:43</small></h2><ol><li>적어 둔 다섯 문장을 줄을 바꾸지 않고 이어서 입력</li><li>한 번에 전송</li><li>만들어진 카드 열어 보기</li></ol><h3>카드에서 확인할 것</h3><ul class="pick"><li>받는 사람의 이름이 있음</li><li>내가 말하지 않은 이야기가 없음</li></ul><h3>한 번 고쳐달라고 요청하기</h3><p>예: <span class="say">“눈을 더 많이 내리게 해줘”</span>, <span class="say">“글씨를 더 크게 해줘”</span>, <span class="say">“마지막 줄에 내 이름을 넣어줘”</span></p><h3>이 방식이 편했던 정도</h3><ul class="pick"><li>상</li><li>중</li><li>하</li></ul></section>
-<section><h2>두 번째, 질문에 답하면서 채우기<small>00:56</small></h2><ol><li>왼쪽 위 <b>새 채팅</b> 누르기</li><li><b>2주차</b> 폴더 다시 고르기</li><li>아래 문장을 그대로 전송. 받는 사람은 에이전트가 물을 때 답하기</li></ol><span class="q">“인사 카드를 새 파일로 만들래. 폴더의 파일은 읽지 말고, 나한테 질문부터 해줘”</span><h3>에이전트의 질문에 답하는 요령</h3><div class="tw"><table><thead><tr><th>상황</th><th>보낼 문장</th></tr></thead><tbody><tr><td>답을 모르는 질문</td><td><span class="say">“추천해줘”</span></td></tr><tr><td>질문이 너무 많을 때</td><td><span class="say">“세 가지만 질문해줘”</span></td></tr><tr><td>답을 다 했는데 시작하지 않을 때</td><td><span class="say">“이제 만들어줘”</span></td></tr><tr><td>파일 종류를 묻지 않을 때</td><td><span class="say">“웹페이지로 만들어줘”</span></td></tr></tbody></table></div><h3>에이전트가 물어본 내용 가운데 첫 번째 실습에서 적지 않았던 것</h3><span class="blank"></span><h3>이 방식이 편했던 정도</h3><ul class="pick"><li>상</li><li>중</li><li>하</li></ul></section>
-<section><h2>세 번째, 프롬프트를 써달라고 하기<small>01:20</small></h2><ol><li>새 채팅을 누르고 <b>2주차</b> 폴더 고르기</li><li>프롬프트를 써달라고 요청<span class="q">“인사 카드를 새 파일로 만들래. 폴더의 파일은 읽지 말고, 프롬프트만 먼저 써줘”</span></li><li>에이전트가 쓴 프롬프트에서 빈칸과 틀린 곳만 문장으로 알려주고 실행<span class="q">“받는 사람은 김 선생님, 추억은 졸업식 날이야. 이 프롬프트대로 만들어줘”</span><span class="note">받는 사람과 추억은 예시입니다. 세 번째로 정한 사람의 내용으로 바꿉니다.</span></li><li>카드가 나온 뒤 프롬프트 저장<span class="q">“방금 쓴 프롬프트를 ‘카드 프롬프트’ 파일로 저장해줘”</span><span class="note">저장한 프롬프트는 받는 사람만 바꿔서 다시 씁니다. 예: <span class="say">“‘카드 프롬프트’ 파일대로, 받는 사람만 어머니로 바꿔서 만들어줘”</span></span></li></ol><h3>이 방식이 편했던 정도</h3><ul class="pick"><li>상</li><li>중</li><li>하</li></ul></section>
-<section><h2>가장 편했던 방식 고르기<small>01:31</small></h2><ul class="pick"><li>첫 번째</li><li>두 번째</li><li>세 번째</li></ul><p class="note">결과의 품질이 아니라 얼마나 편했는지를 기준으로 고릅니다.</p><h3>방식별 잘 맞는 일</h3><div class="tw"><table><thead><tr><th>방식</th><th>잘 맞는 일</th></tr></thead><tbody><tr><td>내가 다 적어서 요청</td><td>무엇을 적을지 아는 일</td></tr><tr><td>질문에 답하면서 채우기</td><td>무엇을 적을지 모르는 일</td></tr><tr><td>프롬프트를 써달라고 하기</td><td>앞으로 반복할 일</td></tr></tbody></table></div></section>
-<section><h2>네 번째 실습 · 다른 방법 묻기<small>01:46</small></h2><p>세 번째 실습에서 쓴 채팅에 그대로 보냅니다. 에이전트가 알려준 방법은 읽기만 합니다.</p><span class="q">“이 카드를 너한테 요청하는 다른 방법 세 가지를 알려줘”</span><h3>해보고 싶은 방법 한 가지</h3><span class="blank"></span></section>
-<section><h2>이번 주에 하실 일</h2><p>오늘 고른 방식을 내 일에 세 번 써봅니다. 오늘 만든 카드 한 장은 실제로 보내 봅니다.</p><div class="tw"><table><thead><tr><th>회차</th><th>요청한 일</th><th>결과와 느낀 점</th></tr></thead><tbody><tr><td>1</td><td class="w"></td><td class="w"></td></tr><tr><td>2</td><td class="w"></td><td class="w"></td></tr><tr><td>3</td><td class="w"></td><td class="w"></td></tr></tbody></table></div><h3>다음 주에 이야기할 잘 안 된 일 한 가지</h3><span class="blank"></span></section>
+<section><h2>인사 카드를 받을 세 사람</h2><p>고마운 사람에게 보내는 인사 카드를 웹페이지로 만듭니다. 세 가지 방식으로 세 장을 만들고, 받는 사람은 실습마다 바꿉니다.</p><div class="tw"><table><thead><tr><th>실습</th><th>받는 사람</th><th>함께한 일 한 가지</th></tr></thead><tbody><tr><td>첫 번째</td><td class="w"><textarea class="f" data-k="who1" rows="1" aria-label="첫 번째 카드를 받는 사람" placeholder="여기에 입력"></textarea></td><td class="w"><textarea class="f" data-k="what1" rows="1" aria-label="첫 번째 카드를 받는 사람과 함께한 일" placeholder="여기에 입력"></textarea></td></tr><tr><td>두 번째</td><td class="w"><textarea class="f" data-k="who2" rows="1" aria-label="두 번째 카드를 받는 사람" placeholder="여기에 입력"></textarea></td><td class="w"><textarea class="f" data-k="what2" rows="1" aria-label="두 번째 카드를 받는 사람과 함께한 일" placeholder="여기에 입력"></textarea></td></tr><tr><td>세 번째</td><td class="w"><textarea class="f" data-k="who3" rows="1" aria-label="세 번째 카드를 받는 사람" placeholder="여기에 입력"></textarea></td><td class="w"><textarea class="f" data-k="what3" rows="1" aria-label="세 번째 카드를 받는 사람과 함께한 일" placeholder="여기에 입력"></textarea></td></tr></tbody></table></div><h3>적는 방법의 예시</h3><p class="note">아래 내용은 실습을 위해 지어낸 예시입니다.</p><div class="tw"><table><thead><tr><th>받는 사람</th><th>함께한 일 한 가지</th></tr></thead><tbody><tr><td>30년 친구 영희</td><td>봄에 같이 지리산에 다녀옴</td></tr><tr><td>고등학교 때 담임이신 김 선생님</td><td>졸업식 날 손편지를 받음</td></tr><tr><td>어머니</td><td>여름에 같이 김치를 담금</td></tr></tbody></table></div><p class="note">세 사람이 떠오르지 않으면 한 사람에게 세 장을 만들어도 됩니다. 전화번호, 주소, 주민등록번호는 적지 않습니다.</p></section>
+<section><h2>첫 번째 카드의 요청 적기<small>00:37</small></h2><p>화면의 예시를 보고, 첫 번째 카드에 맞는 문장을 오른쪽 칸에 적습니다. 첫 줄과 마지막 줄은 예시를 그대로 적습니다.</p><div class="tw"><table><thead><tr><th>줄</th><th>예시</th><th>내 문장</th></tr></thead><tbody><tr><td><b>요청</b></td><td>“연말 인사 카드를 웹페이지로 만들어줘”</td><td class="w"><textarea class="f" data-k="req1" rows="1" aria-label="요청 줄에 적을 내 문장" placeholder="여기에 입력"></textarea></td></tr><tr><td><b>목적</b></td><td>“올해 고마웠다는 마음을 전하려는 거야”</td><td class="w"><textarea class="f" data-k="req2" rows="1" aria-label="목적 줄에 적을 내 문장" placeholder="여기에 입력"></textarea></td></tr><tr><td><b>읽는 사람</b></td><td>“받는 사람은 30년 친구 영희야. 봄에 같이 지리산에 다녀왔어”</td><td class="w"><textarea class="f" data-k="req3" rows="1" aria-label="읽는 사람 줄에 적을 내 문장" placeholder="여기에 입력"></textarea></td></tr><tr><td><b>형식</b></td><td>“형식은 휴대폰 한 화면이야. 눈이 내리고 글씨는 크게 해줘”</td><td class="w"><textarea class="f" data-k="req4" rows="1" aria-label="형식 줄에 적을 내 문장" placeholder="여기에 입력"></textarea></td></tr><tr><td><b>확인</b></td><td>“내가 말하지 않은 추억은 지어내지 마”</td><td class="w"><textarea class="f" data-k="req5" rows="1" aria-label="확인 줄에 적을 내 문장" placeholder="여기에 입력"></textarea></td></tr></tbody></table></div></section>
+<section><h2>첫 번째, 내가 다 적어서 요청<small>00:43</small></h2><ol><li>적어 둔 문장을 모두, 줄을 바꾸지 않고 이어서 입력</li><li>한 번에 전송</li><li>만들어진 카드 열어 보기</li></ol><h3>카드에서 확인할 것</h3><ul class="pick" aria-label="첫 번째 카드에서 확인할 것"><li><label><input type="checkbox" data-k="check-1">받는 사람의 이름이 있음</label></li><li><label><input type="checkbox" data-k="check-2">내가 말하지 않은 이야기가 없음</label></li></ul><h3>한 번 고쳐달라고 요청하기</h3><p>예: <span class="say">“눈을 더 많이 내리게 해줘”</span>, <span class="say">“글씨를 더 크게 해줘”</span>, <span class="say">“마지막 줄에 내 이름을 넣어줘”</span></p><h3>이 방식이 편했던 정도</h3><ul class="pick" role="radiogroup" aria-label="실습 1이 편했던 정도"><li><label><input type="radio" name="ease1" data-k="ease1" value="상">상</label></li><li><label><input type="radio" name="ease1" data-k="ease1" value="중">중</label></li><li><label><input type="radio" name="ease1" data-k="ease1" value="하">하</label></li></ul></section>
+<section><h2>두 번째, 질문에 답하면서 채우기<small>00:56</small></h2><ol><li>왼쪽 위 <b>새 채팅</b> 누르기</li><li><b>2주차</b> 폴더 다시 고르기</li><li>아래 문장을 그대로 전송. 받는 사람은 에이전트가 물을 때 답하기</li></ol><span class="q">“인사 카드를 새 파일로 만들래. 폴더의 파일은 읽지 말고, 나한테 질문부터 해줘”</span><h3>에이전트의 질문에 답하는 요령</h3><div class="tw"><table><thead><tr><th>상황</th><th>보낼 문장</th></tr></thead><tbody><tr><td>답을 모르는 질문</td><td><span class="say">“추천해줘”</span></td></tr><tr><td>질문이 너무 많을 때</td><td><span class="say">“세 가지만 질문해줘”</span></td></tr><tr><td>답을 다 했는데 시작하지 않을 때</td><td><span class="say">“이제 만들어줘”</span></td></tr><tr><td>파일 종류를 묻지 않을 때</td><td><span class="say">“웹페이지로 만들어줘”</span></td></tr></tbody></table></div><h3>에이전트가 물어본 내용 가운데 첫 번째 실습에서 적지 않았던 것</h3><div class="blank"><textarea class="f" data-k="asked" rows="2" aria-label="에이전트가 물어본 내용 가운데 첫 번째 실습에서 적지 않았던 것" placeholder="여기에 입력"></textarea></div><h3>이 방식이 편했던 정도</h3><ul class="pick" role="radiogroup" aria-label="실습 2이 편했던 정도"><li><label><input type="radio" name="ease2" data-k="ease2" value="상">상</label></li><li><label><input type="radio" name="ease2" data-k="ease2" value="중">중</label></li><li><label><input type="radio" name="ease2" data-k="ease2" value="하">하</label></li></ul></section>
+<section><h2>세 번째, 프롬프트를 써달라고 하기<small>01:20</small></h2><ol><li>새 채팅을 누르고 <b>2주차</b> 폴더 고르기</li><li>프롬프트를 써달라고 요청<span class="q">“인사 카드를 새 파일로 만들래. 폴더의 파일은 읽지 말고, 프롬프트만 먼저 써줘”</span></li><li>에이전트가 쓴 프롬프트에서 빈칸과 틀린 곳만 문장으로 알려주고 실행<span class="q">“받는 사람은 김 선생님, 추억은 졸업식 날이야. 이 프롬프트대로 만들어줘”</span><span class="note">받는 사람과 추억은 예시입니다. 세 번째로 정한 사람의 내용으로 바꿉니다.</span></li><li>카드가 나온 뒤 프롬프트 저장<span class="q">“방금 쓴 프롬프트를 ‘카드 프롬프트’ 파일로 저장해줘”</span><span class="note">저장한 프롬프트는 받는 사람만 바꿔서 다시 씁니다. 예: <span class="say">“‘카드 프롬프트’ 파일대로, 받는 사람만 어머니로 바꿔서 만들어줘”</span></span></li></ol><h3>이 방식이 편했던 정도</h3><ul class="pick" role="radiogroup" aria-label="실습 3이 편했던 정도"><li><label><input type="radio" name="ease3" data-k="ease3" value="상">상</label></li><li><label><input type="radio" name="ease3" data-k="ease3" value="중">중</label></li><li><label><input type="radio" name="ease3" data-k="ease3" value="하">하</label></li></ul></section>
+<section><h2>가장 편했던 방식 고르기<small>01:31</small></h2><ul class="pick" role="radiogroup" aria-label="가장 편했던 방식"><li><label><input type="radio" name="best" data-k="best" value="첫 번째">첫 번째</label></li><li><label><input type="radio" name="best" data-k="best" value="두 번째">두 번째</label></li><li><label><input type="radio" name="best" data-k="best" value="세 번째">세 번째</label></li></ul><p class="note">결과의 품질이 아니라 얼마나 편했는지를 기준으로 고릅니다.</p><h3>방식별 잘 맞는 일</h3><div class="tw"><table><thead><tr><th>방식</th><th>잘 맞는 일</th></tr></thead><tbody><tr><td>내가 다 적어서 요청</td><td>무엇을 적을지 아는 일</td></tr><tr><td>질문에 답하면서 채우기</td><td>무엇을 적을지 모르는 일</td></tr><tr><td>프롬프트를 써달라고 하기</td><td>앞으로 반복할 일</td></tr></tbody></table></div></section>
+<section><h2>네 번째 실습 · 다른 방법 묻기<small>01:46</small></h2><p>세 번째 실습에서 쓴 채팅에 그대로 보냅니다. 에이전트가 알려준 방법은 읽기만 합니다.</p><span class="q">“이 카드를 너한테 요청하는 다른 방법 세 가지를 알려줘”</span><h3>해보고 싶은 방법 한 가지</h3><div class="blank"><textarea class="f" data-k="try" rows="2" aria-label="해보고 싶은 방법 한 가지" placeholder="여기에 입력"></textarea></div></section>
+<section><h2>이번 주에 하실 일</h2><p>오늘 고른 방식을 내 일에 세 번 써봅니다. 오늘 만든 카드 한 장은 실제로 보내 봅니다.</p><div class="tw"><table><thead><tr><th>회차</th><th>요청한 일</th><th>결과와 느낀 점</th></tr></thead><tbody><tr><td>1</td><td class="w"><textarea class="f" data-k="hw1-task" rows="1" aria-label="1회차에 요청한 일" placeholder="여기에 입력"></textarea></td><td class="w"><textarea class="f" data-k="hw1-result" rows="1" aria-label="1회차의 결과와 느낀 점" placeholder="여기에 입력"></textarea></td></tr><tr><td>2</td><td class="w"><textarea class="f" data-k="hw2-task" rows="1" aria-label="2회차에 요청한 일" placeholder="여기에 입력"></textarea></td><td class="w"><textarea class="f" data-k="hw2-result" rows="1" aria-label="2회차의 결과와 느낀 점" placeholder="여기에 입력"></textarea></td></tr><tr><td>3</td><td class="w"><textarea class="f" data-k="hw3-task" rows="1" aria-label="3회차에 요청한 일" placeholder="여기에 입력"></textarea></td><td class="w"><textarea class="f" data-k="hw3-result" rows="1" aria-label="3회차의 결과와 느낀 점" placeholder="여기에 입력"></textarea></td></tr></tbody></table></div><h3>다음 주에 이야기할 잘 안 된 일 한 가지</h3><div class="blank"><textarea class="f" data-k="next" rows="2" aria-label="다음 주에 이야기할 잘 안 된 일 한 가지" placeholder="여기에 입력"></textarea></div></section>
 <section><h2>진행이 멈췄을 때</h2><div class="tw"><table><thead><tr><th>상황</th><th>할 일</th></tr></thead><tbody><tr><td>진행이 멈춘 것처럼 보일 때</td><td>승인 요청이 화면에 떠 있는지 확인</td></tr><tr><td>에이전트가 계획을 설명하고 확인을 구할 때</td><td><span class="say">“좋아, 만들어줘”</span></td></tr><tr><td>폴더를 고를 수 없을 때</td><td>옆의 ‘이 컴퓨터’가 눌려 있는지 확인</td></tr><tr><td>문장을 다 적기 전에 전송했을 때</td><td>멈추지 않고 나머지 문장을 이어서 전송</td></tr><tr><td>앞에서 만든 카드 파일을 덮어쓰려고 할 때</td><td><span class="say">“다른 이름으로 저장해줘”</span></td></tr><tr><td>프롬프트를 쓰지 않고 바로 만들기 시작할 때</td><td><span class="say">“멈추고 프롬프트만 써줘”</span></td></tr></tbody></table></div></section>
 <footer>이 문서는 <code>_build/handouts.py</code>가 덱에서 만든 생성물입니다.</footer>
 </main>
+<script>
+(function () {
+  var KEY = 'lecture16-worksheet-v1';
+  var data = {};
+  var status = document.getElementById('save-status');
+  var timer = null;
+  function tell(text) {
+    status.textContent = text;
+    clearTimeout(timer);
+    timer = setTimeout(function () { status.textContent = ''; }, 2500);
+  }
+  try { data = JSON.parse(localStorage.getItem(KEY) || '{}') || {}; }
+  catch (e) { data = {}; }
+  function save() {
+    try { localStorage.setItem(KEY, JSON.stringify(data)); tell('저장했습니다'); }
+    catch (e) { tell('이 브라우저에서는 저장할 수 없습니다. 창을 닫으면 내용이 사라집니다.'); }
+  }
+  function grow(el) { el.style.height = 'auto'; el.style.height = el.scrollHeight + 'px'; }
+  var texts = document.querySelectorAll('textarea[data-k]');
+  var picks = document.querySelectorAll('input[data-k]');
+  function fill() {
+    texts.forEach(function (el) {
+      el.value = typeof data[el.dataset.k] === 'string' ? data[el.dataset.k] : '';
+      grow(el);
+    });
+    picks.forEach(function (el) {
+      el.checked = el.type === 'radio' ? data[el.dataset.k] === el.value : data[el.dataset.k] === true;
+    });
+  }
+  texts.forEach(function (el) {
+    el.addEventListener('input', function () { data[el.dataset.k] = el.value; grow(el); save(); });
+  });
+  picks.forEach(function (el) {
+    el.addEventListener('change', function () {
+      data[el.dataset.k] = el.type === 'radio' ? el.value : el.checked;
+      save();
+    });
+  });
+  fill();
+  window.addEventListener('resize', function () { texts.forEach(grow); });
+  window.addEventListener('beforeprint', function () { texts.forEach(grow); });
+
+  // 지우기는 두 번 눌러야 실행됩니다. 실수로 한 번 누른 경우에는 4초 뒤에 원래대로 돌아갑니다.
+  var clear = document.getElementById('clear-all');
+  var label = clear.textContent;
+  var armed = null;
+  clear.addEventListener('click', function () {
+    if (!armed) {
+      clear.classList.add('arm');
+      clear.textContent = '한 번 더 누르면 모두 지워집니다';
+      armed = setTimeout(function () { armed = null; clear.classList.remove('arm'); clear.textContent = label; }, 4000);
+      return;
+    }
+    clearTimeout(armed); armed = null;
+    clear.classList.remove('arm'); clear.textContent = label;
+    data = {};
+    try { localStorage.removeItem(KEY); } catch (e) {}
+    fill();
+    tell('모두 지웠습니다');
+  });
+})();
+</script>
 </body>
 </html>

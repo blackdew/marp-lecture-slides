@@ -81,7 +81,7 @@ def cue(title, name):
     return _text(hit.group(1))
 
 
-FIVE = lines_of('실습 1')
+REQUEST = lines_of('실습 1')                          # (라벨, 문장) 요청 · 목적 · 읽는 사람 · 형식 · 확인
 P2, P3, P3RUN, P3SAVE, P4 = (prompt(t) for t in ('실습 2', '실습 3', '프롬프트대로 실행', '프롬프트 저장', '실습 4'))
 REDO = re.findall(r'“(.*?)”', cue('다시 요청하기', '예'))
 FIT = table_of('잘 맞는 일')
@@ -111,17 +111,30 @@ ul,ol{margin:6px 0;padding-left:22px}
 li{margin:3px 0}
 .q{display:block;background:var(--accs);border-left:3px solid var(--acc);border-radius:6px;
   padding:9px 12px;margin:8px 0;font-weight:600}
-.say{font-weight:600;color:var(--acc);white-space:nowrap}
+.say{font-weight:600;color:var(--acc)}
+td .say{white-space:nowrap}
 .tw{overflow-x:auto}
 table{border-collapse:collapse;width:100%;font-size:15px}
 th,td{border:1px solid var(--line);padding:8px 10px;text-align:left;vertical-align:top}
 th{background:#F1EEE8;font-weight:600;white-space:nowrap}
-td.w{height:44px;min-width:180px}
-.blank{display:block;border-bottom:1.5px solid var(--line);height:34px;margin:4px 0 10px}
+td.w{min-width:180px;padding:4px 6px}
+textarea.f{display:block;width:100%;min-height:36px;border:0;border-bottom:1.5px solid var(--line);border-radius:0;
+  background:transparent;color:inherit;font:inherit;font-size:16px;line-height:1.5;padding:5px 2px;
+  resize:none;overflow:hidden}
+td.w textarea.f{border-bottom:0}
+textarea.f::placeholder{color:var(--faint);opacity:.7}
+textarea.f:focus-visible{outline:2px solid var(--acc);outline-offset:1px}
+.blank{margin:4px 0 10px}
 .pick{display:flex;flex-wrap:wrap;gap:8px 18px;margin:8px 0;padding:0;list-style:none}
 .pick li{margin:0}
-.pick li::before{content:"";display:inline-block;width:15px;height:15px;border:1.5px solid var(--dim);
-  border-radius:3px;margin-right:7px;vertical-align:-2px}
+.pick label{display:inline-flex;align-items:center;gap:7px;cursor:pointer}
+.pick input{width:17px;height:17px;margin:0;accent-color:var(--acc)}
+.store{display:flex;flex-wrap:wrap;align-items:center;gap:6px 12px;margin:12px 0 0;font-size:14px;color:var(--dim)}
+.store button{font:inherit;font-size:13px;color:var(--dim);background:var(--panel);border:1px solid var(--line);
+  border-radius:8px;padding:5px 11px;cursor:pointer}
+.store button:focus-visible{outline:2px solid var(--acc);outline-offset:1px}
+.store button.arm{color:#fff;background:#B3261E;border-color:#B3261E}
+#save-status{color:var(--acc);font-weight:600}
 .tag{display:inline-block;font-size:12px;font-weight:600;color:var(--acc);background:var(--accs);
   border-radius:99px;padding:1px 9px;margin-left:6px;white-space:nowrap}
 .note{font-size:14px;color:var(--dim)}
@@ -136,19 +149,22 @@ footer{font-size:13px;color:var(--faint);margin-top:18px}
   section{border-color:#bbb;margin:9px 0;padding:12px 14px}
   .q,tr.do td,th,.tag{-webkit-print-color-adjust:exact;print-color-adjust:exact}
   a{color:inherit;text-decoration:none}
+  .store{display:none}
+  textarea.f{border-bottom-color:#999}
+  textarea.f::placeholder{color:transparent}
 }
 """
 
 
-def doc(title, kicker, lede, body, robots=False):
+def doc(title, kicker, lede, body, robots=False, top='', script=''):
     return ('<!DOCTYPE html>\n<html lang="ko">\n<head>\n<meta charset="utf-8">\n'
             '<meta name="viewport" content="width=device-width, initial-scale=1">\n'
             + ('<meta name="robots" content="noindex">\n' if robots else '')
             + '<title>' + _h.escape(title) + '</title>\n<style>' + CSS + '</style>\n</head>\n<body>\n<main>\n'
             '<header><div class="kicker">' + kicker + '</div><h1>' + _h.escape(title) + '</h1>'
-            '<p class="lede">' + lede + '</p></header>\n' + body +
+            '<p class="lede">' + lede + '</p>' + top + '</header>\n' + body +
             '\n<footer>이 문서는 <code>_build/handouts.py</code>가 덱에서 만든 생성물입니다.</footer>\n'
-            '</main>\n</body>\n</html>\n')
+            '</main>\n' + (('<script>' + script + '</script>\n') if script else '') + '</body>\n</html>\n')
 
 
 def q(text):
@@ -175,8 +191,105 @@ def td(text, c=None):
     return '<td' + ((' class="' + c + '"') if c else '') + '>' + text + '</td>'
 
 
-EASE = ('<h3>이 방식이 편했던 정도</h3><ul class="pick"><li>상</li><li>중</li><li>하</li></ul>')
-BLANK = '<span class="blank"></span>'
+# 입력 칸마다 고정된 이름(key)을 붙입니다. 저장한 값은 이 이름으로 되찾으므로,
+# 칸을 추가하거나 순서를 바꿔도 이미 적어 둔 값이 다른 칸으로 밀리지 않습니다.
+def field(key, label, rows=1):
+    return ('<textarea class="f" data-k="%s" rows="%d" aria-label="%s" placeholder="여기에 입력"></textarea>'
+            % (key, rows, _h.escape(label, quote=True)))
+
+
+def cell(key, label):
+    return '<td class="w">' + field(key, label) + '</td>'
+
+
+def blank(key, label):
+    return '<div class="blank">' + field(key, label, 2) + '</div>'
+
+
+def choose(key, label, items, kind='radio'):
+    """선택 칸. radio 는 하나만 고르고, checkbox 는 항목마다 따로 저장합니다."""
+    o = ['<ul class="pick"' + (' role="radiogroup"' if kind == 'radio' else '')
+         + ' aria-label="' + _h.escape(label, quote=True) + '">']
+    for i, text in enumerate(items):
+        attrs = ('type="radio" name="%s" data-k="%s" value="%s"' % (key, key, _h.escape(text, quote=True))
+                 if kind == 'radio' else 'type="checkbox" data-k="%s-%d"' % (key, i + 1))
+        o.append('<li><label><input ' + attrs + '>' + _h.escape(text) + '</label></li>')
+    o.append('</ul>')
+    return ''.join(o)
+
+
+def ease(n):
+    return '<h3>이 방식이 편했던 정도</h3>' + choose('ease%d' % n, '실습 %d이 편했던 정도' % n, ['상', '중', '하'])
+
+
+STORE_NOTE = ('<p class="store"><span>적은 내용은 이 기기의 브라우저에 저장됩니다. '
+              '다른 기기나 다른 브라우저에서는 보이지 않습니다.</span>'
+              '<button type="button" id="clear-all">적은 내용 모두 지우기</button>'
+              '<span id="save-status" role="status" aria-live="polite"></span></p>')
+
+# 저장소를 쓸 수 없는 브라우저(사생활 보호 모드 등)에서도 입력은 되도록 모든 접근을 try 로 감쌉니다.
+STORE_JS = r"""
+(function () {
+  var KEY = 'lecture16-worksheet-v1';
+  var data = {};
+  var status = document.getElementById('save-status');
+  var timer = null;
+  function tell(text) {
+    status.textContent = text;
+    clearTimeout(timer);
+    timer = setTimeout(function () { status.textContent = ''; }, 2500);
+  }
+  try { data = JSON.parse(localStorage.getItem(KEY) || '{}') || {}; }
+  catch (e) { data = {}; }
+  function save() {
+    try { localStorage.setItem(KEY, JSON.stringify(data)); tell('저장했습니다'); }
+    catch (e) { tell('이 브라우저에서는 저장할 수 없습니다. 창을 닫으면 내용이 사라집니다.'); }
+  }
+  function grow(el) { el.style.height = 'auto'; el.style.height = el.scrollHeight + 'px'; }
+  var texts = document.querySelectorAll('textarea[data-k]');
+  var picks = document.querySelectorAll('input[data-k]');
+  function fill() {
+    texts.forEach(function (el) {
+      el.value = typeof data[el.dataset.k] === 'string' ? data[el.dataset.k] : '';
+      grow(el);
+    });
+    picks.forEach(function (el) {
+      el.checked = el.type === 'radio' ? data[el.dataset.k] === el.value : data[el.dataset.k] === true;
+    });
+  }
+  texts.forEach(function (el) {
+    el.addEventListener('input', function () { data[el.dataset.k] = el.value; grow(el); save(); });
+  });
+  picks.forEach(function (el) {
+    el.addEventListener('change', function () {
+      data[el.dataset.k] = el.type === 'radio' ? el.value : el.checked;
+      save();
+    });
+  });
+  fill();
+  window.addEventListener('resize', function () { texts.forEach(grow); });
+  window.addEventListener('beforeprint', function () { texts.forEach(grow); });
+
+  // 지우기는 두 번 눌러야 실행됩니다. 실수로 한 번 누른 경우에는 4초 뒤에 원래대로 돌아갑니다.
+  var clear = document.getElementById('clear-all');
+  var label = clear.textContent;
+  var armed = null;
+  clear.addEventListener('click', function () {
+    if (!armed) {
+      clear.classList.add('arm');
+      clear.textContent = '한 번 더 누르면 모두 지워집니다';
+      armed = setTimeout(function () { armed = null; clear.classList.remove('arm'); clear.textContent = label; }, 4000);
+      return;
+    }
+    clearTimeout(armed); armed = null;
+    clear.classList.remove('arm'); clear.textContent = label;
+    data = {};
+    try { localStorage.removeItem(KEY); } catch (e) {}
+    fill();
+    tell('모두 지웠습니다');
+  });
+})();
+"""
 
 
 # ───────────────────────── 수강생용 실습지 ─────────────────────────
@@ -194,7 +307,8 @@ def worksheet():
         '<p>고마운 사람에게 보내는 인사 카드를 웹페이지로 만듭니다. '
         '세 가지 방식으로 세 장을 만들고, 받는 사람은 실습마다 바꿉니다.</p>'
         + tbl(['실습', '받는 사람', '함께한 일 한 가지'],
-              [[td(t), td('', 'w'), td('', 'w')] for t in ('첫 번째', '두 번째', '세 번째')])
+              [[td(t), cell('who%d' % i, t + ' 카드를 받는 사람'), cell('what%d' % i, t + ' 카드를 받는 사람과 함께한 일')]
+               for i, t in enumerate(('첫 번째', '두 번째', '세 번째'), 1)])
         + '<h3>적는 방법의 예시</h3>'
         '<p class="note">아래 내용은 실습을 위해 지어낸 예시입니다.</p>'
         + tbl(['받는 사람', '함께한 일 한 가지'], [
@@ -204,23 +318,25 @@ def worksheet():
         + '<p class="note">세 사람이 떠오르지 않으면 한 사람에게 세 장을 만들어도 됩니다. '
           '전화번호, 주소, 주민등록번호는 적지 않습니다.</p>'))
 
-    rows = [[td('<b>' + _h.escape(a) + '</b>'), td('“' + _h.escape(s) + '”'), td('', 'w')] for a, s in FIVE]
-    b.append(sec('다섯 문장 적기',
+    rows = [[td('<b>' + _h.escape(a) + '</b>'), td('“' + _h.escape(s) + '”'), cell('req%d' % i, a + ' 줄에 적을 내 문장')]
+            for i, (a, s) in enumerate(REQUEST, 1)]
+    b.append(sec('첫 번째 카드의 요청 적기',
         '<p>화면의 예시를 보고, 첫 번째 카드에 맞는 문장을 오른쪽 칸에 적습니다. '
         '첫 줄과 마지막 줄은 예시를 그대로 적습니다.</p>'
-        + tbl(['줄', '예시', '내 문장'], rows), clock('한 줄 요청')))
+        + tbl(['줄', '예시', '내 문장'], rows), clock('요청')))
 
     b.append(sec(METHODS[0],
         '<ol>'
-        '<li>적어 둔 다섯 문장을 줄을 바꾸지 않고 이어서 입력</li>'
+        '<li>적어 둔 문장을 모두, 줄을 바꾸지 않고 이어서 입력</li>'
         '<li>한 번에 전송</li>'
         '<li>만들어진 카드 열어 보기</li>'
         '</ol>'
         '<h3>카드에서 확인할 것</h3>'
-        '<ul class="pick"><li>받는 사람의 이름이 있음</li><li>내가 말하지 않은 이야기가 없음</li></ul>'
+        + choose('check', '첫 번째 카드에서 확인할 것',
+                 ['받는 사람의 이름이 있음', '내가 말하지 않은 이야기가 없음'], kind='checkbox') +
         '<h3>한 번 고쳐달라고 요청하기</h3>'
         '<p>예: ' + ', '.join(say(r) for r in REDO) + '</p>'
-        + EASE, clock('실습 1')))
+        + ease(1), clock('실습 1')))
 
     b.append(sec(METHODS[1],
         '<ol>'
@@ -234,8 +350,9 @@ def worksheet():
             [td('질문이 너무 많을 때'), td(say('세 가지만 질문해줘'))],
             [td('답을 다 했는데 시작하지 않을 때'), td(say('이제 만들어줘'))],
             [td('파일 종류를 묻지 않을 때'), td(say('웹페이지로 만들어줘'))]])
-        + '<h3>에이전트가 물어본 내용 가운데 첫 번째 실습에서 적지 않았던 것</h3>' + BLANK
-        + EASE, clock('실습 2')))
+        + '<h3>에이전트가 물어본 내용 가운데 첫 번째 실습에서 적지 않았던 것</h3>'
+        + blank('asked', '에이전트가 물어본 내용 가운데 첫 번째 실습에서 적지 않았던 것')
+        + ease(2), clock('실습 2')))
 
     b.append(sec(METHODS[2],
         '<ol>'
@@ -246,24 +363,26 @@ def worksheet():
         '<li>카드가 나온 뒤 프롬프트 저장' + q(P3SAVE) +
         '<span class="note">저장한 프롬프트는 받는 사람만 바꿔서 다시 씁니다. 예: '
         + say('‘카드 프롬프트’ 파일대로, 받는 사람만 어머니로 바꿔서 만들어줘') + '</span></li>'
-        '</ol>' + EASE, clock('실습 3')))
+        '</ol>' + ease(3), clock('실습 3')))
 
     fit_rows = [[td(_h.escape(r[0])), td(_h.escape(r[1]))] for r in FIT[1:]]
     b.append(sec('가장 편했던 방식 고르기',
-        '<ul class="pick"><li>첫 번째</li><li>두 번째</li><li>세 번째</li></ul>'
+        choose('best', '가장 편했던 방식', ['첫 번째', '두 번째', '세 번째']) +
         '<p class="note">결과의 품질이 아니라 얼마나 편했는지를 기준으로 고릅니다.</p>'
         '<h3>' + _h.escape(slide('잘 맞는 일')[3]) + '</h3>'
         + tbl([_h.escape(c) for c in FIT[0]], fit_rows), clock('어느 방식')))
 
     b.append(sec('네 번째 실습 · 다른 방법 묻기',
         '<p>세 번째 실습에서 쓴 채팅에 그대로 보냅니다. 에이전트가 알려준 방법은 읽기만 합니다.</p>'
-        + q(P4) + '<h3>해보고 싶은 방법 한 가지</h3>' + BLANK, clock('실습 4')))
+        + q(P4) + '<h3>해보고 싶은 방법 한 가지</h3>' + blank('try', '해보고 싶은 방법 한 가지'), clock('실습 4')))
 
     b.append(sec(slide('이번 주')[3],
         '<p>오늘 고른 방식을 내 일에 세 번 써봅니다. 오늘 만든 카드 한 장은 실제로 보내 봅니다.</p>'
         + tbl(['회차', '요청한 일', '결과와 느낀 점'],
-              [[td(str(i)), td('', 'w'), td('', 'w')] for i in (1, 2, 3)])
-        + '<h3>다음 주에 이야기할 잘 안 된 일 한 가지</h3>' + BLANK))
+              [[td(str(i)), cell('hw%d-task' % i, '%d회차에 요청한 일' % i),
+                cell('hw%d-result' % i, '%d회차의 결과와 느낀 점' % i)] for i in (1, 2, 3)])
+        + '<h3>다음 주에 이야기할 잘 안 된 일 한 가지</h3>'
+        + blank('next', '다음 주에 이야기할 잘 안 된 일 한 가지')))
 
     b.append(sec('진행이 멈췄을 때',
         tbl(['상황', '할 일'], [
@@ -275,12 +394,12 @@ def worksheet():
             [td('프롬프트를 쓰지 않고 바로 만들기 시작할 때'), td(say('멈추고 프롬프트만 써줘'))]])))
 
     return doc('2주차 실습지', 'WEEK 2 / 4 · 수강생용', _h.escape(SUBJECT) + ' · 직접 적으면서 따라 하는 자료',
-               '\n'.join(b))
+               '\n'.join(b), top=STORE_NOTE, script=STORE_JS)
 
 
 # ───────────────────────── 강사용 진행표 ─────────────────────────
 DO = {'실습 1', '다시 요청하기', '실습 2', '실습 3', '프롬프트대로 실행', '프롬프트 저장', '실습 4'}
-WRITE = {'한 줄 요청', '목적', '읽는 사람', '형식', '확인 방법'}
+WRITE = {'요청', '목적', '읽는 사람', '형식', '확인 방법'}
 ASK = {'체크인', '빈칸', '오늘 만들 것', '질문의 효과', '어느 방식', '확인 질문'}
 
 
@@ -312,17 +431,17 @@ def runsheet():
         '‘적기’는 종이에 자기 문장을 적는 시간, ‘질문’은 채팅창으로 답을 듣는 시간입니다.</p>'
         + tbl(['시각', '시간', '구간', '장표', '화면의 문장'], rows, cls)))
 
-    five = ' '.join(s if s.endswith(('.', '?')) else s + '.' for _, s in FIVE)
+    joined = ' '.join(s if s.endswith(('.', '?')) else s + '.' for _, s in REQUEST)
     b.append(sec('채팅창에 올릴 문장',
         tbl(['시각', '장표', '올릴 문장'], [
             [td(clock('오늘 만들 것'), 't'), td('오늘 만들 것'), td('수강생용 실습지 주소')],
-            [td(clock('실습 1'), 't'), td('실습 1'), td(_h.escape(five))],
+            [td(clock('실습 1'), 't'), td('실습 1'), td(_h.escape(joined))],
             [td(clock('실습 2'), 't'), td('실습 2'), td(_h.escape(P2))],
             [td(clock('실습 3'), 't'), td('실습 3'), td(_h.escape(P3))],
             [td(clock('프롬프트대로 실행'), 't'), td('프롬프트대로 실행'), td(_h.escape(P3RUN))],
             [td(clock('프롬프트 저장'), 't'), td('프롬프트 저장'), td(_h.escape(P3SAVE))],
             [td(clock('실습 4'), 't'), td('실습 4'), td(_h.escape(P4))]])
-        + '<p class="note">실습 1의 다섯 문장은 줄을 바꾸지 않고 이어 붙인 형태입니다. '
+        + '<p class="note">실습 1의 문장은 화면의 요청을 줄을 바꾸지 않고 이어 붙인 형태입니다. '
           '수강생은 자기가 적어 둔 문장으로 바꿔서 입력합니다.</p>'))
 
     b.append(sec('막힌 수강생에게 알려줄 문장',
