@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" role="img" aria-label="예측한 낱말을 붙이고 다시 예측하는 과정" fill="none" stroke="#13735F" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+<rect x="4" y="30" width="30" height="34" rx="5" opacity=".5"/>
+<rect x="42" y="30" width="30" height="34" rx="5" opacity=".5"/>
+<rect x="84" y="30" width="30" height="34" rx="5" fill="#13735F"/>
+<path d="M99 72v10a10 10 0 0 1-10 10H26"/><path d="M36 82l-10 10 10 10"/></svg>

@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" role="img" aria-label="낱말 두 개와 비어 있는 다음 칸" fill="none" stroke="#13735F" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+<rect x="4" y="42" width="32" height="36" rx="5"/><path d="M12 60h16" opacity=".5"/>
+<rect x="44" y="42" width="32" height="36" rx="5"/><path d="M52 60h16" opacity=".5"/>
+<rect x="84" y="42" width="32" height="36" rx="5" stroke-dasharray="5 5"/>
+<text x="100" y="68" text-anchor="middle" font-size="22" font-weight="700" fill="#13735F" stroke="none">?</text></svg>

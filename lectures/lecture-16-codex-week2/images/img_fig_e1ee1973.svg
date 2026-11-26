@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" role="img" aria-label="조절 막대 셋 가운데 하나만 옮긴 모습" fill="none" stroke="#13735F" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+<path d="M12 32h96M12 60h96M12 88h96" opacity=".4"/>
+<circle cx="42" cy="32" r="7" opacity=".45"/>
+<circle cx="80" cy="60" r="9" fill="#13735F"/>
+<circle cx="42" cy="88" r="7" opacity=".45"/></svg>

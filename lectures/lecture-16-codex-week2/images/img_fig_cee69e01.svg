@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" role="img" aria-label="짧은 요청 말풍선과 물음표로 답하는 말풍선" fill="none" stroke="#13735F" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+<path d="M16 12h34a9 9 0 0 1 9 9v16a9 9 0 0 1-9 9H32l-10 9v-9h-6a9 9 0 0 1-9-9V21a9 9 0 0 1 9-9z" opacity=".5"/>
+<path d="M19 29h28" opacity=".5"/>
+<path d="M60 56h44a9 9 0 0 1 9 9v22a9 9 0 0 1-9 9h-6v10l-11-10H60a9 9 0 0 1-9-9V65a9 9 0 0 1 9-9z"/>
+<text x="82" y="86" text-anchor="middle" font-size="26" font-weight="700" fill="#13735F" stroke="none">?</text></svg>

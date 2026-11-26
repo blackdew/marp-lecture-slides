@@ -13,7 +13,7 @@ AI 에이전트 오픈 강의 슬라이드 저장소입니다. 마크다운과 �
 | `lecture-11-agent-life-transition` | Just Plan It!! AI Agent로 일과 삶의 전환 | 대학생·교직원 | 2시간 | Marp |
 | `lecture-12-agent-life-transition` | AI Agent 활용 생활·업무 전환 | 대학생·교직원 | 2시간 | Marp |
 | `lecture-15-codex-4weeks` | 에이전트와 함께하는 삶의 전환: Codex 4주 과정 1강 | 비전공자 30~60대 | 2시간 | 생성기 |
-| `lecture-16-codex-week2` | 무엇이고 어떻게 쓰는가: Codex 4주 과정 2강 | 비전공자 30~60대 | 2시간 | 생성기 |
+| `lecture-16-codex-week2` | 에이전트, 더 잘 쓰는 방법: Codex 4주 과정 2강 | 비전공자 30~60대 | 2시간 | 생성기 |
 
 포털에는 09·10·11·12·15강이 등재되어 있습니다.
 
