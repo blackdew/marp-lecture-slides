@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f5f1e6">
+  <meta name="description" content="가을에 함께 감을 따던 추억을 담아 아버지께 보내는 카드">
+  <title>아버지와 함께한 가을</title>
+  <style>
+    :root{color-scheme:light;--paper:#fffdf6;--background:#f5f1e6;--ink:#353b30;--orange:#a44720;--leaf:#626d43}
+    *{box-sizing:border-box}
+    body{margin:0;background:var(--background);color:var(--ink);font-family:"AppleMyungjo","Batang","Noto Serif CJK KR",serif}
+    main{padding:48px 20px;min-height:100svh;display:grid;place-items:center}
+    .card{position:relative;width:100%;max-width:680px;background:var(--paper);border:1px solid #ddd7c4;box-shadow:0 16px 54px #353b3010;overflow:hidden}
+    .illustration{display:block;width:100%;height:auto}
+    .message{padding:0 68px 54px}
+    h1{margin:0 0 30px;color:var(--orange);font-size:clamp(1.7rem,5.5vw,2.35rem);line-height:1.5;font-weight:600;letter-spacing:-.055em}
+    p{margin:0 0 25px;font-size:1.125rem;line-height:2;word-break:keep-all;overflow-wrap:break-word;letter-spacing:-.025em}
+    .signature{margin:36px 0 0;text-align:right;font-size:1.1rem;color:var(--leaf)}
+    @media(max-width:520px){main{padding:18px 12px}.message{padding:0 27px 36px}h1{margin-bottom:24px}p{font-size:1.0625rem;line-height:1.95;margin-bottom:22px}.signature{margin-top:30px}}
+    @media print{body{background:white}main{padding:0;min-height:0}.card{box-shadow:none;max-width:680px;break-inside:avoid}}
+  </style>
+</head>
+<body>
+  <main>
+    <article class="card" aria-labelledby="greeting">
+      <svg class="illustration" viewBox="0 0 680 220" role="img" aria-labelledby="branch-title">
+        <title id="branch-title">가을 햇살 아래 주황빛 감 세 알이 익어가는 가지</title>
+        <defs>
+          <radialGradient id="fruit" cx="35%" cy="30%" r="75%"><stop stop-color="#eea444"/><stop offset=".65" stop-color="#df762c"/><stop offset="1" stop-color="#c75c25"/></radialGradient>
+        </defs>
+        <circle cx="493" cy="95" r="74" fill="#f3e8c9" opacity=".55"/>
+        <g fill="none" stroke="#746044" stroke-linecap="round">
+          <path d="M695 33Q541 38 443 83T260 117" stroke-width="7"/>
+          <path d="M550 46Q536 90 521 111M445 82L432 138M347 111L332 143M493 66Q462 38 423 30" stroke-width="4"/>
+        </g>
+        <g fill="#7a8450">
+          <path d="M570 44Q590 3 632 17Q612 56 570 44Z"/>
+          <path d="M482 68Q514 27 540 45Q521 80 482 68Z"/>
+          <path d="M415 92Q379 48 357 65Q370 103 415 92Z"/>
+          <path d="M330 114Q309 81 279 93Q290 123 330 114Z"/>
+        </g>
+        <path d="M427 32Q398 8 374 23Q395 45 427 32Z" fill="#aa994f"/>
+        <g fill="url(#fruit)">
+          <path d="M521 111C487 94 477 129 489 151C502 177 540 178 555 151C569 126 551 97 521 111Z"/>
+          <path d="M432 137C404 122 390 150 401 171C413 196 446 195 460 174C477 148 458 125 432 137Z"/>
+          <path d="M332 143C309 129 294 151 304 173C315 195 343 196 356 174C369 152 354 131 332 143Z"/>
+        </g>
+        <g fill="#59643a">
+          <path d="M521 111L507 104L511 115L500 122L517 121L523 129L528 119L542 121L533 112L536 103Z"/>
+          <path d="M432 137L420 131L422 142L413 147L428 147L433 154L438 145L450 146L443 138L445 132Z"/>
+          <path d="M332 143L321 137L323 146L314 151L328 151L333 158L338 149L349 150L342 143L343 137Z"/>
+        </g>
+        <g fill="none" stroke="#ffd694" stroke-width="3" stroke-linecap="round" opacity=".6"><path d="M499 132Q495 141 501 149"/><path d="M411 155Q408 162 414 169"/><path d="M313 159Q311 166 317 171"/></g>
+        <path d="M192 161Q175 174 184 192Q204 181 192 161Z" fill="#b18b45" opacity=".65"/>
+      </svg>
+      <div class="message">
+        <h1 id="greeting">사랑하는 아버지께</h1>
+        <p>가을이면 아버지와 함께 따던 감이 생각나요.<br>주황빛 감을 바라보던 그 시간이<br>제 마음에는 참 따뜻한 추억으로 남아 있어요.</p>
+        <p>그때는 감을 따는 게 즐거웠는데,<br>지금 생각해 보니 아버지와 함께여서 더 좋았나 봐요.</p>
+        <p>앞으로도 아버지와 소소한 추억을 오래오래 쌓고 싶어요.<br>늘 건강하시고, 사랑해요.</p>
+        <p class="signature">막내딸 올림</p>
+      </div>
+    </article>
+  </main>
+</body>
+</html>

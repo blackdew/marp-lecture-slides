@@ -96,6 +96,9 @@ P3RUN, P3AGAIN = joined('프롬프트대로 실행'), joined('프롬프트 다�
 REDO = re.findall(r'“(.*?)”', cue('다시 요청하기', '예'))
 FIT = table_of('잘 맞는 일')
 METHODS = [slide(t)[3] for t in ('첫 번째 방식', '두 번째 방식', '세 번째 방식')]     # “첫 번째, 내가 다 적어서 요청”
+NEXT = table_of('다음 단계')                         # [오늘 해본 방식, 다음 단계] 표. 첫 행은 머리글
+NEXT_SAID = [lines_of(t)[0][1] for t in ('자료를 폴더에 두기', '계획부터 받기',
+                                         '지침 파일로 남기기', '확인하게 하기')]   # 시연에서 보낸 요청, 표와 같은 순서
 
 
 # ───────────────────────── 공통 틀 ─────────────────────────
@@ -399,6 +402,12 @@ def worksheet():
         '<p class="note">결과의 품질이 아니라 얼마나 편했는지를 기준으로 고릅니다.</p>'
         '<h3>' + _h.escape(slide('잘 맞는 일')[3]) + '</h3>'
         + tbl([_h.escape(c) for c in FIT[0]], fit_rows), clock('어느 방식')))
+
+    assert len(NEXT) - 1 == len(NEXT_SAID), '다음 단계 표와 시연 장표의 수가 다릅니다'
+    b.append(sec(slide('다음 단계')[3],
+        '<p>수업에서는 강사가 보여주는 화면을 봅니다. 수업이 끝난 뒤에 한 가지씩 내 카드에 해봅니다.</p>'
+        + ''.join('<h3>' + _h.escape(r[1]) + '</h3>' + q(t) for r, t in zip(NEXT[1:], NEXT_SAID))
+        + '<p class="note">예로 적힌 이름과 추억은 내 카드에 맞게 바꿉니다.</p>', clock('다음 단계')))
 
     b.append(sec('네 번째 실습 · 다른 방법 묻기',
         '<p>세 번째 카드를 만든 채팅에 그대로 보냅니다. 에이전트가 알려준 방법은 읽기만 합니다.</p>'
