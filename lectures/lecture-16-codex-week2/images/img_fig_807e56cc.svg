@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" role="img" aria-label="가운데 원과 이어진 도구 세 개" fill="none" stroke="#13735F" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+<circle cx="60" cy="60" r="15"/>
+<rect x="8" y="10" width="30" height="30" rx="6"/><rect x="82" y="10" width="30" height="30" rx="6"/>
+<rect x="45" y="84" width="30" height="30" rx="6"/>
+<path d="M38 36l11 12M82 36L71 48M60 75v9" opacity=".6"/></svg>

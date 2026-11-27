@@ -15,7 +15,8 @@ def _uri(name):
     return 'data:image/jpeg;base64,' + base64.b64encode((_CAP / name).read_bytes()).decode()
 
 
-# 2026-11-26, ChatGPT 데스크탑 앱의 Codex 에 실제로 요청해서 받은 카드
+# 2026-11-26, Codex 에 실제로 요청해서 받은 카드. CARD_MOTHER 는 앱에 들어 있는 실행 파일의 결과이고,
+# CARD_REQUEST_ONLY 를 받은 방식은 기록으로 다시 확인하지 못했습니다
 CARD_REQUEST_ONLY = _uri('card-request-only.jpg')   # 요청만 적음: “연말 인사 카드를 웹페이지로 만들어줘”
 CARD_MOTHER = _uri('card-mother.jpg')               # 내 상황과 확인 방법을 더함
 

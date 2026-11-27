@@ -103,10 +103,29 @@ def one(title):
     return SAY[title][0]
 
 
+def tool(title):
+    """요청 장표의 '쓰는 도구' 줄."""
+    return '<p class="note">에이전트가 쓰는 도구: <b>' + _h.escape(dict(lines_of(title))['쓰는 도구']) + '</b></p>'
+
+
+def warn(text):
+    return '<p class="warn">' + text + '</p>'
+
+
+def learned(title):
+    """'익힌 방법' 장표의 방법과 내 일에 쓰는 예."""
+    d = dict(lines_of(title))
+    return ('<p class="got">익힌 방법: <b>' + _h.escape(d['방법']) + '</b><br>내 일에 쓰기: '
+            + _h.escape(d['내 일에 쓰기']) + '</p>')
+
+
 RESERVE, UNRESERVE = SAY['매일 예약']
-REDO = re.findall(r'“(.*?)”', cue('다시 요청하기', '예'))
+CARD_FIX = m.CARD_FIX
+METHODS = lines_of('오늘 익힌 방법')                  # [(실습, 익힌 방법)]
+LEFT = lines_of('수업 뒤에 남는 것')                  # [(남는 곳, 남는 것)]
+REDO = re.findall(r'“(.*?)”', cue('보고서 고치기', '예'))
 PLAN_MORE = m.PLAN_MORE                              # [(주제, 문장)] 공부 계획, 사업 계획
-MADE = lines_of('오늘 만든 것')                      # [(만든 것, 에이전트가 쓴 기능)]
+MADE = lines_of('오늘 만든 것')                      # [(만든 것, 에이전트가 쓴 도구)]
 
 
 # ───────────────────────── 공통 틀 ─────────────────────────
@@ -139,11 +158,11 @@ table{border-collapse:collapse;width:100%;font-size:15px}
 th,td{border:1px solid var(--line);padding:8px 10px;text-align:left;vertical-align:top}
 th{background:#F1EEE8;font-weight:600;white-space:nowrap}
 td.w{min-width:180px;padding:4px 6px}
-textarea.f{display:block;width:100%;min-height:36px;border:0;border-bottom:1.5px solid var(--line);border-radius:0;
-  background:transparent;color:inherit;font:inherit;font-size:16px;line-height:1.5;padding:5px 2px;
+textarea.f{display:block;width:100%;min-height:36px;border:1.5px solid var(--line);border-radius:6px;
+  background:#fff;color:inherit;font:inherit;font-size:16px;line-height:1.5;padding:5px 2px;
   resize:none;overflow:hidden}
-td.w textarea.f{border-bottom:0}
-textarea.f::placeholder{color:var(--faint);opacity:.7}
+td.w textarea.f{border:0}
+textarea.f::placeholder{color:var(--dim);opacity:.8}
 textarea.f:focus-visible{outline:2px solid var(--acc);outline-offset:1px}
 .blank{margin:4px 0 10px}
 .pick{display:flex;flex-wrap:wrap;gap:8px 18px;margin:8px 0;padding:0;list-style:none}
@@ -159,6 +178,8 @@ textarea.f:focus-visible{outline:2px solid var(--acc);outline-offset:1px}
 .tag{display:inline-block;font-size:12px;font-weight:600;color:var(--acc);background:var(--accs);
   border-radius:99px;padding:1px 9px;margin-left:6px;white-space:nowrap}
 .note{font-size:14px;color:var(--dim)}
+.warn{background:#FBEDEC;border-left:3px solid #B3261E;border-radius:6px;padding:9px 12px;margin:8px 0;font-weight:600}
+.got{background:var(--accs);border-radius:6px;padding:8px 12px;margin:12px 0 0}
 tr.do td{background:var(--accs)}
 td.t{white-space:nowrap;font-variant-numeric:tabular-nums}
 footer{font-size:13px;color:var(--faint);margin-top:18px}
@@ -177,14 +198,14 @@ footer{font-size:13px;color:var(--faint);margin-top:18px}
 """
 
 
-def doc(title, kicker, lede, body, robots=False, top='', script=''):
+def doc(title, kicker, lede, body, robots=False, top='', script='', foot=True):
     return ('<!DOCTYPE html>\n<html lang="ko">\n<head>\n<meta charset="utf-8">\n'
             '<meta name="viewport" content="width=device-width, initial-scale=1">\n'
             + ('<meta name="robots" content="noindex">\n' if robots else '')
             + '<title>' + _h.escape(title) + '</title>\n<style>' + CSS + '</style>\n</head>\n<body>\n<main>\n'
             '<header><div class="kicker">' + kicker + '</div><h1>' + _h.escape(title) + '</h1>'
             '<p class="lede">' + lede + '</p>' + top + '</header>\n' + body +
-            '\n<footer>이 문서는 <code>_build/handouts.py</code>가 덱에서 만든 생성물입니다.</footer>\n'
+            ('\n<footer>이 문서는 <code>_build/handouts.py</code>가 덱에서 만든 생성물입니다.</footer>\n' if foot else '\n') +
             '</main>\n' + (('<script>' + script + '</script>\n') if script else '') + '</body>\n</html>\n')
 
 
@@ -214,17 +235,17 @@ def td(text, c=None):
 
 # 입력 칸마다 고정된 이름(key)을 붙입니다. 저장한 값은 이 이름으로 되찾으므로,
 # 칸을 추가하거나 순서를 바꿔도 이미 적어 둔 값이 다른 칸으로 밀리지 않습니다.
-def field(key, label, rows=1):
-    return ('<textarea class="f" data-k="%s" rows="%d" aria-label="%s" placeholder="여기에 입력"></textarea>'
-            % (key, rows, _h.escape(label, quote=True)))
+def field(key, label, rows=1, ph='여기에 입력'):
+    return ('<textarea class="f" data-k="%s" rows="%d" aria-label="%s" placeholder="%s"></textarea>'
+            % (key, rows, _h.escape(label, quote=True), _h.escape(ph, quote=True)))
 
 
-def cell(key, label):
-    return '<td class="w">' + field(key, label) + '</td>'
+def cell(key, label, ph='여기에 입력'):
+    return '<td class="w">' + field(key, label, ph=ph) + '</td>'
 
 
-def blank(key, label):
-    return '<div class="blank">' + field(key, label, 2) + '</div>'
+def blank(key, label, ph='여기에 입력'):
+    return '<div class="blank">' + field(key, label, 2, ph) + '</div>'
 
 
 def choose(key, label, items, kind='radio'):
@@ -247,7 +268,7 @@ STORE_NOTE = ('<p class="store"><span>적은 내용은 이 기기의 브라우�
 # 저장소를 쓸 수 없는 브라우저(사생활 보호 모드 등)에서도 입력은 되도록 모든 접근을 try 로 감쌉니다.
 STORE_JS = r"""
 (function () {
-  var KEY = 'lecture16-worksheet-v2';
+  var KEY = 'lecture16-worksheet-v3';
   var data = {};
   var status = document.getElementById('save-status');
   var timer = null;
@@ -310,110 +331,149 @@ STORE_JS = r"""
 
 
 # ───────────────────────── 수강생용 실습지 ─────────────────────────
+NEWCHAT = '<p>새 채팅을 열고 <b>2주차</b> 폴더를 다시 고른 뒤 시작합니다.</p>'
+CONFIRM = ('<p class="note">에이전트가 어떻게 만들지 먼저 보여 주고 만들어도 되는지 물으면, 읽어 보고 '
+           + say('응, 만들어줘') + '라고 답합니다.</p>')
+
+
 def worksheet():
     b = []
     b.append(sec('시작하기 전에',
         '<ul>'
         '<li>바탕화면에 <b>2주차</b>라는 빈 폴더 만들기</li>'
-        '<li>Codex의 새 채팅에서 <b>2주차</b> 폴더 고르기. ‘이 폴더를 신뢰할까요?’ 창이 뜨면 ‘폴더 신뢰’ 누르기</li>'
-        '<li>전화번호와 주소는 적지 않기. 화면에 보여도 괜찮은 이야기만 적기</li>'
-        '<li>엔터를 누르면 바로 전송. 여러 문장은 줄을 바꾸지 않고 이어서 적은 뒤 한 번에 전송</li>'
+        '<li>Codex의 새 채팅에서 <b>2주차</b> 폴더 고르기. ‘이 폴더를 신뢰할까요?’ 창이 뜨면 '
+        '폴더 이름이 2주차인지 보고 ‘폴더 신뢰’ 누르기</li>'
+        '<li>새 채팅을 열 때마다 <b>2주차</b> 폴더를 다시 고르기</li>'
+        '<li>전화번호, 집 주소, 실제 이름은 적지 않기. 다른 사람이 봐도 괜찮은 이야기만 적기</li>'
+        '<li>엔터를 누르면 바로 보내짐. 여러 문장은 줄을 바꾸지 않고 이어서 적은 뒤 한 번에 보내기</li>'
         '<li>아래의 문장은 예시. 받는 사람, 주제, 경험은 내 것으로 바꿔 적기</li>'
+        '<li>허용이나 설치를 묻는 창이 뜨면 내용을 읽고 누르기. 뜻을 모르는 창은 누르지 말고 강사에게 묻기</li>'
         '</ul>'))
 
-    b.append(sec('첫 번째 실습 · 연하장', 
-        '<p>채팅 하나에서 모든 단계를 이어서 합니다. 뒤 단계의 요청이 앞 단계에서 만든 그림을 가리킵니다.</p>'
-        '<h3>연하장을 받는 사람</h3>' + blank('card-who', '연하장을 받는 사람')
-        + '<h3>그림판으로 그리기</h3>' + q(one('그림판으로 그리기'))
-        + '<p class="note">허용을 묻는 창이 뜨면 ‘이 대화 허용’을 누릅니다. 에이전트가 그리는 동안에는 기다립니다.</p>'
-        '<h3>말로 설명해서 그림 받기</h3>' + q(one('그림 생성'))
-        + tbl(['줄', '내 문장'], [
-            [td('<b>모습</b>'), cell('img-look', '그림의 모습')],
-            [td('<b>느낌</b>'), cell('img-feel', '그림의 느낌')]])
-        + '<h3>연하장을 인터넷 주소로 만들기</h3>' + q(one('연하장 페이지와 주소'))
-        + '<p class="note">에이전트가 인사말을 먼저 보여 주고 확인을 구하면, 읽어 보고 '
-        + say('응, 만들어서 공개해줘') + '라고 답합니다. '
-          '만든 페이지는 주소를 아는 사람이면 누구나 볼 수 있습니다.</p>'
-        '<h3>내 연하장의 주소</h3>' + blank('card-url', '내 연하장의 주소')
+    b.append(sec('첫 번째 실습 · 연하장',
+        '<p>Codex 채팅 하나에서 모든 단계를 이어서 합니다. 뒤 단계의 요청이 앞 단계에서 만든 그림을 쓰기 때문입니다.</p>'
+        '<h3>연하장을 받는 사람</h3>' + blank('card-who', '연하장을 받는 사람', '예: 어머니, 큰언니 (이름 대신 호칭으로)')
+        + '<h3>그림판으로 그리기</h3>' + q(one('그림판으로 그리기')) + tool('그림판으로 그리기')
+        + '<ul><li>허용을 묻는 창이 뜨면 ‘이 대화 허용’ 누르기. ‘항상 허용’은 누르지 않기</li>'
+          '<li>에이전트가 그리는 동안에는 마우스와 키보드에 손을 대지 않기</li>'
+          '<li>그림판 조작이 되지 않으면 이 단계를 건너뛰고 다음 단계부터 진행</li></ul>'
+        '<h3>말로 설명해서 그림 받기</h3>' + q(one('그림 생성')) + tool('그림 생성')
+        + tbl(['바꿀 부분', '내가 적을 내용'], [
+            [td('<b>모습</b>'), cell('img-look', '그림의 모습', '예: 소나무와 학이 있는 모습')],
+            [td('<b>느낌</b>'), cell('img-feel', '그림의 느낌', '예: 색연필로 그린 느낌')]])
+        + '<h3>그림으로 연하장 만들기</h3>' + q(one('연하장 만들기')) + tool('연하장 만들기') + CONFIRM
+        + '<h3>연하장에서 고칠 곳 말하기</h3><p>예: ' + say(CARD_FIX) + '</p>'
+        '<h3>연하장을 인터넷에 올리기</h3>'
+        + warn('이 요청을 보내면 연하장이 인터넷에 올라갑니다. 인터넷 주소를 아는 사람은 누구나 볼 수 있습니다. '
+               '전화번호, 집 주소, 실제 이름이 없는지 먼저 읽어 봅니다.')
+        + q(one('인터넷 주소')) + tool('인터넷 주소')
+        + '<h3>내 연하장의 인터넷 주소</h3>'
+        + blank('card-url', '내 연하장의 인터넷 주소', '복사한 인터넷 주소를 여기에 붙여 넣기')
         + '<h3>서로 보내기</h3>'
-        '<ol><li>내 연하장의 주소를 복사해서 수업 채팅창에 올리기</li>'
+        '<ol><li>내 연하장의 인터넷 주소를 복사해서 수업 채팅창에 올리기</li>'
         '<li>다른 사람이 올린 주소를 하나 골라 열어 보기</li></ol>'
         '<h3>확인할 것</h3>'
         + choose('check-card', '연하장에서 확인할 것',
-                 ['폴더에 눈사람 그림이 저장됨', '연하장에 받는 사람이 있음', '주소를 채팅창에 올림',
-                  '다른 사람의 연하장을 열어 봄'], kind='checkbox'), clock('2주차 폴더')))
+                 ['연하장에 받는 사람의 호칭이 적혀 있음', '연하장에 전화번호, 집 주소, 실제 이름이 없음',
+                  '인터넷 주소를 수업 채팅창에 올림', '다른 사람의 연하장을 열어 봄'], kind='checkbox')
+        + learned('연하장에서 익힌 방법')))
 
     b.append(sec('두 번째 실습 · 계획 보고서',
-        '<p>새 채팅에서 시작합니다. 여행, 공부, 사업 가운데 하나를 고릅니다.</p>'
+        NEWCHAT + '<p>여행, 공부, 사업 가운데 하나를 고릅니다.</p>'
         + choose('plan-kind', '계획 보고서의 주제', ['여행 계획', '공부 계획', '사업 계획'])
-        + '<h3>여행 계획</h3>' + q(one('계획 보고서'))
+        + tool('계획 보고서') + '<h3>여행 계획</h3>' + q(one('계획 보고서'))
         + ''.join('<h3>' + _h.escape(k) + '</h3>' + q(v) for k, v in PLAN_MORE)
-        + '<h3>내 상황과 조건</h3>'
-        '<p class="note">누구와, 언제, 얼마 동안, 어떤 사정이 있는지를 적습니다. 이 줄이 빠지면 누구에게나 맞는 계획이 나옵니다.</p>'
-        + blank('plan-me', '계획 보고서에 적을 내 상황과 조건')
-        + '<p class="note">에이전트가 구성을 먼저 보여 주고 확인을 구하면 ' + say('응, 만들어줘') + '라고 답합니다.</p>'
-        '<h3>보고서에서 고칠 곳 말하기</h3>'
+        + '<h3>내 상황</h3>'
+        '<p class="note">무엇을 하려는지, 언제 얼마 동안 하는지, 꼭 고려해야 할 점이 무엇인지를 적습니다. '
+        '내 상황을 적지 않으면 에이전트가 그 내용을 반영할 수 없습니다.</p>'
+        + blank('plan-me', '계획 보고서에 적을 내 상황') + CONFIRM
+        + warn('보고서는 인터넷에 올리지 않습니다. 문장 끝의 “인터넷에 올리지는 마”를 빼지 않습니다.')
+        + '<h3>보고서에서 고칠 곳 말하기</h3>'
         '<p>예: ' + ', '.join(say(r) for r in REDO) + '</p>'
-        '<p class="note">보고서에 적힌 가격, 영업시간, 일정은 틀릴 수 있습니다. 실제로 쓰기 전에 출처를 눌러 확인합니다.</p>',
-        clock('여행 보고서')))
+        + warn('보고서에 적힌 가격, 영업시간, 일정은 틀릴 수 있습니다. '
+               '보고서의 내용대로 예약하거나 결제하기 전에 출처를 눌러 확인합니다.')
+        + '<h3>확인할 것</h3>'
+        + choose('check-plan', '계획 보고서에서 확인할 것', ['보고서에 내가 적은 조건이 반영돼 있음'], kind='checkbox')
+        + learned('계획 보고서에서 익힌 방법')))
 
     b.append(sec('세 번째 실습 · 관심 주제 보고서',
-        '<p>새 채팅에서 시작합니다. ‘AI 에이전트’ 자리에 내 관심 주제를 넣습니다.</p>'
-        '<h3>내 관심 주제</h3>' + blank('topic', '내 관심 주제')
-        + q(one('관심 주제 보고서'))
+        NEWCHAT + '<p>‘보이스피싱 수법’ 자리에 내 관심 주제를 넣습니다.</p>'
+        '<h3>내 관심 주제</h3>' + blank('topic', '내 관심 주제', '예: 겨울철 난방비 줄이는 방법')
+        + q(one('관심 주제 보고서')) + tool('관심 주제 보고서') + CONFIRM
+        + warn('건강과 돈에 관한 내용은 그대로 따르지 않습니다. 출처를 눌러서 그 내용이 실제로 있는지 확인합니다.')
         + '<h3>시간이 남으면: 같은 일을 매일 하게 하기</h3>'
         '<ol><li>예약하기' + q(RESERVE) + '</li>'
         '<li>생긴 예약 항목을 눌러 내용 읽어 보기</li>'
-        '<li>예약 지우기' + q(UNRESERVE) + '</li></ol>'
-        '<p class="note">켜 둔 예약은 수업이 끝난 뒤에도 매일 실행됩니다. 수업이 끝나기 전에 지웁니다.</p>'
-        + choose('check-topic', '주제 보고서에서 확인할 것',
-                 ['보고서에 출처가 있음', '예약을 만들었다면 지웠음'], kind='checkbox'), clock('주제 보고서')))
+        '<li>예약 지우기' + q(UNRESERVE) + '</li></ol>' + tool('매일 예약')
+        + warn('지우지 않은 예약은 수업이 끝난 뒤에도 매일 실행됩니다. 수업이 끝나기 전에 지웁니다.')
+        + '<h3>확인할 것</h3>'
+        + choose('check-topic', '관심 주제 보고서에서 확인할 것',
+                 ['출처 하나를 눌러서 내용을 확인함', '예약을 만들었다면 지웠음'], kind='checkbox')
+        + learned('주제 보고서에서 익힌 방법')))
 
     b.append(sec('네 번째 실습 · 블로그 글',
-        '<p>새 채팅에서 시작합니다. ‘가족과 김장한 이야기’ 자리에 내 경험을 넣습니다.</p>'
-        '<h3>글로 쓸 내 경험</h3>' + blank('blog', '글로 쓸 내 경험')
-        + q(one('블로그 글 쓰기'))
-        + '<p class="note">글에 실제 장면이 없으면, 겪은 일을 한두 줄 덧붙여 다시 요청합니다. '
-          '내가 겪지 않은 일이 들어가지 않았는지 읽어 봅니다.</p>', clock('블로그 글')))
+        NEWCHAT + '<p>‘가족과 김장한 이야기’ 자리에 내 경험을 넣습니다.</p>'
+        '<h3>글로 쓸 내 경험</h3>' + blank('blog', '글로 쓸 내 경험', '예: 지난달에 다녀온 여행')
+        + q(one('블로그 글 쓰기')) + tool('블로그 글 쓰기')
+        + '<h3>내가 겪은 장면 덧붙이기</h3>'
+        + blank('blog-scene', '덧붙일 장면', '예: 배추는 마흔 포기였고, 손주가 양념을 버무렸어')
+        + q(one('장면 덧붙이기'))
+        + '<p class="note">에이전트가 쓴 글에 내가 겪지 않은 일이 들어가지 않았는지 읽어 봅니다. '
+          '글은 Codex 채팅에만 나옵니다. 쓸 때는 글을 복사해서 붙여 넣습니다.</p>'
+        + learned('블로그 글에서 익힌 방법')))
 
     b.append(sec('다섯 번째 실습 · 쇼츠',
-        '<p>연하장을 만든 채팅으로 돌아가서 이어서 보냅니다.</p>'
-        '<h3>인사말 음성</h3>' + q(one('음성 만들기'))
-        + '<h3>시간이 남으면: 그림과 음성을 영상으로</h3>' + q(one('쇼츠 영상'))
-        + '<p class="note">에이전트가 어느 그림을 쓸지 물으면 ' + say('눈 내린 마을 그림으로 해줘') + '라고 답합니다.</p>',
-        clock('쇼츠')))
+        '<p>연하장을 만든 Codex 채팅으로 돌아갑니다. 왼쪽 목록에서 그 채팅을 누릅니다.</p>'
+        '<h3>인사말 음성</h3>' + q(one('음성 만들기')) + tool('음성 만들기')
+        + '<p class="note">받는 사람을 바꿨으면 ‘어머니’ 자리도 바꿉니다. 만들어지는 음성은 컴퓨터가 읽어 주는 목소리입니다.</p>'
+        '<h3>시간이 남으면: 그림과 음성으로 영상 만들기</h3>' + q(one('쇼츠 영상')) + tool('쇼츠 영상')
+        + '<p class="note">에이전트가 어느 그림을 쓸지 물으면 ' + say('말로 설명해서 받은 그림으로 해줘') + '라고 답합니다.</p>'
+        + warn('에이전트가 프로그램을 설치하겠다고 물으면 허용하지 않고 강사에게 알립니다.')
+        + learned('쇼츠에서 익힌 방법')))
+
+    b.append(sec(slide('오늘 익힌 방법')[3],
+        tbl(['어디에서', '익힌 방법'], [[td(_h.escape(a)), td(_h.escape(t))] for a, t in METHODS])))
 
     b.append(sec(slide('오늘 만든 것')[3],
-        tbl(['만든 것', '에이전트가 한 일', '만들었으면 표시'],
+        tbl(['만든 것', '에이전트가 쓴 도구', '만들었으면 표시'],
             [[td(_h.escape(a)), td(_h.escape(t)),
               td(choose('made%d' % i, a + '을(를) 만들었는지', ['만듦'], kind='checkbox'))]
-             for i, (a, t) in enumerate(MADE, 1)]), clock('오늘 만든 것')))
+             for i, (a, t) in enumerate(MADE, 1)])))
+
+    b.append(sec(slide('수업 뒤에 남는 것')[3],
+        tbl(['어디에', '남는 것'], [[td(_h.escape(a)), td(_h.escape(t))] for a, t in LEFT])
+        + warn('예약을 만들었다면 수업이 끝나기 전에 지웁니다.')
+        + '<p class="note">2주차 폴더의 파일은 지워도 됩니다. 공개한 연하장을 내리는 방법은 수업에서 안내합니다.</p>'))
 
     b.append(sec(slide('이번 주')[3],
         '<p>오늘 만든 것 가운데 하나를 골라, 실제로 필요한 내용으로 바꿔서 다시 만듭니다. '
         '오늘 만든 연하장은 가족 한 사람에게 실제로 보내 봅니다.</p>'
-        '<h3>다시 만들 것과 바꿀 내용</h3>' + blank('hw', '이번 주에 다시 만들 것과 바꿀 내용')
-        + '<h3>다음 주에 이야기할 잘 안 된 일 한 가지</h3>'
-        + blank('next', '다음 주에 이야기할 잘 안 된 일 한 가지')))
+        '<h3>다시 만들 것</h3>' + blank('hw', '이번 주에 다시 만들 것', '예: 모임 안내장')
+        + '<h3>잘 안 된 일</h3><p class="note">다음 주 수업에서 이야기합니다.</p>'
+        + blank('next', '잘 안 된 일')))
 
-    b.append(sec('진행이 멈췄을 때',
+    b.append(sec('막혔을 때',
         tbl(['상황', '할 일'], [
-            [td('진행이 멈춘 것처럼 보일 때'), td('채팅을 아래로 내려 허용이나 승인을 묻는 창이 떠 있는지 확인')],
-            [td('에이전트가 구성을 설명하고 확인을 구할 때'), td(say('응, 만들어줘'))],
-            [td('공개해도 되는지 물을 때'), td(say('응, 만들어서 공개해줘'))],
-            [td('폴더를 고를 수 없을 때'), td('옆의 ‘이 컴퓨터’가 눌려 있는지 확인')],
-            [td('문장을 다 적기 전에 전송했을 때'), td('멈추지 않고 나머지 문장을 이어서 전송')],
+            [td('진행이 멈춘 것처럼 보일 때'), td('Codex 채팅을 아래로 내려 허용을 묻는 창이 떠 있는지 확인')],
+            [td('에이전트가 만들어도 되는지 물을 때'), td(say('응, 만들어줘'))],
+            [td('연하장을 공개해도 되는지 물을 때'), td('연하장을 읽어 본 뒤 공개해 달라고 답하기')],
+            [td('보고서를 공개해도 되는지 물을 때'), td('공개하지 말라고 답하기')],
+            [td('프로그램을 설치하겠다고 물을 때'), td('허용하지 않고 강사에게 알리기')],
+            [td('폴더를 고를 수 없을 때'), td('폴더를 고르는 자리 옆의 ‘이 컴퓨터’가 선택돼 있는지 확인')],
+            [td('문장을 다 적기 전에 보냈을 때'), td('에이전트를 멈추지 말고 나머지 문장을 이어서 보내기')],
             [td('결과가 마음에 들지 않을 때'), td('처음부터 다시 요청하지 않고, 고칠 곳을 한 가지씩 말하기')],
             [td('그림판 조작이 되지 않을 때'), td('그 단계를 건너뛰고 그림 받기부터 진행')]])))
 
     return doc('2주차 실습지', 'WEEK 2 / 4 · 수강생용', _h.escape(SUBJECT) + ' · 직접 적으면서 따라 하는 자료',
-               '\n'.join(b), top=STORE_NOTE, script=STORE_JS)
+               '\n'.join(b), top=STORE_NOTE, script=STORE_JS, foot=False)
 
 
 # ───────────────────────── 강사용 진행표 ─────────────────────────
-DO = {'그림판으로 그리기', '그림 생성', '연하장 페이지와 주소', '서로 보내기', '계획 보고서', '보고서 고치기',
-      '관심 주제 보고서', '매일 예약', '블로그 글 쓰기', '음성 만들기', '쇼츠 영상'}
-ASK = {'빈칸', '받은 연하장', '오늘 만든 것'}
+DO = {'그림판으로 그리기', '그림 생성', '연하장 만들기', '연하장 고치기', '인터넷 주소', '서로 보내기',
+      '계획 보고서', '보고서 고치기', '관심 주제 보고서', '출처 확인', '매일 예약', '블로그 글 쓰기', '장면 덧붙이기',
+      '음성 만들기', '쇼츠 영상'}
+ASK = {'지난 한 주', '빈칸', '받은 연하장', '연하장에서 익힌 방법', '계획 보고서에서 익힌 방법',
+       '주제 보고서에서 익힌 방법', '블로그 글에서 익힌 방법', '쇼츠에서 익힌 방법', '오늘 익힌 방법'}
 
 
 def runsheet():
@@ -422,8 +482,8 @@ def runsheet():
         '<ul>'
         '<li>ChatGPT 데스크탑 앱에서 Codex 화면이 열리는지 확인</li>'
         '<li>바탕화면의 <b>2주차</b> 폴더로 모든 실습을 한 번씩 직접 실행</li>'
-        '<li>수강생용 실습지(<code>worksheet.html</code>) 주소를 채팅창에 올릴 수 있게 준비</li>'
-        '<li>아래의 ‘채팅창에 올릴 문장’을 복사해 둘 곳 준비</li>'
+        '<li>수강생용 실습지(<code>worksheet.html</code>) 주소를 수업 채팅창에 올릴 수 있게 준비</li>'
+        '<li>아래의 ‘수업 채팅창에 올릴 문장’을 복사해 둘 곳 준비</li>'
         '<li>쇼츠 실습이 안 될 때 보여줄 영상 한 편 준비</li>'
         '</ul>'))
 
@@ -432,10 +492,16 @@ def runsheet():
         '한 번씩 실행해서, 되는지와 걸리는 시간을 확인합니다.</p>'
         + tbl(['항목', '확인할 내용', '안 될 때'], [
             [td('그림판으로 그리기'), td('허용 창이 뜨는지, 그림이 폴더에 저장되는지'), td('이 단계를 건너뛰고 그림 받기부터 진행')],
-            [td('연하장의 인터넷 주소'), td('주소가 발급되는지, 주소를 복사하는 위치'), td('웹페이지 파일을 열어서 확인')],
+            [td('연하장 만들기'), td('‘지금까지 만든 그림’이 그림판 그림과 생성한 그림을 모두 가리키는지'), td('그림을 이름으로 다시 말하게 하기')],
+            [td('연하장의 인터넷 주소'), td('주소가 발급되는지, 주소를 복사하는 위치, 공개한 연하장을 내리는 방법'), td('웹페이지 파일을 열어서 확인')],
             [td('매일 예약'), td('예약 항목이 생기는지, 지워지는지'), td('강사의 화면으로 보여 주기')],
             [td('음성 만들기'), td('음성 파일이 생기는지, 채팅에서 들리는지'), td('강사의 화면으로 보여 주기')],
-            [td('쇼츠 영상'), td('영상이 만들어지는지, 도구 설치를 묻는지'), td('준비해 둔 영상 보여 주기')]])))
+            [td('쇼츠 영상'), td('영상이 만들어지는지, 도구 설치를 묻는지'), td('준비해 둔 영상 보여 주기')],
+            [td('계획 보고서, 관심 주제 보고서, 블로그 글'),
+             td('앱에서 실행해 보지 않음. 결과가 어디에 열리는지, 에이전트가 보고서를 공개하려고 하는지'),
+             td('공개를 물으면 공개하지 말라고 답하게 하기')],
+            [td('승인을 묻는 창'), td('연하장 공개와 음성 만들기에서 승인을 묻는 창이 뜨는지, 그 문구'),
+             td('창의 문구를 미리 보여 주고 읽은 뒤 누르게 하기')]])))
 
     timed = [s for s in SLIDES if s[2] is not None]
     rows, cls = [], []
@@ -448,11 +514,11 @@ def runsheet():
                      td(_h.escape(line))])
         cls.append('do' if title in DO else None)
     b.append(sec('시간표',
-        '<p class="note">색이 칠해진 줄은 수강생이 Codex에 직접 입력하는 시간입니다. '
-        '‘질문’은 채팅창으로 답을 듣는 시간입니다.</p>'
-        + tbl(['시각', '시간', '구간', '장표', '화면의 문장'], rows, cls)))
+        '<p class="note">색이 칠해진 줄은 수강생이 직접 해보는 시간입니다. '
+        '‘질문’은 수업 채팅창으로 답을 듣는 시간입니다.</p>'
+        + tbl(['시각', '시간', '구간', '장표', '화면의 글'], rows, cls)))
 
-    b.append(sec('채팅창에 올릴 문장',
+    b.append(sec('수업 채팅창에 올릴 문장',
         tbl(['시각', '장표', '올릴 문장'],
             [[td(clock('오늘 만들 것'), 't'), td('오늘 만들 것'), td('수강생용 실습지 주소')]]
             + [[td(clock(t), 't'), td(_h.escape(t)), td(_h.escape(s))] for t in m.SAY for s in SAY[t]])
@@ -464,14 +530,16 @@ def runsheet():
             [td('‘이 폴더를 신뢰할까요?’ 창이 뜸'), td('‘폴더 신뢰’ 누르기. 폴더마다 한 번만 뜸')],
             [td('‘(앱 이름)을(를) 사용하도록 허용할까요?’ 창이 뜸'), td('‘이 대화 허용’ 누르기')],
             [td('에이전트가 구성을 설명하고 확인을 구함'), td(say('응, 만들어줘'))],
-            [td('공개해도 되는지 물음'), td(say('응, 만들어서 공개해줘'))],
+            [td('연하장을 공개해도 되는지 물음'), td('연하장을 읽어 본 뒤 공개해 달라고 답하게 하기')],
+            [td('보고서를 공개해도 되는지 물음'), td('공개하지 말라고 답하게 하기')],
             [td('폴더를 고를 수 없음'), td('옆의 ‘이 컴퓨터’가 눌려 있는지 확인')],
             [td('첫 문장만 전송함'), td('멈추지 않고 나머지 문장을 이어서 전송')],
             [td('결과가 마음에 들지 않음'), td('고칠 곳을 한 가지씩 말하기')],
-            [td('쇼츠에서 어느 그림을 쓸지 물음'), td(say('눈 내린 마을 그림으로 해줘'))],
+            [td('쇼츠에서 어느 그림을 쓸지 물음'), td(say('말로 설명해서 받은 그림으로 해줘'))],
+            [td('프로그램을 설치하겠다고 물음'), td('허용하지 않게 하고, 강사의 영상 보여 주기')],
             [td('예약을 지우지 않고 나가려 함'), td(say(UNRESERVE.rstrip('.')))]])))
 
-    return doc('2주차 강사용 진행표', 'WEEK 2 / 4 · 강사용', _h.escape(SUBJECT) + ' · 시각별 진행과 채팅창에 올릴 문장',
+    return doc('2주차 강사용 진행표', 'WEEK 2 / 4 · 강사용', _h.escape(SUBJECT) + ' · 시각별 진행과 수업 채팅창에 올릴 문장',
                '\n'.join(b), robots=True)
 
 

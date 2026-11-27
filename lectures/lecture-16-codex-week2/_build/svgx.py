@@ -124,3 +124,33 @@ ENVELOPE = _s("카드가 든 봉투", """
 <rect x="12" y="30" width="96" height="66" rx="7"/>
 <path d="M12 38l48 34 48-34"/>
 <path d="M60 20c-5-9-18-5-14 5 3 7 14 13 14 13s11-6 14-13c4-10-9-14-14-5z" opacity=".55"/>""")
+
+# ── 실습에서 에이전트가 조작하는 것
+POINTER = _s("앱 창 안에서 움직이는 마우스 화살표", """
+<rect x="10" y="18" width="100" height="76" rx="7"/><path d="M10 34h100" opacity=".5"/>
+<circle cx="36" cy="64" r="13" opacity=".5"/>
+<path d="M62 46v36l9-9 7 16 7-3-7-16h13z" fill="currentColor" stroke="none"/>""")
+
+UPLOAD = _s("지구로 올라가는 화살표", """
+<circle cx="60" cy="38" r="26"/>
+<path d="M34 38h52M60 12c-13 11-13 41 0 52M60 12c13 11 13 41 0 52" opacity=".5"/>
+<path d="M60 110V76M47 89l13-13 13 13" stroke-width="4"/>""")
+
+WEBSEARCH = _s("돋보기 안의 지구", """
+<circle cx="50" cy="50" r="34"/><path d="M75 75l31 31" stroke-width="5"/>
+<path d="M17 50h66M50 16c-15 13-15 55 0 68M50 16c15 13 15 55 0 68" opacity=".5"/>""")
+
+CODE = _s("꺾쇠 기호가 적힌 문서", """
+<rect x="22" y="12" width="76" height="96" rx="7"/>
+<path d="M50 44L37 60l13 16M70 44l13 16-13 16" stroke-width="4"/>""")
+
+TOOLS = _s("가운데 원과 이어진 도구 세 개", """
+<circle cx="60" cy="60" r="15"/>
+<rect x="8" y="10" width="30" height="30" rx="6"/><rect x="82" y="10" width="30" height="30" rx="6"/>
+<rect x="45" y="84" width="30" height="30" rx="6"/>
+<path d="M38 36l11 12M82 36L71 48M60 75v9" opacity=".6"/>""")
+
+NEWS = _s("제목과 본문이 있는 소식지", """
+<rect x="14" y="22" width="92" height="78" rx="6"/>
+<path d="M28 40h38" stroke-width="5"/><rect x="78" y="34" width="16" height="13" opacity=".6"/>
+<path d="M28 58h66M28 72h66M28 86h40" opacity=".45"/>""")
