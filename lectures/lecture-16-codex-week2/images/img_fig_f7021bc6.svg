@@ -1,6 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" role="img" aria-label="점점 늘어나는 칸" fill="none" stroke="#13735F" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
-<rect x="6" y="46" width="24" height="28" rx="5"/>
-<rect x="38" y="46" width="24" height="28" rx="5"/>
-<rect x="70" y="46" width="24" height="28" rx="5" opacity=".55"/>
-<rect x="102" y="46" width="14" height="28" rx="5" stroke-dasharray="4 5" opacity=".4"/>
-<path d="M82 18v16M74 26h16"/></svg>

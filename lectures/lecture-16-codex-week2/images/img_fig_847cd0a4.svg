@@ -1,6 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" role="img" aria-label="서로 이어진 세 칸" fill="none" stroke="#13735F" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
-<rect x="42" y="8" width="36" height="30" rx="6"/>
-<rect x="6" y="80" width="36" height="30" rx="6"/>
-<rect x="78" y="80" width="36" height="30" rx="6"/>
-<path d="M50 44L32 74M70 44l18 30M48 95h24"/>
-<path d="M30 62l2 12 11-5M79 69l9 5 3-11M64 89l8 6-8 6" opacity=".7"/></svg>

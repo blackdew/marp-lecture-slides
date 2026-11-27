@@ -1,8 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" role="img" aria-label="같은 요청에서 나온 서로 다른 문서 두 개" fill="none" stroke="#13735F" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
-<path d="M12 46h26a6 6 0 0 1 6 6v14a6 6 0 0 1-6 6H24l-8 8v-8h-4a6 6 0 0 1-6-6V52a6 6 0 0 1 6-6z"/>
-<path d="M50 52l16-16M50 68l16 16" opacity=".6"/>
-<rect x="72" y="8" width="40" height="46" rx="5"/>
-<path d="M80 22h24M80 31h24M80 40h14" opacity=".55"/>
-<rect x="72" y="66" width="40" height="46" rx="5"/>
-<path d="M88 80h16M88 89h16M88 98h16" opacity=".55"/>
-<path d="M81 80h.01M81 89h.01M81 98h.01" stroke-width="4"/></svg>
