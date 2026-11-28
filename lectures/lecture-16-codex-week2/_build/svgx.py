@@ -154,3 +154,7 @@ NEWS = _s("제목과 본문이 있는 소식지", """
 <rect x="14" y="22" width="92" height="78" rx="6"/>
 <path d="M28 40h38" stroke-width="5"/><rect x="78" y="34" width="16" height="13" opacity=".6"/>
 <path d="M28 58h66M28 72h66M28 86h40" opacity=".45"/>""")
+
+PHONE = _s("확인 표시가 뜬 휴대폰", """
+<rect x="34" y="8" width="52" height="104" rx="10"/><path d="M52 21h16M52 99h16" opacity=".45"/>
+<path d="M46 60l10 10 18-21" stroke-width="5"/>""")
