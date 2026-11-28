@@ -29,3 +29,7 @@ SHORTS_FRAME = _uri('shorts-frame.jpg')             # 쇼츠 영상의 한 장�
 CARD_PAGE = _uri('card-page.jpg')                   # 눈사람 그림과 눈 내린 마을 그림을 넣은 연하장 페이지
 REPORT_PLAN = _uri('report-plan.jpg')               # 부모님과 가는 경주 2박 3일 여행 계획 보고서
 REPORT_TOPIC = _uri('report-topic.jpg')             # AI 에이전트 최신 소식 보고서
+
+# 2026-11-28, 앱에 들어 있는 Codex 실행 파일. 연하장을 만들고 고친 뒤 프롬프트로 정리해서 다시 쓴 결과
+CARD_FIRST = _uri('card-first.jpg')                 # 요청을 여러 번 주고받아 만든 어머니 연하장
+CARD_REUSE = _uri('card-reuse.jpg')                 # 저장한 프롬프트로 새 채팅에서 한 번에 만든 아버지 연하장
