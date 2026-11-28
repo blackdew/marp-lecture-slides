@@ -33,3 +33,8 @@ REPORT_TOPIC = _uri('report-topic.jpg')             # AI 에이전트 최신 소
 # 2026-11-28, 앱에 들어 있는 Codex 실행 파일. 연하장을 만들고 고친 뒤 프롬프트로 정리해서 다시 쓴 결과
 CARD_FIRST = _uri('card-first.jpg')                 # 요청을 여러 번 주고받아 만든 어머니 연하장
 CARD_REUSE = _uri('card-reuse.jpg')                 # 저장한 프롬프트로 새 채팅에서 한 번에 만든 아버지 연하장
+
+# 2026-11-28, 강사가 제공한 그림. 피클을 만든 회사가 공개한 소개 화면이고, 직접 써서 받은 결과가 아닙니다
+PICKLE_INTRO = _uri('pickle-intro.jpg')             # 전화 대행, 쇼핑과 주문, 예약과 예매를 보여 주는 화면
+# 2026-11-28, 애플의 앱 정보 조회(itunes.apple.com/lookup)가 알려 준 주소에서 받은 앱 아이콘 (512x512)
+PICKLE_ICON = _uri('pickle-icon.jpg')
